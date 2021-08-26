@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html><head>
+<title>eric6.E5Gui.E5ComboSelectionDialog</title>
+<meta charset="UTF-8">
+<style>
+body {
+    background: #EDECE6;
+    margin: 0em 1em 10em 1em;
+    color: black;
+}
+
+h1 { color: white; background: #85774A; }
+h2 { color: white; background: #85774A; }
+h3 { color: white; background: #9D936E; }
+h4 { color: white; background: #9D936E; }
+    
+a { color: #BA6D36; }
+
+</style>
+</head>
+<body>
+<a NAME="top" ID="top"></a>
+<h1>eric6.E5Gui.E5ComboSelectionDialog</h1>
+
+<p>
+Module implementing a dialog to select one entry from a list of strings.
+</p>
+<h3>Global Attributes</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Classes</h3>
+
+<table>
+
+<tr>
+<td><a href="#E5ComboSelectionDialog">E5ComboSelectionDialog</a></td>
+<td>Class implementing a dialog to select one entry from a list of strings.</td>
+</tr>
+</table>
+<h3>Functions</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+<hr />
+<hr />
+<a NAME="E5ComboSelectionDialog" ID="E5ComboSelectionDialog"></a>
+<h2>E5ComboSelectionDialog</h2>
+
+<p>
+    Class implementing a dialog to select one entry from a list of strings.
+</p>
+<h3>Derived from</h3>
+QDialog, Ui_E5ComboSelectionDialog
+<h3>Class Attributes</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Class Methods</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+
+<table>
+
+<tr>
+<td><a href="#E5ComboSelectionDialog.__init__">E5ComboSelectionDialog</a></td>
+<td>Constructor</td>
+</tr>
+<tr>
+<td><a href="#E5ComboSelectionDialog.getSelection">getSelection</a></td>
+<td>Public method to retrieve the selected item and its data.</td>
+</tr>
+<tr>
+<td><a href="#E5ComboSelectionDialog.on_selectionComboBox_currentTextChanged">on_selectionComboBox_currentTextChanged</a></td>
+<td>Private slot to react upon changes of the selected entry.</td>
+</tr>
+</table>
+<h3>Static Methods</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+
+<a NAME="E5ComboSelectionDialog.__init__" ID="E5ComboSelectionDialog.__init__"></a>
+<h4>E5ComboSelectionDialog (Constructor)</h4>
+<b>E5ComboSelectionDialog</b>(<i>entries, title="", message="", parent=None</i>)
+
+<p>
+        Constructor
+</p>
+<dl>
+
+<dt><i>entries</i> (list of str or list of tuples of (str, any))</dt>
+<dd>
+list of entries to select from
+</dd>
+<dt><i>title</i> (str (optional))</dt>
+<dd>
+title of the dialog (defaults to "")
+</dd>
+<dt><i>message</i> (str (optional))</dt>
+<dd>
+message to be show in the dialog (defaults to "")
+</dd>
+<dt><i>parent</i> (QWidget (optional))</dt>
+<dd>
+reference to the parent widget (defaults to None)
+</dd>
+</dl>
+<a NAME="E5ComboSelectionDialog.getSelection" ID="E5ComboSelectionDialog.getSelection"></a>
+<h4>E5ComboSelectionDialog.getSelection</h4>
+<b>getSelection</b>(<i></i>)
+
+<p>
+        Public method to retrieve the selected item and its data.
+</p>
+<dl>
+<dt>Return:</dt>
+<dd>
+tuple containing the selected entry and its associated data
+</dd>
+</dl>
+<dl>
+<dt>Return Type:</dt>
+<dd>
+tuple of (str, any)
+</dd>
+</dl>
+<a NAME="E5ComboSelectionDialog.on_selectionComboBox_currentTextChanged" ID="E5ComboSelectionDialog.on_selectionComboBox_currentTextChanged"></a>
+<h4>E5ComboSelectionDialog.on_selectionComboBox_currentTextChanged</h4>
+<b>on_selectionComboBox_currentTextChanged</b>(<i>txt</i>)
+
+<p>
+        Private slot to react upon changes of the selected entry.
+</p>
+<dl>
+
+<dt><i>txt</i> (str)</dt>
+<dd>
+text of the selected entry
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+</body></html>

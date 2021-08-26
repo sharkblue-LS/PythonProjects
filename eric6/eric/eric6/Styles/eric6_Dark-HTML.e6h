@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HighlightingStyles SYSTEM "HighlightingStyles-6.0.dtd">
+<!-- Eric6 highlighting styles -->
+<!-- Saved: 2020-04-08, 18:12:20-->
+<!-- Author: Detlev Offenbach <detlev@die-offenbachs.de> -->
+<HighlightingStyles version="6.0">
+  <Lexer name="HTML">
+    <Style style="0" substyle="-1" color="#ffffff" paper="#262626" font="Liberation Mono,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>HTML default</Description>
+    </Style>
+    <Style style="1" substyle="-1" color="#989dff" paper="#262626" font="Liberation Mono,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Tag</Description>
+    </Style>
+    <Style style="2" substyle="-1" color="#ff4e51" paper="#262626" font="Liberation Mono,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Unknown tag</Description>
+    </Style>
+    <Style style="3" substyle="-1" color="#00eeee" paper="#262626" font="Liberation Mono,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Attribute</Description>
+    </Style>
+    <Style style="4" substyle="-1" color="#ff6a6c" paper="#262626" font="Liberation Mono,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Unknown attribute</Description>
+    </Style>
+    <Style style="5" substyle="-1" color="#00e2e2" paper="#262626" font="Liberation Mono,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>HTML number</Description>
+    </Style>
+    <Style style="6" substyle="-1" color="#ff00ff" paper="#262626" font="Liberation Mono,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>HTML double-quoted string</Description>
+    </Style>
+    <Style style="7" substyle="-1" color="#ff00ff" paper="#262626" font="Liberation Mono,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>HTML single-quoted string</Description>
+    </Style>
+    <Style style="8" substyle="-1" color="#ff00ff" paper="#262626" font="Liberation Mono,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Other text in a tag</Description>
+    </Style>
+    <Style style="9" substyle="-1" color="#ffff00" paper="#262626" font="Liberation Mono,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>HTML comment</Description>
+    </Style>
+    <Style style="10" substyle="-1" color="#ff00ff" paper="#262626" font="Liberation Mono,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Entity</Description>
+    </Style>
+    <Style style="11" substyle="-1" color="#00d5ff" paper="#262626" font="Liberation Mono,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>End of a tag</Description>
+    </Style>
+    <Style style="12" substyle="-1" color="#73b2ff" paper="#262626" font="Liberation Mono,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Start of an XML fragment</Description>
+    </Style>
+    <Style style="13" substyle="-1" color="#73b2ff" paper="#262626" font="Liberation Mono,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>End of an XML fragment</Description>
+    </Style>
+    <Style style="14" substyle="-1" color="#8fe5ff" paper="#262626" font="Liberation Mono,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Script tag</Description>
+    </Style>
+    <Style style="15" substyle="-1" color="#000000" paper="#ffff00" font="Liberation Mono,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Start of an ASP fragment with @</Description>
+    </Style>
+    <Style style="16" substyle="-1" color="#000000" paper="#ffdf00" font="Liberation Mono,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Start of an ASP fragment</Description>
+    </Style>
+    <Style style="17" substyle="-1" color="#000000" paper="#ffdf00" font="Liberation Mono,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>CDATA</Description>
+    </Style>
+    <Style style="18" substyle="-1" color="#0000ff" paper="#ffefbf" font="Liberation Mono,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Start of a PHP fragment</Description>
+    </Style>
+    <Style style="19" substyle="-1" color="#ff00ff" paper="#ffefff" font="Liberation Mono,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Unquoted HTML value</Description>
+    </Style>
+    <Style style="20" substyle="-1" color="#ffffff" paper="#262626" font="Liberation Mono,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>ASP X-Code comment</Description>
+    </Style>
+    <Style style="21" substyle="-1" color="#000080" paper="#efefff" font="Liberation Mono,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>SGML default</Description>
+    </Style>
+    <Style style="22" substyle="-1" color="#000080" paper="#efefff" font="Liberation Mono,9,-1,5,75,0,0,0,0,0" eolfill="False">
+      <Description>SGML command</Description>
+    </Style>
+    <Style style="23" substyle="-1" color="#006600" paper="#efefff" font="Liberation Mono,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>First parameter of an SGML command</Description>
+    </Style>
+    <Style style="24" substyle="-1" color="#800000" paper="#efefff" font="Liberation Mono,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>SGML double-quoted string</Description>
+    </Style>
+    <Style style="25" substyle="-1" color="#993300" paper="#efefff" font="Liberation Mono,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>SGML single-quoted string</Description>
+    </Style>
+    <Style style="26" substyle="-1" color="#800000" paper="#ff6666" font="Liberation Mono,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>SGML error</Description>
+    </Style>
+    <Style style="27" substyle="-1" color="#3366ff" paper="#efefff" font="Liberation Mono,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>SGML special entity</Description>
+    </Style>
+    <Style style="29" substyle="-1" color="#808000" paper="#efefff" font="Liberation Mono,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>SGML comment</Description>
+    </Style>
+    <Style style="30" substyle="-1" color="#ffffff" paper="#262626" font="Liberation Mono,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>First parameter comment of an SGML command</Description>
+    </Style>
+    <Style style="31" substyle="-1" color="#000066" paper="#cccce0" font="Liberation Mono,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>SGML block default</Description>
+    </Style>
+    <Style style="40" substyle="-1" color="#ffff00" paper="#262626" font="Liberation Mono,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Start of a JavaScript fragment</Description>
+    </Style>
+    <Style style="41" substyle="-1" color="#000000" paper="#f0f0ff" font="Liberation Mono,9,-1,5,75,0,0,0,0,0" eolfill="True">
+      <Description>JavaScript default</Description>
+    </Style>
+    <Style style="42" substyle="-1" color="#007f00" paper="#f0f0ff" font="Liberation Mono,9,-1,5,50,0,0,0,0,0" eolfill="True">
+      <Description>JavaScript comment</Description>
+    </Style>
+    <Style style="43" substyle="-1" color="#007f00" paper="#f0f0ff" font="Liberation Mono,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>JavaScript line comment</Description>
+    </Style>
+    <Style style="44" substyle="-1" color="#3f703f" paper="#f0f0ff" font="Liberation Mono,9,-1,5,75,0,0,0,0,0" eolfill="True">
+      <Description>JavaDoc style JavaScript comment</Description>
+    </Style>
+    <Style style="45" substyle="-1" color="#007f7f" paper="#f0f0ff" font="Liberation Mono,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>JavaScript number</Description>
+    </Style>
+    <Style style="46" substyle="-1" color="#000000" paper="#f0f0ff" font="Liberation Mono,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>JavaScript word</Description>
+    </Style>
+    <Style style="47" substyle="-1" color="#00007f" paper="#f0f0ff" font="Liberation Mono,9,-1,5,75,0,0,0,0,0" eolfill="False">
+      <Description>JavaScript keyword</Description>
+    </Style>
+    <Style style="48" substyle="-1" color="#7f007f" paper="#f0f0ff" font="Liberation Mono,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>JavaScript double-quoted string</Description>
+    </Style>
+    <Style style="49" substyle="-1" color="#7f007f" paper="#f0f0ff" font="Liberation Mono,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>JavaScript single-quoted string</Description>
+    </Style>
+    <Style style="50" substyle="-1" color="#000000" paper="#f0f0ff" font="Liberation Mono,9,-1,5,75,0,0,0,0,0" eolfill="False">
+      <Description>JavaScript symbol</Description>
+    </Style>
+    <Style style="51" substyle="-1" color="#000000" paper="#bfbbb0" font="Liberation Mono,9,-1,5,50,0,0,0,0,0" eolfill="True">
+      <Description>JavaScript unclosed string</Description>
+    </Style>
+    <Style style="52" substyle="-1" color="#000000" paper="#ffbbb0" font="Liberation Mono,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>JavaScript regular expression</Description>
+    </Style>
+    <Style style="55" substyle="-1" color="#ffffff" paper="#262626" font="Liberation Mono,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Start of an ASP JavaScript fragment</Description>
+    </Style>
+    <Style style="56" substyle="-1" color="#000000" paper="#dfdf7f" font="Liberation Mono,9,-1,5,75,0,0,0,0,0" eolfill="True">
+      <Description>ASP JavaScript default</Description>
+    </Style>
+    <Style style="57" substyle="-1" color="#007f00" paper="#dfdf7f" font="Liberation Mono,9,-1,5,50,0,0,0,0,0" eolfill="True">
+      <Description>ASP JavaScript comment</Description>
+    </Style>
+    <Style style="58" substyle="-1" color="#007f00" paper="#dfdf7f" font="Liberation Mono,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>ASP JavaScript line comment</Description>
+    </Style>
+    <Style style="59" substyle="-1" color="#7f7f7f" paper="#dfdf7f" font="Liberation Mono,9,-1,5,75,0,0,0,0,0" eolfill="True">
+      <Description>JavaDoc style ASP JavaScript comment</Description>
+    </Style>
+    <Style style="60" substyle="-1" color="#007f7f" paper="#dfdf7f" font="Liberation Mono,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>ASP JavaScript number</Description>
+    </Style>
+    <Style style="61" substyle="-1" color="#000000" paper="#dfdf7f" font="Liberation Mono,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>ASP JavaScript word</Description>
+    </Style>
+    <Style style="62" substyle="-1" color="#00007f" paper="#dfdf7f" font="Liberation Mono,9,-1,5,75,0,0,0,0,0" eolfill="False">
+      <Description>ASP JavaScript keyword</Description>
+    </Style>
+    <Style style="63" substyle="-1" color="#7f007f" paper="#dfdf7f" font="Liberation Mono,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>ASP JavaScript double-quoted string</Description>
+    </Style>
+    <Style style="64" substyle="-1" color="#7f007f" paper="#dfdf7f" font="Liberation Mono,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>ASP JavaScript single-quoted string</Description>
+    </Style>
+    <Style style="65" substyle="-1" color="#000000" paper="#dfdf7f" font="Liberation Mono,9,-1,5,75,0,0,0,0,0" eolfill="False">
+      <Description>ASP JavaScript symbol</Description>
+    </Style>
+    <Style style="66" substyle="-1" color="#000000" paper="#bfbbb0" font="Liberation Mono,9,-1,5,50,0,0,0,0,0" eolfill="True">
+      <Description>ASP JavaScript unclosed string</Description>
+    </Style>
+    <Style style="67" substyle="-1" color="#000000" paper="#ffbbb0" font="Liberation Mono,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>ASP JavaScript regular expression</Description>
+    </Style>
+    <Style style="70" substyle="-1" color="#ffffff" paper="#262626" font="Liberation Mono,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Start of a VBScript fragment</Description>
+    </Style>
+    <Style style="71" substyle="-1" color="#000000" paper="#efefff" font="Liberation Mono,9,-1,5,50,0,0,0,0,0" eolfill="True">
+      <Description>VBScript default</Description>
+    </Style>
+    <Style style="72" substyle="-1" color="#008000" paper="#efefff" font="Liberation Mono,9,-1,5,50,0,0,0,0,0" eolfill="True">
+      <Description>VBScript comment</Description>
+    </Style>
+    <Style style="73" substyle="-1" color="#008080" paper="#efefff" font="Liberation Mono,9,-1,5,50,0,0,0,0,0" eolfill="True">
+      <Description>VBScript number</Description>
+    </Style>
+    <Style style="74" substyle="-1" color="#000080" paper="#efefff" font="Liberation Mono,9,-1,5,75,0,0,0,0,0" eolfill="True">
+      <Description>VBScript keyword</Description>
+    </Style>
+    <Style style="75" substyle="-1" color="#800080" paper="#efefff" font="Liberation Mono,9,-1,5,50,0,0,0,0,0" eolfill="True">
+      <Description>VBScript string</Description>
+    </Style>
+    <Style style="76" substyle="-1" color="#000080" paper="#efefff" font="Liberation Mono,9,-1,5,50,0,0,0,0,0" eolfill="True">
+      <Description>VBScript identifier</Description>
+    </Style>
+    <Style style="77" substyle="-1" color="#000080" paper="#7f7fff" font="Liberation Mono,9,-1,5,50,0,0,0,0,0" eolfill="True">
+      <Description>VBScript unclosed string</Description>
+    </Style>
+    <Style style="80" substyle="-1" color="#ffffff" paper="#262626" font="Liberation Mono,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Start of an ASP VBScript fragment</Description>
+    </Style>
+    <Style style="81" substyle="-1" color="#000000" paper="#cfcfef" font="Liberation Mono,9,-1,5,50,0,0,0,0,0" eolfill="True">
+      <Description>ASP VBScript default</Description>
+    </Style>
+    <Style style="82" substyle="-1" color="#008000" paper="#cfcfef" font="Liberation Mono,9,-1,5,50,0,0,0,0,0" eolfill="True">
+      <Description>ASP VBScript comment</Description>
+    </Style>
+    <Style style="83" substyle="-1" color="#008080" paper="#cfcfef" font="Liberation Mono,9,-1,5,50,0,0,0,0,0" eolfill="True">
+      <Description>ASP VBScript number</Description>
+    </Style>
+    <Style style="84" substyle="-1" color="#000080" paper="#cfcfef" font="Liberation Mono,9,-1,5,75,0,0,0,0,0" eolfill="True">
+      <Description>ASP VBScript keyword</Description>
+    </Style>
+    <Style style="85" substyle="-1" color="#800080" paper="#cfcfef" font="Liberation Mono,9,-1,5,50,0,0,0,0,0" eolfill="True">
+      <Description>ASP VBScript string</Description>
+    </Style>
+    <Style style="86" substyle="-1" color="#000080" paper="#cfcfef" font="Liberation Mono,9,-1,5,50,0,0,0,0,0" eolfill="True">
+      <Description>ASP VBScript identifier</Description>
+    </Style>
+    <Style style="87" substyle="-1" color="#000080" paper="#7f7fff" font="Liberation Mono,9,-1,5,50,0,0,0,0,0" eolfill="True">
+      <Description>ASP VBScript unclosed string</Description>
+    </Style>
+    <Style style="90" substyle="-1" color="#808080" paper="#ffffff" font="Liberation Mono,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Start of a Python fragment</Description>
+    </Style>
+    <Style style="91" substyle="-1" color="#808080" paper="#efffef" font="Liberation Mono,9,-1,5,50,0,0,0,0,0" eolfill="True">
+      <Description>Python default</Description>
+    </Style>
+    <Style style="92" substyle="-1" color="#007f00" paper="#efffef" font="Liberation Mono,9,-1,5,50,0,0,0,0,0" eolfill="True">
+      <Description>Python comment</Description>
+    </Style>
+    <Style style="93" substyle="-1" color="#007f7f" paper="#efffef" font="Liberation Mono,9,-1,5,50,0,0,0,0,0" eolfill="True">
+      <Description>Python number</Description>
+    </Style>
+    <Style style="94" substyle="-1" color="#7f007f" paper="#efffef" font="Liberation Mono,9,-1,5,50,0,0,0,0,0" eolfill="True">
+      <Description>Python double-quoted string</Description>
+    </Style>
+    <Style style="95" substyle="-1" color="#7f007f" paper="#efffef" font="Liberation Mono,9,-1,5,50,0,0,0,0,0" eolfill="True">
+      <Description>Python single-quoted string</Description>
+    </Style>
+    <Style style="96" substyle="-1" color="#00007f" paper="#efffef" font="Liberation Mono,9,-1,5,75,0,0,0,0,0" eolfill="True">
+      <Description>Python keyword</Description>
+    </Style>
+    <Style style="97" substyle="-1" color="#7f0000" paper="#efffef" font="Liberation Mono,9,-1,5,50,0,0,0,0,0" eolfill="True">
+      <Description>Python triple single-quoted string</Description>
+    </Style>
+    <Style style="98" substyle="-1" color="#7f0000" paper="#efffef" font="Liberation Mono,9,-1,5,50,0,0,0,0,0" eolfill="True">
+      <Description>Python triple double-quoted string</Description>
+    </Style>
+    <Style style="99" substyle="-1" color="#0000ff" paper="#efffef" font="Liberation Mono,9,-1,5,75,0,0,0,0,0" eolfill="True">
+      <Description>Python class name</Description>
+    </Style>
+    <Style style="100" substyle="-1" color="#007f7f" paper="#efffef" font="Liberation Mono,9,-1,5,75,0,0,0,0,0" eolfill="True">
+      <Description>Python function or method name</Description>
+    </Style>
+    <Style style="101" substyle="-1" color="#000000" paper="#efffef" font="Liberation Mono,9,-1,5,75,0,0,0,0,0" eolfill="True">
+      <Description>Python operator</Description>
+    </Style>
+    <Style style="102" substyle="-1" color="#000000" paper="#efffef" font="Liberation Mono,9,-1,5,50,0,0,0,0,0" eolfill="True">
+      <Description>Python identifier</Description>
+    </Style>
+    <Style style="105" substyle="-1" color="#808080" paper="#ffffff" font="Liberation Mono,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Start of an ASP Python fragment</Description>
+    </Style>
+    <Style style="106" substyle="-1" color="#808080" paper="#cfefcf" font="Liberation Mono,9,-1,5,50,0,0,0,0,0" eolfill="True">
+      <Description>ASP Python default</Description>
+    </Style>
+    <Style style="107" substyle="-1" color="#007f00" paper="#cfefcf" font="Liberation Mono,9,-1,5,50,0,0,0,0,0" eolfill="True">
+      <Description>ASP Python comment</Description>
+    </Style>
+    <Style style="108" substyle="-1" color="#007f7f" paper="#cfefcf" font="Liberation Mono,9,-1,5,50,0,0,0,0,0" eolfill="True">
+      <Description>ASP Python number</Description>
+    </Style>
+    <Style style="109" substyle="-1" color="#7f007f" paper="#cfefcf" font="Liberation Mono,9,-1,5,50,0,0,0,0,0" eolfill="True">
+      <Description>ASP Python double-quoted string</Description>
+    </Style>
+    <Style style="110" substyle="-1" color="#7f007f" paper="#cfefcf" font="Liberation Mono,9,-1,5,50,0,0,0,0,0" eolfill="True">
+      <Description>ASP Python single-quoted string</Description>
+    </Style>
+    <Style style="111" substyle="-1" color="#00007f" paper="#cfefcf" font="Liberation Mono,9,-1,5,75,0,0,0,0,0" eolfill="True">
+      <Description>ASP Python keyword</Description>
+    </Style>
+    <Style style="112" substyle="-1" color="#7f0000" paper="#cfefcf" font="Liberation Mono,9,-1,5,50,0,0,0,0,0" eolfill="True">
+      <Description>ASP Python triple single-quoted string</Description>
+    </Style>
+    <Style style="113" substyle="-1" color="#7f0000" paper="#cfefcf" font="Liberation Mono,9,-1,5,50,0,0,0,0,0" eolfill="True">
+      <Description>ASP Python triple double-quoted string</Description>
+    </Style>
+    <Style style="114" substyle="-1" color="#0000ff" paper="#cfefcf" font="Liberation Mono,9,-1,5,75,0,0,0,0,0" eolfill="True">
+      <Description>ASP Python class name</Description>
+    </Style>
+    <Style style="115" substyle="-1" color="#007f7f" paper="#cfefcf" font="Liberation Mono,9,-1,5,75,0,0,0,0,0" eolfill="True">
+      <Description>ASP Python function or method name</Description>
+    </Style>
+    <Style style="116" substyle="-1" color="#000000" paper="#cfefcf" font="Liberation Mono,9,-1,5,75,0,0,0,0,0" eolfill="True">
+      <Description>ASP Python operator</Description>
+    </Style>
+    <Style style="117" substyle="-1" color="#000000" paper="#cfefcf" font="Liberation Mono,9,-1,5,50,0,0,0,0,0" eolfill="True">
+      <Description>ASP Python identifier</Description>
+    </Style>
+    <Style style="118" substyle="-1" color="#000033" paper="#fff8f8" font="Liberation Mono,9,-1,5,50,0,0,0,0,0" eolfill="True">
+      <Description>PHP default</Description>
+    </Style>
+    <Style style="119" substyle="-1" color="#007f00" paper="#fff8f8" font="Liberation Mono,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>PHP double-quoted string</Description>
+    </Style>
+    <Style style="120" substyle="-1" color="#009f00" paper="#fff8f8" font="Liberation Mono,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>PHP single-quoted string</Description>
+    </Style>
+    <Style style="121" substyle="-1" color="#7f007f" paper="#fff8f8" font="Liberation Mono,9,-1,5,50,1,0,0,0,0" eolfill="False">
+      <Description>PHP keyword</Description>
+    </Style>
+    <Style style="122" substyle="-1" color="#cc9900" paper="#fff8f8" font="Liberation Mono,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>PHP number</Description>
+    </Style>
+    <Style style="123" substyle="-1" color="#00007f" paper="#fff8f8" font="Liberation Mono,9,-1,5,50,1,0,0,0,0" eolfill="False">
+      <Description>PHP variable</Description>
+    </Style>
+    <Style style="124" substyle="-1" color="#999999" paper="#fff8f8" font="Liberation Mono,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>PHP comment</Description>
+    </Style>
+    <Style style="125" substyle="-1" color="#666666" paper="#fff8f8" font="Liberation Mono,9,-1,5,50,1,0,0,0,0" eolfill="False">
+      <Description>PHP line comment</Description>
+    </Style>
+    <Style style="126" substyle="-1" color="#00007f" paper="#fff8f8" font="Liberation Mono,9,-1,5,50,1,0,0,0,0" eolfill="False">
+      <Description>PHP double-quoted variable</Description>
+    </Style>
+    <Style style="127" substyle="-1" color="#000000" paper="#fff8f8" font="Liberation Mono,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>PHP operator</Description>
+    </Style>
+  </Lexer>
+</HighlightingStyles>

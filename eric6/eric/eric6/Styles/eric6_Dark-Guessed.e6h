@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HighlightingStyles SYSTEM "HighlightingStyles-6.0.dtd">
+<!-- Eric6 highlighting styles -->
+<!-- Saved: 2020-04-05, 18:58:52-->
+<!-- Author: Detlev Offenbach <detlev@die-offenbachs.de> -->
+<HighlightingStyles version="6.0">
+  <Lexer name="Guessed">
+    <Style style="0" substyle="-1" color="#ffffff" paper="#262626" font="Noto Mono,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Default</Description>
+    </Style>
+    <Style style="1" substyle="-1" color="#74cc66" paper="#262626" font="Noto Mono,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Comment</Description>
+    </Style>
+    <Style style="2" substyle="-1" color="#dd9900" paper="#262626" font="Noto Mono,9,-1,5,50,1,0,0,0,0" eolfill="False">
+      <Description>Preprocessor</Description>
+    </Style>
+    <Style style="3" substyle="-1" color="#b3efad" paper="#262626" font="Noto Mono,9,-1,5,75,0,0,0,0,0" eolfill="False">
+      <Description>Keyword</Description>
+    </Style>
+    <Style style="4" substyle="-1" color="#b3efad" paper="#262626" font="Noto Mono,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Pseudo Keyword</Description>
+    </Style>
+    <Style style="5" substyle="-1" color="#de77a0" paper="#262626" font="Noto Mono,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Type Keyword</Description>
+    </Style>
+    <Style style="6" substyle="-1" color="#bab1a8" paper="#262626" font="Noto Mono,9,-1,5,75,0,0,0,0,0" eolfill="False">
+      <Description>Operator</Description>
+    </Style>
+    <Style style="7" substyle="-1" color="#e19bff" paper="#262626" font="Noto Mono,9,-1,5,75,0,0,0,0,0" eolfill="False">
+      <Description>Word</Description>
+    </Style>
+    <Style style="8" substyle="-1" color="#b3efad" paper="#262626" font="Noto Mono,9,-1,5,75,0,0,0,0,0" eolfill="False">
+      <Description>Builtin</Description>
+    </Style>
+    <Style style="9" substyle="-1" color="#00aaff" paper="#262626" font="Noto Mono,9,-1,5,75,0,0,0,0,0" eolfill="False">
+      <Description>Function or method name</Description>
+    </Style>
+    <Style style="10" substyle="-1" color="#00aaff" paper="#262626" font="Noto Mono,9,-1,5,75,0,0,0,0,0" eolfill="False">
+      <Description>Class name</Description>
+    </Style>
+    <Style style="11" substyle="-1" color="#00aaff" paper="#262626" font="Noto Mono,9,-1,5,75,0,0,0,0,0" eolfill="False">
+      <Description>Namespace</Description>
+    </Style>
+    <Style style="12" substyle="-1" color="#e75555" paper="#262626" font="Noto Mono,9,-1,5,75,0,0,0,0,0" eolfill="False">
+      <Description>Exception</Description>
+    </Style>
+    <Style style="13" substyle="-1" color="#00aaff" paper="#262626" font="Noto Mono,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Identifier</Description>
+    </Style>
+    <Style style="14" substyle="-1" color="#dd3131" paper="#262626" font="Noto Mono,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Constant</Description>
+    </Style>
+    <Style style="15" substyle="-1" color="#e1e100" paper="#262626" font="Noto Mono,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Label</Description>
+    </Style>
+    <Style style="16" substyle="-1" color="#dedede" paper="#262626" font="Noto Mono,9,-1,5,75,0,0,0,0,0" eolfill="False">
+      <Description>Entity</Description>
+    </Style>
+    <Style style="17" substyle="-1" color="#b6d13b" paper="#262626" font="Noto Mono,9,-1,5,75,0,0,0,0,0" eolfill="False">
+      <Description>Attribute</Description>
+    </Style>
+    <Style style="18" substyle="-1" color="#b3efad" paper="#262626" font="Noto Mono,9,-1,5,75,0,0,0,0,0" eolfill="False">
+      <Description>Tag</Description>
+    </Style>
+    <Style style="19" substyle="-1" color="#e19bff" paper="#262626" font="Noto Mono,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Decorator</Description>
+    </Style>
+    <Style style="20" substyle="-1" color="#f46b6b" paper="#262626" font="Noto Mono,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>String</Description>
+    </Style>
+    <Style style="21" substyle="-1" color="#f46b6b" paper="#262626" font="Noto Mono,9,-1,5,50,1,0,0,0,0" eolfill="False">
+      <Description>Documentation string</Description>
+    </Style>
+    <Style style="22" substyle="-1" color="#bb6688" paper="#262626" font="Noto Mono,9,-1,5,75,0,0,0,0,0" eolfill="False">
+      <Description>Scalar</Description>
+    </Style>
+    <Style style="23" substyle="-1" color="#bb6622" paper="#262626" font="Noto Mono,9,-1,5,75,0,0,0,0,0" eolfill="False">
+      <Description>Escape</Description>
+    </Style>
+    <Style style="24" substyle="-1" color="#bb6688" paper="#262626" font="Noto Mono,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Regular expression</Description>
+    </Style>
+    <Style style="25" substyle="-1" color="#00aaff" paper="#262626" font="Noto Mono,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Symbol</Description>
+    </Style>
+    <Style style="26" substyle="-1" color="#00d300" paper="#262626" font="Noto Mono,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Other string</Description>
+    </Style>
+    <Style style="27" substyle="-1" color="#00c8c8" paper="#262626" font="Noto Mono,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Number</Description>
+    </Style>
+    <Style style="28" substyle="-1" color="#00aaff" paper="#262626" font="Noto Mono,9,-1,5,75,0,0,0,0,0" eolfill="False">
+      <Description>Heading</Description>
+    </Style>
+    <Style style="29" substyle="-1" color="#dd60dd" paper="#262626" font="Noto Mono,9,-1,5,75,0,0,0,0,0" eolfill="False">
+      <Description>Subheading</Description>
+    </Style>
+    <Style style="30" substyle="-1" color="#e30000" paper="#262626" font="Noto Mono,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Deleted</Description>
+    </Style>
+    <Style style="31" substyle="-1" color="#00dd00" paper="#262626" font="Noto Mono,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Inserted</Description>
+    </Style>
+    <Style style="40" substyle="-1" color="#ff0000" paper="#262626" font="Noto Mono,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Generic error</Description>
+    </Style>
+    <Style style="41" substyle="-1" color="#ded3c9" paper="#262626" font="Noto Mono,9,-1,5,50,1,0,0,0,0" eolfill="False">
+      <Description>Emphasized text</Description>
+    </Style>
+    <Style style="42" substyle="-1" color="#ded3c9" paper="#262626" font="Noto Mono,9,-1,5,75,0,0,0,0,0" eolfill="False">
+      <Description>Strong text</Description>
+    </Style>
+    <Style style="43" substyle="-1" color="#00aaff" paper="#262626" font="Noto Mono,9,-1,5,75,0,0,0,0,0" eolfill="False">
+      <Description>Prompt</Description>
+    </Style>
+    <Style style="44" substyle="-1" color="#cccccc" paper="#262626" font="Noto Mono,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Output</Description>
+    </Style>
+    <Style style="45" substyle="-1" color="#6985ea" paper="#262626" font="Noto Mono,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Traceback</Description>
+    </Style>
+    <Style style="46" substyle="-1" color="#ffffff" paper="#ff0000" font="Noto Mono,9,-1,5,75,0,0,0,0,0" eolfill="False">
+      <Description>Error</Description>
+    </Style>
+    <Style style="47" substyle="-1" color="#007f00" paper="#a8ffa8" font="Noto Mono,9,-1,5,50,0,0,0,0,0" eolfill="True">
+      <Description>Comment block</Description>
+    </Style>
+    <Style style="48" substyle="-1" color="#26b5e0" paper="#262626" font="Noto Mono,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Property</Description>
+    </Style>
+    <Style style="49" substyle="-1" color="#e476eb" paper="#262626" font="Noto Mono,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Character</Description>
+    </Style>
+    <Style style="50" substyle="-1" color="#7f007f" paper="#ddd0dd" font="Noto Mono,9,-1,5,50,0,0,0,0,0" eolfill="True">
+      <Description>Here document</Description>
+    </Style>
+    <Style style="51" substyle="-1" color="#ffffff" paper="#262626" font="Noto Mono,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Punctuation</Description>
+    </Style>
+    <Style style="52" substyle="-1" color="#00c000" paper="#262626" font="Noto Mono,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Hashbang</Description>
+    </Style>
+    <Style style="53" substyle="-1" color="#da10bc" paper="#262626" font="Noto Mono,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Reserved Keyword</Description>
+    </Style>
+    <Style style="54" substyle="-1" color="#00aaff" paper="#262626" font="Noto Mono,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Literal</Description>
+    </Style>
+    <Style style="55" substyle="-1" color="#c582f8" paper="#262626" font="Noto Mono,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Double quoted string</Description>
+    </Style>
+    <Style style="56" substyle="-1" color="#c582f8" paper="#262626" font="Noto Mono,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Single quoted string</Description>
+    </Style>
+    <Style style="57" substyle="-1" color="#ffff00" paper="#a08080" font="Noto Mono,9,-1,5,50,0,0,0,0,0" eolfill="True">
+      <Description>Backtick string</Description>
+    </Style>
+    <Style style="58" substyle="-1" color="#bbbbbb" paper="#262626" font="Noto Mono,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Whitespace</Description>
+    </Style>
+  </Lexer>
+</HighlightingStyles>

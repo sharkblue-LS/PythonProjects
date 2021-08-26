@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html><head>
+<title>eric6.Plugins.UiExtensionPlugins.Translator.TranslatorEngines.YandexEngine</title>
+<meta charset="UTF-8">
+<style>
+body {
+    background: #EDECE6;
+    margin: 0em 1em 10em 1em;
+    color: black;
+}
+
+h1 { color: white; background: #85774A; }
+h2 { color: white; background: #85774A; }
+h3 { color: white; background: #9D936E; }
+h4 { color: white; background: #9D936E; }
+    
+a { color: #BA6D36; }
+
+</style>
+</head>
+<body>
+<a NAME="top" ID="top"></a>
+<h1>eric6.Plugins.UiExtensionPlugins.Translator.TranslatorEngines.YandexEngine</h1>
+
+<p>
+Module implementing the Yandex translation engine.
+</p>
+<h3>Global Attributes</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Classes</h3>
+
+<table>
+
+<tr>
+<td><a href="#YandexEngine">YandexEngine</a></td>
+<td>Class implementing the translation engine for the Yandex translation service.</td>
+</tr>
+</table>
+<h3>Functions</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+<hr />
+<hr />
+<a NAME="YandexEngine" ID="YandexEngine"></a>
+<h2>YandexEngine</h2>
+
+<p>
+    Class implementing the translation engine for the Yandex
+    translation service.
+</p>
+<h3>Derived from</h3>
+TranslationEngine
+<h3>Class Attributes</h3>
+
+<table>
+<tr><td>TranslatorLimit</td></tr><tr><td>TranslatorUrl</td></tr>
+</table>
+<h3>Class Methods</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+
+<table>
+
+<tr>
+<td><a href="#YandexEngine.__init__">YandexEngine</a></td>
+<td>Constructor</td>
+</tr>
+<tr>
+<td><a href="#YandexEngine.engineName">engineName</a></td>
+<td>Public method to return the name of the engine.</td>
+</tr>
+<tr>
+<td><a href="#YandexEngine.getTranslation">getTranslation</a></td>
+<td>Public method to translate the given text.</td>
+</tr>
+<tr>
+<td><a href="#YandexEngine.supportedLanguages">supportedLanguages</a></td>
+<td>Public method to get the supported languages.</td>
+</tr>
+</table>
+<h3>Static Methods</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+
+<a NAME="YandexEngine.__init__" ID="YandexEngine.__init__"></a>
+<h4>YandexEngine (Constructor)</h4>
+<b>YandexEngine</b>(<i>plugin, parent=None</i>)
+
+<p>
+        Constructor
+</p>
+<dl>
+
+<dt><i>plugin</i></dt>
+<dd>
+reference to the plugin object (TranslatorPlugin)
+</dd>
+<dt><i>parent</i></dt>
+<dd>
+reference to the parent object (QObject)
+</dd>
+</dl>
+<a NAME="YandexEngine.engineName" ID="YandexEngine.engineName"></a>
+<h4>YandexEngine.engineName</h4>
+<b>engineName</b>(<i></i>)
+
+<p>
+        Public method to return the name of the engine.
+</p>
+<dl>
+<dt>Return:</dt>
+<dd>
+engine name (string)
+</dd>
+</dl>
+<a NAME="YandexEngine.getTranslation" ID="YandexEngine.getTranslation"></a>
+<h4>YandexEngine.getTranslation</h4>
+<b>getTranslation</b>(<i>requestObject, text, originalLanguage, translationLanguage</i>)
+
+<p>
+        Public method to translate the given text.
+</p>
+<dl>
+
+<dt><i>requestObject</i></dt>
+<dd>
+reference to the request object
+            (TranslatorRequest)
+</dd>
+<dt><i>text</i></dt>
+<dd>
+text to be translated (string)
+</dd>
+<dt><i>originalLanguage</i></dt>
+<dd>
+language code of the original (string)
+</dd>
+<dt><i>translationLanguage</i></dt>
+<dd>
+language code of the translation (string)
+</dd>
+</dl>
+<dl>
+<dt>Return:</dt>
+<dd>
+tuple of translated text (string) and flag indicating
+            success (boolean)
+</dd>
+</dl>
+<a NAME="YandexEngine.supportedLanguages" ID="YandexEngine.supportedLanguages"></a>
+<h4>YandexEngine.supportedLanguages</h4>
+<b>supportedLanguages</b>(<i></i>)
+
+<p>
+        Public method to get the supported languages.
+</p>
+<dl>
+<dt>Return:</dt>
+<dd>
+list of supported language codes (list of string)
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+</body></html>

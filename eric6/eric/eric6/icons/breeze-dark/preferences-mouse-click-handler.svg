@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg version="1.1" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg"><style type="text/css">.ColorScheme-Text {
+            color:#eff0f1;
+        }
+        .ColorScheme-Highlight {
+            color:#3daee9;
+        }</style><rect class="ColorScheme-Highlight" x="9" y="2" width="4" height="7" color="#3daee9" fill="currentColor" fill-rule="evenodd"/><path class="ColorScheme-Text" d="m9.75 1a6.25 6.25 0 0 0-6.25 6.25v7.5a6.25 6.25 0 0 0 6.25 6.25h2.5a6.25 6.25 0 0 0 6.25-6.25v-7.5a6.25 6.25 0 0 0-6.25-6.25zm0 1.25h2.5a5 5 0 0 1 5 5v7.5a5 5 0 0 1-5 5h-2.5a5 5 0 0 1-5-5v-7.5a5 5 0 0 1 5-5z" color="#eff0f1" fill="currentColor" stroke-width="1.25"/></svg>

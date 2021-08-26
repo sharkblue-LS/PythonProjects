@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>GitMergeDialog</class>
+ <widget class="QDialog" name="GitMergeDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>451</width>
+    <height>491</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Git Merge</string>
+  </property>
+  <property name="sizeGripEnabled">
+   <bool>true</bool>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_2">
+   <item>
+    <widget class="QGroupBox" name="groupBox">
+     <property name="title">
+      <string>Revision</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="0" column="0">
+       <widget class="QRadioButton" name="idButton">
+        <property name="toolTip">
+         <string>Select to specify a revision by changeset id</string>
+        </property>
+        <property name="text">
+         <string>Commit:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLineEdit" name="idEdit">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="toolTip">
+         <string>Enter a commit id</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QRadioButton" name="tagButton">
+        <property name="toolTip">
+         <string>Select to specify a revision by a tag</string>
+        </property>
+        <property name="text">
+         <string>Tag:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QComboBox" name="tagCombo">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="toolTip">
+         <string>Enter a tag name</string>
+        </property>
+        <property name="editable">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QRadioButton" name="branchButton">
+        <property name="toolTip">
+         <string>Select to specify a revision by a local branch</string>
+        </property>
+        <property name="text">
+         <string>Local Branch:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QComboBox" name="branchCombo">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="toolTip">
+         <string>Enter a local branch name</string>
+        </property>
+        <property name="editable">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0">
+       <widget class="QRadioButton" name="remoteBranchButton">
+        <property name="toolTip">
+         <string>Select to specify a revision by a remote branch</string>
+        </property>
+        <property name="text">
+         <string>Remote Branch:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1">
+       <widget class="QComboBox" name="remoteBranchCombo">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="toolTip">
+         <string>Enter a remote branch name</string>
+        </property>
+        <property name="editable">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="0" colspan="2">
+       <widget class="QRadioButton" name="noneButton">
+        <property name="toolTip">
+         <string>Select to not specify a specific revision</string>
+        </property>
+        <property name="text">
+         <string>No commit selected</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="commitGroupBox">
+     <property name="toolTip">
+      <string>Select to commit the merge</string>
+     </property>
+     <property name="title">
+      <string>Commit Merge</string>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string>Commit Message:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPlainTextEdit" name="commitMessageEdit">
+        <property name="toolTip">
+         <string>Enter a message for the merge commit</string>
+        </property>
+        <property name="tabChangesFocus">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="addLogCheckBox">
+        <property name="toolTip">
+         <string>Select to append the log summaries of merged commits</string>
+        </property>
+        <property name="text">
+         <string>Add Log Message Summary</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QCheckBox" name="diffstatCheckBox">
+     <property name="toolTip">
+      <string>Select to show diff statistics at the end of the merge</string>
+     </property>
+     <property name="text">
+      <string>Show diff statistics</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <tabstops>
+  <tabstop>idButton</tabstop>
+  <tabstop>idEdit</tabstop>
+  <tabstop>tagButton</tabstop>
+  <tabstop>tagCombo</tabstop>
+  <tabstop>branchButton</tabstop>
+  <tabstop>branchCombo</tabstop>
+  <tabstop>remoteBranchButton</tabstop>
+  <tabstop>remoteBranchCombo</tabstop>
+  <tabstop>noneButton</tabstop>
+  <tabstop>commitGroupBox</tabstop>
+  <tabstop>commitMessageEdit</tabstop>
+  <tabstop>addLogCheckBox</tabstop>
+  <tabstop>diffstatCheckBox</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>GitMergeDialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>238</x>
+     <y>480</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>157</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>GitMergeDialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>306</x>
+     <y>480</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>286</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>idButton</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>idEdit</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>80</x>
+     <y>58</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>285</x>
+     <y>63</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>tagButton</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>tagCombo</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>49</x>
+     <y>89</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>281</x>
+     <y>92</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>branchButton</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>branchCombo</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>101</x>
+     <y>120</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>278</x>
+     <y>121</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>remoteBranchButton</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>remoteBranchCombo</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>87</x>
+     <y>138</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>174</x>
+     <y>139</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

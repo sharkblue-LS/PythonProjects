@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MicroPythonFileManagerWidget</class>
+ <widget class="QWidget" name="MicroPythonFileManagerWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>675</width>
+    <height>338</height>
+   </rect>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <widget class="QLabel" name="label">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="text">
+      <string>Local Files</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="2">
+    <layout class="QHBoxLayout" name="horizontalLayout_3">
+     <item>
+      <widget class="QLabel" name="label_2">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="text">
+        <string>Device Files</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="E5Led" name="deviceConnectedLed" native="true"/>
+     </item>
+    </layout>
+   </item>
+   <item row="1" column="0">
+    <widget class="QTreeWidget" name="localFileTreeWidget">
+     <property name="contextMenuPolicy">
+      <enum>Qt::CustomContextMenu</enum>
+     </property>
+     <property name="alternatingRowColors">
+      <bool>true</bool>
+     </property>
+     <property name="rootIsDecorated">
+      <bool>false</bool>
+     </property>
+     <property name="itemsExpandable">
+      <bool>false</bool>
+     </property>
+     <property name="sortingEnabled">
+      <bool>true</bool>
+     </property>
+     <attribute name="headerShowSortIndicator" stdset="0">
+      <bool>true</bool>
+     </attribute>
+     <column>
+      <property name="text">
+       <string>Name</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Mode</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Size</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Time</string>
+      </property>
+     </column>
+    </widget>
+   </item>
+   <item row="1" column="1">
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <spacer name="verticalSpacer_2">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>26</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QToolButton" name="syncButton">
+       <property name="toolTip">
+        <string>Press to sync the local directory to the device directory</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QToolButton" name="putButton">
+       <property name="toolTip">
+        <string>Press to copy the selected file to the device</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QToolButton" name="putAsButton">
+       <property name="toolTip">
+        <string>Press to copy the selected file to the device with a new name</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QToolButton" name="getButton">
+       <property name="toolTip">
+        <string>Press to copy the selected file from the device</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QToolButton" name="getAsButton">
+       <property name="toolTip">
+        <string>Press to copy the selected file from the device with a new name</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="verticalSpacer">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>26</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+   <item row="1" column="2">
+    <widget class="QTreeWidget" name="deviceFileTreeWidget">
+     <property name="contextMenuPolicy">
+      <enum>Qt::CustomContextMenu</enum>
+     </property>
+     <property name="alternatingRowColors">
+      <bool>true</bool>
+     </property>
+     <property name="rootIsDecorated">
+      <bool>false</bool>
+     </property>
+     <property name="itemsExpandable">
+      <bool>false</bool>
+     </property>
+     <property name="sortingEnabled">
+      <bool>true</bool>
+     </property>
+     <attribute name="headerShowSortIndicator" stdset="0">
+      <bool>true</bool>
+     </attribute>
+     <column>
+      <property name="text">
+       <string>Name</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Mode</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Size</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Time</string>
+      </property>
+     </column>
+    </widget>
+   </item>
+   <item row="2" column="0">
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <property name="spacing">
+      <number>2</number>
+     </property>
+     <item>
+      <widget class="QLineEdit" name="localCwd">
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QToolButton" name="localUpButton">
+       <property name="toolTip">
+        <string>Press to move one directory level up</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QToolButton" name="localHomeButton">
+       <property name="toolTip">
+        <string>Press to move to the configured home directory</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QToolButton" name="localReloadButton">
+       <property name="toolTip">
+        <string>Press to reload the list</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="2" column="2">
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <property name="spacing">
+      <number>2</number>
+     </property>
+     <item>
+      <widget class="QLineEdit" name="deviceCwd">
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QToolButton" name="deviceUpButton">
+       <property name="toolTip">
+        <string>Press to move one directory level up</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QToolButton" name="deviceHomeButton">
+       <property name="toolTip">
+        <string>Press to move to the device workspace directory</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QToolButton" name="deviceReloadButton">
+       <property name="toolTip">
+        <string>Press to reload the list</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>E5Led</class>
+   <extends>QWidget</extends>
+   <header>E5Gui/E5Led.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>localFileTreeWidget</tabstop>
+  <tabstop>deviceFileTreeWidget</tabstop>
+  <tabstop>syncButton</tabstop>
+  <tabstop>putButton</tabstop>
+  <tabstop>putAsButton</tabstop>
+  <tabstop>getButton</tabstop>
+  <tabstop>getAsButton</tabstop>
+  <tabstop>localCwd</tabstop>
+  <tabstop>localUpButton</tabstop>
+  <tabstop>localHomeButton</tabstop>
+  <tabstop>localReloadButton</tabstop>
+  <tabstop>deviceCwd</tabstop>
+  <tabstop>deviceUpButton</tabstop>
+  <tabstop>deviceHomeButton</tabstop>
+  <tabstop>deviceReloadButton</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>

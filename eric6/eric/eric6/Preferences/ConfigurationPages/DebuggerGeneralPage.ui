@@ -1,0 +1,908 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DebuggerGeneralPage</class>
+ <widget class="QWidget" name="DebuggerGeneralPage">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>550</width>
+    <height>1655</height>
+   </rect>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_7">
+   <item>
+    <widget class="QLabel" name="headerLabel">
+     <property name="text">
+      <string>&lt;b&gt;Configure general debugger settings&lt;/b&gt;</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="Line" name="line11">
+     <property name="frameShape">
+      <enum>QFrame::HLine</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Sunken</enum>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="groupBox_3">
+     <property name="title">
+      <string>Network Interface</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_2">
+      <item row="0" column="0" colspan="4">
+       <widget class="QLabel" name="TextLabel1_2_3">
+        <property name="text">
+         <string>&lt;font color=&quot;#FF0000&quot;&gt;&lt;b&gt;Note:&lt;/b&gt; These settings are activated at the next startup of the application.&lt;/font&gt;</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0" colspan="2">
+       <widget class="QRadioButton" name="allInterfacesButton">
+        <property name="toolTip">
+         <string>Select to listen on all available network interfaces (IPv4 mode)</string>
+        </property>
+        <property name="text">
+         <string>All network interfaces (IPv4)</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="2">
+       <widget class="QRadioButton" name="all6InterfacesButton">
+        <property name="toolTip">
+         <string>Select to listen on all available network interfaces (IPv6 mode)</string>
+        </property>
+        <property name="text">
+         <string>All network interfaces (IPv6)</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="3">
+       <spacer name="horizontalSpacer_5">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>103</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item row="2" column="0">
+       <widget class="QRadioButton" name="selectedInterfaceButton">
+        <property name="toolTip">
+         <string>Select to listen on the configured interface</string>
+        </property>
+        <property name="text">
+         <string>Only selected interface</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1" colspan="3">
+       <widget class="QComboBox" name="interfacesCombo">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="toolTip">
+         <string>Select the network interface to listen on</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="groupBox_4">
+     <property name="title">
+      <string>Allowed hosts</string>
+     </property>
+     <layout class="QGridLayout">
+      <item row="3" column="1">
+       <spacer>
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>40</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item row="2" column="1">
+       <widget class="QPushButton" name="deleteAllowedHostButton">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="text">
+         <string>Delete</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QPushButton" name="editAllowedHostButton">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="text">
+         <string>Edit...</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QPushButton" name="addAllowedHostButton">
+        <property name="text">
+         <string>Add...</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0" rowspan="4">
+       <widget class="QListWidget" name="allowedHostsList">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="passiveDbgGroup">
+     <property name="title">
+      <string>Passive Debugger</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="0" column="0" colspan="4">
+       <widget class="QLabel" name="TextLabel1_2_2">
+        <property name="text">
+         <string>&lt;font color=&quot;#FF0000&quot;&gt;&lt;b&gt;Note:&lt;/b&gt; These settings are activated at the next startup of the application.&lt;/font&gt;</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0" colspan="4">
+       <widget class="QCheckBox" name="passiveDbgCheckBox">
+        <property name="toolTip">
+         <string>Enables the passive debug mode</string>
+        </property>
+        <property name="whatsThis">
+         <string>&lt;b&gt;Passive Debugger Enabled&lt;/b&gt;
+&lt;p&gt;This enables the passive debugging mode. In this mode the debug client (the script) connects to the debug server (the IDE). The script is started outside the IDE. This way mod_python or Zope scripts can be debugged.&lt;/p&gt;</string>
+        </property>
+        <property name="text">
+         <string>Passive Debugger Enabled</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="passiveDbgPortLabel">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="text">
+         <string>Debug Server Port:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QSpinBox" name="passiveDbgPortSpinBox">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="toolTip">
+         <string>Enter the port the debugger should listen on</string>
+        </property>
+        <property name="whatsThis">
+         <string>&lt;b&gt;Debug Server Port&lt;/b&gt;
+&lt;p&gt;Enter the port the debugger should listen on.&lt;/p&gt;</string>
+        </property>
+        <property name="minimum">
+         <number>1024</number>
+        </property>
+        <property name="maximum">
+         <number>65535</number>
+        </property>
+        <property name="value">
+         <number>42424</number>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="2" colspan="2">
+       <spacer name="horizontalSpacer_2">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>91</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item row="3" column="0">
+       <widget class="QLabel" name="label">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="text">
+         <string>Debugger Type:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1" colspan="2">
+       <widget class="QComboBox" name="passiveDbgBackendCombo">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="toolTip">
+         <string>Select the debugger type of the backend</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="3">
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>91</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="remoteDebuggerGroup">
+     <property name="toolTip">
+      <string>Select, if the debugger should be run remotely</string>
+     </property>
+     <property name="title">
+      <string>Remote Debugger</string>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+     <layout class="QGridLayout">
+      <item row="0" column="1">
+       <widget class="QLineEdit" name="hostLineEdit">
+        <property name="toolTip">
+         <string>Enter the hostname of the remote machine.</string>
+        </property>
+        <property name="whatsThis">
+         <string>&lt;b&gt;Remote Host&lt;/b&gt;
+&lt;p&gt;Enter the hostname of the remote machine.&lt;/p&gt;</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QLabel" name="hostLabel">
+        <property name="text">
+         <string>Remote Host:</string>
+        </property>
+        <property name="buddy">
+         <cstring>hostLineEdit</cstring>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="execLabel">
+        <property name="text">
+         <string>Remote Execution:</string>
+        </property>
+        <property name="buddy">
+         <cstring>execLineEdit</cstring>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QLineEdit" name="execLineEdit">
+        <property name="toolTip">
+         <string>Enter the remote execution command.</string>
+        </property>
+        <property name="whatsThis">
+         <string>&lt;b&gt;Remote Execution&lt;/b&gt;
+&lt;p&gt;Enter the remote execution command (e.g. ssh). This command is used to log into the remote host and execute the remote debugger.&lt;/p&gt;</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0" colspan="2">
+       <widget class="QGroupBox" name="dbgPathTranslationGroup">
+        <property name="toolTip">
+         <string>Select, if path translation for remote debugging should be done</string>
+        </property>
+        <property name="title">
+         <string>Perform Path Translation</string>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+        <layout class="QGridLayout" name="_2">
+         <item row="1" column="0">
+          <widget class="QLabel" name="textLabel2_9">
+           <property name="text">
+            <string>Local Path:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QLineEdit" name="dbgTranslationLocalEdit">
+           <property name="toolTip">
+            <string>Enter the local path</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QLineEdit" name="dbgTranslationRemoteEdit">
+           <property name="toolTip">
+            <string>Enter the remote path</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="0">
+          <widget class="QLabel" name="textLabel1_18">
+           <property name="text">
+            <string>Remote Path:</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="consoleDebuggerGroup">
+     <property name="toolTip">
+      <string>Select, if the debugger should be executed in a console window</string>
+     </property>
+     <property name="title">
+      <string>Console Debugger</string>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+     <layout class="QGridLayout" name="_4">
+      <item row="0" column="1">
+       <widget class="QLineEdit" name="consoleDbgEdit">
+        <property name="toolTip">
+         <string>Enter the console command (e.g. xterm -e)</string>
+        </property>
+        <property name="whatsThis">
+         <string>&lt;b&gt;Console Command&lt;/b&gt;
+&lt;p&gt;Enter the console command (e.g. xterm -e). This command is used to open a command window for the debugger.&lt;/p&gt;</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QLabel" name="textLabel1_17">
+        <property name="text">
+         <string>Console Command:</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="groupBox_5">
+     <property name="title">
+      <string>Environment Variables for Debug Client</string>
+     </property>
+     <layout class="QGridLayout" name="_3">
+      <item row="0" column="0" colspan="2">
+       <widget class="QCheckBox" name="debugEnvironReplaceCheckBox">
+        <property name="toolTip">
+         <string>Select, if the environment should be replaced.</string>
+        </property>
+        <property name="whatsThis">
+         <string>&lt;b&gt;Replace Environment&lt;/b&gt;
+&lt;p&gt;If this entry is checked, the environment of the debugger will be replaced by the entries of the environment variables field. If it is unchecked, the environment will be ammended by these settings.&lt;/p&gt;</string>
+        </property>
+        <property name="text">
+         <string>Replace Environment Variables</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="textLabel1_16">
+        <property name="text">
+         <string>Environment Variables:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QLineEdit" name="debugEnvironEdit">
+        <property name="toolTip">
+         <string>Enter the environment variables to be set.</string>
+        </property>
+        <property name="whatsThis">
+         <string>&lt;b&gt;Environment Variables&lt;/b&gt;
+&lt;p&gt;Enter the environment variables to be set for the debugger. The individual settings must be separated by whitespace and be given in the form 'var=value'.&lt;/p&gt;
+&lt;p&gt;Example: var1=1 var2=&quot;hello world&quot;&lt;/p&gt;</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="groupBox">
+     <property name="title">
+      <string>Start Debugging</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QCheckBox" name="debugAutoSaveScriptsCheckBox">
+        <property name="toolTip">
+         <string>Select, whether changed scripts should be saved upon a debug, run, ... action.</string>
+        </property>
+        <property name="text">
+         <string>Autosave changed scripts</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="groupBox_7">
+     <property name="title">
+      <string>Debug Client Exit</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_3">
+      <item>
+       <widget class="QCheckBox" name="automaticResetCheckBox">
+        <property name="toolTip">
+         <string>Select, whether a reset of the debug client should be performed after a client exit</string>
+        </property>
+        <property name="text">
+         <string>Automatic Reset after Client Exit</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="groupBox_6">
+     <property name="title">
+      <string>Multi Process Debugging</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_8">
+      <item>
+       <widget class="QCheckBox" name="multiprocessCheckBox">
+        <property name="toolTip">
+         <string>Select to enable multiprocess debugging support globally</string>
+        </property>
+        <property name="text">
+         <string>Enable Multi Process Debugging Support</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="groupBox_8">
+     <property name="title">
+      <string>Breakpoints</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <widget class="QCheckBox" name="debugThreeStateBreakPoint">
+        <property name="toolTip">
+         <string>Select to change the breakpoint toggle order from Off-&gt;On-&gt;Off to Off-&gt;On (permanent)-&gt;On (temporary)-&gt;Off</string>
+        </property>
+        <property name="text">
+         <string>Three state breakpoint</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <widget class="QLabel" name="label_4">
+          <property name="text">
+           <string>Number of recent files and conditions:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QSpinBox" name="recentFilesSpinBox">
+          <property name="toolTip">
+           <string>Enter the number of recent files and breakpoint conditions to remember</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          </property>
+          <property name="minimum">
+           <number>5</number>
+          </property>
+          <property name="maximum">
+           <number>50</number>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="spacer">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="groupBox_9">
+     <property name="title">
+      <string>Exceptions</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_4">
+      <item>
+       <widget class="QCheckBox" name="exceptionBreakCheckBox">
+        <property name="toolTip">
+         <string>Select to always break at exceptions</string>
+        </property>
+        <property name="text">
+         <string>Always break at exceptions</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="exceptionShellCheckBox">
+        <property name="toolTip">
+         <string>Select to show exception information in the shell window</string>
+        </property>
+        <property name="text">
+         <string>Show exceptions in Shell</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="groupBox_11">
+     <property name="title">
+      <string>Variables Viewer</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_6">
+      <property name="spacing">
+       <number>9</number>
+      </property>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <widget class="QLabel" name="label_2">
+          <property name="text">
+           <string>Max. Variable Size:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QSpinBox" name="maxSizeSpinBox">
+          <property name="toolTip">
+           <string>Enter the maximum size of a variable to be shown (0 = no limit)</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          </property>
+          <property name="specialValueText">
+           <string>no limit</string>
+          </property>
+          <property name="showGroupSeparator" stdset="0">
+           <bool>true</bool>
+          </property>
+          <property name="suffix">
+           <string> Bytes</string>
+          </property>
+          <property name="maximum">
+           <number>1063256064</number>
+          </property>
+          <property name="singleStep">
+           <number>16384</number>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_3">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="groupBox_2">
+        <property name="title">
+         <string>Background Colors</string>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_3" stretch="2,1">
+         <item>
+          <layout class="QGridLayout" name="gridLayout_3">
+           <property name="topMargin">
+            <number>8</number>
+           </property>
+           <property name="bottomMargin">
+            <number>8</number>
+           </property>
+           <property name="verticalSpacing">
+            <number>16</number>
+           </property>
+           <item row="1" column="1">
+            <widget class="QPushButton" name="backgroundChangedButton">
+             <property name="minimumSize">
+              <size>
+               <width>100</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>100</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="toolTip">
+              <string>Select the background color for changed items.</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="label_bgChangedItems">
+             <property name="text">
+              <string>Changed elements:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_bgFirstLoaded">
+             <property name="text">
+              <string>First time opened elements:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QPushButton" name="backgroundNewButton">
+             <property name="minimumSize">
+              <size>
+               <width>100</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>100</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="toolTip">
+              <string>Select the background color for elements which are loaded for the first time.</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="2">
+            <spacer name="horizontalSpacer_4">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <widget class="QListView" name="preView">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Ignored">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
+           </property>
+           <property name="verticalScrollBarPolicy">
+            <enum>Qt::ScrollBarAlwaysOff</enum>
+           </property>
+           <property name="horizontalScrollBarPolicy">
+            <enum>Qt::ScrollBarAlwaysOff</enum>
+           </property>
+           <property name="editTriggers">
+            <set>QAbstractItemView::NoEditTriggers</set>
+           </property>
+           <property name="alternatingRowColors">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="groupBox_10">
+        <property name="title">
+         <string>Local Variables Viewer</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_5">
+         <item>
+          <widget class="QCheckBox" name="autoViewSourcecodeCheckBox">
+           <property name="toolTip">
+            <string>Automatically view source code when user changes the callstack frame in the callstack viewer.</string>
+           </property>
+           <property name="text">
+            <string>Automatically view source code</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <tabstops>
+  <tabstop>allInterfacesButton</tabstop>
+  <tabstop>all6InterfacesButton</tabstop>
+  <tabstop>selectedInterfaceButton</tabstop>
+  <tabstop>interfacesCombo</tabstop>
+  <tabstop>allowedHostsList</tabstop>
+  <tabstop>addAllowedHostButton</tabstop>
+  <tabstop>editAllowedHostButton</tabstop>
+  <tabstop>deleteAllowedHostButton</tabstop>
+  <tabstop>passiveDbgCheckBox</tabstop>
+  <tabstop>passiveDbgPortSpinBox</tabstop>
+  <tabstop>passiveDbgBackendCombo</tabstop>
+  <tabstop>remoteDebuggerGroup</tabstop>
+  <tabstop>hostLineEdit</tabstop>
+  <tabstop>execLineEdit</tabstop>
+  <tabstop>dbgPathTranslationGroup</tabstop>
+  <tabstop>dbgTranslationRemoteEdit</tabstop>
+  <tabstop>dbgTranslationLocalEdit</tabstop>
+  <tabstop>consoleDebuggerGroup</tabstop>
+  <tabstop>consoleDbgEdit</tabstop>
+  <tabstop>debugEnvironReplaceCheckBox</tabstop>
+  <tabstop>debugEnvironEdit</tabstop>
+  <tabstop>debugAutoSaveScriptsCheckBox</tabstop>
+  <tabstop>automaticResetCheckBox</tabstop>
+  <tabstop>multiprocessCheckBox</tabstop>
+  <tabstop>debugThreeStateBreakPoint</tabstop>
+  <tabstop>recentFilesSpinBox</tabstop>
+  <tabstop>exceptionBreakCheckBox</tabstop>
+  <tabstop>exceptionShellCheckBox</tabstop>
+  <tabstop>maxSizeSpinBox</tabstop>
+  <tabstop>backgroundNewButton</tabstop>
+  <tabstop>backgroundChangedButton</tabstop>
+  <tabstop>autoViewSourcecodeCheckBox</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>passiveDbgCheckBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>passiveDbgPortLabel</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>121</x>
+     <y>467</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>107</x>
+     <y>498</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>passiveDbgCheckBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>passiveDbgPortSpinBox</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>219</x>
+     <y>467</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>205</x>
+     <y>498</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>selectedInterfaceButton</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>interfacesCombo</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>587</x>
+     <y>107</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>307</x>
+     <y>137</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>passiveDbgCheckBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>label</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>78</x>
+     <y>467</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>410</x>
+     <y>498</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>passiveDbgCheckBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>passiveDbgBackendCombo</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>257</x>
+     <y>467</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>484</x>
+     <y>497</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

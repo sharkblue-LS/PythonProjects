@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>GitSubmodulesUpdateOptionsDialog</class>
+ <widget class="QDialog" name="GitSubmodulesUpdateOptionsDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>458</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Submodule Update Options</string>
+  </property>
+  <property name="sizeGripEnabled">
+   <bool>true</bool>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QGroupBox" name="groupBox">
+     <property name="title">
+      <string>Update Procedure</string>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QRadioButton" name="checkoutButton">
+        <property name="toolTip">
+         <string>Select to perform a 'checkout' procedure</string>
+        </property>
+        <property name="text">
+         <string>checkout</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QRadioButton" name="rebaseButton">
+        <property name="toolTip">
+         <string>Select to perform a 'rebase' procedure</string>
+        </property>
+        <property name="text">
+         <string>rebase</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QRadioButton" name="mergeButton">
+        <property name="toolTip">
+         <string>Select to perform a 'merge' procedure</string>
+        </property>
+        <property name="text">
+         <string>merge</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QCheckBox" name="initCheckBox">
+     <property name="toolTip">
+      <string>Select to initialize submodules before the update</string>
+     </property>
+     <property name="text">
+      <string>Initialize before Update</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QCheckBox" name="remoteCheckBox">
+     <property name="toolTip">
+      <string>Fetch remote changes before updating</string>
+     </property>
+     <property name="text">
+      <string>Synchronize with remote</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QCheckBox" name="nofetchCheckBox">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="toolTip">
+      <string>Select to not fetch the remote</string>
+     </property>
+     <property name="text">
+      <string>Don't Fetch</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="label">
+     <property name="text">
+      <string>Selected Submodules:</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QListWidget" name="submodulesList">
+     <property name="toolTip">
+      <string>Select the submodules to be updated</string>
+     </property>
+     <property name="alternatingRowColors">
+      <bool>true</bool>
+     </property>
+     <property name="selectionMode">
+      <enum>QAbstractItemView::ExtendedSelection</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QCheckBox" name="forceCheckBox">
+     <property name="toolTip">
+      <string>Select to enforce the update</string>
+     </property>
+     <property name="text">
+      <string>Enforce Operation</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <tabstops>
+  <tabstop>checkoutButton</tabstop>
+  <tabstop>rebaseButton</tabstop>
+  <tabstop>mergeButton</tabstop>
+  <tabstop>initCheckBox</tabstop>
+  <tabstop>remoteCheckBox</tabstop>
+  <tabstop>nofetchCheckBox</tabstop>
+  <tabstop>submodulesList</tabstop>
+  <tabstop>forceCheckBox</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>GitSubmodulesUpdateOptionsDialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>227</x>
+     <y>437</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>157</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>GitSubmodulesUpdateOptionsDialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>295</x>
+     <y>443</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>286</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>remoteCheckBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>nofetchCheckBox</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>37</x>
+     <y>124</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>37</x>
+     <y>157</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html><head>
+<title>eric6.Project.IdlCompilerDefineNameDialog</title>
+<meta charset="UTF-8">
+<style>
+body {
+    background: #EDECE6;
+    margin: 0em 1em 10em 1em;
+    color: black;
+}
+
+h1 { color: white; background: #85774A; }
+h2 { color: white; background: #85774A; }
+h3 { color: white; background: #9D936E; }
+h4 { color: white; background: #9D936E; }
+    
+a { color: #BA6D36; }
+
+</style>
+</head>
+<body>
+<a NAME="top" ID="top"></a>
+<h1>eric6.Project.IdlCompilerDefineNameDialog</h1>
+
+<p>
+Module implementing a dialog to enter the name-value pair to define a variable
+for the IDL compiler.
+</p>
+<h3>Global Attributes</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Classes</h3>
+
+<table>
+
+<tr>
+<td><a href="#IdlCompilerDefineNameDialog">IdlCompilerDefineNameDialog</a></td>
+<td>Class implementing a dialog to enter the name-value pair to define a variable for the IDL compiler.</td>
+</tr>
+</table>
+<h3>Functions</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+<hr />
+<hr />
+<a NAME="IdlCompilerDefineNameDialog" ID="IdlCompilerDefineNameDialog"></a>
+<h2>IdlCompilerDefineNameDialog</h2>
+
+<p>
+    Class implementing a dialog to enter the name-value pair to define a
+    variable for the IDL compiler.
+</p>
+<h3>Derived from</h3>
+QDialog, Ui_IdlCompilerDefineNameDialog
+<h3>Class Attributes</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Class Methods</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+
+<table>
+
+<tr>
+<td><a href="#IdlCompilerDefineNameDialog.__init__">IdlCompilerDefineNameDialog</a></td>
+<td>Constructor</td>
+</tr>
+<tr>
+<td><a href="#IdlCompilerDefineNameDialog.__updateOkButton">__updateOkButton</a></td>
+<td>Private slot to update the enable state of the OK button.</td>
+</tr>
+<tr>
+<td><a href="#IdlCompilerDefineNameDialog.getData">getData</a></td>
+<td>Public method to get the entered data.</td>
+</tr>
+<tr>
+<td><a href="#IdlCompilerDefineNameDialog.on_nameEdit_textChanged">on_nameEdit_textChanged</a></td>
+<td>Private slot to handle changes of the name.</td>
+</tr>
+</table>
+<h3>Static Methods</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+
+<a NAME="IdlCompilerDefineNameDialog.__init__" ID="IdlCompilerDefineNameDialog.__init__"></a>
+<h4>IdlCompilerDefineNameDialog (Constructor)</h4>
+<b>IdlCompilerDefineNameDialog</b>(<i>name="", value="", parent=None</i>)
+
+<p>
+        Constructor
+</p>
+<dl>
+
+<dt><i>name</i> (str)</dt>
+<dd>
+name of the variable
+</dd>
+<dt><i>value</i> (str)</dt>
+<dd>
+value of the variable
+</dd>
+<dt><i>parent</i> (QWidget)</dt>
+<dd>
+reference to the parent widget
+</dd>
+</dl>
+<a NAME="IdlCompilerDefineNameDialog.__updateOkButton" ID="IdlCompilerDefineNameDialog.__updateOkButton"></a>
+<h4>IdlCompilerDefineNameDialog.__updateOkButton</h4>
+<b>__updateOkButton</b>(<i></i>)
+
+<p>
+        Private slot to update the enable state of the OK button.
+</p>
+<a NAME="IdlCompilerDefineNameDialog.getData" ID="IdlCompilerDefineNameDialog.getData"></a>
+<h4>IdlCompilerDefineNameDialog.getData</h4>
+<b>getData</b>(<i></i>)
+
+<p>
+        Public method to get the entered data.
+</p>
+<dl>
+<dt>Return:</dt>
+<dd>
+tuple containing the variable name and value
+</dd>
+</dl>
+<dl>
+<dt>Return Type:</dt>
+<dd>
+tuple of (str, str)
+</dd>
+</dl>
+<a NAME="IdlCompilerDefineNameDialog.on_nameEdit_textChanged" ID="IdlCompilerDefineNameDialog.on_nameEdit_textChanged"></a>
+<h4>IdlCompilerDefineNameDialog.on_nameEdit_textChanged</h4>
+<b>on_nameEdit_textChanged</b>(<i>txt</i>)
+
+<p>
+        Private slot to handle changes of the name.
+</p>
+<dl>
+
+<dt><i>txt</i> (str)</dt>
+<dd>
+current text of the name edit
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+</body></html>

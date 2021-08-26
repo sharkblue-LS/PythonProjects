@@ -1,0 +1,1160 @@
+<!DOCTYPE html>
+<html><head>
+<title>eric6.PipInterface.PipPackagesWidget</title>
+<meta charset="UTF-8">
+<style>
+body {
+    background: #EDECE6;
+    margin: 0em 1em 10em 1em;
+    color: black;
+}
+
+h1 { color: white; background: #85774A; }
+h2 { color: white; background: #85774A; }
+h3 { color: white; background: #9D936E; }
+h4 { color: white; background: #9D936E; }
+    
+a { color: #BA6D36; }
+
+</style>
+</head>
+<body>
+<a NAME="top" ID="top"></a>
+<h1>eric6.PipInterface.PipPackagesWidget</h1>
+
+<p>
+Module implementing the pip packages management widget.
+</p>
+<h3>Global Attributes</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Classes</h3>
+
+<table>
+
+<tr>
+<td><a href="#PipPackagesWidget">PipPackagesWidget</a></td>
+<td>Class implementing the pip packages management widget.</td>
+</tr>
+<tr>
+<td><a href="#PypiSearchResultsParser">PypiSearchResultsParser</a></td>
+<td>Class implementing the parser for the PyPI search result page.</td>
+</tr>
+</table>
+<h3>Functions</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+<hr />
+<hr />
+<a NAME="PipPackagesWidget" ID="PipPackagesWidget"></a>
+<h2>PipPackagesWidget</h2>
+
+<p>
+    Class implementing the pip packages management widget.
+</p>
+<h3>Derived from</h3>
+QWidget, Ui_PipPackagesWidget
+<h3>Class Attributes</h3>
+
+<table>
+<tr><td>SearchVersionRole</td></tr><tr><td>ShowProcessClassifiersMode</td></tr><tr><td>ShowProcessEntryPointsMode</td></tr><tr><td>ShowProcessFilesListMode</td></tr><tr><td>ShowProcessGeneralMode</td></tr>
+</table>
+<h3>Class Methods</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+
+<table>
+
+<tr>
+<td><a href="#PipPackagesWidget.__init__">PipPackagesWidget</a></td>
+<td>Constructor</td>
+</tr>
+<tr>
+<td><a href="#PipPackagesWidget.__aboutToShowPipMenu">__aboutToShowPipMenu</a></td>
+<td>Private slot to set the action enabled status.</td>
+</tr>
+<tr>
+<td><a href="#PipPackagesWidget.__allUpdateableItems">__allUpdateableItems</a></td>
+<td>Private method to get a list of all items that can be updated.</td>
+</tr>
+<tr>
+<td><a href="#PipPackagesWidget.__availablePipVersion">__availablePipVersion</a></td>
+<td>Private method to get the pip version of the selected environment.</td>
+</tr>
+<tr>
+<td><a href="#PipPackagesWidget.__editConfiguration">__editConfiguration</a></td>
+<td>Private method to edit a configuration.</td>
+</tr>
+<tr>
+<td><a href="#PipPackagesWidget.__editUserConfiguration">__editUserConfiguration</a></td>
+<td>Private slot to edit the user configuration.</td>
+</tr>
+<tr>
+<td><a href="#PipPackagesWidget.__editVirtualenvConfiguration">__editVirtualenvConfiguration</a></td>
+<td>Private slot to edit the configuration of the selected environment.</td>
+</tr>
+<tr>
+<td><a href="#PipPackagesWidget.__finishSearch">__finishSearch</a></td>
+<td>Private slot performing the search finishing actions.</td>
+</tr>
+<tr>
+<td><a href="#PipPackagesWidget.__generateRequirements">__generateRequirements</a></td>
+<td>Private slot to generate the contents for a requirements file.</td>
+</tr>
+<tr>
+<td><a href="#PipPackagesWidget.__initPipMenu">__initPipMenu</a></td>
+<td>Private method to create the super menu and attach it to the super menu button.</td>
+</tr>
+<tr>
+<td><a href="#PipPackagesWidget.__installLocalPackage">__installLocalPackage</a></td>
+<td>Private slot to install a package available on local storage.</td>
+</tr>
+<tr>
+<td><a href="#PipPackagesWidget.__installPackages">__installPackages</a></td>
+<td>Private slot to install packages to be given by the user.</td>
+</tr>
+<tr>
+<td><a href="#PipPackagesWidget.__installPip">__installPip</a></td>
+<td>Private slot to install pip into the selected environment.</td>
+</tr>
+<tr>
+<td><a href="#PipPackagesWidget.__installPipUser">__installPipUser</a></td>
+<td>Private slot to install pip into the user site for the selected environment.</td>
+</tr>
+<tr>
+<td><a href="#PipPackagesWidget.__installRequirements">__installRequirements</a></td>
+<td>Private slot to install packages as given in a requirements file.</td>
+</tr>
+<tr>
+<td><a href="#PipPackagesWidget.__isPipAvailable">__isPipAvailable</a></td>
+<td>Private method to check, if the pip package is available for the selected environment.</td>
+</tr>
+<tr>
+<td><a href="#PipPackagesWidget.__pipConfigure">__pipConfigure</a></td>
+<td>Private slot to open the configuration page.</td>
+</tr>
+<tr>
+<td><a href="#PipPackagesWidget.__populateEnvironments">__populateEnvironments</a></td>
+<td>Private method to get a list of environments and populate the selector.</td>
+</tr>
+<tr>
+<td><a href="#PipPackagesWidget.__purgeCache">__purgeCache</a></td>
+<td>Private slot to empty the pip cache.</td>
+</tr>
+<tr>
+<td><a href="#PipPackagesWidget.__refreshPackagesList">__refreshPackagesList</a></td>
+<td>Private method to referesh the packages list.</td>
+</tr>
+<tr>
+<td><a href="#PipPackagesWidget.__reinstallPackages">__reinstallPackages</a></td>
+<td>Private slot to force a re-installation of the selected packages.</td>
+</tr>
+<tr>
+<td><a href="#PipPackagesWidget.__removeCachedFiles">__removeCachedFiles</a></td>
+<td>Private slot to remove files from the pip cache.</td>
+</tr>
+<tr>
+<td><a href="#PipPackagesWidget.__repairPip">__repairPip</a></td>
+<td>Private slot to repair the pip installation of the selected environment.</td>
+</tr>
+<tr>
+<td><a href="#PipPackagesWidget.__search">__search</a></td>
+<td>Private method to perform the search by calling the PyPI search URL.</td>
+</tr>
+<tr>
+<td><a href="#PipPackagesWidget.__searchResponse">__searchResponse</a></td>
+<td>Private method to extract the search result data from the response.</td>
+</tr>
+<tr>
+<td><a href="#PipPackagesWidget.__selectedUpdateableItems">__selectedUpdateableItems</a></td>
+<td>Private method to get a list of selected items that can be updated.</td>
+</tr>
+<tr>
+<td><a href="#PipPackagesWidget.__showCacheInfo">__showCacheInfo</a></td>
+<td>Private slot to show information about the cache.</td>
+</tr>
+<tr>
+<td><a href="#PipPackagesWidget.__showCacheList">__showCacheList</a></td>
+<td>Private slot to show a list of cached files.</td>
+</tr>
+<tr>
+<td><a href="#PipPackagesWidget.__showPackageDetails">__showPackageDetails</a></td>
+<td>Private method to populate the package details dialog.</td>
+</tr>
+<tr>
+<td><a href="#PipPackagesWidget.__showSearchedDetails">__showSearchedDetails</a></td>
+<td>Private slot to show details about the selected search result package.</td>
+</tr>
+<tr>
+<td><a href="#PipPackagesWidget.__uninstallRequirements">__uninstallRequirements</a></td>
+<td>Private slot to uninstall packages as given in a requirements file.</td>
+</tr>
+<tr>
+<td><a href="#PipPackagesWidget.__updateActionButtons">__updateActionButtons</a></td>
+<td>Private method to set the state of the action buttons.</td>
+</tr>
+<tr>
+<td><a href="#PipPackagesWidget.__updateSearchActionButtons">__updateSearchActionButtons</a></td>
+<td>Private method to update the action button states of the search widget.</td>
+</tr>
+<tr>
+<td><a href="#PipPackagesWidget.__updateSearchButton">__updateSearchButton</a></td>
+<td>Private method to update the state of the search button.</td>
+</tr>
+<tr>
+<td><a href="#PipPackagesWidget.executeInstallPackages">executeInstallPackages</a></td>
+<td>Public method to install the given list of packages.</td>
+</tr>
+<tr>
+<td><a href="#PipPackagesWidget.executeUninstallPackages">executeUninstallPackages</a></td>
+<td>Public method to uninstall the given list of packages.</td>
+</tr>
+<tr>
+<td><a href="#PipPackagesWidget.executeUpgradePackages">executeUpgradePackages</a></td>
+<td>Public method to execute the pip upgrade command.</td>
+</tr>
+<tr>
+<td><a href="#PipPackagesWidget.getPip">getPip</a></td>
+<td>Public method to get a reference to the pip interface object.</td>
+</tr>
+<tr>
+<td><a href="#PipPackagesWidget.on_environmentsComboBox_currentIndexChanged">on_environmentsComboBox_currentIndexChanged</a></td>
+<td>Private slot handling the selection of a Python environment.</td>
+</tr>
+<tr>
+<td><a href="#PipPackagesWidget.on_installButton_clicked">on_installButton_clicked</a></td>
+<td>Private slot to handle pressing the Install button..</td>
+</tr>
+<tr>
+<td><a href="#PipPackagesWidget.on_installUserSiteButton_clicked">on_installUserSiteButton_clicked</a></td>
+<td>Private slot to handle pressing the Install to User-Site button..</td>
+</tr>
+<tr>
+<td><a href="#PipPackagesWidget.on_installedFilesCheckBox_clicked">on_installedFilesCheckBox_clicked</a></td>
+<td>Private slot to handle a change of the installed files information checkbox.</td>
+</tr>
+<tr>
+<td><a href="#PipPackagesWidget.on_localCheckBox_clicked">on_localCheckBox_clicked</a></td>
+<td>Private slot handling the switching of the local mode.</td>
+</tr>
+<tr>
+<td><a href="#PipPackagesWidget.on_notRequiredCheckBox_clicked">on_notRequiredCheckBox_clicked</a></td>
+<td>Private slot handling the switching of the 'not required' mode.</td>
+</tr>
+<tr>
+<td><a href="#PipPackagesWidget.on_packagesList_itemActivated">on_packagesList_itemActivated</a></td>
+<td>Private slot reacting on a package item activation.</td>
+</tr>
+<tr>
+<td><a href="#PipPackagesWidget.on_packagesList_itemSelectionChanged">on_packagesList_itemSelectionChanged</a></td>
+<td>Private slot handling the selection of a package.</td>
+</tr>
+<tr>
+<td><a href="#PipPackagesWidget.on_refreshButton_clicked">on_refreshButton_clicked</a></td>
+<td>Private slot to refresh the display.</td>
+</tr>
+<tr>
+<td><a href="#PipPackagesWidget.on_searchButton_clicked">on_searchButton_clicked</a></td>
+<td>Private slot handling a press of the search button.</td>
+</tr>
+<tr>
+<td><a href="#PipPackagesWidget.on_searchEditName_returnPressed">on_searchEditName_returnPressed</a></td>
+<td>Private slot initiating a search via a press of the Return key.</td>
+</tr>
+<tr>
+<td><a href="#PipPackagesWidget.on_searchEditName_textChanged">on_searchEditName_textChanged</a></td>
+<td>Private slot handling a change of the search term.</td>
+</tr>
+<tr>
+<td><a href="#PipPackagesWidget.on_searchResultList_itemActivated">on_searchResultList_itemActivated</a></td>
+<td>Private slot reacting on an search result item activation.</td>
+</tr>
+<tr>
+<td><a href="#PipPackagesWidget.on_searchResultList_itemSelectionChanged">on_searchResultList_itemSelectionChanged</a></td>
+<td>Private slot handling changes of the search result selection.</td>
+</tr>
+<tr>
+<td><a href="#PipPackagesWidget.on_searchToggleButton_toggled">on_searchToggleButton_toggled</a></td>
+<td>Private slot to togle the search widget.</td>
+</tr>
+<tr>
+<td><a href="#PipPackagesWidget.on_showDetailsButton_clicked">on_showDetailsButton_clicked</a></td>
+<td>Private slot to handle pressing the Show Details button.</td>
+</tr>
+<tr>
+<td><a href="#PipPackagesWidget.on_showPackageDetailsButton_clicked">on_showPackageDetailsButton_clicked</a></td>
+<td>Private slot to show information for the selected package.</td>
+</tr>
+<tr>
+<td><a href="#PipPackagesWidget.on_uninstallButton_clicked">on_uninstallButton_clicked</a></td>
+<td>Private slot to remove selected packages of the selected environment.</td>
+</tr>
+<tr>
+<td><a href="#PipPackagesWidget.on_upgradeAllButton_clicked">on_upgradeAllButton_clicked</a></td>
+<td>Private slot to upgrade all packages of the selected environment.</td>
+</tr>
+<tr>
+<td><a href="#PipPackagesWidget.on_upgradeButton_clicked">on_upgradeButton_clicked</a></td>
+<td>Private slot to upgrade selected packages of the selected environment.</td>
+</tr>
+<tr>
+<td><a href="#PipPackagesWidget.on_userCheckBox_clicked">on_userCheckBox_clicked</a></td>
+<td>Private slot handling the switching of the 'user-site' mode.</td>
+</tr>
+<tr>
+<td><a href="#PipPackagesWidget.on_verboseCheckBox_clicked">on_verboseCheckBox_clicked</a></td>
+<td>Private slot to handle a change of the verbose package information checkbox.</td>
+</tr>
+</table>
+<h3>Static Methods</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+
+<a NAME="PipPackagesWidget.__init__" ID="PipPackagesWidget.__init__"></a>
+<h4>PipPackagesWidget (Constructor)</h4>
+<b>PipPackagesWidget</b>(<i>pip, parent=None</i>)
+
+<p>
+        Constructor
+</p>
+<dl>
+
+<dt><i>pip</i> (Pip)</dt>
+<dd>
+reference to the global pip interface
+</dd>
+<dt><i>parent</i> (QWidget)</dt>
+<dd>
+reference to the parent widget
+</dd>
+</dl>
+<a NAME="PipPackagesWidget.__aboutToShowPipMenu" ID="PipPackagesWidget.__aboutToShowPipMenu"></a>
+<h4>PipPackagesWidget.__aboutToShowPipMenu</h4>
+<b>__aboutToShowPipMenu</b>(<i></i>)
+
+<p>
+        Private slot to set the action enabled status.
+</p>
+<a NAME="PipPackagesWidget.__allUpdateableItems" ID="PipPackagesWidget.__allUpdateableItems"></a>
+<h4>PipPackagesWidget.__allUpdateableItems</h4>
+<b>__allUpdateableItems</b>(<i></i>)
+
+<p>
+        Private method to get a list of all items that can be updated.
+</p>
+<dl>
+<dt>Return:</dt>
+<dd>
+list of all items that can be updated
+</dd>
+</dl>
+<dl>
+<dt>Return Type:</dt>
+<dd>
+list of QTreeWidgetItem
+</dd>
+</dl>
+<a NAME="PipPackagesWidget.__availablePipVersion" ID="PipPackagesWidget.__availablePipVersion"></a>
+<h4>PipPackagesWidget.__availablePipVersion</h4>
+<b>__availablePipVersion</b>(<i></i>)
+
+<p>
+        Private method to get the pip version of the selected environment.
+</p>
+<dl>
+<dt>Return:</dt>
+<dd>
+tuple containing the version number or tuple with all zeros
+            in case pip is not available
+</dd>
+</dl>
+<dl>
+<dt>Return Type:</dt>
+<dd>
+tuple of int
+</dd>
+</dl>
+<a NAME="PipPackagesWidget.__editConfiguration" ID="PipPackagesWidget.__editConfiguration"></a>
+<h4>PipPackagesWidget.__editConfiguration</h4>
+<b>__editConfiguration</b>(<i>venvName=""</i>)
+
+<p>
+        Private method to edit a configuration.
+</p>
+<dl>
+
+<dt><i>venvName</i> (str)</dt>
+<dd>
+name of the environment to act upon
+</dd>
+</dl>
+<a NAME="PipPackagesWidget.__editUserConfiguration" ID="PipPackagesWidget.__editUserConfiguration"></a>
+<h4>PipPackagesWidget.__editUserConfiguration</h4>
+<b>__editUserConfiguration</b>(<i></i>)
+
+<p>
+        Private slot to edit the user configuration.
+</p>
+<a NAME="PipPackagesWidget.__editVirtualenvConfiguration" ID="PipPackagesWidget.__editVirtualenvConfiguration"></a>
+<h4>PipPackagesWidget.__editVirtualenvConfiguration</h4>
+<b>__editVirtualenvConfiguration</b>(<i></i>)
+
+<p>
+        Private slot to edit the configuration of the selected environment.
+</p>
+<a NAME="PipPackagesWidget.__finishSearch" ID="PipPackagesWidget.__finishSearch"></a>
+<h4>PipPackagesWidget.__finishSearch</h4>
+<b>__finishSearch</b>(<i></i>)
+
+<p>
+        Private slot performing the search finishing actions.
+</p>
+<a NAME="PipPackagesWidget.__generateRequirements" ID="PipPackagesWidget.__generateRequirements"></a>
+<h4>PipPackagesWidget.__generateRequirements</h4>
+<b>__generateRequirements</b>(<i></i>)
+
+<p>
+        Private slot to generate the contents for a requirements file.
+</p>
+<a NAME="PipPackagesWidget.__initPipMenu" ID="PipPackagesWidget.__initPipMenu"></a>
+<h4>PipPackagesWidget.__initPipMenu</h4>
+<b>__initPipMenu</b>(<i></i>)
+
+<p>
+        Private method to create the super menu and attach it to the super
+        menu button.
+</p>
+<a NAME="PipPackagesWidget.__installLocalPackage" ID="PipPackagesWidget.__installLocalPackage"></a>
+<h4>PipPackagesWidget.__installLocalPackage</h4>
+<b>__installLocalPackage</b>(<i></i>)
+
+<p>
+        Private slot to install a package available on local storage.
+</p>
+<a NAME="PipPackagesWidget.__installPackages" ID="PipPackagesWidget.__installPackages"></a>
+<h4>PipPackagesWidget.__installPackages</h4>
+<b>__installPackages</b>(<i></i>)
+
+<p>
+        Private slot to install packages to be given by the user.
+</p>
+<a NAME="PipPackagesWidget.__installPip" ID="PipPackagesWidget.__installPip"></a>
+<h4>PipPackagesWidget.__installPip</h4>
+<b>__installPip</b>(<i></i>)
+
+<p>
+        Private slot to install pip into the selected environment.
+</p>
+<a NAME="PipPackagesWidget.__installPipUser" ID="PipPackagesWidget.__installPipUser"></a>
+<h4>PipPackagesWidget.__installPipUser</h4>
+<b>__installPipUser</b>(<i></i>)
+
+<p>
+        Private slot to install pip into the user site for the selected
+        environment.
+</p>
+<a NAME="PipPackagesWidget.__installRequirements" ID="PipPackagesWidget.__installRequirements"></a>
+<h4>PipPackagesWidget.__installRequirements</h4>
+<b>__installRequirements</b>(<i></i>)
+
+<p>
+        Private slot to install packages as given in a requirements file.
+</p>
+<a NAME="PipPackagesWidget.__isPipAvailable" ID="PipPackagesWidget.__isPipAvailable"></a>
+<h4>PipPackagesWidget.__isPipAvailable</h4>
+<b>__isPipAvailable</b>(<i></i>)
+
+<p>
+        Private method to check, if the pip package is available for the
+        selected environment.
+</p>
+<dl>
+<dt>Return:</dt>
+<dd>
+flag indicating availability
+</dd>
+</dl>
+<dl>
+<dt>Return Type:</dt>
+<dd>
+bool
+</dd>
+</dl>
+<a NAME="PipPackagesWidget.__pipConfigure" ID="PipPackagesWidget.__pipConfigure"></a>
+<h4>PipPackagesWidget.__pipConfigure</h4>
+<b>__pipConfigure</b>(<i></i>)
+
+<p>
+        Private slot to open the configuration page.
+</p>
+<a NAME="PipPackagesWidget.__populateEnvironments" ID="PipPackagesWidget.__populateEnvironments"></a>
+<h4>PipPackagesWidget.__populateEnvironments</h4>
+<b>__populateEnvironments</b>(<i></i>)
+
+<p>
+        Private method to get a list of environments and populate the selector.
+</p>
+<a NAME="PipPackagesWidget.__purgeCache" ID="PipPackagesWidget.__purgeCache"></a>
+<h4>PipPackagesWidget.__purgeCache</h4>
+<b>__purgeCache</b>(<i></i>)
+
+<p>
+        Private slot to empty the pip cache.
+</p>
+<a NAME="PipPackagesWidget.__refreshPackagesList" ID="PipPackagesWidget.__refreshPackagesList"></a>
+<h4>PipPackagesWidget.__refreshPackagesList</h4>
+<b>__refreshPackagesList</b>(<i></i>)
+
+<p>
+        Private method to referesh the packages list.
+</p>
+<a NAME="PipPackagesWidget.__reinstallPackages" ID="PipPackagesWidget.__reinstallPackages"></a>
+<h4>PipPackagesWidget.__reinstallPackages</h4>
+<b>__reinstallPackages</b>(<i></i>)
+
+<p>
+        Private slot to force a re-installation of the selected packages.
+</p>
+<a NAME="PipPackagesWidget.__removeCachedFiles" ID="PipPackagesWidget.__removeCachedFiles"></a>
+<h4>PipPackagesWidget.__removeCachedFiles</h4>
+<b>__removeCachedFiles</b>(<i></i>)
+
+<p>
+        Private slot to remove files from the pip cache.
+</p>
+<a NAME="PipPackagesWidget.__repairPip" ID="PipPackagesWidget.__repairPip"></a>
+<h4>PipPackagesWidget.__repairPip</h4>
+<b>__repairPip</b>(<i></i>)
+
+<p>
+        Private slot to repair the pip installation of the selected
+        environment.
+</p>
+<a NAME="PipPackagesWidget.__search" ID="PipPackagesWidget.__search"></a>
+<h4>PipPackagesWidget.__search</h4>
+<b>__search</b>(<i></i>)
+
+<p>
+        Private method to perform the search by calling the PyPI search URL.
+</p>
+<a NAME="PipPackagesWidget.__searchResponse" ID="PipPackagesWidget.__searchResponse"></a>
+<h4>PipPackagesWidget.__searchResponse</h4>
+<b>__searchResponse</b>(<i>reply</i>)
+
+<p>
+        Private method to extract the search result data from the response.
+</p>
+<dl>
+
+<dt><i>reply</i> (QNetworkReply)</dt>
+<dd>
+reference to the reply object containing the data
+</dd>
+</dl>
+<a NAME="PipPackagesWidget.__selectedUpdateableItems" ID="PipPackagesWidget.__selectedUpdateableItems"></a>
+<h4>PipPackagesWidget.__selectedUpdateableItems</h4>
+<b>__selectedUpdateableItems</b>(<i></i>)
+
+<p>
+        Private method to get a list of selected items that can be updated.
+</p>
+<dl>
+<dt>Return:</dt>
+<dd>
+list of selected items that can be updated
+</dd>
+</dl>
+<dl>
+<dt>Return Type:</dt>
+<dd>
+list of QTreeWidgetItem
+</dd>
+</dl>
+<a NAME="PipPackagesWidget.__showCacheInfo" ID="PipPackagesWidget.__showCacheInfo"></a>
+<h4>PipPackagesWidget.__showCacheInfo</h4>
+<b>__showCacheInfo</b>(<i></i>)
+
+<p>
+        Private slot to show information about the cache.
+</p>
+<a NAME="PipPackagesWidget.__showCacheList" ID="PipPackagesWidget.__showCacheList"></a>
+<h4>PipPackagesWidget.__showCacheList</h4>
+<b>__showCacheList</b>(<i></i>)
+
+<p>
+        Private slot to show a list of cached files.
+</p>
+<a NAME="PipPackagesWidget.__showPackageDetails" ID="PipPackagesWidget.__showPackageDetails"></a>
+<h4>PipPackagesWidget.__showPackageDetails</h4>
+<b>__showPackageDetails</b>(<i>packageName, packageVersion, upgradable=False, installable=False</i>)
+
+<p>
+        Private method to populate the package details dialog.
+</p>
+<dl>
+
+<dt><i>packageName</i> (str)</dt>
+<dd>
+name of the package to show details for
+</dd>
+<dt><i>packageVersion</i> (str)</dt>
+<dd>
+version of the package
+</dd>
+<dt><i>upgradable</i> (bool (optional))</dt>
+<dd>
+flag indicating that the package may be upgraded
+            (defaults to False)
+</dd>
+<dt><i>installable</i> (bool (optional))</dt>
+<dd>
+flag indicating that the package may be installed
+            (defaults to False)
+</dd>
+</dl>
+<a NAME="PipPackagesWidget.__showSearchedDetails" ID="PipPackagesWidget.__showSearchedDetails"></a>
+<h4>PipPackagesWidget.__showSearchedDetails</h4>
+<b>__showSearchedDetails</b>(<i>item=None</i>)
+
+<p>
+        Private slot to show details about the selected search result package.
+</p>
+<dl>
+
+<dt><i>item</i> (QTreeWidgetItem)</dt>
+<dd>
+reference to the search result item to show details for
+</dd>
+</dl>
+<a NAME="PipPackagesWidget.__uninstallRequirements" ID="PipPackagesWidget.__uninstallRequirements"></a>
+<h4>PipPackagesWidget.__uninstallRequirements</h4>
+<b>__uninstallRequirements</b>(<i></i>)
+
+<p>
+        Private slot to uninstall packages as given in a requirements file.
+</p>
+<a NAME="PipPackagesWidget.__updateActionButtons" ID="PipPackagesWidget.__updateActionButtons"></a>
+<h4>PipPackagesWidget.__updateActionButtons</h4>
+<b>__updateActionButtons</b>(<i></i>)
+
+<p>
+        Private method to set the state of the action buttons.
+</p>
+<a NAME="PipPackagesWidget.__updateSearchActionButtons" ID="PipPackagesWidget.__updateSearchActionButtons"></a>
+<h4>PipPackagesWidget.__updateSearchActionButtons</h4>
+<b>__updateSearchActionButtons</b>(<i></i>)
+
+<p>
+        Private method to update the action button states of the search widget.
+</p>
+<a NAME="PipPackagesWidget.__updateSearchButton" ID="PipPackagesWidget.__updateSearchButton"></a>
+<h4>PipPackagesWidget.__updateSearchButton</h4>
+<b>__updateSearchButton</b>(<i></i>)
+
+<p>
+        Private method to update the state of the search button.
+</p>
+<a NAME="PipPackagesWidget.executeInstallPackages" ID="PipPackagesWidget.executeInstallPackages"></a>
+<h4>PipPackagesWidget.executeInstallPackages</h4>
+<b>executeInstallPackages</b>(<i>packages, userSite=False</i>)
+
+<p>
+        Public method to install the given list of packages.
+</p>
+<dl>
+
+<dt><i>packages</i> (list of str)</dt>
+<dd>
+list of package names to be installed
+</dd>
+<dt><i>userSite</i> (bool)</dt>
+<dd>
+flag indicating to install to the user directory
+</dd>
+</dl>
+<a NAME="PipPackagesWidget.executeUninstallPackages" ID="PipPackagesWidget.executeUninstallPackages"></a>
+<h4>PipPackagesWidget.executeUninstallPackages</h4>
+<b>executeUninstallPackages</b>(<i>packages</i>)
+
+<p>
+        Public method to uninstall the given list of packages.
+</p>
+<dl>
+
+<dt><i>packages</i> (list of str)</dt>
+<dd>
+list of package names to be uninstalled
+</dd>
+</dl>
+<a NAME="PipPackagesWidget.executeUpgradePackages" ID="PipPackagesWidget.executeUpgradePackages"></a>
+<h4>PipPackagesWidget.executeUpgradePackages</h4>
+<b>executeUpgradePackages</b>(<i>packages</i>)
+
+<p>
+        Public method to execute the pip upgrade command.
+</p>
+<dl>
+
+<dt><i>packages</i> (list of str)</dt>
+<dd>
+list of package names to be upgraded
+</dd>
+</dl>
+<a NAME="PipPackagesWidget.getPip" ID="PipPackagesWidget.getPip"></a>
+<h4>PipPackagesWidget.getPip</h4>
+<b>getPip</b>(<i></i>)
+
+<p>
+        Public method to get a reference to the pip interface object.
+</p>
+<dl>
+<dt>Return:</dt>
+<dd>
+reference to the pip interface object
+</dd>
+</dl>
+<dl>
+<dt>Return Type:</dt>
+<dd>
+Pip
+</dd>
+</dl>
+<a NAME="PipPackagesWidget.on_environmentsComboBox_currentIndexChanged" ID="PipPackagesWidget.on_environmentsComboBox_currentIndexChanged"></a>
+<h4>PipPackagesWidget.on_environmentsComboBox_currentIndexChanged</h4>
+<b>on_environmentsComboBox_currentIndexChanged</b>(<i>index</i>)
+
+<p>
+        Private slot handling the selection of a Python environment.
+</p>
+<dl>
+
+<dt><i>index</i> (int)</dt>
+<dd>
+index of the selected Python environment
+</dd>
+</dl>
+<a NAME="PipPackagesWidget.on_installButton_clicked" ID="PipPackagesWidget.on_installButton_clicked"></a>
+<h4>PipPackagesWidget.on_installButton_clicked</h4>
+<b>on_installButton_clicked</b>(<i></i>)
+
+<p>
+        Private slot to handle pressing the Install button..
+</p>
+<a NAME="PipPackagesWidget.on_installUserSiteButton_clicked" ID="PipPackagesWidget.on_installUserSiteButton_clicked"></a>
+<h4>PipPackagesWidget.on_installUserSiteButton_clicked</h4>
+<b>on_installUserSiteButton_clicked</b>(<i></i>)
+
+<p>
+        Private slot to handle pressing the Install to User-Site button..
+</p>
+<a NAME="PipPackagesWidget.on_installedFilesCheckBox_clicked" ID="PipPackagesWidget.on_installedFilesCheckBox_clicked"></a>
+<h4>PipPackagesWidget.on_installedFilesCheckBox_clicked</h4>
+<b>on_installedFilesCheckBox_clicked</b>(<i>checked</i>)
+
+<p>
+        Private slot to handle a change of the installed files information
+        checkbox.
+</p>
+<dl>
+
+<dt><i>checked</i> (bool)</dt>
+<dd>
+state of the checkbox
+</dd>
+</dl>
+<a NAME="PipPackagesWidget.on_localCheckBox_clicked" ID="PipPackagesWidget.on_localCheckBox_clicked"></a>
+<h4>PipPackagesWidget.on_localCheckBox_clicked</h4>
+<b>on_localCheckBox_clicked</b>(<i>checked</i>)
+
+<p>
+        Private slot handling the switching of the local mode.
+</p>
+<dl>
+
+<dt><i>checked</i> (bool)</dt>
+<dd>
+state of the local check box
+</dd>
+</dl>
+<a NAME="PipPackagesWidget.on_notRequiredCheckBox_clicked" ID="PipPackagesWidget.on_notRequiredCheckBox_clicked"></a>
+<h4>PipPackagesWidget.on_notRequiredCheckBox_clicked</h4>
+<b>on_notRequiredCheckBox_clicked</b>(<i>checked</i>)
+
+<p>
+        Private slot handling the switching of the 'not required' mode.
+</p>
+<dl>
+
+<dt><i>checked</i> (bool)</dt>
+<dd>
+state of the 'not required' check box
+</dd>
+</dl>
+<a NAME="PipPackagesWidget.on_packagesList_itemActivated" ID="PipPackagesWidget.on_packagesList_itemActivated"></a>
+<h4>PipPackagesWidget.on_packagesList_itemActivated</h4>
+<b>on_packagesList_itemActivated</b>(<i>item, column</i>)
+
+<p>
+        Private slot reacting on a package item activation.
+</p>
+<dl>
+
+<dt><i>item</i> (QTreeWidgetItem)</dt>
+<dd>
+reference to the activated item
+</dd>
+<dt><i>column</i> (int)</dt>
+<dd>
+activated column
+</dd>
+</dl>
+<a NAME="PipPackagesWidget.on_packagesList_itemSelectionChanged" ID="PipPackagesWidget.on_packagesList_itemSelectionChanged"></a>
+<h4>PipPackagesWidget.on_packagesList_itemSelectionChanged</h4>
+<b>on_packagesList_itemSelectionChanged</b>(<i></i>)
+
+<p>
+        Private slot handling the selection of a package.
+</p>
+<a NAME="PipPackagesWidget.on_refreshButton_clicked" ID="PipPackagesWidget.on_refreshButton_clicked"></a>
+<h4>PipPackagesWidget.on_refreshButton_clicked</h4>
+<b>on_refreshButton_clicked</b>(<i></i>)
+
+<p>
+        Private slot to refresh the display.
+</p>
+<a NAME="PipPackagesWidget.on_searchButton_clicked" ID="PipPackagesWidget.on_searchButton_clicked"></a>
+<h4>PipPackagesWidget.on_searchButton_clicked</h4>
+<b>on_searchButton_clicked</b>(<i></i>)
+
+<p>
+        Private slot handling a press of the search button.
+</p>
+<a NAME="PipPackagesWidget.on_searchEditName_returnPressed" ID="PipPackagesWidget.on_searchEditName_returnPressed"></a>
+<h4>PipPackagesWidget.on_searchEditName_returnPressed</h4>
+<b>on_searchEditName_returnPressed</b>(<i></i>)
+
+<p>
+        Private slot initiating a search via a press of the Return key.
+</p>
+<a NAME="PipPackagesWidget.on_searchEditName_textChanged" ID="PipPackagesWidget.on_searchEditName_textChanged"></a>
+<h4>PipPackagesWidget.on_searchEditName_textChanged</h4>
+<b>on_searchEditName_textChanged</b>(<i>txt</i>)
+
+<p>
+        Private slot handling a change of the search term.
+</p>
+<dl>
+
+<dt><i>txt</i> (str)</dt>
+<dd>
+search term
+</dd>
+</dl>
+<a NAME="PipPackagesWidget.on_searchResultList_itemActivated" ID="PipPackagesWidget.on_searchResultList_itemActivated"></a>
+<h4>PipPackagesWidget.on_searchResultList_itemActivated</h4>
+<b>on_searchResultList_itemActivated</b>(<i>item, column</i>)
+
+<p>
+        Private slot reacting on an search result item activation.
+</p>
+<dl>
+
+<dt><i>item</i> (QTreeWidgetItem)</dt>
+<dd>
+reference to the activated item
+</dd>
+<dt><i>column</i> (int)</dt>
+<dd>
+activated column
+</dd>
+</dl>
+<a NAME="PipPackagesWidget.on_searchResultList_itemSelectionChanged" ID="PipPackagesWidget.on_searchResultList_itemSelectionChanged"></a>
+<h4>PipPackagesWidget.on_searchResultList_itemSelectionChanged</h4>
+<b>on_searchResultList_itemSelectionChanged</b>(<i></i>)
+
+<p>
+        Private slot handling changes of the search result selection.
+</p>
+<a NAME="PipPackagesWidget.on_searchToggleButton_toggled" ID="PipPackagesWidget.on_searchToggleButton_toggled"></a>
+<h4>PipPackagesWidget.on_searchToggleButton_toggled</h4>
+<b>on_searchToggleButton_toggled</b>(<i>checked</i>)
+
+<p>
+        Private slot to togle the search widget.
+</p>
+<dl>
+
+<dt><i>checked</i> (bool)</dt>
+<dd>
+state of the search widget button
+</dd>
+</dl>
+<a NAME="PipPackagesWidget.on_showDetailsButton_clicked" ID="PipPackagesWidget.on_showDetailsButton_clicked"></a>
+<h4>PipPackagesWidget.on_showDetailsButton_clicked</h4>
+<b>on_showDetailsButton_clicked</b>(<i></i>)
+
+<p>
+        Private slot to handle pressing the Show Details button.
+</p>
+<a NAME="PipPackagesWidget.on_showPackageDetailsButton_clicked" ID="PipPackagesWidget.on_showPackageDetailsButton_clicked"></a>
+<h4>PipPackagesWidget.on_showPackageDetailsButton_clicked</h4>
+<b>on_showPackageDetailsButton_clicked</b>(<i></i>)
+
+<p>
+        Private slot to show information for the selected package.
+</p>
+<a NAME="PipPackagesWidget.on_uninstallButton_clicked" ID="PipPackagesWidget.on_uninstallButton_clicked"></a>
+<h4>PipPackagesWidget.on_uninstallButton_clicked</h4>
+<b>on_uninstallButton_clicked</b>(<i></i>)
+
+<p>
+        Private slot to remove selected packages of the selected environment.
+</p>
+<a NAME="PipPackagesWidget.on_upgradeAllButton_clicked" ID="PipPackagesWidget.on_upgradeAllButton_clicked"></a>
+<h4>PipPackagesWidget.on_upgradeAllButton_clicked</h4>
+<b>on_upgradeAllButton_clicked</b>(<i></i>)
+
+<p>
+        Private slot to upgrade all packages of the selected environment.
+</p>
+<a NAME="PipPackagesWidget.on_upgradeButton_clicked" ID="PipPackagesWidget.on_upgradeButton_clicked"></a>
+<h4>PipPackagesWidget.on_upgradeButton_clicked</h4>
+<b>on_upgradeButton_clicked</b>(<i></i>)
+
+<p>
+        Private slot to upgrade selected packages of the selected environment.
+</p>
+<a NAME="PipPackagesWidget.on_userCheckBox_clicked" ID="PipPackagesWidget.on_userCheckBox_clicked"></a>
+<h4>PipPackagesWidget.on_userCheckBox_clicked</h4>
+<b>on_userCheckBox_clicked</b>(<i>checked</i>)
+
+<p>
+        Private slot handling the switching of the 'user-site' mode.
+</p>
+<dl>
+
+<dt><i>checked</i> (bool)</dt>
+<dd>
+state of the 'user-site' check box
+</dd>
+</dl>
+<a NAME="PipPackagesWidget.on_verboseCheckBox_clicked" ID="PipPackagesWidget.on_verboseCheckBox_clicked"></a>
+<h4>PipPackagesWidget.on_verboseCheckBox_clicked</h4>
+<b>on_verboseCheckBox_clicked</b>(<i>checked</i>)
+
+<p>
+        Private slot to handle a change of the verbose package information
+        checkbox.
+</p>
+<dl>
+
+<dt><i>checked</i> (bool)</dt>
+<dd>
+state of the checkbox
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+<hr />
+<a NAME="PypiSearchResultsParser" ID="PypiSearchResultsParser"></a>
+<h2>PypiSearchResultsParser</h2>
+
+<p>
+    Class implementing the parser for the PyPI search result page.
+</p>
+<h3>Derived from</h3>
+html.parser.HTMLParser
+<h3>Class Attributes</h3>
+
+<table>
+<tr><td>ClassPrefix</td></tr>
+</table>
+<h3>Class Methods</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+
+<table>
+
+<tr>
+<td><a href="#PypiSearchResultsParser.__init__">PypiSearchResultsParser</a></td>
+<td>Constructor</td>
+</tr>
+<tr>
+<td><a href="#PypiSearchResultsParser.__getClass">__getClass</a></td>
+<td>Private method to extract the class attribute out of the list of attributes.</td>
+</tr>
+<tr>
+<td><a href="#PypiSearchResultsParser.__getDate">__getDate</a></td>
+<td>Private method to extract the datetime attribute out of the list of attributes and process it.</td>
+</tr>
+<tr>
+<td><a href="#PypiSearchResultsParser.getResults">getResults</a></td>
+<td>Public method to get the extracted search results.</td>
+</tr>
+<tr>
+<td><a href="#PypiSearchResultsParser.handle_data">handle_data</a></td>
+<td>Public method process arbitrary data.</td>
+</tr>
+<tr>
+<td><a href="#PypiSearchResultsParser.handle_endtag">handle_endtag</a></td>
+<td>Public method to process the end tag.</td>
+</tr>
+<tr>
+<td><a href="#PypiSearchResultsParser.handle_starttag">handle_starttag</a></td>
+<td>Public method to process the start tag.</td>
+</tr>
+</table>
+<h3>Static Methods</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+
+<a NAME="PypiSearchResultsParser.__init__" ID="PypiSearchResultsParser.__init__"></a>
+<h4>PypiSearchResultsParser (Constructor)</h4>
+<b>PypiSearchResultsParser</b>(<i>data</i>)
+
+<p>
+        Constructor
+</p>
+<dl>
+
+<dt><i>data</i> (str)</dt>
+<dd>
+data to be parsed
+</dd>
+</dl>
+<a NAME="PypiSearchResultsParser.__getClass" ID="PypiSearchResultsParser.__getClass"></a>
+<h4>PypiSearchResultsParser.__getClass</h4>
+<b>__getClass</b>(<i>attrs</i>)
+
+<p>
+        Private method to extract the class attribute out of the list of
+        attributes.
+</p>
+<dl>
+
+<dt><i>attrs</i> (list of tuple of (str, str))</dt>
+<dd>
+list of tag attributes as (name, value) tuples
+</dd>
+</dl>
+<dl>
+<dt>Return:</dt>
+<dd>
+value of the 'class' attribute or None
+</dd>
+</dl>
+<dl>
+<dt>Return Type:</dt>
+<dd>
+str
+</dd>
+</dl>
+<a NAME="PypiSearchResultsParser.__getDate" ID="PypiSearchResultsParser.__getDate"></a>
+<h4>PypiSearchResultsParser.__getDate</h4>
+<b>__getDate</b>(<i>attrs</i>)
+
+<p>
+        Private method to extract the datetime attribute out of the list of
+        attributes and process it.
+</p>
+<dl>
+
+<dt><i>attrs</i> (list of tuple of (str, str))</dt>
+<dd>
+list of tag attributes as (name, value) tuples
+</dd>
+</dl>
+<dl>
+<dt>Return:</dt>
+<dd>
+value of the 'class' attribute or None
+</dd>
+</dl>
+<dl>
+<dt>Return Type:</dt>
+<dd>
+str
+</dd>
+</dl>
+<a NAME="PypiSearchResultsParser.getResults" ID="PypiSearchResultsParser.getResults"></a>
+<h4>PypiSearchResultsParser.getResults</h4>
+<b>getResults</b>(<i></i>)
+
+<p>
+        Public method to get the extracted search results.
+</p>
+<dl>
+<dt>Return:</dt>
+<dd>
+extracted result data
+</dd>
+</dl>
+<dl>
+<dt>Return Type:</dt>
+<dd>
+list of dict
+</dd>
+</dl>
+<a NAME="PypiSearchResultsParser.handle_data" ID="PypiSearchResultsParser.handle_data"></a>
+<h4>PypiSearchResultsParser.handle_data</h4>
+<b>handle_data</b>(<i>data</i>)
+
+<p>
+        Public method process arbitrary data.
+</p>
+<dl>
+
+<dt><i>data</i> (str)</dt>
+<dd>
+data to be processed
+</dd>
+</dl>
+<a NAME="PypiSearchResultsParser.handle_endtag" ID="PypiSearchResultsParser.handle_endtag"></a>
+<h4>PypiSearchResultsParser.handle_endtag</h4>
+<b>handle_endtag</b>(<i>tag</i>)
+
+<p>
+        Public method to process the end tag.
+</p>
+<dl>
+
+<dt><i>tag</i> (str)</dt>
+<dd>
+tag name (all lowercase)
+</dd>
+</dl>
+<a NAME="PypiSearchResultsParser.handle_starttag" ID="PypiSearchResultsParser.handle_starttag"></a>
+<h4>PypiSearchResultsParser.handle_starttag</h4>
+<b>handle_starttag</b>(<i>tag, attrs</i>)
+
+<p>
+        Public method to process the start tag.
+</p>
+<dl>
+
+<dt><i>tag</i> (str)</dt>
+<dd>
+tag name (all lowercase)
+</dd>
+<dt><i>attrs</i> (list of tuple of (str, str))</dt>
+<dd>
+list of tag attributes as (name, value) tuples
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+</body></html>

@@ -1,0 +1,691 @@
+analogio.AnalogIn.deinit?4()
+analogio.AnalogIn.reference_voltage?7
+analogio.AnalogIn.value?7
+analogio.AnalogIn?1(pin)
+analogio.AnalogOut.deinit?4()
+analogio.AnalogOut.value?7
+analogio.AnalogOut?1(pin)
+array.array.append?4(value)
+array.array.extend?4(iterable)
+array.array?1(typecode, iterable=None)
+audiobusio.I2SOut.deinit?4()
+audiobusio.I2SOut.pause?4()
+audiobusio.I2SOut.paused?7
+audiobusio.I2SOut.play?4(sample, *, loop=False)
+audiobusio.I2SOut.playing?7
+audiobusio.I2SOut.resume?4()
+audiobusio.I2SOut.stop?4()
+audiobusio.I2SOut?1(bit_clock, word_select, data, *, left_justified)
+audiobusio.PDMIn.deinit?4()
+audiobusio.PDMIn.record?4(destination, destination_length)
+audiobusio.PDMIn.sample_rate?7
+audiobusio.PDMIn?1(clock_pin, data_pin, *, sample_rate=16000, bit_depth=8, mono=True, oversample=64, startup_delay=0.11)
+audiocore.Mixer.deinit?4()
+audiocore.Mixer.play?4(sample, *, voice=0, loop=False)
+audiocore.Mixer.playing?7
+audiocore.Mixer.sample_rate?7
+audiocore.Mixer.stop_voice?4(voice=0)
+audiocore.Mixer?1(channel_count=2, buffer_size=1024)
+audiocore.RawSample.deinit?4()
+audiocore.RawSample.sample_rate?7
+audiocore.RawSample?1(buffer, *, channel_count=1, sample_rate=8000)
+audiocore.WaveFile.bits_per_sample?7
+audiocore.WaveFile.channel_count?7
+audiocore.WaveFile.deinit?4()
+audiocore.WaveFile.sample_rate?7
+audiocore.WaveFile?1(file, buffer=None)
+audioio.AudioOut.deinit?4()
+audioio.AudioOut.pause?4()
+audioio.AudioOut.paused?7
+audioio.AudioOut.play?4(sample, *, loop=False)
+audioio.AudioOut.playing?7
+audioio.AudioOut.resume?4()
+audioio.AudioOut.stop?4()
+audioio.AudioOut?1(left_channel, *, right_channel=None, quiescent_value=0x8000)
+audiopwmio.PWMAudioOut.deinit?4()
+audiopwmio.PWMAudioOut.pause?4()
+audiopwmio.PWMAudioOut.paused?7
+audiopwmio.PWMAudioOut.play?4(sample, *, loop=False)
+audiopwmio.PWMAudioOut.playing?7
+audiopwmio.PWMAudioOut.resume?4()
+audiopwmio.PWMAudioOut.stop?4()
+audiopwmio.PWMAudioOut?1(left_channel, *, right_channel=None, quiescent_value=0x8000)
+binascii.a2b_base64?4(data)
+binascii.b2a_base64?4(data)
+binascii.hexlify?4(data, sep="")
+binascii.unhexlify?4(data)
+bitbangio.I2C.deinit?4()
+bitbangio.I2C.readfrom_into?4(address, buffer, *, start=0, end=None)
+bitbangio.I2C.scan?4()
+bitbangio.I2C.try_lock?4()
+bitbangio.I2C.unlock?4()
+bitbangio.I2C.writeto?4(address, buffer, *, start=0, end=None, stop=True)
+bitbangio.I2C.writeto_then_readfrom?4(address, out_buffer, in_buffer, *, out_start=0, out_end=None, in_start=0, in_end=None)
+bitbangio.I2C?1(scl, sda, *, frequency=400000, timeout)
+bitbangio.OneWire.deinit?4()
+bitbangio.OneWire.read_bit?4()
+bitbangio.OneWire.reset?4()
+bitbangio.OneWire.write_bit?4(value)
+bitbangio.OneWire?1(pin)
+bitbangio.SPI.configure?4(*, baudrate=100000, polarity=0, phase=0, bits=8)
+bitbangio.SPI.deinit?4()
+bitbangio.SPI.readinto?4(buf)
+bitbangio.SPI.try_lock?4()
+bitbangio.SPI.unlock?4()
+bitbangio.SPI.write?4(buf)
+bitbangio.SPI.write_readinto?4(buffer_out, buffer_in, *, out_start=0, out_end=None, in_start=0, in_end=None)
+bitbangio.SPI?1(clock, MOSI=None, MISO=None)
+bleio.Adapter.address?7
+bleio.Adapter.default_name?7
+bleio.Adapter.enabled?7
+bleio.Address.PUBLIC?7
+bleio.Address.RANDOM_PRIVATE_NON_RESOLVABLE?7
+bleio.Address.RANDOM_PRIVATE_RESOLVABLE?7
+bleio.Address.RANDOM_STATIC?7
+bleio.Address.address_bytes?7
+bleio.Address.type?7
+bleio.Address?1(address, address_type)
+bleio.Attribute.ENCRYPT_NO_MITM?7
+bleio.Attribute.ENCRYPT_WITH_MITM?7
+bleio.Attribute.LESC_ENCRYPT_WITH_MITM?7
+bleio.Attribute.NO_ACCESS?7
+bleio.Attribute.OPEN?7
+bleio.Attribute.SIGNED_NO_MITM?7
+bleio.Attribute.SIGNED_WITH_MITM?7
+bleio.Central.connect?4(address, timeout, *, service_uuids_whitelist=None)
+bleio.Central.connected?7
+bleio.Central.disconnect?4()
+bleio.Central.discover_remote_services?4(service_uuids_whitelist=None)
+bleio.Central?1()
+bleio.Characteristic.BROADCAST?7
+bleio.Characteristic.INDICATE?7
+bleio.Characteristic.NOTIFY?7
+bleio.Characteristic.READ?7
+bleio.Characteristic.WRITE?7
+bleio.Characteristic.WRITE_NO_RESPONSE?7
+bleio.Characteristic.descriptors?7
+bleio.Characteristic.properties?7
+bleio.Characteristic.service?4(read_only)
+bleio.Characteristic.set_cccd?4(*, notify=False, indicate=False)
+bleio.Characteristic.uuid?7
+bleio.Characteristic.value?7
+bleio.Characteristic?1(uuid, *, properties=0, read_perm=Attribute.OPEN, write_perm=Attribute.OPEN, max_length=20, fixed_length=False, descriptors=None)
+bleio.CharacteristicBuffer.deinit?4()
+bleio.CharacteristicBuffer.in_waiting?7
+bleio.CharacteristicBuffer.read?4(nbytes=None)
+bleio.CharacteristicBuffer.readinto?4(buf)
+bleio.CharacteristicBuffer.readline?4()
+bleio.CharacteristicBuffer.reset_input_buffer?4()
+bleio.CharacteristicBuffer?1(characteristic, *, timeout=1, buffer_size=64)
+bleio.Descriptor.characteristic?4(read_only)
+bleio.Descriptor.uuid?7
+bleio.Descriptor.value?7
+bleio.Descriptor?1(uuid, *, read_perm=Attribute.OPEN, write_perm=Attribute.OPEN)
+bleio.Peripheral.connected?4(read_only)
+bleio.Peripheral.disconnect?4()
+bleio.Peripheral.discover_remote_services?4(service_uuids_whitelist=None)
+bleio.Peripheral.name?7
+bleio.Peripheral.pair?4()
+bleio.Peripheral.services?7
+bleio.Peripheral.start_advertising?4(data, *, scan_response=None, connectable=True, interval=1)
+bleio.Peripheral.stop_advertising?4()
+bleio.Peripheral?1(services=(), *, name=None)
+bleio.ScanEntry.address?7
+bleio.ScanEntry.advertisement_bytes?7
+bleio.ScanEntry.rssi?7
+bleio.Scanner.scan?4(timeout, *, interval=0.1, window=0.1)
+bleio.Scanner?1()
+bleio.Service.remotes?7
+bleio.Service.secondary?7
+bleio.Service.uuids?7
+bleio.Service?1(uuid, characteristics, *, secondary=False)
+bleio.UUID.size?7
+bleio.UUID.uuid128?7
+bleio.UUID.uuid16?7
+bleio.UUID?1(value)
+bleio.adapter?7
+board.I2C?4()
+board.SPI?4()
+board.UART?4()
+btree.BTree.close?4()
+btree.BTree.flush?4()
+btree.BTree.get?4(key, default=None)
+btree.BTree.items?4(start_key=None, end_key=None, flags=0)
+btree.BTree.keys?4(start_key=None, end_key=None, flags=0)
+btree.BTree.values?4(start_key=None, end_key=None, flags=0)
+btree.DESC?7
+btree.INCL?7
+btree.open?4(stream, *, flags=0, pagesize=0, cachesize=0, minkeypage=0)
+busio.I2C.deinit?4()
+busio.I2C.readfrom_into?4(address, buffer, *, start=0, end=None)
+busio.I2C.scan?4()
+busio.I2C.try_lock?4()
+busio.I2C.unlock?4()
+busio.I2C.writeto?4(address, buffer, *, start=0, end=None, stop=True)
+busio.I2C?1(scl, sda, *, frequency=400000)
+busio.OneWire.deinit?4()
+busio.OneWire.read_bit?4()
+busio.OneWire.reset?4()
+busio.OneWire.write_bit?4(value)
+busio.OneWire?1(pin)
+busio.SPI.configure?4(*, baudrate=100000, polarity=0, phase=0, bits=8)
+busio.SPI.deinit?4()
+busio.SPI.frequency?7
+busio.SPI.readinto?4(buffer, *, start=0, end=None, write_value=0)
+busio.SPI.try_lock?4()
+busio.SPI.unlock?4()
+busio.SPI.write?4(buffer, *, start=0, end=None)
+busio.SPI.write_readinto?4(buffer_out, buffer_in, *, out_start=0, out_end=None, in_start=0, in_end=None)
+busio.SPI?1(clock, MOSI=None, MISO=None)
+busio.UART.baudrate?7
+busio.UART.deinit?4()
+busio.UART.in_waiting?7
+busio.UART.read?4(nbytes=None)
+busio.UART.readinto?4(buf)
+busio.UART.readline?4()
+busio.UART.reset_input_buffer?4()
+busio.UART.write?4(buf)
+busio.UART?1(x, rx, *, baudrate=9600, bits=8, parity=None, stop=1, timeout=1, receiver_buffer_size=64)
+collections.OrderedDict?1(iterableOfKeyValue)
+collections.namedtuple?1(name, fields)
+digitalio.DigitalInOut.deinit?4()
+digitalio.DigitalInOut.direction?7
+digitalio.DigitalInOut.drive_mode?7
+digitalio.DigitalInOut.pull?7
+digitalio.DigitalInOut.switch_to_input?4(pull=None)
+digitalio.DigitalInOut.switch_to_output?4(value=False, drive_mode=DriveMode.PUSH_PULL)
+digitalio.DigitalInOut.value?7
+digitalio.DigitalInOut?1(pin)
+digitalio.DriveMode.OPEN_DRAIN?7
+digitalio.DriveMode.PUSH_PULL?7
+digitalio.Pull.DOWN?7
+digitalio.Pull.UP?7
+displayio.Bitmap.height?7
+displayio.Bitmap.width?7
+displayio.Bitmap?1(width, height, value_count)
+displayio.ColorConverter.convert?4(color)
+displayio.ColorConverter?1()
+displayio.Display.auto_brightness?7
+displayio.Display.brightness?7
+displayio.Display.bus?7
+displayio.Display.height?7
+displayio.Display.refresh_soon?4()
+displayio.Display.show?4(group)
+displayio.Display.wait_for_frame?4()
+displayio.Display.width?7
+displayio.Display?1(display_bus, init_sequence, *, width, height, colstart=0, rowstart=0, rotation=0, color_depth=16, set_column_command=0x2a, set_row_command=0x2b, write_ram_command=0x2c, set_vertical_scroll=0, backlight_pin=None, brightness=1.0, auto_brightness=False, single_byte_bounds=False, data_as_commands=False)
+displayio.FourWire.send?4(command, data)
+displayio.FourWire?1(spi_bus, *, command, chip_select, reset=None)
+displayio.Group.append?4(layer)
+displayio.Group.insert?4(index, layer)
+displayio.Group.pop?4(i=-1)
+displayio.Group.scale?7
+displayio.Group.x?7
+displayio.Group.y?7
+displayio.Group?1(*, max_size=4, scale=1, x=0, y=0)
+displayio.OnDiskBitmap.height?7
+displayio.OnDiskBitmap.width?7
+displayio.OnDiskBitmap?1(file)
+displayio.Palette.make_opaque?4(palette_index)
+displayio.Palette.make_transparent?4(palette_index)
+displayio.Palette?1(color_count)
+displayio.ParallelBus.send?4(command, data)
+displayio.ParallelBus?1(*, data0, command, chip_select, write, read, reset)
+displayio.Shape.set_boundary?4(y, start_x, end_x)
+displayio.Shape?1(width, height, *, mirror_x=False, mirror_y=False)
+displayio.TileGrid.pixel_shader?7
+displayio.TileGrid.x?7
+displayio.TileGrid.y?7
+displayio.TileGrid?1(bitmap, *, pixel_shader, width=1, height=1, tile_width=None, tile_height=None, default_tile=0, x=0, y=0)
+displayio.release_displays?4()
+esp.SLEEP_LIGHT?7
+esp.SLEEP_MODEM?7
+esp.SLEEP_NONE?7
+esp.deepsleep?4(time=0)
+esp.flash_erase?4(sector_no)
+esp.flash_id?4()
+esp.flash_read?4(byte_offset, length_or_buffer)
+esp.flash_size?4()
+esp.flash_user_start?4()
+esp.flash_write?4(byte_offset, bytes)
+esp.set_native_code_location?4(start, length)
+esp.sleep_type?4(sleep_type=None)
+fontio.BuiltinFont.bitmap?7
+fontio.BuiltinFont.get_bounding_box?4()
+fontio.BuiltinFont.get_glyph?4(codepoint)
+fontio.Glyph?1(bitmap, tile_index, width, height, dx, dy, shift_x, shift_y)
+framebuf.FrameBuffer.blit?4(fbuf, x, y, key=None)
+framebuf.FrameBuffer.fill?4(c)
+framebuf.FrameBuffer.fill_rect?4(x, y, w, h, c)
+framebuf.FrameBuffer.hline?4(x, y, w, c)
+framebuf.FrameBuffer.line?4(x1, y1, x2, y2, c)
+framebuf.FrameBuffer.pixel?4(x, y, c=None)
+framebuf.FrameBuffer.rect?4(x, y, w, h, c)
+framebuf.FrameBuffer.scroll?4(xstep, ystep)
+framebuf.FrameBuffer.text?4(s, x, y, c=None)
+framebuf.FrameBuffer.vline?4(x, y, h, c)
+framebuf.FrameBuffer?1(buffer, width, height, format, stride=None)
+framebuf.GS2_HMSB?7
+framebuf.GS4_HMSB?7
+framebuf.GS8?7
+framebuf.MONO_HLSB?7
+framebuf.MONO_HMSB?7
+framebuf.MONO_VLSB?7
+framebuf.RGB565?7
+frequencyio.FrequencyIn.capture_period?7
+frequencyio.FrequencyIn.clear?4()
+frequencyio.FrequencyIn.deinit?4()
+frequencyio.FrequencyIn.pause?4()
+frequencyio.FrequencyIn.resume?4()
+frequencyio.FrequencyIn?1(pin, capture_period=10)
+gamepad.GamePad.deinit?4()
+gamepad.GamePad.get_pressed?4()
+gamepad.GamePad?1(b1=None, b2=None, b3=None, b4=None, b5=None, b6=None, b7=None, b8=None)
+gamepadshift.GamePadShift.deinit?4()
+gamepadshift.GamePadShift.get_pressed?4()
+gamepadshift.GamePadShift?1(clock, data, latch)
+gc.collect?4()
+gc.disable?4()
+gc.enable?4()
+gc.mem_alloc?4()
+gc.mem_free?4()
+gc.threshold?4(amount=None)
+hashlib.md5.digest?4()
+hashlib.md5.update?4(data)
+hashlib.md5?1(data=None)
+hashlib.sha1.digest?4()
+hashlib.sha1.update?4(data)
+hashlib.sha1?1(data=None)
+hashlib.sha256.digest?4()
+hashlib.sha256.update?4(data)
+hashlib.sha256?1(data=None)
+i2cslave.I2CSlave.deinit?4()
+i2cslave.I2CSlave.request?4(timeout=-1)
+i2cslave.I2CSlave?1(scl, sda, addresses, smbus=False)
+i2cslave.I2CSlaveRequest.ack?4(ack=True)
+i2cslave.I2CSlaveRequest.address?7
+i2cslave.I2CSlaveRequest.is_read?7
+i2cslave.I2CSlaveRequest.is_restart?7
+i2cslave.I2CSlaveRequest.read?4(n=-1, ack=True)
+i2cslave.I2CSlaveRequest.write?4(buffer)
+i2cslave.I2CSlaveRequest?1(slave, address, is_read, is_restart)
+math.acos?4(x)
+math.asin?4(x)
+math.atan2?4(y, x)
+math.atan?4(x)
+math.ceil?4(x)
+math.copysign?4(x, y)
+math.cos?4(x)
+math.degrees?4(x)
+math.e?7
+math.exp?4(x)
+math.fabs?4(x)
+math.floor?4(x)
+math.fmod?4(x, y)
+math.frexp?4(x)
+math.isfinite?4(x)
+math.isinf?4(x)
+math.isnan?4(x)
+math.ldexp?4(x, exp)
+math.modf?4(x)
+math.pi?7
+math.pow?4(x, y)
+math.radians?4(x)
+math.sin?4(x)
+math.sqrt?4(x)
+math.tan?4(x)
+math.trunc?4(x)
+microcontroller.Processor.frequency?7
+microcontroller.Processor.temperatur?7
+microcontroller.Processor.uid?7
+microcontroller.RunMode.BOOTLOADER?7
+microcontroller.RunMode.NORMAL?7
+microcontroller.RunMode.SAFE_MODE?7
+microcontroller.cpu?7
+microcontroller.delay_us?4(delay)
+microcontroller.disable_interrupts?4()
+microcontroller.enable_interrupts?4()
+microcontroller.nvm?7
+microcontroller.on_next_reset?4(run_mode)
+microcontroller.pin?7
+microcontroller.reset?4()
+micropython.const?4(expr)
+micropython.heap_lock?4()
+micropython.heap_unlock?4()
+micropython.kbd_intr?4(chr)
+micropython.mem_info?4(verbose=False)
+micropython.opt_level?4(level=None)
+micropython.qstr_info?4(verbose=False)
+micropython.stack_use?4()
+multiterminal.clear_secondary_terminal?4()
+multiterminal.get_secondary_terminal?4()
+multiterminal.schedule_secondary_terminal_read?4(socket)
+multiterminal.set_secondary_terminal?4(stream)
+neopixel_write.neopixel_write?4(digitalinout, buf)
+network.AP_IF?7
+network.AUTH_OPEN?7
+network.AUTH_WEP?7
+network.AUTH_WPA2_PSK?7
+network.AUTH_WPA_PSK?7
+network.AUTH_WPA_WPA2_PSK?7
+network.AbstractNIC.active?4(is_active=None)
+network.AbstractNIC.config?4(**params)
+network.AbstractNIC.connect?4(service_id=None, key=None, *args)
+network.AbstractNIC.disconnect?4()
+network.AbstractNIC.ifconfig?4(params=tuple())
+network.AbstractNIC.isconnected?4()
+network.AbstractNIC.scan?4(*args)
+network.AbstractNIC.status?4(param=None)
+network.AbstractNIC?1(id=None, *args)
+network.MODE_11B?7
+network.MODE_11G?7
+network.MODE_11N?7
+network.STAT_CONNECTING?7
+network.STAT_CONNECT_FAIL?7
+network.STAT_GOT_IP?7
+network.STAT_IDLE?7
+network.STAT_NO_AP_FOUND?7
+network.STAT_WRONG_PASSWORD?7
+network.STA_IF?7
+network.WLAN.active?4(is_active=None)
+network.WLAN.config?4(**params)
+network.WLAN.connect?4(ssid=None, password=None, *, bssid=None)
+network.WLAN.disconnect?4()
+network.WLAN.ifconfig?4(params=tuple())
+network.WLAN.isconnected?4()
+network.WLAN.scan?4()
+network.WLAN.status?4(param=None)
+network.WLAN?1(interface_id)
+network.phy_mode?4(mode=None)
+network.route?4()
+os.chdir?4(path)
+os.getcwd?4()
+os.listdir?4(dir=".")
+os.mkdir?4(path)
+os.remove?4(path)
+os.rename?4(old_path, new_path)
+os.rmdir?4(path)
+os.sep?7
+os.stat?4(path)
+os.statvfs?4(path)
+os.sync?4()
+os.uname?4()
+os.urandom?4(size)
+ps2io.Ps2.clear_errors?4()
+ps2io.Ps2.deinit?4()
+ps2io.Ps2.popleft?4()
+ps2io.Ps2.sendcmd?4(byte)
+ps2io.Ps2?1(data_pin, clock_pin)
+pulseio.PWMOut.deinit?4()
+pulseio.PWMOut.duty_cycle?7
+pulseio.PWMOut.frequency?7
+pulseio.PWMOut?1(pin, *, duty_cycle=0, frequency=500, variable_frequency=False)
+pulseio.PulseIn.clear?4()
+pulseio.PulseIn.deinit?4()
+pulseio.PulseIn.maxlen?7
+pulseio.PulseIn.pause?4()
+pulseio.PulseIn.paused?7
+pulseio.PulseIn.popleft?4()
+pulseio.PulseIn.resume?4(trigger_duration=0)
+pulseio.PulseIn?1(pin, maxlen=2, *, idle_state=False)
+pulseio.PulseOut.deinit?4()
+pulseio.PulseOut.send?4(pulses)
+pulseio.PulseOut?1(carrier)
+random.choice?4(seq)
+random.getrandbits?4(k)
+random.randint?4(a, b)
+random.random?4()
+random.randrange?4(start, stop, step=1)
+random.randrange?4(stop)
+random.seed?4(seed)
+random.uniform?4(a, b)
+rotaryio.IncrementalEncoder.deinit?4()
+rotaryio.IncrementalEncoder.position?7
+rotaryio.IncrementalEncoder?1(pin_a, pin_b)
+rtc.RTC.calibration?7
+rtc.RTC.datetime?7
+rtc.set_time_source?4(rtc)
+samd.Clock.calibration?7
+samd.Clock.enabled?7
+samd.Clock.frequency?7
+samd.Clock.parent?7
+samd.clock?7
+socket.getaddrinfo?4(host, port)
+socket.socket.accept?4()
+socket.socket.bind?4(address)
+socket.socket.connect?4(address)
+socket.socket.listen?4(backlog)
+socket.socket.recv?4(bufsize)
+socket.socket.recv_into?4(buffer, bufsize=None)
+socket.socket.recvfrom?4(bufsize)
+socket.socket.send?4(bytes)
+socket.socket.sendto?4(bytes, address)
+socket.socket.setblocking?4(flag)
+socket.socket.setsockopt?4(level, optname, value)
+socket.socket.settimeout?4(value)
+socket.socket?1(family, type, proto)
+storage.VfsFat.ilistdir?4(path=None)
+storage.VfsFat.label?7
+storage.VfsFat.mkdir?4(path)
+storage.VfsFat.mkfs?4()
+storage.VfsFat.open?4(path, mode)
+storage.VfsFat.rmdir?4(path)
+storage.VfsFat.stat?4(path)
+storage.VfsFat.statvfs?4(path)
+storage.VfsFat?1(block_device)
+storage.erase_filesystem?4()
+storage.getmount?4(mount_path)
+storage.mount?4(filesystem, mount_path, *, readonly=False)
+storage.remount?4(mount_path, readonly=False, *, disable_concurrent_write_protection=False)
+storage.umount?4(mount)
+struct.calcsize?4(fmt)
+struct.pack?4(fmt, *values)
+struct.pack_into?4(fmt, buffer, offset, *values)
+struct.unpack?4(fmt, data)
+struct.unpack_from?4(fmt, data, offset=0)
+supervisor.Runtime.serial_bytes_available?7
+supervisor.Runtime.serial_connected?7
+supervisor.disable_autoreload?4()
+supervisor.enable_autoreload?4()
+supervisor.reload?4()
+supervisor.runtime?7
+supervisor.set_next_stack_limit?4(size)
+supervisor.set_rgb_status_brightness?4()
+sys.argv?7
+sys.byteorder?7
+sys.exit?4(retval=0)
+sys.implementation?7
+sys.maxsize?7
+sys.modules?7
+sys.path?7
+sys.platform?7
+sys.print_exception?4(exc, file=stdout)
+sys.stderr?7
+sys.stdin?7
+sys.stdout?7
+sys.version?7
+sys.version_info?7
+terminalio.FONT?7
+terminalio.Terminal.write?4(buf)
+terminalio.Terminal?1(tilegrid, font)
+time.localtime?4(secs=None)
+time.mktime?4(t)
+time.monotonic?4()
+time.monotonic_ns?4()
+time.sleep?4(seconds)
+time.struct_time?1(time_tuple)
+time.time?4()
+touchio.TouchIn.deinit?4()
+touchio.TouchIn.raw_value?7
+touchio.TouchIn.threshold?7
+touchio.TouchIn.value?7
+touchio.TouchIn?1(pin)
+uctypes.ARRAY?7
+uctypes.BIG_ENDIAN?7
+uctypes.FLOAT32?7
+uctypes.FLOAT64?7
+uctypes.INT16?7
+uctypes.INT32?7
+uctypes.INT64?7
+uctypes.INT8?7
+uctypes.LITTLE_ENDIAN?7
+uctypes.NATIVE?7
+uctypes.PTR?7
+uctypes.UINT16?7
+uctypes.UINT32?7
+uctypes.UINT64?7
+uctypes.UINT8?7
+uctypes.VOID?7
+uctypes.addressof?4(obj)
+uctypes.bytearray_at?4(addr, size)
+uctypes.bytes_at?4(addr, size)
+uctypes.sizeof?4(struct, layout_type=NATIVE)
+uctypes.struct?1(addr, descriptor, layout_type=NATIVE)
+uerrno.EACCES?7
+uerrno.EADDRINUSE?7
+uerrno.EAGAIN?7
+uerrno.EALREADY?7
+uerrno.EBADF?7
+uerrno.ECONNABORTED?7
+uerrno.ECONNREFUSED?7
+uerrno.ECONNRESET?7
+uerrno.EEXIST?7
+uerrno.EHOSTUNREACH?7
+uerrno.EINPROGRESS?7
+uerrno.EINVAL?7
+uerrno.EIO?7
+uerrno.EISDIR?7
+uerrno.ENOBUFS?7
+uerrno.ENODEV?7
+uerrno.ENOENT?7
+uerrno.ENOMEM?7
+uerrno.ENOTCONN?7
+uerrno.EOPNOTSUPP?7
+uerrno.EPERM?7
+uerrno.ETIMEDOUT?7
+uerrno.errorcode?7
+uheap.info?4(object)
+uheapq.heapify?4(x)
+uheapq.heappop?4(heap)
+uheapq.heappush?4(heap, item)
+uio.BytesIO.close?4()
+uio.BytesIO.flush?4()
+uio.BytesIO.getvalue?4()
+uio.BytesIO.read?4(size=-1)
+uio.BytesIO.readinto?4(b)
+uio.BytesIO.readline?4(size=-1)
+uio.BytesIO.seek?4(offset, whence=0)
+uio.BytesIO.write?4(b)
+uio.BytesIO?1(initial_value=b"")
+uio.FileIO.close?4()
+uio.FileIO.flush?4()
+uio.FileIO.read?4(size=-1)
+uio.FileIO.readinto?4(b)
+uio.FileIO.readline?4(size=-1)
+uio.FileIO.readlines?4(hint=-1)
+uio.FileIO.seek?4(offset, whence=0)
+uio.FileIO.tell?4()
+uio.FileIO.write?4(b)
+uio.FileIO?1(name, mode='r', **kwargs)
+uio.StringIO.close?4()
+uio.StringIO.flush?4()
+uio.StringIO.getvalue?4()
+uio.StringIO.read?4(size=-1)
+uio.StringIO.readinto?4(b)
+uio.StringIO.readline?4(size=-1)
+uio.StringIO.seek?4(offset, whence=0)
+uio.StringIO.write?4(s)
+uio.StringIO?1(initial_value="")
+uio.TextIOWrapper.close?4()
+uio.TextIOWrapper.flush?4()
+uio.TextIOWrapper.read?4(size=-1)
+uio.TextIOWrapper.readinto?4(b)
+uio.TextIOWrapper.readline?4(size=-1)
+uio.TextIOWrapper.readlines?4(hint=-1)
+uio.TextIOWrapper.seek?4(offset, whence=0)
+uio.TextIOWrapper.tell?4()
+uio.TextIOWrapper.write?4(s)
+uio.TextIOWrapper?1(name, mode='r', **kwargs)
+uio.open?4(name, mode='r', **kwargs)
+ujson.dump?4(obj, stream)
+ujson.dumps?4(obj)
+ujson.load?4(stream)
+ujson.loads?4(string)
+ure.DEBUG?7
+ure.compile?4(regex_str, flags=0)
+ure.match?4(regex_str, string)
+ure.match_object.end?4(index=0)
+ure.match_object.group?4(index)
+ure.match_object.groups?4()
+ure.match_object.span?4(index=0)
+ure.match_object.start?4(index=0)
+ure.regex_object.match?4(string)
+ure.regex_object.search?4(string)
+ure.regex_object.split?4(string, max_split=-1)
+ure.search?4(regex_str, string)
+usb_hid.Device.send_report?4(buf)
+usb_hid.Device.usage?7
+usb_hid.Device.usage_page?7
+usb_hid.devices?7
+usb_midi.PortIn.read?4(nbytes=None)
+usb_midi.PortIn.readinto?4(buf, nbytes=None)
+usb_midi.PortOut.write?4(buf)
+uselect.POLLERR?7
+uselect.POLLHUP?7
+uselect.POLLIN?7
+uselect.POLLOUT?7
+uselect.Poll.ipoll?4(timeout=-1, flags=0)
+uselect.Poll.modify?4(obj, eventmask)
+uselect.Poll.poll?4(timeout=-1)
+uselect.Poll.register?4(obj, eventmask = POLLIN | POLLOUT)
+uselect.Poll.unregister?4(obj)
+uselect.poll?4()
+uselect.select?4(rlist, wlist, xlist, timeout=-1)
+usocket.AF_INET6?7
+usocket.AF_INET?7
+usocket.IPPROTO_IP?7
+usocket.IPPROTO_SEC?7
+usocket.IPPROTO_TCP?7
+usocket.IPPROTO_UDP?7
+usocket.IP_ADD_MEMBERSHIP?7
+usocket.SOCK_DGRAM?7
+usocket.SOCK_RAW?7
+usocket.SOCK_STREAM?7
+usocket.SOL_SOCKET?7
+usocket.SO_REUSEADDR?7
+usocket.Socket.accept?4()
+usocket.Socket.bind?4(address)
+usocket.Socket.close?4()
+usocket.Socket.connect?4(address)
+usocket.Socket.listen?4(backlog=None)
+usocket.Socket.makefile?4(mode='rb', buffering=0)
+usocket.Socket.read?4(size=None)
+usocket.Socket.readinto?4(buf, nbytes=None)
+usocket.Socket.readline?4()
+usocket.Socket.recv?4(bufsize)
+usocket.Socket.recvfrom?4(bufsize)
+usocket.Socket.send?4(bytes)
+usocket.Socket.sendall?4(bytes)
+usocket.Socket.sendto?4(bytes, address)
+usocket.Socket.setblocking?4(flag)
+usocket.Socket.setsockopt?4(level, optname, value)
+usocket.Socket.settimeout?4(value)
+usocket.Socket.write?4(buf)
+usocket.error?7
+usocket.getaddrinfo?4(host, port, af=0, type=0, proto=0, flags=0)
+usocket.inet_ntop?4(af, bin_addr)
+usocket.inet_pton?4(af, txt_addr)
+usocket.socket?4(af=AF_INET, type=SOCK_STREAM, proto=IPPROTO_TCP)
+ussl.CERT_NONE?7
+ussl.CERT_OPTIONAL?7
+ussl.CERT_REQUIRED?7
+ussl.wrap_socket?4(sock, server_side=False, keyfile=None, certfile=None, cert_reqs=CERT_NONE, ca_certs=None)
+ustack.max_stack_usage?4()
+ustack.stack_size?4()
+ustack.stack_usage?4()
+uzlib.DecompIO?1(stream, wbits=0)
+uzlib.decompress?4(data, wbits=0, bufsize=0)
+wiznet.WIZNET5K.connected?7
+wiznet.WIZNET5K.dhcp?7
+wiznet.WIZNET5K.ifconfig?4(params=None)
+wiznet.WIZNET5K?1(spi, cs, rst, dhcp=True)

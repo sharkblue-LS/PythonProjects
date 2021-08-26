@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>GitSubmoduleAddDialog</class>
+ <widget class="QDialog" name="GitSubmoduleAddDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>562</width>
+    <height>202</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Add Submodule</string>
+  </property>
+  <property name="sizeGripEnabled">
+   <bool>true</bool>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <widget class="QLabel" name="TextLabel2">
+     <property name="text">
+      <string>&amp;URL:</string>
+     </property>
+     <property name="buddy">
+      <cstring>submoduleUrlCombo</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="1">
+    <widget class="QComboBox" name="submoduleUrlCombo">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="toolTip">
+      <string>Enter the URL of the repository</string>
+     </property>
+     <property name="editable">
+      <bool>true</bool>
+     </property>
+     <property name="insertPolicy">
+      <enum>QComboBox::InsertAtTop</enum>
+     </property>
+     <property name="sizeAdjustPolicy">
+      <enum>QComboBox::AdjustToContents</enum>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="2">
+    <widget class="QToolButton" name="submoduleUrlButton">
+     <property name="toolTip">
+      <string>Select the repository URL via a directory selection dialog</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="3">
+    <widget class="QToolButton" name="submoduleUrlClearHistoryButton">
+     <property name="toolTip">
+      <string>Press to clear the history of entered repository URLs</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QLabel" name="TextLabel4">
+     <property name="text">
+      <string>Submodule &amp;Directory:</string>
+     </property>
+     <property name="buddy">
+      <cstring>submoduleDirEdit</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="1">
+    <widget class="QLineEdit" name="submoduleDirEdit">
+     <property name="toolTip">
+      <string>Enter the directory for the submodule (leave empty to use default).</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="2">
+    <widget class="QToolButton" name="submoduleDirButton"/>
+   </item>
+   <item row="2" column="0">
+    <widget class="QLabel" name="label">
+     <property name="text">
+      <string>&amp;Branch:</string>
+     </property>
+     <property name="buddy">
+      <cstring>branchEdit</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="1">
+    <widget class="QLineEdit" name="branchEdit">
+     <property name="toolTip">
+      <string>Enter a branch name</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="0">
+    <widget class="QLabel" name="label_2">
+     <property name="text">
+      <string>&amp;Logical Name:</string>
+     </property>
+     <property name="buddy">
+      <cstring>nameEdit</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="1">
+    <widget class="QLineEdit" name="nameEdit">
+     <property name="toolTip">
+      <string>Enter a logical name</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="0" colspan="2">
+    <widget class="QCheckBox" name="forceCheckBox">
+     <property name="toolTip">
+      <string>Select to enforce the operation</string>
+     </property>
+     <property name="text">
+      <string>&amp;Force Operation</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="0" colspan="4">
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <tabstops>
+  <tabstop>submoduleUrlCombo</tabstop>
+  <tabstop>submoduleUrlButton</tabstop>
+  <tabstop>submoduleUrlClearHistoryButton</tabstop>
+  <tabstop>submoduleDirEdit</tabstop>
+  <tabstop>submoduleDirButton</tabstop>
+  <tabstop>branchEdit</tabstop>
+  <tabstop>nameEdit</tabstop>
+  <tabstop>forceCheckBox</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>GitSubmoduleAddDialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>257</x>
+     <y>192</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>157</x>
+     <y>201</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>GitSubmoduleAddDialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>325</x>
+     <y>192</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>286</x>
+     <y>201</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

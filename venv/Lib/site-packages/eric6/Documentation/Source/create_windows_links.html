@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html><head>
+<title>create_windows_links</title>
+<meta charset="UTF-8">
+<style>
+body {
+    background: #EDECE6;
+    margin: 0em 1em 10em 1em;
+    color: black;
+}
+
+h1 { color: white; background: #85774A; }
+h2 { color: white; background: #85774A; }
+h3 { color: white; background: #9D936E; }
+h4 { color: white; background: #9D936E; }
+    
+a { color: #BA6D36; }
+
+</style>
+</head>
+<body>
+<a NAME="top" ID="top"></a>
+<h1>create_windows_links</h1>
+
+<p>
+Installation script for the eric IDE and all eric related tools.
+</p>
+<h3>Global Attributes</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Classes</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Functions</h3>
+
+<table>
+
+<tr>
+<td><a href="#createWindowsShortcut">createWindowsShortcut</a></td>
+<td>Create Windows shortcut.</td>
+</tr>
+<tr>
+<td><a href="#getWinregEntry">getWinregEntry</a></td>
+<td>Function to get an entry from the Windows Registry.</td>
+</tr>
+<tr>
+<td><a href="#main">main</a></td>
+<td>Create Desktop and Start Menu links.</td>
+</tr>
+<tr>
+<td><a href="#windowsDesktopEntries">windowsDesktopEntries</a></td>
+<td>Function to generate data for the Windows Desktop links.</td>
+</tr>
+<tr>
+<td><a href="#windowsDesktopNames">windowsDesktopNames</a></td>
+<td>Function to generate the link names for the Windows Desktop.</td>
+</tr>
+<tr>
+<td><a href="#windowsProgramsEntry">windowsProgramsEntry</a></td>
+<td>Function to generate the name of the Start Menu top entry.</td>
+</tr>
+</table>
+<hr />
+<hr />
+<a NAME="createWindowsShortcut" ID="createWindowsShortcut"></a>
+<h2>createWindowsShortcut</h2>
+<b>createWindowsShortcut</b>(<i>linkPath, targetPath, iconPath</i>)
+
+<p>
+    Create Windows shortcut.
+</p>
+<dl>
+
+<dt><i>linkPath</i> (str)</dt>
+<dd>
+path of the shortcut file
+</dd>
+<dt><i>targetPath</i> (str)</dt>
+<dd>
+path the shortcut shall point to
+</dd>
+<dt><i>iconPath</i> (str)</dt>
+<dd>
+path of the icon file
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+<hr />
+<a NAME="getWinregEntry" ID="getWinregEntry"></a>
+<h2>getWinregEntry</h2>
+<b>getWinregEntry</b>(<i>name, path</i>)
+
+<p>
+    Function to get an entry from the Windows Registry.
+</p>
+<dl>
+
+<dt><i>name</i> (str)</dt>
+<dd>
+variable name
+</dd>
+<dt><i>path</i> (str)</dt>
+<dd>
+registry path of the variable
+</dd>
+</dl>
+<dl>
+<dt>Return:</dt>
+<dd>
+value of requested registry variable
+</dd>
+</dl>
+<dl>
+<dt>Return Type:</dt>
+<dd>
+any
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+<hr />
+<a NAME="main" ID="main"></a>
+<h2>main</h2>
+<b>main</b>(<i>argv</i>)
+
+<p>
+    Create Desktop and Start Menu links.
+</p>
+<dl>
+
+<dt><i>argv</i> (list of str)</dt>
+<dd>
+list of command line arguments
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+<hr />
+<a NAME="windowsDesktopEntries" ID="windowsDesktopEntries"></a>
+<h2>windowsDesktopEntries</h2>
+<b>windowsDesktopEntries</b>(<i></i>)
+
+<p>
+    Function to generate data for the Windows Desktop links.
+</p>
+<dl>
+<dt>Return:</dt>
+<dd>
+list of tuples containing the desktop link name,
+        the link target and the icon target
+</dd>
+</dl>
+<dl>
+<dt>Return Type:</dt>
+<dd>
+list of tuples of (str, str, str)
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+<hr />
+<a NAME="windowsDesktopNames" ID="windowsDesktopNames"></a>
+<h2>windowsDesktopNames</h2>
+<b>windowsDesktopNames</b>(<i></i>)
+
+<p>
+    Function to generate the link names for the Windows Desktop.
+</p>
+<dl>
+<dt>Return:</dt>
+<dd>
+list of desktop link names
+</dd>
+</dl>
+<dl>
+<dt>Return Type:</dt>
+<dd>
+list of str
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+<hr />
+<a NAME="windowsProgramsEntry" ID="windowsProgramsEntry"></a>
+<h2>windowsProgramsEntry</h2>
+<b>windowsProgramsEntry</b>(<i></i>)
+
+<p>
+    Function to generate the name of the Start Menu top entry.
+</p>
+<dl>
+<dt>Return:</dt>
+<dd>
+name of the Start Menu top entry
+</dd>
+</dl>
+<dl>
+<dt>Return Type:</dt>
+<dd>
+str
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+</body></html>

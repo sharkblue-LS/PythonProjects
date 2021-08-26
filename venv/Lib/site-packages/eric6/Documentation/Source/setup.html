@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html><head>
+<title>setup</title>
+<meta charset="UTF-8">
+<style>
+body {
+    background: #EDECE6;
+    margin: 0em 1em 10em 1em;
+    color: black;
+}
+
+h1 { color: white; background: #85774A; }
+h2 { color: white; background: #85774A; }
+h3 { color: white; background: #9D936E; }
+h4 { color: white; background: #9D936E; }
+    
+a { color: #BA6D36; }
+
+</style>
+</head>
+<body>
+<a NAME="top" ID="top"></a>
+<h1>setup</h1>
+
+<p>
+Module to prepare a distribution package for uploading to PyPI.
+</p>
+<h3>Global Attributes</h3>
+
+<table>
+<tr><td>Version</td></tr><tr><td>appdataFileName</td></tr><tr><td>infoFileName</td></tr><tr><td>installInfoName</td></tr><tr><td>sourceDir</td></tr>
+</table>
+<h3>Classes</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Functions</h3>
+
+<table>
+
+<tr>
+<td><a href="#__pyName">__pyName</a></td>
+<td>Local function to create the Python source file name for the compiled .ui file.</td>
+</tr>
+<tr>
+<td><a href="#cleanupSource">cleanupSource</a></td>
+<td>Cleanup the sources directory to get rid of leftover files and directories.</td>
+</tr>
+<tr>
+<td><a href="#compileUiFiles">compileUiFiles</a></td>
+<td>Compile the .ui files to Python sources.</td>
+</tr>
+<tr>
+<td><a href="#createInstallInfoFile">createInstallInfoFile</a></td>
+<td>Create a file containing some rudimentary install information.</td>
+</tr>
+<tr>
+<td><a href="#getDataFiles">getDataFiles</a></td>
+<td>Function to return data_files in a platform dependent manner.</td>
+</tr>
+<tr>
+<td><a href="#getLongDescription">getLongDescription</a></td>
+<td>Function to get the long description via the README file.</td>
+</tr>
+<tr>
+<td><a href="#getPackageData">getPackageData</a></td>
+<td>Function to return data files of a package with given extensions.</td>
+</tr>
+<tr>
+<td><a href="#getVersion">getVersion</a></td>
+<td>Function to get the version from file.</td>
+</tr>
+<tr>
+<td><a href="#prepareAppdataFile">prepareAppdataFile</a></td>
+<td>Function to prepare a .appdata.xml file.</td>
+</tr>
+<tr>
+<td><a href="#prepareInfoFile">prepareInfoFile</a></td>
+<td>Function to prepare an Info.py file.</td>
+</tr>
+</table>
+<hr />
+<hr />
+<a NAME="__pyName" ID="__pyName"></a>
+<h2>__pyName</h2>
+<b>__pyName</b>(<i>py_dir, py_file</i>)
+
+<p>
+    Local function to create the Python source file name for the compiled
+    .ui file.
+</p>
+<dl>
+
+<dt><i>py_dir</i></dt>
+<dd>
+suggested name of the directory (string)
+</dd>
+<dt><i>py_file</i></dt>
+<dd>
+suggested name for the compile source file (string)
+</dd>
+</dl>
+<dl>
+<dt>Return:</dt>
+<dd>
+tuple of directory name (string) and source file name (string)
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+<hr />
+<a NAME="cleanupSource" ID="cleanupSource"></a>
+<h2>cleanupSource</h2>
+<b>cleanupSource</b>(<i>dirName</i>)
+
+<p>
+    Cleanup the sources directory to get rid of leftover files
+    and directories.
+</p>
+<dl>
+
+<dt><i>dirName</i></dt>
+<dd>
+name of the directory to prune (string)
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+<hr />
+<a NAME="compileUiFiles" ID="compileUiFiles"></a>
+<h2>compileUiFiles</h2>
+<b>compileUiFiles</b>(<i>dirName</i>)
+
+<p>
+    Compile the .ui files to Python sources.
+</p>
+<dl>
+
+<dt><i>dirName</i></dt>
+<dd>
+name of the directory to compile UI files for (string)
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+<hr />
+<a NAME="createInstallInfoFile" ID="createInstallInfoFile"></a>
+<h2>createInstallInfoFile</h2>
+<b>createInstallInfoFile</b>(<i>dirName</i>)
+
+<p>
+    Create a file containing some rudimentary install information.
+</p>
+<dl>
+
+<dt><i>dirName</i> (str)</dt>
+<dd>
+name of the directory to compile UI files for
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+<hr />
+<a NAME="getDataFiles" ID="getDataFiles"></a>
+<h2>getDataFiles</h2>
+<b>getDataFiles</b>(<i></i>)
+
+<p>
+    Function to return data_files in a platform dependent manner.
+</p>
+<dl>
+<dt>Return:</dt>
+<dd>
+list containing the platform specific data files
+</dd>
+</dl>
+<dl>
+<dt>Return Type:</dt>
+<dd>
+list of tuples of (str, list of str)
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+<hr />
+<a NAME="getLongDescription" ID="getLongDescription"></a>
+<h2>getLongDescription</h2>
+<b>getLongDescription</b>(<i></i>)
+
+<p>
+    Function to get the long description via the README file.
+</p>
+<dl>
+<dt>Return:</dt>
+<dd>
+long description
+</dd>
+</dl>
+<dl>
+<dt>Return Type:</dt>
+<dd>
+str
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+<hr />
+<a NAME="getPackageData" ID="getPackageData"></a>
+<h2>getPackageData</h2>
+<b>getPackageData</b>(<i>package, extensions</i>)
+
+<p>
+    Function to return data files of a package with given extensions.
+</p>
+<dl>
+
+<dt><i>package</i> (str)</dt>
+<dd>
+name of the package directory
+</dd>
+<dt><i>extensions</i> (list of str)</dt>
+<dd>
+list of extensions to test for
+</dd>
+</dl>
+<dl>
+<dt>Return:</dt>
+<dd>
+list of package data files
+</dd>
+</dl>
+<dl>
+<dt>Return Type:</dt>
+<dd>
+list of str
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+<hr />
+<a NAME="getVersion" ID="getVersion"></a>
+<h2>getVersion</h2>
+<b>getVersion</b>(<i></i>)
+
+<p>
+    Function to get the version from file.
+</p>
+<dl>
+<dt>Return:</dt>
+<dd>
+string containing the version
+</dd>
+</dl>
+<dl>
+<dt>Return Type:</dt>
+<dd>
+str
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+<hr />
+<a NAME="prepareAppdataFile" ID="prepareAppdataFile"></a>
+<h2>prepareAppdataFile</h2>
+<b>prepareAppdataFile</b>(<i>fileName, version</i>)
+
+<p>
+    Function to prepare a .appdata.xml file.
+</p>
+<dl>
+
+<dt><i>fileName</i></dt>
+<dd>
+name of the .appdata.xml file (string)
+</dd>
+<dt><i>version</i></dt>
+<dd>
+version string for the package (string)
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+<hr />
+<a NAME="prepareInfoFile" ID="prepareInfoFile"></a>
+<h2>prepareInfoFile</h2>
+<b>prepareInfoFile</b>(<i>fileName, version</i>)
+
+<p>
+    Function to prepare an Info.py file.
+</p>
+<dl>
+
+<dt><i>fileName</i></dt>
+<dd>
+name of the Python file containing the info (string)
+</dd>
+<dt><i>version</i></dt>
+<dd>
+version string for the package (string)
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+</body></html>

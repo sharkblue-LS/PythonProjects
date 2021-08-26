@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<html><head>
+<title>eric6.MicroPython.MicroPythonWidget</title>
+<meta charset="UTF-8">
+<style>
+body {
+    background: #EDECE6;
+    margin: 0em 1em 10em 1em;
+    color: black;
+}
+
+h1 { color: white; background: #85774A; }
+h2 { color: white; background: #85774A; }
+h3 { color: white; background: #9D936E; }
+h4 { color: white; background: #9D936E; }
+    
+a { color: #BA6D36; }
+
+</style>
+</head>
+<body>
+<a NAME="top" ID="top"></a>
+<h1>eric6.MicroPython.MicroPythonWidget</h1>
+
+<p>
+Module implementing the MicroPython REPL widget.
+</p>
+<h3>Global Attributes</h3>
+
+<table>
+<tr><td>AnsiColorSchemes</td></tr>
+</table>
+<h3>Classes</h3>
+
+<table>
+
+<tr>
+<td><a href="#MicroPythonWidget">MicroPythonWidget</a></td>
+<td>Class implementing the MicroPython REPL widget.</td>
+</tr>
+</table>
+<h3>Functions</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+<hr />
+<hr />
+<a NAME="MicroPythonWidget" ID="MicroPythonWidget"></a>
+<h2>MicroPythonWidget</h2>
+
+<p>
+    Class implementing the MicroPython REPL widget.
+</p>
+<h3>Signals</h3>
+<dl>
+
+<dt>dataReceived(data)</dt>
+<dd>
+emitted to send data received via the serial
+        connection for further processing
+</dd>
+</dl>
+<h3>Derived from</h3>
+QWidget, Ui_MicroPythonWidget
+<h3>Class Attributes</h3>
+
+<table>
+<tr><td>DeviceBoardRole</td></tr><tr><td>DevicePidRole</td></tr><tr><td>DevicePortRole</td></tr><tr><td>DeviceTypeRole</td></tr><tr><td>DeviceVidRole</td></tr><tr><td>ManualMarker</td></tr><tr><td>ZoomMax</td></tr><tr><td>ZoomMin</td></tr>
+</table>
+<h3>Class Methods</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+
+<table>
+
+<tr>
+<td><a href="#MicroPythonWidget.__init__">MicroPythonWidget</a></td>
+<td>Constructor</td>
+</tr>
+<tr>
+<td><a href="#MicroPythonWidget.__aboutToShowSuperMenu">__aboutToShowSuperMenu</a></td>
+<td>Private slot to populate the Super Menu before showing it.</td>
+</tr>
+<tr>
+<td><a href="#MicroPythonWidget.__addUnknownDevices">__addUnknownDevices</a></td>
+<td>Private method to add devices to the list of manually added boards.</td>
+</tr>
+<tr>
+<td><a href="#MicroPythonWidget.__clear">__clear</a></td>
+<td>Private slot to clear the REPL pane.</td>
+</tr>
+<tr>
+<td><a href="#MicroPythonWidget.__compileEditor2Mpy">__compileEditor2Mpy</a></td>
+<td>Private slot to cross compile the current editor to a .mpy file.</td>
+</tr>
+<tr>
+<td><a href="#MicroPythonWidget.__compileFile2Mpy">__compileFile2Mpy</a></td>
+<td>Private slot to cross compile a Python file (*.py) to a .mpy file.</td>
+</tr>
+<tr>
+<td><a href="#MicroPythonWidget.__configure">__configure</a></td>
+<td>Private slot to open the MicroPython configuration page.</td>
+</tr>
+<tr>
+<td><a href="#MicroPythonWidget.__connectToDevice">__connectToDevice</a></td>
+<td>Private method to connect to the selected device.</td>
+</tr>
+<tr>
+<td><a href="#MicroPythonWidget.__crossCompile">__crossCompile</a></td>
+<td>Private method to cross compile a Python file to a .mpy file.</td>
+</tr>
+<tr>
+<td><a href="#MicroPythonWidget.__disconnectFromDevice">__disconnectFromDevice</a></td>
+<td>Private method to disconnect from the device.</td>
+</tr>
+<tr>
+<td><a href="#MicroPythonWidget.__doZoom">__doZoom</a></td>
+<td>Private slot to zoom the REPL pane.</td>
+</tr>
+<tr>
+<td><a href="#MicroPythonWidget.__downloadFirmware">__downloadFirmware</a></td>
+<td>Private slot to open the firmware download page.</td>
+</tr>
+<tr>
+<td><a href="#MicroPythonWidget.__downloadFromUrl">__downloadFromUrl</a></td>
+<td>Private method to open a web browser for the given URL.</td>
+</tr>
+<tr>
+<td><a href="#MicroPythonWidget.__flashUF2">__flashUF2</a></td>
+<td>Private slot to flash MicroPython/CircuitPython to a device support the UF2 bootloader.</td>
+</tr>
+<tr>
+<td><a href="#MicroPythonWidget.__getDeviceTime">__getDeviceTime</a></td>
+<td>Private method to get a string containing the date and time of the connected device.</td>
+</tr>
+<tr>
+<td><a href="#MicroPythonWidget.__handlePreferencesChanged">__handlePreferencesChanged</a></td>
+<td>Private slot to handle a change in preferences.</td>
+</tr>
+<tr>
+<td><a href="#MicroPythonWidget.__manageIgnored">__manageIgnored</a></td>
+<td>Private slot to manage the list of ignored serial devices.</td>
+</tr>
+<tr>
+<td><a href="#MicroPythonWidget.__manageUnknownDevices">__manageUnknownDevices</a></td>
+<td>Private slot to manage manually added boards (i.e.</td>
+</tr>
+<tr>
+<td><a href="#MicroPythonWidget.__mpyCrossAvailable">__mpyCrossAvailable</a></td>
+<td>Private method to check the availability of mpy-cross.</td>
+</tr>
+<tr>
+<td><a href="#MicroPythonWidget.__paste">__paste</a></td>
+<td>Private slot to perform a paste operation.</td>
+</tr>
+<tr>
+<td><a href="#MicroPythonWidget.__populateDeviceTypeComboBox">__populateDeviceTypeComboBox</a></td>
+<td>Private method to populate the device type selector.</td>
+</tr>
+<tr>
+<td><a href="#MicroPythonWidget.__processData">__processData</a></td>
+<td>Private slot to process bytes received from the device.</td>
+</tr>
+<tr>
+<td><a href="#MicroPythonWidget.__replEditMouseReleaseEvent">__replEditMouseReleaseEvent</a></td>
+<td>Private method handling mouse release events for the replEdit widget.</td>
+</tr>
+<tr>
+<td><a href="#MicroPythonWidget.__setCharFormat">__setCharFormat</a></td>
+<td>Private method setting the current text format of the REPL pane based on the passed ANSI codes.</td>
+</tr>
+<tr>
+<td><a href="#MicroPythonWidget.__setConnected">__setConnected</a></td>
+<td>Private method to set the connection status LED.</td>
+</tr>
+<tr>
+<td><a href="#MicroPythonWidget.__showContextMenu">__showContextMenu</a></td>
+<td>Private slot to show the REPL context menu.</td>
+</tr>
+<tr>
+<td><a href="#MicroPythonWidget.__showDeviceTime">__showDeviceTime</a></td>
+<td>Private slot to show the date and time of the connected device.</td>
+</tr>
+<tr>
+<td><a href="#MicroPythonWidget.__showDeviceVersion">__showDeviceVersion</a></td>
+<td>Private slot to show some version info about MicroPython of the device.</td>
+</tr>
+<tr>
+<td><a href="#MicroPythonWidget.__showDocumentation">__showDocumentation</a></td>
+<td>Private slot to open the documentation URL for the selected device.</td>
+</tr>
+<tr>
+<td><a href="#MicroPythonWidget.__showError">__showError</a></td>
+<td>Private method to show some error message.</td>
+</tr>
+<tr>
+<td><a href="#MicroPythonWidget.__showImplementation">__showImplementation</a></td>
+<td>Private slot to show some implementation related information.</td>
+</tr>
+<tr>
+<td><a href="#MicroPythonWidget.__showLocalAndDeviceTime">__showLocalAndDeviceTime</a></td>
+<td>Private slot to show the local and device time side-by-side.</td>
+</tr>
+<tr>
+<td><a href="#MicroPythonWidget.__showLocalTime">__showLocalTime</a></td>
+<td>Private slot to show the local date and time.</td>
+</tr>
+<tr>
+<td><a href="#MicroPythonWidget.__showNoDeviceMessage">__showNoDeviceMessage</a></td>
+<td>Private method to show a message dialog indicating a missing device.</td>
+</tr>
+<tr>
+<td><a href="#MicroPythonWidget.__synchronizeTime">__synchronizeTime</a></td>
+<td>Private slot to set the time of the connected device to the local computer's time.</td>
+</tr>
+<tr>
+<td><a href="#MicroPythonWidget.commandsInterface">commandsInterface</a></td>
+<td>Public method to get a reference to the commands interface object.</td>
+</tr>
+<tr>
+<td><a href="#MicroPythonWidget.eventFilter">eventFilter</a></td>
+<td>Public method to process events for the REPL pane.</td>
+</tr>
+<tr>
+<td><a href="#MicroPythonWidget.getCurrentBoard">getCurrentBoard</a></td>
+<td>Public method to get the board name of the selected device.</td>
+</tr>
+<tr>
+<td><a href="#MicroPythonWidget.getCurrentPort">getCurrentPort</a></td>
+<td>Public method to determine the port path of the selected device.</td>
+</tr>
+<tr>
+<td><a href="#MicroPythonWidget.getDeviceWorkspace">getDeviceWorkspace</a></td>
+<td>Public method to get the workspace directory of the device.</td>
+</tr>
+<tr>
+<td><a href="#MicroPythonWidget.handleDataFlood">handleDataFlood</a></td>
+<td>Public slot handling a data flood from the device.</td>
+</tr>
+<tr>
+<td><a href="#MicroPythonWidget.isConnected">isConnected</a></td>
+<td>Public method to get the connection state.</td>
+</tr>
+<tr>
+<td><a href="#MicroPythonWidget.isMicrobit">isMicrobit</a></td>
+<td>Public method to check, if the connected/selected device is a BBC micro:bit or Calliope mini.</td>
+</tr>
+<tr>
+<td><a href="#MicroPythonWidget.on_chartButton_clicked">on_chartButton_clicked</a></td>
+<td>Private slot to open a chart view to plot data received from the connected device.</td>
+</tr>
+<tr>
+<td><a href="#MicroPythonWidget.on_checkButton_clicked">on_checkButton_clicked</a></td>
+<td>Private slot to check for connected devices.</td>
+</tr>
+<tr>
+<td><a href="#MicroPythonWidget.on_connectButton_clicked">on_connectButton_clicked</a></td>
+<td>Private slot to connect to the selected device or disconnect from the currently connected device.</td>
+</tr>
+<tr>
+<td><a href="#MicroPythonWidget.on_deviceTypeComboBox_activated">on_deviceTypeComboBox_activated</a></td>
+<td>Private slot handling the selection of a device type.</td>
+</tr>
+<tr>
+<td><a href="#MicroPythonWidget.on_filesButton_clicked">on_filesButton_clicked</a></td>
+<td>Private slot to open a file manager window to the connected device.</td>
+</tr>
+<tr>
+<td><a href="#MicroPythonWidget.on_openButton_clicked">on_openButton_clicked</a></td>
+<td>Private slot to open a file of the connected device.</td>
+</tr>
+<tr>
+<td><a href="#MicroPythonWidget.on_replButton_clicked">on_replButton_clicked</a></td>
+<td>Private slot to connect to enable or disable the REPL widget.</td>
+</tr>
+<tr>
+<td><a href="#MicroPythonWidget.on_runButton_clicked">on_runButton_clicked</a></td>
+<td>Private slot to execute the script of the active editor on the selected device.</td>
+</tr>
+<tr>
+<td><a href="#MicroPythonWidget.on_saveButton_clicked">on_saveButton_clicked</a></td>
+<td>Private slot to save the current editor to the connected device.</td>
+</tr>
+<tr>
+<td><a href="#MicroPythonWidget.setActionButtons">setActionButtons</a></td>
+<td>Public method to set the enabled state of the various action buttons.</td>
+</tr>
+</table>
+<h3>Static Methods</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+
+<a NAME="MicroPythonWidget.__init__" ID="MicroPythonWidget.__init__"></a>
+<h4>MicroPythonWidget (Constructor)</h4>
+<b>MicroPythonWidget</b>(<i>parent=None</i>)
+
+<p>
+        Constructor
+</p>
+<dl>
+
+<dt><i>parent</i> (QWidget)</dt>
+<dd>
+reference to the parent widget
+</dd>
+</dl>
+<a NAME="MicroPythonWidget.__aboutToShowSuperMenu" ID="MicroPythonWidget.__aboutToShowSuperMenu"></a>
+<h4>MicroPythonWidget.__aboutToShowSuperMenu</h4>
+<b>__aboutToShowSuperMenu</b>(<i></i>)
+
+<p>
+        Private slot to populate the Super Menu before showing it.
+</p>
+<a NAME="MicroPythonWidget.__addUnknownDevices" ID="MicroPythonWidget.__addUnknownDevices"></a>
+<h4>MicroPythonWidget.__addUnknownDevices</h4>
+<b>__addUnknownDevices</b>(<i>devices</i>)
+
+<p>
+        Private method to add devices to the list of manually added boards.
+</p>
+<dl>
+
+<dt><i>devices</i> (list of tuple of (int, int, str))</dt>
+<dd>
+list of not ignored but unknown devices
+</dd>
+</dl>
+<a NAME="MicroPythonWidget.__clear" ID="MicroPythonWidget.__clear"></a>
+<h4>MicroPythonWidget.__clear</h4>
+<b>__clear</b>(<i></i>)
+
+<p>
+        Private slot to clear the REPL pane.
+</p>
+<a NAME="MicroPythonWidget.__compileEditor2Mpy" ID="MicroPythonWidget.__compileEditor2Mpy"></a>
+<h4>MicroPythonWidget.__compileEditor2Mpy</h4>
+<b>__compileEditor2Mpy</b>(<i></i>)
+
+<p>
+        Private slot to cross compile the current editor to a .mpy file.
+</p>
+<a NAME="MicroPythonWidget.__compileFile2Mpy" ID="MicroPythonWidget.__compileFile2Mpy"></a>
+<h4>MicroPythonWidget.__compileFile2Mpy</h4>
+<b>__compileFile2Mpy</b>(<i></i>)
+
+<p>
+        Private slot to cross compile a Python file (*.py) to a .mpy file.
+</p>
+<a NAME="MicroPythonWidget.__configure" ID="MicroPythonWidget.__configure"></a>
+<h4>MicroPythonWidget.__configure</h4>
+<b>__configure</b>(<i></i>)
+
+<p>
+        Private slot to open the MicroPython configuration page.
+</p>
+<a NAME="MicroPythonWidget.__connectToDevice" ID="MicroPythonWidget.__connectToDevice"></a>
+<h4>MicroPythonWidget.__connectToDevice</h4>
+<b>__connectToDevice</b>(<i></i>)
+
+<p>
+        Private method to connect to the selected device.
+</p>
+<a NAME="MicroPythonWidget.__crossCompile" ID="MicroPythonWidget.__crossCompile"></a>
+<h4>MicroPythonWidget.__crossCompile</h4>
+<b>__crossCompile</b>(<i>pythonFile="", title=""</i>)
+
+<p>
+        Private method to cross compile a Python file to a .mpy file.
+</p>
+<dl>
+
+<dt><i>pythonFile</i> (str)</dt>
+<dd>
+name of the Python file to be compiled
+</dd>
+<dt><i>title</i> (str)</dt>
+<dd>
+title for the various dialogs
+</dd>
+</dl>
+<a NAME="MicroPythonWidget.__disconnectFromDevice" ID="MicroPythonWidget.__disconnectFromDevice"></a>
+<h4>MicroPythonWidget.__disconnectFromDevice</h4>
+<b>__disconnectFromDevice</b>(<i></i>)
+
+<p>
+        Private method to disconnect from the device.
+</p>
+<a NAME="MicroPythonWidget.__doZoom" ID="MicroPythonWidget.__doZoom"></a>
+<h4>MicroPythonWidget.__doZoom</h4>
+<b>__doZoom</b>(<i>value</i>)
+
+<p>
+        Private slot to zoom the REPL pane.
+</p>
+<dl>
+
+<dt><i>value</i> (int)</dt>
+<dd>
+zoom value
+</dd>
+</dl>
+<a NAME="MicroPythonWidget.__downloadFirmware" ID="MicroPythonWidget.__downloadFirmware"></a>
+<h4>MicroPythonWidget.__downloadFirmware</h4>
+<b>__downloadFirmware</b>(<i></i>)
+
+<p>
+        Private slot to open the firmware download page.
+</p>
+<a NAME="MicroPythonWidget.__downloadFromUrl" ID="MicroPythonWidget.__downloadFromUrl"></a>
+<h4>MicroPythonWidget.__downloadFromUrl</h4>
+<b>__downloadFromUrl</b>(<i>url</i>)
+
+<p>
+        Private method to open a web browser for the given URL.
+</p>
+<dl>
+
+<dt><i>url</i> (str)</dt>
+<dd>
+URL to be opened
+</dd>
+</dl>
+<a NAME="MicroPythonWidget.__flashUF2" ID="MicroPythonWidget.__flashUF2"></a>
+<h4>MicroPythonWidget.__flashUF2</h4>
+<b>__flashUF2</b>(<i></i>)
+
+<p>
+        Private slot to flash MicroPython/CircuitPython to a device
+        support the UF2 bootloader.
+</p>
+<a NAME="MicroPythonWidget.__getDeviceTime" ID="MicroPythonWidget.__getDeviceTime"></a>
+<h4>MicroPythonWidget.__getDeviceTime</h4>
+<b>__getDeviceTime</b>(<i></i>)
+
+<p>
+        Private method to get a string containing the date and time of the
+        connected device.
+</p>
+<dl>
+<dt>Return:</dt>
+<dd>
+date and time of the connected device
+</dd>
+</dl>
+<dl>
+<dt>Return Type:</dt>
+<dd>
+str
+</dd>
+</dl>
+<a NAME="MicroPythonWidget.__handlePreferencesChanged" ID="MicroPythonWidget.__handlePreferencesChanged"></a>
+<h4>MicroPythonWidget.__handlePreferencesChanged</h4>
+<b>__handlePreferencesChanged</b>(<i></i>)
+
+<p>
+        Private slot to handle a change in preferences.
+</p>
+<a NAME="MicroPythonWidget.__manageIgnored" ID="MicroPythonWidget.__manageIgnored"></a>
+<h4>MicroPythonWidget.__manageIgnored</h4>
+<b>__manageIgnored</b>(<i></i>)
+
+<p>
+        Private slot to manage the list of ignored serial devices.
+</p>
+<a NAME="MicroPythonWidget.__manageUnknownDevices" ID="MicroPythonWidget.__manageUnknownDevices"></a>
+<h4>MicroPythonWidget.__manageUnknownDevices</h4>
+<b>__manageUnknownDevices</b>(<i></i>)
+
+<p>
+        Private slot to manage manually added boards (i.e. those not in the
+        list of supported boards).
+</p>
+<a NAME="MicroPythonWidget.__mpyCrossAvailable" ID="MicroPythonWidget.__mpyCrossAvailable"></a>
+<h4>MicroPythonWidget.__mpyCrossAvailable</h4>
+<b>__mpyCrossAvailable</b>(<i></i>)
+
+<p>
+        Private method to check the availability of mpy-cross.
+</p>
+<dl>
+<dt>Return:</dt>
+<dd>
+flag indicating the availability of mpy-cross
+</dd>
+</dl>
+<dl>
+<dt>Return Type:</dt>
+<dd>
+bool
+</dd>
+</dl>
+<a NAME="MicroPythonWidget.__paste" ID="MicroPythonWidget.__paste"></a>
+<h4>MicroPythonWidget.__paste</h4>
+<b>__paste</b>(<i>mode=QClipboard.Mode.Clipboard</i>)
+
+<p>
+        Private slot to perform a paste operation.
+</p>
+<dl>
+
+<dt><i>mode</i> (QClipboard.Mode (optional))</dt>
+<dd>
+paste mode (defaults to QClipboard.Mode.Clipboard)
+</dd>
+</dl>
+<a NAME="MicroPythonWidget.__populateDeviceTypeComboBox" ID="MicroPythonWidget.__populateDeviceTypeComboBox"></a>
+<h4>MicroPythonWidget.__populateDeviceTypeComboBox</h4>
+<b>__populateDeviceTypeComboBox</b>(<i></i>)
+
+<p>
+        Private method to populate the device type selector.
+</p>
+<a NAME="MicroPythonWidget.__processData" ID="MicroPythonWidget.__processData"></a>
+<h4>MicroPythonWidget.__processData</h4>
+<b>__processData</b>(<i>data</i>)
+
+<p>
+        Private slot to process bytes received from the device.
+</p>
+<dl>
+
+<dt><i>data</i> (bytes)</dt>
+<dd>
+bytes received from the device
+</dd>
+</dl>
+<a NAME="MicroPythonWidget.__replEditMouseReleaseEvent" ID="MicroPythonWidget.__replEditMouseReleaseEvent"></a>
+<h4>MicroPythonWidget.__replEditMouseReleaseEvent</h4>
+<b>__replEditMouseReleaseEvent</b>(<i>evt</i>)
+
+<p>
+        Private method handling mouse release events for the replEdit widget.
+</p>
+<p>
+        Note: this is a hack because QTextEdit does not allow filtering of
+        QEvent.Type.MouseButtonRelease. To make middle button paste work, we
+        had to intercept the protected event method (some kind of
+        reimplementing it).
+</p>
+<dl>
+
+<dt><i>evt</i> (QMouseEvent)</dt>
+<dd>
+reference to the event object
+</dd>
+</dl>
+<a NAME="MicroPythonWidget.__setCharFormat" ID="MicroPythonWidget.__setCharFormat"></a>
+<h4>MicroPythonWidget.__setCharFormat</h4>
+<b>__setCharFormat</b>(<i>formatCodes, textCursor</i>)
+
+<p>
+        Private method setting the current text format of the REPL pane based
+        on the passed ANSI codes.
+</p>
+<p>
+        Following codes are used:
+        <ul>
+        <li>0: Reset</li>
+        <li>1: Bold font (weight 75)</li>
+        <li>2: Light font (weight 25)</li>
+        <li>3: Italic font</li>
+        <li>4: Underlined font</li>
+        <li>9: Strikeout font</li>
+        <li>21: Bold off (weight 50)</li>
+        <li>22: Light off (weight 50)</li>
+        <li>23: Italic off</li>
+        <li>24: Underline off</li>
+        <li>29: Strikeout off</li>
+        <li>30: foreground Black</li>
+        <li>31: foreground Dark Red</li>
+        <li>32: foreground Dark Green</li>
+        <li>33: foreground Dark Yellow</li>
+        <li>34: foreground Dark Blue</li>
+        <li>35: foreground Dark Magenta</li>
+        <li>36: foreground Dark Cyan</li>
+        <li>37: foreground Light Gray</li>
+        <li>39: reset foreground to default</li>
+        <li>40: background Black</li>
+        <li>41: background Dark Red</li>
+        <li>42: background Dark Green</li>
+        <li>43: background Dark Yellow</li>
+        <li>44: background Dark Blue</li>
+        <li>45: background Dark Magenta</li>
+        <li>46: background Dark Cyan</li>
+        <li>47: background Light Gray</li>
+        <li>49: reset background to default</li>
+        <li>53: Overlined font</li>
+        <li>55: Overline off</li>
+        <li>90: bright foreground Dark Gray</li>
+        <li>91: bright foreground Red</li>
+        <li>92: bright foreground Green</li>
+        <li>93: bright foreground Yellow</li>
+        <li>94: bright foreground Blue</li>
+        <li>95: bright foreground Magenta</li>
+        <li>96: bright foreground Cyan</li>
+        <li>97: bright foreground White</li>
+        <li>100: bright background Dark Gray</li>
+        <li>101: bright background Red</li>
+        <li>102: bright background Green</li>
+        <li>103: bright background Yellow</li>
+        <li>104: bright background Blue</li>
+        <li>105: bright background Magenta</li>
+        <li>106: bright background Cyan</li>
+        <li>107: bright background White</li>
+        </ul>
+</p>
+<dl>
+
+<dt><i>formatCodes</i> (list of str)</dt>
+<dd>
+list of format codes
+</dd>
+<dt><i>textCursor</i> (QTextCursor)</dt>
+<dd>
+reference to the text cursor
+</dd>
+</dl>
+<a NAME="MicroPythonWidget.__setConnected" ID="MicroPythonWidget.__setConnected"></a>
+<h4>MicroPythonWidget.__setConnected</h4>
+<b>__setConnected</b>(<i>connected</i>)
+
+<p>
+        Private method to set the connection status LED.
+</p>
+<dl>
+
+<dt><i>connected</i> (bool)</dt>
+<dd>
+connection state
+</dd>
+</dl>
+<a NAME="MicroPythonWidget.__showContextMenu" ID="MicroPythonWidget.__showContextMenu"></a>
+<h4>MicroPythonWidget.__showContextMenu</h4>
+<b>__showContextMenu</b>(<i>pos</i>)
+
+<p>
+        Private slot to show the REPL context menu.
+</p>
+<dl>
+
+<dt><i>pos</i> (QPoint)</dt>
+<dd>
+position to show the menu at
+</dd>
+</dl>
+<a NAME="MicroPythonWidget.__showDeviceTime" ID="MicroPythonWidget.__showDeviceTime"></a>
+<h4>MicroPythonWidget.__showDeviceTime</h4>
+<b>__showDeviceTime</b>(<i></i>)
+
+<p>
+        Private slot to show the date and time of the connected device.
+</p>
+<a NAME="MicroPythonWidget.__showDeviceVersion" ID="MicroPythonWidget.__showDeviceVersion"></a>
+<h4>MicroPythonWidget.__showDeviceVersion</h4>
+<b>__showDeviceVersion</b>(<i></i>)
+
+<p>
+        Private slot to show some version info about MicroPython of the device.
+</p>
+<a NAME="MicroPythonWidget.__showDocumentation" ID="MicroPythonWidget.__showDocumentation"></a>
+<h4>MicroPythonWidget.__showDocumentation</h4>
+<b>__showDocumentation</b>(<i></i>)
+
+<p>
+        Private slot to open the documentation URL for the selected device.
+</p>
+<a NAME="MicroPythonWidget.__showError" ID="MicroPythonWidget.__showError"></a>
+<h4>MicroPythonWidget.__showError</h4>
+<b>__showError</b>(<i>method, error</i>)
+
+<p>
+        Private method to show some error message.
+</p>
+<dl>
+
+<dt><i>method</i> (str)</dt>
+<dd>
+name of the method the error occured in
+</dd>
+<dt><i>error</i> (str)</dt>
+<dd>
+error message
+</dd>
+</dl>
+<a NAME="MicroPythonWidget.__showImplementation" ID="MicroPythonWidget.__showImplementation"></a>
+<h4>MicroPythonWidget.__showImplementation</h4>
+<b>__showImplementation</b>(<i></i>)
+
+<p>
+        Private slot to show some implementation related information.
+</p>
+<a NAME="MicroPythonWidget.__showLocalAndDeviceTime" ID="MicroPythonWidget.__showLocalAndDeviceTime"></a>
+<h4>MicroPythonWidget.__showLocalAndDeviceTime</h4>
+<b>__showLocalAndDeviceTime</b>(<i></i>)
+
+<p>
+        Private slot to show the local and device time side-by-side.
+</p>
+<a NAME="MicroPythonWidget.__showLocalTime" ID="MicroPythonWidget.__showLocalTime"></a>
+<h4>MicroPythonWidget.__showLocalTime</h4>
+<b>__showLocalTime</b>(<i></i>)
+
+<p>
+        Private slot to show the local date and time.
+</p>
+<a NAME="MicroPythonWidget.__showNoDeviceMessage" ID="MicroPythonWidget.__showNoDeviceMessage"></a>
+<h4>MicroPythonWidget.__showNoDeviceMessage</h4>
+<b>__showNoDeviceMessage</b>(<i></i>)
+
+<p>
+        Private method to show a message dialog indicating a missing device.
+</p>
+<a NAME="MicroPythonWidget.__synchronizeTime" ID="MicroPythonWidget.__synchronizeTime"></a>
+<h4>MicroPythonWidget.__synchronizeTime</h4>
+<b>__synchronizeTime</b>(<i>quiet=False</i>)
+
+<p>
+        Private slot to set the time of the connected device to the local
+        computer's time.
+</p>
+<dl>
+
+<dt><i>quiet</i> (bool)</dt>
+<dd>
+flag indicating to not show a message
+</dd>
+</dl>
+<a NAME="MicroPythonWidget.commandsInterface" ID="MicroPythonWidget.commandsInterface"></a>
+<h4>MicroPythonWidget.commandsInterface</h4>
+<b>commandsInterface</b>(<i></i>)
+
+<p>
+        Public method to get a reference to the commands interface object.
+</p>
+<dl>
+<dt>Return:</dt>
+<dd>
+reference to the commands interface object
+</dd>
+</dl>
+<dl>
+<dt>Return Type:</dt>
+<dd>
+MicroPythonCommandsInterface
+</dd>
+</dl>
+<a NAME="MicroPythonWidget.eventFilter" ID="MicroPythonWidget.eventFilter"></a>
+<h4>MicroPythonWidget.eventFilter</h4>
+<b>eventFilter</b>(<i>obj, evt</i>)
+
+<p>
+        Public method to process events for the REPL pane.
+</p>
+<dl>
+
+<dt><i>obj</i> (QObject)</dt>
+<dd>
+reference to the object the event was meant for
+</dd>
+<dt><i>evt</i> (QEvent)</dt>
+<dd>
+reference to the event object
+</dd>
+</dl>
+<dl>
+<dt>Return:</dt>
+<dd>
+flag to indicate that the event was handled
+</dd>
+</dl>
+<dl>
+<dt>Return Type:</dt>
+<dd>
+bool
+</dd>
+</dl>
+<a NAME="MicroPythonWidget.getCurrentBoard" ID="MicroPythonWidget.getCurrentBoard"></a>
+<h4>MicroPythonWidget.getCurrentBoard</h4>
+<b>getCurrentBoard</b>(<i></i>)
+
+<p>
+        Public method to get the board name of the selected device.
+</p>
+<dl>
+<dt>Return:</dt>
+<dd>
+board name of the selected device
+</dd>
+</dl>
+<dl>
+<dt>Return Type:</dt>
+<dd>
+str
+</dd>
+</dl>
+<a NAME="MicroPythonWidget.getCurrentPort" ID="MicroPythonWidget.getCurrentPort"></a>
+<h4>MicroPythonWidget.getCurrentPort</h4>
+<b>getCurrentPort</b>(<i></i>)
+
+<p>
+        Public method to determine the port path of the selected device.
+</p>
+<dl>
+<dt>Return:</dt>
+<dd>
+path of the port of the selected device
+</dd>
+</dl>
+<dl>
+<dt>Return Type:</dt>
+<dd>
+str
+</dd>
+</dl>
+<a NAME="MicroPythonWidget.getDeviceWorkspace" ID="MicroPythonWidget.getDeviceWorkspace"></a>
+<h4>MicroPythonWidget.getDeviceWorkspace</h4>
+<b>getDeviceWorkspace</b>(<i></i>)
+
+<p>
+        Public method to get the workspace directory of the device.
+</p>
+<dl>
+<dt>Return:</dt>
+<dd>
+workspace directory of the device
+</dd>
+</dl>
+<dl>
+<dt>Return Type:</dt>
+<dd>
+str
+</dd>
+</dl>
+<a NAME="MicroPythonWidget.handleDataFlood" ID="MicroPythonWidget.handleDataFlood"></a>
+<h4>MicroPythonWidget.handleDataFlood</h4>
+<b>handleDataFlood</b>(<i></i>)
+
+<p>
+        Public slot handling a data flood from the device.
+</p>
+<a NAME="MicroPythonWidget.isConnected" ID="MicroPythonWidget.isConnected"></a>
+<h4>MicroPythonWidget.isConnected</h4>
+<b>isConnected</b>(<i></i>)
+
+<p>
+        Public method to get the connection state.
+</p>
+<dl>
+<dt>Return:</dt>
+<dd>
+connection state
+</dd>
+</dl>
+<dl>
+<dt>Return Type:</dt>
+<dd>
+bool
+</dd>
+</dl>
+<a NAME="MicroPythonWidget.isMicrobit" ID="MicroPythonWidget.isMicrobit"></a>
+<h4>MicroPythonWidget.isMicrobit</h4>
+<b>isMicrobit</b>(<i></i>)
+
+<p>
+        Public method to check, if the connected/selected device is a
+        BBC micro:bit or Calliope mini.
+</p>
+<dl>
+<dt>Return:</dt>
+<dd>
+flag indicating a micro:bit device
+        rtype bool
+</dd>
+</dl>
+<a NAME="MicroPythonWidget.on_chartButton_clicked" ID="MicroPythonWidget.on_chartButton_clicked"></a>
+<h4>MicroPythonWidget.on_chartButton_clicked</h4>
+<b>on_chartButton_clicked</b>(<i>checked</i>)
+
+<p>
+        Private slot to open a chart view to plot data received from the
+        connected device.
+</p>
+<p>
+        If the selected device is not connected yet, this will be done now.
+</p>
+<dl>
+
+<dt><i>checked</i> (bool)</dt>
+<dd>
+state of the button
+</dd>
+</dl>
+<a NAME="MicroPythonWidget.on_checkButton_clicked" ID="MicroPythonWidget.on_checkButton_clicked"></a>
+<h4>MicroPythonWidget.on_checkButton_clicked</h4>
+<b>on_checkButton_clicked</b>(<i></i>)
+
+<p>
+        Private slot to check for connected devices.
+</p>
+<a NAME="MicroPythonWidget.on_connectButton_clicked" ID="MicroPythonWidget.on_connectButton_clicked"></a>
+<h4>MicroPythonWidget.on_connectButton_clicked</h4>
+<b>on_connectButton_clicked</b>(<i></i>)
+
+<p>
+        Private slot to connect to the selected device or disconnect from the
+        currently connected device.
+</p>
+<a NAME="MicroPythonWidget.on_deviceTypeComboBox_activated" ID="MicroPythonWidget.on_deviceTypeComboBox_activated"></a>
+<h4>MicroPythonWidget.on_deviceTypeComboBox_activated</h4>
+<b>on_deviceTypeComboBox_activated</b>(<i>index</i>)
+
+<p>
+        Private slot handling the selection of a device type.
+</p>
+<dl>
+
+<dt><i>index</i> (int)</dt>
+<dd>
+index of the selected device
+</dd>
+</dl>
+<a NAME="MicroPythonWidget.on_filesButton_clicked" ID="MicroPythonWidget.on_filesButton_clicked"></a>
+<h4>MicroPythonWidget.on_filesButton_clicked</h4>
+<b>on_filesButton_clicked</b>(<i>checked</i>)
+
+<p>
+        Private slot to open a file manager window to the connected device.
+</p>
+<p>
+        If the selected device is not connected yet, this will be done now.
+</p>
+<dl>
+
+<dt><i>checked</i> (bool)</dt>
+<dd>
+state of the button
+</dd>
+</dl>
+<a NAME="MicroPythonWidget.on_openButton_clicked" ID="MicroPythonWidget.on_openButton_clicked"></a>
+<h4>MicroPythonWidget.on_openButton_clicked</h4>
+<b>on_openButton_clicked</b>(<i></i>)
+
+<p>
+        Private slot to open a file of the connected device.
+</p>
+<a NAME="MicroPythonWidget.on_replButton_clicked" ID="MicroPythonWidget.on_replButton_clicked"></a>
+<h4>MicroPythonWidget.on_replButton_clicked</h4>
+<b>on_replButton_clicked</b>(<i>checked</i>)
+
+<p>
+        Private slot to connect to enable or disable the REPL widget.
+</p>
+<p>
+        If the selected device is not connected yet, this will be done now.
+</p>
+<dl>
+
+<dt><i>checked</i> (bool)</dt>
+<dd>
+state of the button
+</dd>
+</dl>
+<a NAME="MicroPythonWidget.on_runButton_clicked" ID="MicroPythonWidget.on_runButton_clicked"></a>
+<h4>MicroPythonWidget.on_runButton_clicked</h4>
+<b>on_runButton_clicked</b>(<i></i>)
+
+<p>
+        Private slot to execute the script of the active editor on the
+        selected device.
+</p>
+<p>
+        If the REPL is not active yet, it will be activated, which might cause
+        an unconnected device to be connected.
+</p>
+<a NAME="MicroPythonWidget.on_saveButton_clicked" ID="MicroPythonWidget.on_saveButton_clicked"></a>
+<h4>MicroPythonWidget.on_saveButton_clicked</h4>
+<b>on_saveButton_clicked</b>(<i></i>)
+
+<p>
+        Private slot to save the current editor to the connected device.
+</p>
+<a NAME="MicroPythonWidget.setActionButtons" ID="MicroPythonWidget.setActionButtons"></a>
+<h4>MicroPythonWidget.setActionButtons</h4>
+<b>setActionButtons</b>(<i>**kwargs</i>)
+
+<p>
+        Public method to set the enabled state of the various action buttons.
+</p>
+<dl>
+
+<dt><i>kwargs=</i> (dict)</dt>
+<dd>
+keyword arguments containg the enabled states (keys
+            are 'run', 'repl', 'files', 'chart', 'open', 'save'
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+</body></html>

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html><head>
+<title>eric6.Plugins.VcsPlugins.vcsGit.GitBundleDialog</title>
+<meta charset="UTF-8">
+<style>
+body {
+    background: #EDECE6;
+    margin: 0em 1em 10em 1em;
+    color: black;
+}
+
+h1 { color: white; background: #85774A; }
+h2 { color: white; background: #85774A; }
+h3 { color: white; background: #9D936E; }
+h4 { color: white; background: #9D936E; }
+    
+a { color: #BA6D36; }
+
+</style>
+</head>
+<body>
+<a NAME="top" ID="top"></a>
+<h1>eric6.Plugins.VcsPlugins.vcsGit.GitBundleDialog</h1>
+
+<p>
+Module implementing a dialog to enter the data for a bundle operation.
+</p>
+<h3>Global Attributes</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Classes</h3>
+
+<table>
+
+<tr>
+<td><a href="#GitBundleDialog">GitBundleDialog</a></td>
+<td>Class implementing a dialog to enter the data for a bundle operation.</td>
+</tr>
+</table>
+<h3>Functions</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+<hr />
+<hr />
+<a NAME="GitBundleDialog" ID="GitBundleDialog"></a>
+<h2>GitBundleDialog</h2>
+
+<p>
+    Class implementing a dialog to enter the data for a bundle operation.
+</p>
+<h3>Derived from</h3>
+QDialog, Ui_GitBundleDialog
+<h3>Class Attributes</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Class Methods</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+
+<table>
+
+<tr>
+<td><a href="#GitBundleDialog.__init__">GitBundleDialog</a></td>
+<td>Constructor</td>
+</tr>
+<tr>
+<td><a href="#GitBundleDialog.__updateOK">__updateOK</a></td>
+<td>Private slot to update the OK button.</td>
+</tr>
+<tr>
+<td><a href="#GitBundleDialog.getData">getData</a></td>
+<td>Public method to retrieve the bundle data.</td>
+</tr>
+<tr>
+<td><a href="#GitBundleDialog.on_branchButton_toggled">on_branchButton_toggled</a></td>
+<td>Private slot to handle changes of the Branch select button.</td>
+</tr>
+<tr>
+<td><a href="#GitBundleDialog.on_branchCombo_editTextChanged">on_branchCombo_editTextChanged</a></td>
+<td>Private slot to handle changes of the Branch combo.</td>
+</tr>
+<tr>
+<td><a href="#GitBundleDialog.on_revisionsButton_toggled">on_revisionsButton_toggled</a></td>
+<td>Private slot to handle changes of the revisions select button.</td>
+</tr>
+<tr>
+<td><a href="#GitBundleDialog.on_revisionsEdit_textChanged">on_revisionsEdit_textChanged</a></td>
+<td>Private slot to handle changes of the Revisions edit.</td>
+</tr>
+<tr>
+<td><a href="#GitBundleDialog.on_tagButton_toggled">on_tagButton_toggled</a></td>
+<td>Private slot to handle changes of the Tag select button.</td>
+</tr>
+<tr>
+<td><a href="#GitBundleDialog.on_tagCombo_editTextChanged">on_tagCombo_editTextChanged</a></td>
+<td>Private slot to handle changes of the Tag combo.</td>
+</tr>
+</table>
+<h3>Static Methods</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+
+<a NAME="GitBundleDialog.__init__" ID="GitBundleDialog.__init__"></a>
+<h4>GitBundleDialog (Constructor)</h4>
+<b>GitBundleDialog</b>(<i>tagsList, branchesList, parent=None</i>)
+
+<p>
+        Constructor
+</p>
+<dl>
+
+<dt><i>tagsList</i></dt>
+<dd>
+list of tags (list of strings)
+</dd>
+<dt><i>branchesList</i></dt>
+<dd>
+list of branches (list of strings)
+</dd>
+<dt><i>parent</i></dt>
+<dd>
+parent widget (QWidget)
+</dd>
+</dl>
+<a NAME="GitBundleDialog.__updateOK" ID="GitBundleDialog.__updateOK"></a>
+<h4>GitBundleDialog.__updateOK</h4>
+<b>__updateOK</b>(<i></i>)
+
+<p>
+        Private slot to update the OK button.
+</p>
+<a NAME="GitBundleDialog.getData" ID="GitBundleDialog.getData"></a>
+<h4>GitBundleDialog.getData</h4>
+<b>getData</b>(<i></i>)
+
+<p>
+        Public method to retrieve the bundle data.
+</p>
+<dl>
+<dt>Return:</dt>
+<dd>
+list of revision expressions (list of strings)
+</dd>
+</dl>
+<a NAME="GitBundleDialog.on_branchButton_toggled" ID="GitBundleDialog.on_branchButton_toggled"></a>
+<h4>GitBundleDialog.on_branchButton_toggled</h4>
+<b>on_branchButton_toggled</b>(<i>checked</i>)
+
+<p>
+        Private slot to handle changes of the Branch select button.
+</p>
+<dl>
+
+<dt><i>checked</i></dt>
+<dd>
+state of the button (boolean)
+</dd>
+</dl>
+<a NAME="GitBundleDialog.on_branchCombo_editTextChanged" ID="GitBundleDialog.on_branchCombo_editTextChanged"></a>
+<h4>GitBundleDialog.on_branchCombo_editTextChanged</h4>
+<b>on_branchCombo_editTextChanged</b>(<i>txt</i>)
+
+<p>
+        Private slot to handle changes of the Branch combo.
+</p>
+<dl>
+
+<dt><i>txt</i></dt>
+<dd>
+text of the combo (string)
+</dd>
+</dl>
+<a NAME="GitBundleDialog.on_revisionsButton_toggled" ID="GitBundleDialog.on_revisionsButton_toggled"></a>
+<h4>GitBundleDialog.on_revisionsButton_toggled</h4>
+<b>on_revisionsButton_toggled</b>(<i>checked</i>)
+
+<p>
+        Private slot to handle changes of the revisions select button.
+</p>
+<dl>
+
+<dt><i>checked</i></dt>
+<dd>
+state of the button (boolean)
+</dd>
+</dl>
+<a NAME="GitBundleDialog.on_revisionsEdit_textChanged" ID="GitBundleDialog.on_revisionsEdit_textChanged"></a>
+<h4>GitBundleDialog.on_revisionsEdit_textChanged</h4>
+<b>on_revisionsEdit_textChanged</b>(<i>txt</i>)
+
+<p>
+        Private slot to handle changes of the Revisions edit.
+</p>
+<dl>
+
+<dt><i>txt</i></dt>
+<dd>
+text of the line edit (string)
+</dd>
+</dl>
+<a NAME="GitBundleDialog.on_tagButton_toggled" ID="GitBundleDialog.on_tagButton_toggled"></a>
+<h4>GitBundleDialog.on_tagButton_toggled</h4>
+<b>on_tagButton_toggled</b>(<i>checked</i>)
+
+<p>
+        Private slot to handle changes of the Tag select button.
+</p>
+<dl>
+
+<dt><i>checked</i></dt>
+<dd>
+state of the button (boolean)
+</dd>
+</dl>
+<a NAME="GitBundleDialog.on_tagCombo_editTextChanged" ID="GitBundleDialog.on_tagCombo_editTextChanged"></a>
+<h4>GitBundleDialog.on_tagCombo_editTextChanged</h4>
+<b>on_tagCombo_editTextChanged</b>(<i>txt</i>)
+
+<p>
+        Private slot to handle changes of the Tag combo.
+</p>
+<dl>
+
+<dt><i>txt</i></dt>
+<dd>
+text of the combo (string)
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+</body></html>

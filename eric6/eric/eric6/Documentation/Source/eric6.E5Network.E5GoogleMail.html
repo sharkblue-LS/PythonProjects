@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html><head>
+<title>eric6.E5Network.E5GoogleMail</title>
+<meta charset="UTF-8">
+<style>
+body {
+    background: #EDECE6;
+    margin: 0em 1em 10em 1em;
+    color: black;
+}
+
+h1 { color: white; background: #85774A; }
+h2 { color: white; background: #85774A; }
+h3 { color: white; background: #9D936E; }
+h4 { color: white; background: #9D936E; }
+    
+a { color: #BA6D36; }
+
+</style>
+</head>
+<body>
+<a NAME="top" ID="top"></a>
+<h1>eric6.E5Network.E5GoogleMail</h1>
+
+<p>
+Module implementing a dialog to send bug reports.
+</p>
+<h3>Global Attributes</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Classes</h3>
+
+<table>
+
+<tr>
+<td><a href="#E5GoogleMail">E5GoogleMail</a></td>
+<td>Class implementing the logic to send emails via Google Mail.</td>
+</tr>
+<tr>
+<td><a href="#E5GoogleMailAuthBrowser">E5GoogleMailAuthBrowser</a></td>
+<td>Class implementing a simple web browser to perform the OAuth2 authentication process.</td>
+</tr>
+</table>
+<h3>Functions</h3>
+
+<table>
+
+<tr>
+<td><a href="#GoogleMailHelp">GoogleMailHelp</a></td>
+<td>Module function to get some help about how to enable the Google Mail OAuth2 service.</td>
+</tr>
+</table>
+<hr />
+<hr />
+<a NAME="E5GoogleMail" ID="E5GoogleMail"></a>
+<h2>E5GoogleMail</h2>
+
+<p>
+    Class implementing the logic to send emails via Google Mail.
+</p>
+<h3>Signals</h3>
+<dl>
+
+<dt>sendResult(bool, str)</dt>
+<dd>
+emitted to indicate the transmission result
+        and a result message
+</dd>
+</dl>
+<h3>Derived from</h3>
+QObject
+<h3>Class Attributes</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Class Methods</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+
+<table>
+
+<tr>
+<td><a href="#E5GoogleMail.__init__">E5GoogleMail</a></td>
+<td>Constructor</td>
+</tr>
+<tr>
+<td><a href="#E5GoogleMail.__credentialsFromSession">__credentialsFromSession</a></td>
+<td>Private method to create a credentials object.</td>
+</tr>
+<tr>
+<td><a href="#E5GoogleMail.__doSendMessages">__doSendMessages</a></td>
+<td>Private method to send all queued messages.</td>
+</tr>
+<tr>
+<td><a href="#E5GoogleMail.__loadToken">__loadToken</a></td>
+<td>Private method to load a token from the token file.</td>
+</tr>
+<tr>
+<td><a href="#E5GoogleMail.__prepareMessage">__prepareMessage</a></td>
+<td>Private method to prepare the message for sending.</td>
+</tr>
+<tr>
+<td><a href="#E5GoogleMail.__processAuthorization">__processAuthorization</a></td>
+<td>Private slot to process the received authorization code.</td>
+</tr>
+<tr>
+<td><a href="#E5GoogleMail.__saveToken">__saveToken</a></td>
+<td>Private method to save a token to the token file.</td>
+</tr>
+<tr>
+<td><a href="#E5GoogleMail.__startSession">__startSession</a></td>
+<td>Private method to start an authorized session and optionally start the authorization flow.</td>
+</tr>
+<tr>
+<td><a href="#E5GoogleMail.sendMessage">sendMessage</a></td>
+<td>Public method to send a message via Google Mail.</td>
+</tr>
+</table>
+<h3>Static Methods</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+
+<a NAME="E5GoogleMail.__init__" ID="E5GoogleMail.__init__"></a>
+<h4>E5GoogleMail (Constructor)</h4>
+<b>E5GoogleMail</b>(<i>parent=None</i>)
+
+<p>
+        Constructor
+</p>
+<dl>
+
+<dt><i>parent</i> (QObject)</dt>
+<dd>
+reference to the parent object
+</dd>
+</dl>
+<a NAME="E5GoogleMail.__credentialsFromSession" ID="E5GoogleMail.__credentialsFromSession"></a>
+<h4>E5GoogleMail.__credentialsFromSession</h4>
+<b>__credentialsFromSession</b>(<i></i>)
+
+<p>
+        Private method to create a credentials object.
+</p>
+<dl>
+<dt>Return:</dt>
+<dd>
+created credentials object
+</dd>
+</dl>
+<dl>
+<dt>Return Type:</dt>
+<dd>
+google.oauth2.credentials.Credentials
+</dd>
+</dl>
+<a NAME="E5GoogleMail.__doSendMessages" ID="E5GoogleMail.__doSendMessages"></a>
+<h4>E5GoogleMail.__doSendMessages</h4>
+<b>__doSendMessages</b>(<i></i>)
+
+<p>
+        Private method to send all queued messages.
+</p>
+<a NAME="E5GoogleMail.__loadToken" ID="E5GoogleMail.__loadToken"></a>
+<h4>E5GoogleMail.__loadToken</h4>
+<b>__loadToken</b>(<i></i>)
+
+<p>
+        Private method to load a token from the token file.
+</p>
+<dl>
+<dt>Return:</dt>
+<dd>
+loaded token
+</dd>
+</dl>
+<dl>
+<dt>Return Type:</dt>
+<dd>
+dict or None
+</dd>
+</dl>
+<a NAME="E5GoogleMail.__prepareMessage" ID="E5GoogleMail.__prepareMessage"></a>
+<h4>E5GoogleMail.__prepareMessage</h4>
+<b>__prepareMessage</b>(<i>message</i>)
+
+<p>
+        Private method to prepare the message for sending.
+</p>
+<dl>
+
+<dt><i>message</i> (email.mime.text.MIMEBase)</dt>
+<dd>
+message to be prepared
+</dd>
+</dl>
+<dl>
+<dt>Return:</dt>
+<dd>
+prepared message dictionary
+</dd>
+</dl>
+<dl>
+<dt>Return Type:</dt>
+<dd>
+dict
+</dd>
+</dl>
+<a NAME="E5GoogleMail.__processAuthorization" ID="E5GoogleMail.__processAuthorization"></a>
+<h4>E5GoogleMail.__processAuthorization</h4>
+<b>__processAuthorization</b>(<i>authCode</i>)
+
+<p>
+        Private slot to process the received authorization code.
+</p>
+<dl>
+
+<dt><i>authCode</i> (str)</dt>
+<dd>
+received authorization code
+</dd>
+</dl>
+<a NAME="E5GoogleMail.__saveToken" ID="E5GoogleMail.__saveToken"></a>
+<h4>E5GoogleMail.__saveToken</h4>
+<b>__saveToken</b>(<i>token</i>)
+
+<p>
+        Private method to save a token to the token file.
+</p>
+<dl>
+
+<dt><i>token</i> (dict)</dt>
+<dd>
+token to be saved
+</dd>
+</dl>
+<a NAME="E5GoogleMail.__startSession" ID="E5GoogleMail.__startSession"></a>
+<h4>E5GoogleMail.__startSession</h4>
+<b>__startSession</b>(<i></i>)
+
+<p>
+        Private method to start an authorized session and optionally start the
+        authorization flow.
+</p>
+<a NAME="E5GoogleMail.sendMessage" ID="E5GoogleMail.sendMessage"></a>
+<h4>E5GoogleMail.sendMessage</h4>
+<b>sendMessage</b>(<i>message</i>)
+
+<p>
+        Public method to send a message via Google Mail.
+</p>
+<dl>
+
+<dt><i>message</i> (email.mime.text.MIMEBase)</dt>
+<dd>
+email message to be sent
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+<hr />
+<a NAME="E5GoogleMailAuthBrowser" ID="E5GoogleMailAuthBrowser"></a>
+<h2>E5GoogleMailAuthBrowser</h2>
+
+<p>
+    Class implementing a simple web browser to perform the OAuth2
+    authentication process.
+</p>
+<h3>Signals</h3>
+<dl>
+
+<dt>approvalCodeReceived(str)</dt>
+<dd>
+emitted to indicate the receipt of the
+        approval code
+</dd>
+</dl>
+<h3>Derived from</h3>
+QDialog
+<h3>Class Attributes</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Class Methods</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+
+<table>
+
+<tr>
+<td><a href="#E5GoogleMailAuthBrowser.__init__">E5GoogleMailAuthBrowser</a></td>
+<td>Constructor</td>
+</tr>
+<tr>
+<td><a href="#E5GoogleMailAuthBrowser.__pageLoadFinished">__pageLoadFinished</a></td>
+<td>Private slot handling the loadFinished signal.</td>
+</tr>
+<tr>
+<td><a href="#E5GoogleMailAuthBrowser.__titleChanged">__titleChanged</a></td>
+<td>Private slot handling changes of the web page title.</td>
+</tr>
+<tr>
+<td><a href="#E5GoogleMailAuthBrowser.load">load</a></td>
+<td>Public method to start the authorization flow by loading the given URL.</td>
+</tr>
+</table>
+<h3>Static Methods</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+
+<a NAME="E5GoogleMailAuthBrowser.__init__" ID="E5GoogleMailAuthBrowser.__init__"></a>
+<h4>E5GoogleMailAuthBrowser (Constructor)</h4>
+<b>E5GoogleMailAuthBrowser</b>(<i>parent=None</i>)
+
+<p>
+        Constructor
+</p>
+<dl>
+
+<dt><i>parent</i> (QWidget)</dt>
+<dd>
+reference to the parent widget
+</dd>
+</dl>
+<a NAME="E5GoogleMailAuthBrowser.__pageLoadFinished" ID="E5GoogleMailAuthBrowser.__pageLoadFinished"></a>
+<h4>E5GoogleMailAuthBrowser.__pageLoadFinished</h4>
+<b>__pageLoadFinished</b>(<i></i>)
+
+<p>
+        Private slot handling the loadFinished signal.
+</p>
+<a NAME="E5GoogleMailAuthBrowser.__titleChanged" ID="E5GoogleMailAuthBrowser.__titleChanged"></a>
+<h4>E5GoogleMailAuthBrowser.__titleChanged</h4>
+<b>__titleChanged</b>(<i>title</i>)
+
+<p>
+        Private slot handling changes of the web page title.
+</p>
+<dl>
+
+<dt><i>title</i> (str)</dt>
+<dd>
+web page title
+</dd>
+</dl>
+<a NAME="E5GoogleMailAuthBrowser.load" ID="E5GoogleMailAuthBrowser.load"></a>
+<h4>E5GoogleMailAuthBrowser.load</h4>
+<b>load</b>(<i>url</i>)
+
+<p>
+        Public method to start the authorization flow by loading the given URL.
+</p>
+<dl>
+
+<dt><i>url</i> (str or QUrl)</dt>
+<dd>
+URL to be laoded
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+<hr />
+<a NAME="GoogleMailHelp" ID="GoogleMailHelp"></a>
+<h2>GoogleMailHelp</h2>
+<b>GoogleMailHelp</b>(<i></i>)
+
+<p>
+    Module function to get some help about how to enable the Google Mail
+    OAuth2 service.
+</p>
+<dl>
+<dt>Return:</dt>
+<dd>
+help text
+</dd>
+</dl>
+<dl>
+<dt>Return Type:</dt>
+<dd>
+str
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+</body></html>

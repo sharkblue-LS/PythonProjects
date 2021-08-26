@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html><head>
+<title>eric6.Plugins.VcsPlugins.vcsGit.GitStashDataDialog</title>
+<meta charset="UTF-8">
+<style>
+body {
+    background: #EDECE6;
+    margin: 0em 1em 10em 1em;
+    color: black;
+}
+
+h1 { color: white; background: #85774A; }
+h2 { color: white; background: #85774A; }
+h3 { color: white; background: #9D936E; }
+h4 { color: white; background: #9D936E; }
+    
+a { color: #BA6D36; }
+
+</style>
+</head>
+<body>
+<a NAME="top" ID="top"></a>
+<h1>eric6.Plugins.VcsPlugins.vcsGit.GitStashDataDialog</h1>
+
+<p>
+Module implementing a dialog to enter the data for a stash operation.
+</p>
+<h3>Global Attributes</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Classes</h3>
+
+<table>
+
+<tr>
+<td><a href="#GitStashDataDialog">GitStashDataDialog</a></td>
+<td>Class implementing a dialog to enter the data for a stash operation.</td>
+</tr>
+</table>
+<h3>Functions</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+<hr />
+<hr />
+<a NAME="GitStashDataDialog" ID="GitStashDataDialog"></a>
+<h2>GitStashDataDialog</h2>
+
+<p>
+    Class implementing a dialog to enter the data for a stash operation.
+</p>
+<h3>Derived from</h3>
+QDialog, Ui_GitStashDataDialog
+<h3>Class Attributes</h3>
+
+<table>
+<tr><td>NoUntracked</td></tr><tr><td>UntrackedAndIgnored</td></tr><tr><td>UntrackedOnly</td></tr>
+</table>
+<h3>Class Methods</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+
+<table>
+
+<tr>
+<td><a href="#GitStashDataDialog.__init__">GitStashDataDialog</a></td>
+<td>Constructor</td>
+</tr>
+<tr>
+<td><a href="#GitStashDataDialog.getData">getData</a></td>
+<td>Public method to get the user data.</td>
+</tr>
+</table>
+<h3>Static Methods</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+
+<a NAME="GitStashDataDialog.__init__" ID="GitStashDataDialog.__init__"></a>
+<h4>GitStashDataDialog (Constructor)</h4>
+<b>GitStashDataDialog</b>(<i>parent=None</i>)
+
+<p>
+        Constructor
+</p>
+<dl>
+
+<dt><i>parent</i></dt>
+<dd>
+reference to the parent widget (QWidget)
+</dd>
+</dl>
+<a NAME="GitStashDataDialog.getData" ID="GitStashDataDialog.getData"></a>
+<h4>GitStashDataDialog.getData</h4>
+<b>getData</b>(<i></i>)
+
+<p>
+        Public method to get the user data.
+</p>
+<dl>
+<dt>Return:</dt>
+<dd>
+tuple containing the message (string), a flag indicating to
+            keep changes in the staging area (boolean) and an indication to
+            stash untracked and/or ignored files (integer)
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+</body></html>

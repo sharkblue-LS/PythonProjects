@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HighlightingStyles SYSTEM "HighlightingStyles-6.0.dtd">
+<!-- Eric6 highlighting styles -->
+<!-- Saved: 2020-04-17, 19:29:41-->
+<!-- Author: Detlev Offenbach <detlev@die-offenbachs.de> -->
+<HighlightingStyles version="6.0">
+  <Lexer name="YAML">
+    <Style style="0" substyle="-1" color="#ffffff" paper="#262626" font="Hack,10,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Default</Description>
+    </Style>
+    <Style style="1" substyle="-1" color="#74cc66" paper="#262626" font="Hack,10,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Comment</Description>
+    </Style>
+    <Style style="2" substyle="-1" color="#00aaff" paper="#262626" font="Hack,10,-1,5,75,0,0,0,0,0" eolfill="False">
+      <Description>Identifier</Description>
+    </Style>
+    <Style style="3" substyle="-1" color="#c354c3" paper="#262626" font="Hack,10,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Keyword</Description>
+    </Style>
+    <Style style="4" substyle="-1" color="#dc5a5a" paper="#262626" font="Hack,10,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Number</Description>
+    </Style>
+    <Style style="5" substyle="-1" color="#00f4f4" paper="#262626" font="Hack,10,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Reference</Description>
+    </Style>
+    <Style style="6" substyle="-1" color="#ffffff" paper="#000088" font="Hack,10,-1,5,75,0,0,0,0,0" eolfill="True">
+      <Description>Document delimiter</Description>
+    </Style>
+    <Style style="7" substyle="-1" color="#9d9fff" paper="#262626" font="Hack,10,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Text block marker</Description>
+    </Style>
+    <Style style="8" substyle="-1" color="#ffffff" paper="#ff0000" font="Hack,10,-1,5,75,1,0,0,0,0" eolfill="True">
+      <Description>Syntax error marker</Description>
+    </Style>
+    <Style style="9" substyle="-1" color="#f4efc5" paper="#262626" font="Hack,10,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Operator</Description>
+    </Style>
+  </Lexer>
+</HighlightingStyles>

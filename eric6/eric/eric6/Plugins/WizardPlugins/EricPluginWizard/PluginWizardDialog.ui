@@ -1,0 +1,576 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>PluginWizardDialog</class>
+ <widget class="QDialog" name="PluginWizardDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>700</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>eric Plug-in Wizard</string>
+  </property>
+  <property name="sizeGripEnabled">
+   <bool>true</bool>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_5">
+   <item>
+    <widget class="QTabWidget" name="dataTabWidget">
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="headerTab">
+      <attribute name="title">
+       <string>Header</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <layout class="QGridLayout" name="gridLayout">
+         <item row="0" column="0">
+          <widget class="QLabel" name="label">
+           <property name="text">
+            <string>Plug-in Name:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1" colspan="2">
+          <widget class="QLineEdit" name="nameEdit">
+           <property name="toolTip">
+            <string>Enter the plug-in name</string>
+           </property>
+           <property name="maxLength">
+            <number>55</number>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="label_2">
+           <property name="text">
+            <string>Version:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1" colspan="2">
+          <widget class="QLineEdit" name="versionEdit">
+           <property name="toolTip">
+            <string>Enter the version number in the form 'major.minor[.patch[.sub]]'</string>
+           </property>
+           <property name="maxLength">
+            <number>10</number>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="label_3">
+           <property name="text">
+            <string>Author:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="1" colspan="2">
+          <widget class="QLineEdit" name="authorEdit">
+           <property name="toolTip">
+            <string>Enter the author's name</string>
+           </property>
+           <property name="maxLength">
+            <number>55</number>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="0">
+          <widget class="QLabel" name="label_4">
+           <property name="text">
+            <string>Author Email:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="1" colspan="2">
+          <widget class="QLineEdit" name="authorEmailEdit">
+           <property name="toolTip">
+            <string>Enter the author's email address</string>
+           </property>
+           <property name="inputMask">
+            <string notr="true"/>
+           </property>
+           <property name="maxLength">
+            <number>55</number>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="0">
+          <widget class="QLabel" name="label_5">
+           <property name="text">
+            <string>Class Name:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="1" colspan="2">
+          <widget class="QLineEdit" name="classNameEdit">
+           <property name="toolTip">
+            <string>Enter the name of the plug-in class</string>
+           </property>
+           <property name="maxLength">
+            <number>55</number>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="0">
+          <widget class="QLabel" name="label_6">
+           <property name="text">
+            <string>Package Name:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="1">
+          <widget class="QLineEdit" name="packageNameEdit">
+           <property name="toolTip">
+            <string>Enter the name of the plug-in package</string>
+           </property>
+           <property name="maxLength">
+            <number>55</number>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="2">
+          <widget class="QCheckBox" name="createPackageCheckBox">
+           <property name="toolTip">
+            <string>Select to create the entered package</string>
+           </property>
+           <property name="text">
+            <string>Create Package</string>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="6" column="0">
+          <widget class="QLabel" name="label_7">
+           <property name="text">
+            <string>Short Description:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="6" column="1" colspan="2">
+          <widget class="QLineEdit" name="shortDescriptionEdit">
+           <property name="toolTip">
+            <string>Enter the short description</string>
+           </property>
+           <property name="maxLength">
+            <number>55</number>
+           </property>
+          </widget>
+         </item>
+         <item row="7" column="0">
+          <widget class="QLabel" name="label_8">
+           <property name="text">
+            <string>Long Description:</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+           </property>
+          </widget>
+         </item>
+         <item row="7" column="1" colspan="2">
+          <widget class="QPlainTextEdit" name="longDescriptionEdit">
+           <property name="toolTip">
+            <string>Enter the long description</string>
+           </property>
+           <property name="tabChangesFocus">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QGridLayout" name="gridLayout_2">
+         <item row="0" column="0">
+          <widget class="QCheckBox" name="autoActivateCheckBox">
+           <property name="toolTip">
+            <string>Select to activate the plug-in automatically</string>
+           </property>
+           <property name="text">
+            <string>Activate Automatically</string>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QCheckBox" name="deactivateableCheckBox">
+           <property name="toolTip">
+            <string>Select to allow the plug-in to be deactivated</string>
+           </property>
+           <property name="text">
+            <string>Can be deactivated</string>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QCheckBox" name="restartCheckBox">
+           <property name="toolTip">
+            <string>Select to indicate a restart is needed when updated</string>
+           </property>
+           <property name="text">
+            <string>Needs Restart</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QCheckBox" name="python2CheckBox">
+           <property name="toolTip">
+            <string>Select to indicate Python 2 compatibility</string>
+           </property>
+           <property name="text">
+            <string>Python 2 compatible</string>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QFrame" name="ondemandFrame">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::NoFrame</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_4">
+          <item row="0" column="0">
+           <widget class="QLabel" name="label_10">
+            <property name="text">
+             <string>Plug-in Type:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QComboBox" name="pluginTypeCombo">
+            <property name="toolTip">
+             <string>Select the plug-in type</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="2">
+           <spacer name="horizontalSpacer_2">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>406</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="label_11">
+            <property name="text">
+             <string>Plug-in Type Name:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1" colspan="2">
+           <widget class="QLineEdit" name="pluginTypeNameEdit">
+            <property name="toolTip">
+             <string>Enter the plug-in type name</string>
+            </property>
+            <property name="maxLength">
+             <number>55</number>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="configTab">
+      <attribute name="title">
+       <string>Configuration</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <item>
+        <widget class="QGroupBox" name="configurationGroup">
+         <property name="toolTip">
+          <string>Select to indicate that the plug-in has configurable data</string>
+         </property>
+         <property name="title">
+          <string>Is configurable</string>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+         <property name="checked">
+          <bool>false</bool>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_3">
+          <item row="0" column="0">
+           <widget class="QLabel" name="label_9">
+            <property name="text">
+             <string>Preferences Key:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QLineEdit" name="preferencesKeyEdit">
+            <property name="toolTip">
+             <string>Enter the preferences key</string>
+            </property>
+            <property name="maxLength">
+             <number>55</number>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <spacer name="verticalSpacer">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>416</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="variousTab">
+      <attribute name="title">
+       <string>Various</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_4">
+       <item>
+        <widget class="QCheckBox" name="pixmapCheckBox">
+         <property name="toolTip">
+          <string>Select to create a 'previewPix()' function skeleton</string>
+         </property>
+         <property name="text">
+          <string>Include 'previewPix()' function</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="moduleSetupCheckBox">
+         <property name="toolTip">
+          <string>Select to create a 'moduleSetup()' function skeleton</string>
+         </property>
+         <property name="text">
+          <string>Include 'moduleSetup()' function</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="exeGroup">
+         <property name="title">
+          <string>Include an 'exeDisplayData' function</string>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+         <property name="checked">
+          <bool>false</bool>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_2">
+          <item>
+           <widget class="QRadioButton" name="exeRadioButton">
+            <property name="toolTip">
+             <string>Select to create an 'exeDisplayData()' function skeleton</string>
+            </property>
+            <property name="text">
+             <string>'exeDisplayData()' function returning program data to determine version information</string>
+            </property>
+            <property name="checked">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QRadioButton" name="exeInfoRadioButton">
+            <property name="toolTip">
+             <string>Select to create an 'exeDisplayData()' function skeleton returning version info</string>
+            </property>
+            <property name="text">
+             <string>'exeDisplayData()' function returning version information</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QRadioButton" name="exeListRadioButton">
+            <property name="toolTip">
+             <string>Select to create an 'exeDisplayDataList()' function skeleton</string>
+            </property>
+            <property name="text">
+             <string>'exeDisplayDataList()' function</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="apiFilesCheckBox">
+         <property name="toolTip">
+          <string>Select to create an 'apiFiles()' function skeleton</string>
+         </property>
+         <property name="text">
+          <string>Include 'apiFiles()' function</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="verticalSpacer_2">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>377</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QPushButton" name="projectButton">
+       <property name="toolTip">
+        <string>Press to populate entry fields from project data</string>
+       </property>
+       <property name="text">
+        <string>Populate from Project</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QDialogButtonBox" name="buttonBox">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="standardButtons">
+        <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <tabstops>
+  <tabstop>projectButton</tabstop>
+  <tabstop>dataTabWidget</tabstop>
+  <tabstop>nameEdit</tabstop>
+  <tabstop>versionEdit</tabstop>
+  <tabstop>authorEdit</tabstop>
+  <tabstop>authorEmailEdit</tabstop>
+  <tabstop>classNameEdit</tabstop>
+  <tabstop>packageNameEdit</tabstop>
+  <tabstop>createPackageCheckBox</tabstop>
+  <tabstop>shortDescriptionEdit</tabstop>
+  <tabstop>longDescriptionEdit</tabstop>
+  <tabstop>autoActivateCheckBox</tabstop>
+  <tabstop>deactivateableCheckBox</tabstop>
+  <tabstop>restartCheckBox</tabstop>
+  <tabstop>python2CheckBox</tabstop>
+  <tabstop>pluginTypeCombo</tabstop>
+  <tabstop>pluginTypeNameEdit</tabstop>
+  <tabstop>configurationGroup</tabstop>
+  <tabstop>preferencesKeyEdit</tabstop>
+  <tabstop>pixmapCheckBox</tabstop>
+  <tabstop>moduleSetupCheckBox</tabstop>
+  <tabstop>exeGroup</tabstop>
+  <tabstop>exeRadioButton</tabstop>
+  <tabstop>exeInfoRadioButton</tabstop>
+  <tabstop>exeListRadioButton</tabstop>
+  <tabstop>apiFilesCheckBox</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>PluginWizardDialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>649</x>
+     <y>578</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>157</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>PluginWizardDialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>688</x>
+     <y>584</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>286</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>autoActivateCheckBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>ondemandFrame</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>108</x>
+     <y>422</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>126</x>
+     <y>470</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

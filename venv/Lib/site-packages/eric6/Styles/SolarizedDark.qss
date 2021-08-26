@@ -1,0 +1,46 @@
+/* Solarized Dark theme for Eric6
+ * Taken from https://gist.github.com/Zren/e91ad5197f9d6b6d410f
+ * Author: Chris Holland
+ *
+ * Theme Notes:
+ *  - This theme is designed to work on top of the Fusion or the Plastique client style.
+ *    It will look weird on almost all the others (including the system default).
+ */
+QPalette {
+    /* Window colors */
+    window: #2b2b2b;
+    background: #212121;
+    foreground: #dddddd;
+    base: #131313;
+    alternate-base: #42403B;
+
+    /* Just setting palette(tooltip-base) doesn't work as intended so we set it in
+     * a QTooltip{} rule as well.
+     */
+    tooltip-base: #131313;  /* palette(base) */
+    tooltip-text: white;    /* palette(text) */
+
+    /* The following attributes should be done in a scale */
+    light: #444444;     /* Tab Borders, Scrollbar handle grips, Titled Panel border (Settings) */
+    midlight: #333333;  /* ? */
+    button: #292929;    /* Menu BG, Scrollbar and Button base. */
+    mid: #252525;       /* Titled Panel border (Settings) */
+    dark: #202020;      /* TreeView [-] and ... color (Also various borders in Windows Client Style) */
+    shadow: #1d1d1d;    /* ? */
+
+
+    /* Text colors */
+    text: white;
+    button-text: #B6B3AB;
+
+    highlight: #268bd2;
+    /* highlight-text: #000000; */
+
+    /* Link colors */
+    link: #539FA3;
+    link-visited: #845B90;
+
+    /* Color of the marker line in the chat view. BG Node that is overlayed on the first new ChatLine. */
+    /* 0 -> 0.1 (sharp line) */
+    marker-line: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #586e75, stop: 0.1 #586e75, stop: 0.1 transparent);
+}

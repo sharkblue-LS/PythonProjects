@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html><head>
+<title>eric6.Plugins.VcsPlugins.vcsGit.GitCommandDialog</title>
+<meta charset="UTF-8">
+<style>
+body {
+    background: #EDECE6;
+    margin: 0em 1em 10em 1em;
+    color: black;
+}
+
+h1 { color: white; background: #85774A; }
+h2 { color: white; background: #85774A; }
+h3 { color: white; background: #9D936E; }
+h4 { color: white; background: #9D936E; }
+    
+a { color: #BA6D36; }
+
+</style>
+</head>
+<body>
+<a NAME="top" ID="top"></a>
+<h1>eric6.Plugins.VcsPlugins.vcsGit.GitCommandDialog</h1>
+
+<p>
+Module implementing the Git command dialog.
+</p>
+<h3>Global Attributes</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Classes</h3>
+
+<table>
+
+<tr>
+<td><a href="#GitCommandDialog">GitCommandDialog</a></td>
+<td>Class implementing the Git command dialog.</td>
+</tr>
+</table>
+<h3>Functions</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+<hr />
+<hr />
+<a NAME="GitCommandDialog" ID="GitCommandDialog"></a>
+<h2>GitCommandDialog</h2>
+
+<p>
+    Class implementing the Git command dialog.
+</p>
+<p>
+    It implements a dialog that is used to enter an
+    arbitrary Git command. It asks the user to enter
+    the commandline parameters.
+</p>
+<h3>Derived from</h3>
+QDialog, Ui_GitCommandDialog
+<h3>Class Attributes</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Class Methods</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+
+<table>
+
+<tr>
+<td><a href="#GitCommandDialog.__init__">GitCommandDialog</a></td>
+<td>Constructor</td>
+</tr>
+<tr>
+<td><a href="#GitCommandDialog.getData">getData</a></td>
+<td>Public method to retrieve the data entered into this dialog.</td>
+</tr>
+<tr>
+<td><a href="#GitCommandDialog.on_commandCombo_editTextChanged">on_commandCombo_editTextChanged</a></td>
+<td>Private method used to enable/disable the OK-button.</td>
+</tr>
+</table>
+<h3>Static Methods</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+
+<a NAME="GitCommandDialog.__init__" ID="GitCommandDialog.__init__"></a>
+<h4>GitCommandDialog (Constructor)</h4>
+<b>GitCommandDialog</b>(<i>argvList, ppath, parent=None</i>)
+
+<p>
+        Constructor
+</p>
+<dl>
+
+<dt><i>argvList</i></dt>
+<dd>
+history list of commandline arguments (list of strings)
+</dd>
+<dt><i>ppath</i></dt>
+<dd>
+pathname of the project directory (string)
+</dd>
+<dt><i>parent</i></dt>
+<dd>
+parent widget of this dialog (QWidget)
+</dd>
+</dl>
+<a NAME="GitCommandDialog.getData" ID="GitCommandDialog.getData"></a>
+<h4>GitCommandDialog.getData</h4>
+<b>getData</b>(<i></i>)
+
+<p>
+        Public method to retrieve the data entered into this dialog.
+</p>
+<dl>
+<dt>Return:</dt>
+<dd>
+commandline parameters (string)
+</dd>
+</dl>
+<a NAME="GitCommandDialog.on_commandCombo_editTextChanged" ID="GitCommandDialog.on_commandCombo_editTextChanged"></a>
+<h4>GitCommandDialog.on_commandCombo_editTextChanged</h4>
+<b>on_commandCombo_editTextChanged</b>(<i>text</i>)
+
+<p>
+        Private method used to enable/disable the OK-button.
+</p>
+<dl>
+
+<dt><i>text</i></dt>
+<dd>
+ignored
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+</body></html>

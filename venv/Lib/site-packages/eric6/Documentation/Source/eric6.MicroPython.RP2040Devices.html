@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html><head>
+<title>eric6.MicroPython.RP2040Devices</title>
+<meta charset="UTF-8">
+<style>
+body {
+    background: #EDECE6;
+    margin: 0em 1em 10em 1em;
+    color: black;
+}
+
+h1 { color: white; background: #85774A; }
+h2 { color: white; background: #85774A; }
+h3 { color: white; background: #9D936E; }
+h4 { color: white; background: #9D936E; }
+    
+a { color: #BA6D36; }
+
+</style>
+</head>
+<body>
+<a NAME="top" ID="top"></a>
+<h1>eric6.MicroPython.RP2040Devices</h1>
+
+<p>
+Module implementing the device interface class for RP2040 based boards
+(e.g. Raspberry Pi Pico).
+</p>
+<h3>Global Attributes</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Classes</h3>
+
+<table>
+
+<tr>
+<td><a href="#RP2040Device">RP2040Device</a></td>
+<td>Class implementing the device for RP2040 based boards.</td>
+</tr>
+</table>
+<h3>Functions</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+<hr />
+<hr />
+<a NAME="RP2040Device" ID="RP2040Device"></a>
+<h2>RP2040Device</h2>
+
+<p>
+    Class implementing the device for RP2040 based boards.
+</p>
+<h3>Derived from</h3>
+MicroPythonDevice
+<h3>Class Attributes</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Class Methods</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+
+<table>
+
+<tr>
+<td><a href="#RP2040Device.__init__">RP2040Device</a></td>
+<td>Constructor</td>
+</tr>
+<tr>
+<td><a href="#RP2040Device.__activateBootloader">__activateBootloader</a></td>
+<td>Private method to switch the board into 'bootloader' mode.</td>
+</tr>
+<tr>
+<td><a href="#RP2040Device.__flashPython">__flashPython</a></td>
+<td>Private slot to flash a MicroPython firmware to the device.</td>
+</tr>
+<tr>
+<td><a href="#RP2040Device.addDeviceMenuEntries">addDeviceMenuEntries</a></td>
+<td>Public method to add device specific entries to the given menu.</td>
+</tr>
+<tr>
+<td><a href="#RP2040Device.canRunScript">canRunScript</a></td>
+<td>Public method to determine, if a script can be executed.</td>
+</tr>
+<tr>
+<td><a href="#RP2040Device.canStartFileManager">canStartFileManager</a></td>
+<td>Public method to determine, if a File Manager can be started.</td>
+</tr>
+<tr>
+<td><a href="#RP2040Device.canStartPlotter">canStartPlotter</a></td>
+<td>Public method to determine, if a Plotter can be started.</td>
+</tr>
+<tr>
+<td><a href="#RP2040Device.canStartRepl">canStartRepl</a></td>
+<td>Public method to determine, if a REPL can be started.</td>
+</tr>
+<tr>
+<td><a href="#RP2040Device.deviceName">deviceName</a></td>
+<td>Public method to get the name of the device.</td>
+</tr>
+<tr>
+<td><a href="#RP2040Device.forceInterrupt">forceInterrupt</a></td>
+<td>Public method to determine the need for an interrupt when opening the serial connection.</td>
+</tr>
+<tr>
+<td><a href="#RP2040Device.getDocumentationUrl">getDocumentationUrl</a></td>
+<td>Public method to get the device documentation URL.</td>
+</tr>
+<tr>
+<td><a href="#RP2040Device.getDownloadMenuEntries">getDownloadMenuEntries</a></td>
+<td>Public method to retrieve the entries for the downloads menu.</td>
+</tr>
+<tr>
+<td><a href="#RP2040Device.hasFlashMenuEntry">hasFlashMenuEntry</a></td>
+<td>Public method to check, if the device has its own flash menu entry.</td>
+</tr>
+<tr>
+<td><a href="#RP2040Device.runScript">runScript</a></td>
+<td>Public method to run the given Python script.</td>
+</tr>
+<tr>
+<td><a href="#RP2040Device.setButtons">setButtons</a></td>
+<td>Public method to enable the supported action buttons.</td>
+</tr>
+</table>
+<h3>Static Methods</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+
+<a NAME="RP2040Device.__init__" ID="RP2040Device.__init__"></a>
+<h4>RP2040Device (Constructor)</h4>
+<b>RP2040Device</b>(<i>microPythonWidget, deviceType, parent=None</i>)
+
+<p>
+        Constructor
+</p>
+<dl>
+
+<dt><i>microPythonWidget</i> (MicroPythonWidget)</dt>
+<dd>
+reference to the main MicroPython widget
+</dd>
+<dt><i>deviceType</i> (str)</dt>
+<dd>
+device type assigned to this device interface
+</dd>
+<dt><i>parent</i> (QObject)</dt>
+<dd>
+reference to the parent object
+</dd>
+</dl>
+<a NAME="RP2040Device.__activateBootloader" ID="RP2040Device.__activateBootloader"></a>
+<h4>RP2040Device.__activateBootloader</h4>
+<b>__activateBootloader</b>(<i></i>)
+
+<p>
+        Private method to switch the board into 'bootloader' mode.
+</p>
+<a NAME="RP2040Device.__flashPython" ID="RP2040Device.__flashPython"></a>
+<h4>RP2040Device.__flashPython</h4>
+<b>__flashPython</b>(<i></i>)
+
+<p>
+        Private slot to flash a MicroPython firmware to the device.
+</p>
+<a NAME="RP2040Device.addDeviceMenuEntries" ID="RP2040Device.addDeviceMenuEntries"></a>
+<h4>RP2040Device.addDeviceMenuEntries</h4>
+<b>addDeviceMenuEntries</b>(<i>menu</i>)
+
+<p>
+        Public method to add device specific entries to the given menu.
+</p>
+<dl>
+
+<dt><i>menu</i> (QMenu)</dt>
+<dd>
+reference to the context menu
+</dd>
+</dl>
+<a NAME="RP2040Device.canRunScript" ID="RP2040Device.canRunScript"></a>
+<h4>RP2040Device.canRunScript</h4>
+<b>canRunScript</b>(<i></i>)
+
+<p>
+        Public method to determine, if a script can be executed.
+</p>
+<dl>
+<dt>Return:</dt>
+<dd>
+tuple containing a flag indicating it is safe to start a
+            Plotter and a reason why it cannot.
+</dd>
+</dl>
+<dl>
+<dt>Return Type:</dt>
+<dd>
+tuple of (bool, str)
+</dd>
+</dl>
+<a NAME="RP2040Device.canStartFileManager" ID="RP2040Device.canStartFileManager"></a>
+<h4>RP2040Device.canStartFileManager</h4>
+<b>canStartFileManager</b>(<i></i>)
+
+<p>
+        Public method to determine, if a File Manager can be started.
+</p>
+<dl>
+<dt>Return:</dt>
+<dd>
+tuple containing a flag indicating it is safe to start a
+            File Manager and a reason why it cannot.
+</dd>
+</dl>
+<dl>
+<dt>Return Type:</dt>
+<dd>
+tuple of (bool, str)
+</dd>
+</dl>
+<a NAME="RP2040Device.canStartPlotter" ID="RP2040Device.canStartPlotter"></a>
+<h4>RP2040Device.canStartPlotter</h4>
+<b>canStartPlotter</b>(<i></i>)
+
+<p>
+        Public method to determine, if a Plotter can be started.
+</p>
+<dl>
+<dt>Return:</dt>
+<dd>
+tuple containing a flag indicating it is safe to start a
+            Plotter and a reason why it cannot.
+</dd>
+</dl>
+<dl>
+<dt>Return Type:</dt>
+<dd>
+tuple of (bool, str)
+</dd>
+</dl>
+<a NAME="RP2040Device.canStartRepl" ID="RP2040Device.canStartRepl"></a>
+<h4>RP2040Device.canStartRepl</h4>
+<b>canStartRepl</b>(<i></i>)
+
+<p>
+        Public method to determine, if a REPL can be started.
+</p>
+<dl>
+<dt>Return:</dt>
+<dd>
+tuple containing a flag indicating it is safe to start a REPL
+            and a reason why it cannot.
+</dd>
+</dl>
+<dl>
+<dt>Return Type:</dt>
+<dd>
+tuple of (bool, str)
+</dd>
+</dl>
+<a NAME="RP2040Device.deviceName" ID="RP2040Device.deviceName"></a>
+<h4>RP2040Device.deviceName</h4>
+<b>deviceName</b>(<i></i>)
+
+<p>
+        Public method to get the name of the device.
+</p>
+<dl>
+<dt>Return:</dt>
+<dd>
+name of the device
+</dd>
+</dl>
+<dl>
+<dt>Return Type:</dt>
+<dd>
+str
+</dd>
+</dl>
+<a NAME="RP2040Device.forceInterrupt" ID="RP2040Device.forceInterrupt"></a>
+<h4>RP2040Device.forceInterrupt</h4>
+<b>forceInterrupt</b>(<i></i>)
+
+<p>
+        Public method to determine the need for an interrupt when opening the
+        serial connection.
+</p>
+<dl>
+<dt>Return:</dt>
+<dd>
+flag indicating an interrupt is needed
+</dd>
+</dl>
+<dl>
+<dt>Return Type:</dt>
+<dd>
+bool
+</dd>
+</dl>
+<a NAME="RP2040Device.getDocumentationUrl" ID="RP2040Device.getDocumentationUrl"></a>
+<h4>RP2040Device.getDocumentationUrl</h4>
+<b>getDocumentationUrl</b>(<i></i>)
+
+<p>
+        Public method to get the device documentation URL.
+</p>
+<dl>
+<dt>Return:</dt>
+<dd>
+documentation URL of the device
+</dd>
+</dl>
+<dl>
+<dt>Return Type:</dt>
+<dd>
+str
+</dd>
+</dl>
+<a NAME="RP2040Device.getDownloadMenuEntries" ID="RP2040Device.getDownloadMenuEntries"></a>
+<h4>RP2040Device.getDownloadMenuEntries</h4>
+<b>getDownloadMenuEntries</b>(<i></i>)
+
+<p>
+        Public method to retrieve the entries for the downloads menu.
+</p>
+<dl>
+<dt>Return:</dt>
+<dd>
+list of tuples with menu text and URL to be opened for each
+            entry
+</dd>
+</dl>
+<dl>
+<dt>Return Type:</dt>
+<dd>
+list of tuple of (str, str)
+</dd>
+</dl>
+<a NAME="RP2040Device.hasFlashMenuEntry" ID="RP2040Device.hasFlashMenuEntry"></a>
+<h4>RP2040Device.hasFlashMenuEntry</h4>
+<b>hasFlashMenuEntry</b>(<i></i>)
+
+<p>
+        Public method to check, if the device has its own flash menu entry.
+</p>
+<dl>
+<dt>Return:</dt>
+<dd>
+flag indicating a specific flash menu entry
+</dd>
+</dl>
+<dl>
+<dt>Return Type:</dt>
+<dd>
+bool
+</dd>
+</dl>
+<a NAME="RP2040Device.runScript" ID="RP2040Device.runScript"></a>
+<h4>RP2040Device.runScript</h4>
+<b>runScript</b>(<i>script</i>)
+
+<p>
+        Public method to run the given Python script.
+</p>
+<dl>
+
+<dt><i>script</i> (str)</dt>
+<dd>
+script to be executed
+</dd>
+</dl>
+<a NAME="RP2040Device.setButtons" ID="RP2040Device.setButtons"></a>
+<h4>RP2040Device.setButtons</h4>
+<b>setButtons</b>(<i></i>)
+
+<p>
+        Public method to enable the supported action buttons.
+</p>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+</body></html>

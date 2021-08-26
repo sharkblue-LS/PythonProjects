@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg version="1.1" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg"><defs><style type="text/css">.ColorScheme-Text {
+        color:#eff0f1;
+      }
+      .ColorScheme-NegativeText {
+        color:#da4453;
+      }</style></defs><path class="ColorScheme-Text" d="m20.116 1-4.375 4.375-1.875-1.875-4.7412 4.7412 4.6338 4.6338 4.7412-4.7412-1.875-1.875 4.375-4.375zm-11.875 8.125-3.4912 3.4912 1.875 1.875-5.625 5.625 0.88379 0.88379 5.625-5.625 1.875 1.875 3.4912-3.4912-2.7588-2.7588z" color="#eff0f1" fill="#232629"/><path class="ColorScheme-NegativeText" d="M 14.334374,13 13,14.334374 15.665626,17 13,19.665626 14.334374,21 17,18.334374 19.665626,21 21,19.665626 18.334374,17 21,14.334374 19.665626,13 17,15.665626 Z" color="#da4453" fill="currentColor"/></svg>

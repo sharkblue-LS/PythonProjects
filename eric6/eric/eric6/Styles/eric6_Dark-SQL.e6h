@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HighlightingStyles SYSTEM "HighlightingStyles-6.0.dtd">
+<!-- Eric6 highlighting styles -->
+<!-- Saved: 2020-11-14, 18:10:34-->
+<!-- Author: Detlev Offenbach <detlev@die-offenbachs.de> -->
+<HighlightingStyles version="6.0">
+  <Lexer name="SQL">
+    <Style style="0" substyle="-1" color="#ffffff" paper="#262626" font="Hack,10,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Default</Description>
+    </Style>
+    <Style style="1" substyle="-1" color="#74cc66" paper="#262626" font="Hack,10,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Comment</Description>
+    </Style>
+    <Style style="2" substyle="-1" color="#74cc66" paper="#262626" font="Hack,10,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Comment line</Description>
+    </Style>
+    <Style style="3" substyle="-1" color="#cfcfcf" paper="#262626" font="Hack,10,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>JavaDoc style comment</Description>
+    </Style>
+    <Style style="4" substyle="-1" color="#7fcfcf" paper="#262626" font="Hack,10,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Number</Description>
+    </Style>
+    <Style style="5" substyle="-1" color="#60a5ff" paper="#262626" font="Hack,10,-1,5,75,0,0,0,0,0" eolfill="False">
+      <Description>Keyword</Description>
+    </Style>
+    <Style style="6" substyle="-1" color="#c354c3" paper="#262626" font="Hack,10,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Double-quoted string</Description>
+    </Style>
+    <Style style="7" substyle="-1" color="#c354c3" paper="#262626" font="Hack,10,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Single-quoted string</Description>
+    </Style>
+    <Style style="8" substyle="-1" color="#e6e68c" paper="#262626" font="Hack,10,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>SQL*Plus keyword</Description>
+    </Style>
+    <Style style="9" substyle="-1" color="#74cc66" paper="#474747" font="Hack,10,-1,5,50,0,0,0,0,0" eolfill="True">
+      <Description>SQL*Plus prompt</Description>
+    </Style>
+    <Style style="10" substyle="-1" color="#bab1a8" paper="#262626" font="Hack,10,-1,5,75,0,0,0,0,0" eolfill="False">
+      <Description>Operator</Description>
+    </Style>
+    <Style style="11" substyle="-1" color="#ffffff" paper="#262626" font="Hack,10,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Identifier</Description>
+    </Style>
+    <Style style="13" substyle="-1" color="#74cc66" paper="#262626" font="Hack,10,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>SQL*Plus comment</Description>
+    </Style>
+    <Style style="15" substyle="-1" color="#74cc66" paper="#262626" font="Hack,10,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description># comment line</Description>
+    </Style>
+    <Style style="17" substyle="-1" color="#4c9aff" paper="#262626" font="Hack,10,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>JavaDoc keyword</Description>
+    </Style>
+    <Style style="18" substyle="-1" color="#ff8040" paper="#262626" font="Hack,10,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>JavaDoc keyword error</Description>
+    </Style>
+    <Style style="19" substyle="-1" color="#bb5cff" paper="#262626" font="Hack,10,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>User defined 1</Description>
+    </Style>
+    <Style style="20" substyle="-1" color="#ff005d" paper="#262626" font="Hack,10,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>User defined 2</Description>
+    </Style>
+    <Style style="21" substyle="-1" color="#ff6161" paper="#262626" font="Hack,10,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>User defined 3</Description>
+    </Style>
+    <Style style="22" substyle="-1" color="#fb7cff" paper="#262626" font="Hack,10,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>User defined 4</Description>
+    </Style>
+    <Style style="23" substyle="-1" color="#eaded2" paper="#262626" font="Hack,10,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Quoted identifier</Description>
+    </Style>
+    <Style style="24" substyle="-1" color="#eaded2" paper="#262626" font="Hack,10,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Quoted operator</Description>
+    </Style>
+  </Lexer>
+</HighlightingStyles>

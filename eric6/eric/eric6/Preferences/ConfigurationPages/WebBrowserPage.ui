@@ -1,0 +1,1220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>WebBrowserPage</class>
+ <widget class="QWidget" name="WebBrowserPage">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>650</width>
+    <height>2084</height>
+   </rect>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_6">
+   <item>
+    <widget class="QLabel" name="headerLabel">
+     <property name="text">
+      <string>&lt;b&gt;Configure Web Browser&lt;/b&gt;</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="Line" name="line17">
+     <property name="frameShape">
+      <enum>QFrame::HLine</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Sunken</enum>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="groupBox_4">
+     <property name="title">
+      <string>General</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_5">
+      <item row="0" column="0">
+       <widget class="QCheckBox" name="singleHelpWindowCheckBox">
+        <property name="toolTip">
+         <string>Select to use a single web browser window only</string>
+        </property>
+        <property name="text">
+         <string>Use single web browser window</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QCheckBox" name="webSuggestionsCheckBox">
+        <property name="toolTip">
+         <string>Select to enable suggestions for web searches</string>
+        </property>
+        <property name="text">
+         <string>Show suggestions for web searches</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QCheckBox" name="saveGeometryCheckBox">
+        <property name="toolTip">
+         <string>Select to save the window size and position</string>
+        </property>
+        <property name="text">
+         <string>Save size and position upon exit</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QCheckBox" name="showTabPreviews">
+        <property name="toolTip">
+         <string>Select to show a page preview when the mouse hovers over the tab</string>
+        </property>
+        <property name="text">
+         <string>Show preview when hovering tab</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QCheckBox" name="errorPageCheckBox">
+        <property name="toolTip">
+         <string>Select to enable displaying the built-in Chromium error pages.</string>
+        </property>
+        <property name="text">
+         <string>Use built-in Chromium error page</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QCheckBox" name="scrollingCheckBox">
+        <property name="toolTip">
+         <string>Select to activate animated scrolling</string>
+        </property>
+        <property name="text">
+         <string>Enable animated scrolling</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0">
+       <widget class="QCheckBox" name="fullscreenCheckBox">
+        <property name="toolTip">
+         <string>Select to enable fullscreen support</string>
+        </property>
+        <property name="text">
+         <string>Enable Fullscreen Support</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1">
+       <widget class="QCheckBox" name="screenCaptureCheckBox">
+        <property name="toolTip">
+         <string>Select to enable screen capture support</string>
+        </property>
+        <property name="text">
+         <string>Enable Screen Capture Support</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="0">
+       <widget class="QCheckBox" name="webGLCheckBox">
+        <property name="toolTip">
+         <string>Select to enable support for WebGL</string>
+        </property>
+        <property name="text">
+         <string>Enable WebGL support</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="1">
+       <widget class="QCheckBox" name="autoplayMediaCheckBox">
+        <property name="toolTip">
+         <string>Select, to inhibit playback of media content until the user interacts with the page</string>
+        </property>
+        <property name="text">
+         <string>Don't auto-play media content</string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="0">
+       <widget class="QCheckBox" name="webRtcPublicOnlyCheckBox">
+        <property name="toolTip">
+         <string>Select to limit WebRTC to public IP addresses only</string>
+        </property>
+        <property name="text">
+         <string>Only public IP-Addresses for WebRTC</string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="1">
+       <widget class="QCheckBox" name="dnsPrefetchCheckBox">
+        <property name="toolTip">
+         <string>Select to try to pre-fetch DNS entries to speed up browsing</string>
+        </property>
+        <property name="text">
+         <string>Enable DNS Prefetch</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="startupGroupBox">
+     <property name="title">
+      <string>Startup</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_3">
+      <item row="0" column="0">
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string>On startup:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1" colspan="4">
+       <widget class="QComboBox" name="startupCombo">
+        <property name="toolTip">
+         <string>Select the startup behavior</string>
+        </property>
+        <item>
+         <property name="text">
+          <string>Show Empty Page</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Show Home Page</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Show Speed Dial</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Restore Session</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Select Session</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="label_12">
+        <property name="text">
+         <string>On new tab:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1" colspan="4">
+       <widget class="QComboBox" name="newTabCombo">
+        <property name="toolTip">
+         <string>Select the behavior of new tabs</string>
+        </property>
+        <item>
+         <property name="text">
+          <string>Show Empty Page</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Show Home Page</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Show Speed Dial</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="homePageLabel">
+        <property name="text">
+         <string>Home Page:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1" colspan="4">
+       <widget class="QLineEdit" name="homePageEdit">
+        <property name="toolTip">
+         <string>Enter the desired home page</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1">
+       <widget class="QPushButton" name="setCurrentPageButton">
+        <property name="toolTip">
+         <string>Press to set the current page as the home page</string>
+        </property>
+        <property name="text">
+         <string>Set to current page</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="2">
+       <widget class="QPushButton" name="defaultHomeButton">
+        <property name="toolTip">
+         <string>Press to set the default home page</string>
+        </property>
+        <property name="text">
+         <string>Set to default home page</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="3">
+       <widget class="QPushButton" name="setSpeedDialPageButton">
+        <property name="toolTip">
+         <string>Press to set the speed dial as the home page</string>
+        </property>
+        <property name="text">
+         <string>Set to speed dial page</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="4">
+       <spacer name="horizontalSpacer_2">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>160</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item row="4" column="0" colspan="5">
+       <widget class="QCheckBox" name="loadTabOnActivationCheckBox">
+        <property name="toolTip">
+         <string>Select to load restored tabs when they are activated</string>
+        </property>
+        <property name="text">
+         <string>Load tabs when activated</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+     <zorder>label</zorder>
+     <zorder>startupCombo</zorder>
+     <zorder>homePageLabel</zorder>
+     <zorder>homePageEdit</zorder>
+     <zorder>setCurrentPageButton</zorder>
+     <zorder>defaultHomeButton</zorder>
+     <zorder>label_12</zorder>
+     <zorder>newTabCombo</zorder>
+     <zorder>loadTabOnActivationCheckBox</zorder>
+     <zorder>setSpeedDialPageButton</zorder>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="groupBox_8">
+     <property name="title">
+      <string>Sessions</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_6">
+      <item row="0" column="0" colspan="3">
+       <widget class="QCheckBox" name="saveSessionCheckBox">
+        <property name="toolTip">
+         <string>Select to save sessions automatically</string>
+        </property>
+        <property name="text">
+         <string>Save sessions automatically</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="label_13">
+        <property name="text">
+         <string>Session Timer:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QSpinBox" name="sessionTimerSpinBox">
+        <property name="toolTip">
+         <string>Enter the time to save sessions</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        </property>
+        <property name="suffix">
+         <string> s</string>
+        </property>
+        <property name="minimum">
+         <number>10</number>
+        </property>
+        <property name="maximum">
+         <number>180</number>
+        </property>
+        <property name="singleStep">
+         <number>1</number>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="2">
+       <spacer name="horizontalSpacer_8">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>443</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="groupBox_2">
+     <property name="title">
+      <string>Scheme</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_4">
+      <item row="0" column="0">
+       <widget class="QLabel" name="label_3">
+        <property name="text">
+         <string>Default Scheme:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QComboBox" name="defaultSchemeCombo">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="toolTip">
+         <string>Select the default scheme</string>
+        </property>
+        <property name="whatsThis">
+         <string>&lt;b&gt;Default Scheme&lt;/b&gt;&lt;p&gt;Select the default scheme. This scheme is prepended to URLs, that don't contain one.&lt;/p&gt;</string>
+        </property>
+        <property name="editable">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="groupBox_11">
+     <property name="title">
+      <string>Protocol Handler</string>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_8">
+      <item>
+       <widget class="QLabel" name="label_18">
+        <property name="text">
+         <string>Allow websites to register protocol handlers:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QComboBox" name="protocolHandlerComboBox">
+        <property name="toolTip">
+         <string>Select how to allow websites to register protocol handlers via &quot;navigator.registerProtocolHandler&quot;</string>
+        </property>
+        <item>
+         <property name="text">
+          <string>yes</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>no</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>ask</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_9">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>272</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="privacyGroup">
+     <property name="title">
+      <string>Privacy</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_5">
+      <item>
+       <widget class="QGroupBox" name="javaScriptGroup">
+        <property name="toolTip">
+         <string>Select to enable JavaScript support</string>
+        </property>
+        <property name="title">
+         <string>Enable JavaScript</string>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_2">
+         <item>
+          <widget class="QCheckBox" name="jsOpenWindowsCheckBox">
+           <property name="toolTip">
+            <string>Select to allow JavaScript to open windows</string>
+           </property>
+           <property name="text">
+            <string>Allow to open windows</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="jsActivateWindowsCheckBox">
+           <property name="toolTip">
+            <string>Select to allow JavaScript to activate windows</string>
+           </property>
+           <property name="text">
+            <string>Allow to activate windows</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="jsClipboardCheckBox">
+           <property name="toolTip">
+            <string>Select to allow JavaScript to access the clipboard</string>
+           </property>
+           <property name="text">
+            <string>Allow to access the clipboard</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="jsPasteCheckBox">
+           <property name="toolTip">
+            <string>Select to allow JavaScript to paste from the clipboard (this needs access to the clipboard)</string>
+           </property>
+           <property name="text">
+            <string>Allow to paste from the clipboard</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="pluginsGroup">
+        <property name="toolTip">
+         <string>Select to enable plugins in web pages</string>
+        </property>
+        <property name="title">
+         <string>Enable Plug-ins</string>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_3">
+         <item>
+          <widget class="QCheckBox" name="pdfViewerCheckBox">
+           <property name="toolTip">
+            <string>Select to enable the built-in PDF Viewer</string>
+           </property>
+           <property name="text">
+            <string>Enable internal PDF Viewer</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="doNotTrackCheckBox">
+        <property name="toolTip">
+         <string>Select to enabled the &quot;Do Not Track&quot; feature</string>
+        </property>
+        <property name="text">
+         <string>Tell web sites I do not want to be tracked</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="groupBox_9">
+        <property name="title">
+         <string>Referer Headers</string>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_7">
+         <item row="0" column="0">
+          <widget class="QLabel" name="label_14">
+           <property name="text">
+            <string>Send Referer:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QComboBox" name="refererSendComboBox">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="toolTip">
+            <string>Select when to send a referer header (independent of origin)</string>
+           </property>
+           <property name="whatsThis">
+            <string>&lt;b&gt;Send Referer&lt;/b&gt;
+&lt;p&gt;Select, when to send a referer header. This is independent of the requested URL. If a referer header is to be sent, further rules will be applied.&lt;/p&gt;</string>
+           </property>
+           <item>
+            <property name="text">
+             <string>never</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>on click only</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>always</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="label_16">
+           <property name="text">
+            <string>Default Policy:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QComboBox" name="refererDefaultPolicyCcomboBox">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="toolTip">
+            <string>Select when to send a referer header depending on origin</string>
+           </property>
+           <property name="whatsThis">
+            <string>&lt;b&gt;Default Policy&lt;/b&gt;
+&lt;p&gt;Select when to send a referer header depending on origin.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;no referer - don't send a referer header&lt;/li&gt;
+&lt;li&gt;only when same origin - don't send a referer header if the origin of the target is different&lt;/li&gt;
+&lt;li&gt;only origin when cross origin - send trimmed referer header only when same origin, the referer origin when the target is potentially trustworthy and no header otherwise&lt;/li&gt;
+&lt;li&gt;no referer when downgrading - don't send a referer header when the target is not potentially trustworthy&lt;/li&gt;
+&lt;/ul&gt;</string>
+           </property>
+           <item>
+            <property name="text">
+             <string>no referer</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>only when same origin</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>only origin when cross origin</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>no referer when downgrading</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="label_15">
+           <property name="text">
+            <string>Trimming Policy:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="1">
+          <widget class="QComboBox" name="refererTrimmingPolicyComboBox">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="toolTip">
+            <string>Select how the referer URL shall be trimmed</string>
+           </property>
+           <property name="whatsThis">
+            <string>&lt;b&gt;Trimming Policy&lt;/b&gt;
+&lt;p&gt;Select how the referer URL shall be trimmed. The selected rule is applied, when sending a complete referer URL.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;send full URL (no trimming) - this does not perform any trimming beyond removing the user information and any fragment&lt;/li&gt;
+&lt;li&gt;send the URL without its query string - this removes the user information and the query string&lt;/li&gt;
+&lt;li&gt;only send the origin - this shortens the referer URL to the origin, i.e. scheme, host and port only&lt;/li&gt;
+&lt;/ul&gt;</string>
+           </property>
+           <item>
+            <property name="text">
+             <string>send full URL (no trimming)</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>send the URL without its query string</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>only send the origin</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+         <item row="3" column="0" colspan="2">
+          <layout class="QHBoxLayout" name="horizontalLayout_4">
+           <item>
+            <spacer name="horizontalSpacer_6">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>268</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QPushButton" name="refererWhitelistButton">
+             <property name="toolTip">
+              <string>Press to edit the list of whitelisted hosts</string>
+             </property>
+             <property name="text">
+              <string>Edit Referer Whitelist ...</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="groupBox_6">
+     <property name="title">
+      <string>Security</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_4">
+      <item>
+       <widget class="QCheckBox" name="xssAuditingCheckBox">
+        <property name="toolTip">
+         <string>Select to enable XSS auditing</string>
+        </property>
+        <property name="whatsThis">
+         <string>&lt;b&gt;Enable XSS Auditing&lt;/b&gt;
+&lt;p&gt;This selects whether load requests should be monitored for cross-site scripting attempts. Suspicious scripts will be blocked. These will be reported in the JavaScript console. Enabling this feature might have an impact on performance.&lt;/p&gt;</string>
+        </property>
+        <property name="text">
+         <string>Enable XSS Auditing</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="insecureContentsCheckBox">
+        <property name="toolTip">
+         <string>Select to allow HTTPS pages to run JavaScript, CSS, plugins or web-sockets from HTTP URLs</string>
+        </property>
+        <property name="text">
+         <string>Allow to run insecure contents</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="insecureGeolocationCheckBox">
+        <property name="toolTip">
+         <string>Select to allow insecure origins (i.e. those not having an https:// URL) to request Geolocation features.</string>
+        </property>
+        <property name="text">
+         <string>Allow insecure origins to access Geolocation</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="groupBox">
+     <property name="title">
+      <string>History</string>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QLabel" name="label_4">
+        <property name="text">
+         <string>Remove history items:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QComboBox" name="expireHistory">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="toolTip">
+         <string>Select the period for expiration of history entries</string>
+        </property>
+        <item>
+         <property name="text">
+          <string>After one day</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>After one week</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>After two weeks</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>After one month</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>After one year</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Manually</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>On application exit</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="cacheGroup">
+     <property name="title">
+      <string>Browser Cache</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_2">
+      <item row="0" column="0" colspan="3">
+       <widget class="QCheckBox" name="diskCacheCheckBox">
+        <property name="text">
+         <string>Enable disk cache</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="label_7">
+        <property name="text">
+         <string>Cache size:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QSpinBox" name="cacheSizeSpinBox">
+        <property name="toolTip">
+         <string>Enter the maximum size of the disk cache</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        </property>
+        <property name="suffix">
+         <string> MB</string>
+        </property>
+        <property name="minimum">
+         <number>1</number>
+        </property>
+        <property name="maximum">
+         <number>999</number>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="2">
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>410</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="groupBox_10">
+     <property name="title">
+      <string>Local Storage</string>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_7">
+      <item>
+       <widget class="QLabel" name="label_17">
+        <property name="text">
+         <string>Allow websites to request persistent storage quota:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QComboBox" name="requestQuotaComboBox">
+        <property name="toolTip">
+         <string>Select how to allow websites to request persistent storage quota via &quot;navigator.webkitPersistentStorage.requestQuota&quot;</string>
+        </property>
+        <item>
+         <property name="text">
+          <string>yes</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>no</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>ask</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_10">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>230</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="groupBox_5">
+     <property name="title">
+      <string>Web Search</string>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <widget class="QLabel" name="label_5">
+        <property name="text">
+         <string>Language:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QComboBox" name="languageCombo">
+        <property name="toolTip">
+         <string>Select the language to be used for web searches</string>
+        </property>
+        <property name="sizeAdjustPolicy">
+         <enum>QComboBox::AdjustToContents</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_3">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>450</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="imageSearchGroup">
+     <property name="title">
+      <string>Image Search</string>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_3">
+      <item>
+       <widget class="QLabel" name="label_8">
+        <property name="text">
+         <string>Default Search Engine:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QComboBox" name="imageSearchComboBox">
+        <property name="toolTip">
+         <string>Select the default search engine for image searches</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_5">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>383</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="groupBox_7">
+     <property name="title">
+      <string>Printing</string>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_6">
+      <item>
+       <widget class="QCheckBox" name="printBackgroundCheckBox">
+        <property name="toolTip">
+         <string>Select to print the background of page elements as well</string>
+        </property>
+        <property name="text">
+         <string>Print Element Backgrounds</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="groupBox_3">
+     <property name="title">
+      <string>Navigation</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="0" column="0">
+       <widget class="QCheckBox" name="spatialCheckBox">
+        <property name="toolTip">
+         <string>Select to enable the spatial navigation feature</string>
+        </property>
+        <property name="whatsThis">
+         <string>&lt;b&gt;Enable Spatial Navigation&lt;/b&gt;
+&lt;p&gt;This enables or disables the Spatial Navigation feature, which consists in the ability to navigate between focusable elements in a Web page, such as hyperlinks and form controls, by using Left, Right, Up and Down arrow keys. For example, if a user presses the Right key, heuristics determine whether there is an element he might be trying to reach towards the right and which element he probably wants.&lt;/p&gt;</string>
+        </property>
+        <property name="text">
+         <string>Enable Spatial Navigation</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QCheckBox" name="linksInFocusChainCheckBox">
+        <property name="toolTip">
+         <string>Select to include links in focus chain</string>
+        </property>
+        <property name="whatsThis">
+         <string>&lt;b&gt;Include Links in Focus Chain&lt;/b&gt;
+&lt;p&gt;This selects whether hyperlinks should be included in the keyboard focus chain.&lt;/p&gt;</string>
+        </property>
+        <property name="text">
+         <string>Include Links in Focus Chain</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QCheckBox" name="focusOnNavigationCheckBox">
+        <property name="toolTip">
+         <string>Select to give the focus to the view whenever a navigation event occurs</string>
+        </property>
+        <property name="text">
+         <string>Enable Focus on Navigation</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="autoScrollGroupBox">
+     <property name="toolTip">
+      <string>Select to enable the auto-scroller</string>
+     </property>
+     <property name="title">
+      <string>Automatic Scrolling</string>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QLabel" name="label_11">
+        <property name="text">
+         <string>This function is activated by a Mouse Middle Click.</string>
+        </property>
+        <property name="wordWrap">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_5">
+        <item>
+         <widget class="QLabel" name="label_9">
+          <property name="text">
+           <string>Scroll Divider:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QDoubleSpinBox" name="autoScrollDividerSpinBox">
+          <property name="toolTip">
+           <string>Enter the auto-scroll divider value</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          </property>
+          <property name="decimals">
+           <number>1</number>
+          </property>
+          <property name="minimum">
+           <double>1.000000000000000</double>
+          </property>
+          <property name="maximum">
+           <double>99.900000000000006</double>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_7">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_10">
+        <property name="text">
+         <string>&lt;b&gt;Note:&lt;/b&gt; Setting higher divider will slow down scrolling.</string>
+        </property>
+        <property name="wordWrap">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <tabstops>
+  <tabstop>singleHelpWindowCheckBox</tabstop>
+  <tabstop>webSuggestionsCheckBox</tabstop>
+  <tabstop>saveGeometryCheckBox</tabstop>
+  <tabstop>showTabPreviews</tabstop>
+  <tabstop>errorPageCheckBox</tabstop>
+  <tabstop>scrollingCheckBox</tabstop>
+  <tabstop>fullscreenCheckBox</tabstop>
+  <tabstop>screenCaptureCheckBox</tabstop>
+  <tabstop>webGLCheckBox</tabstop>
+  <tabstop>autoplayMediaCheckBox</tabstop>
+  <tabstop>webRtcPublicOnlyCheckBox</tabstop>
+  <tabstop>dnsPrefetchCheckBox</tabstop>
+  <tabstop>startupCombo</tabstop>
+  <tabstop>newTabCombo</tabstop>
+  <tabstop>homePageEdit</tabstop>
+  <tabstop>setCurrentPageButton</tabstop>
+  <tabstop>defaultHomeButton</tabstop>
+  <tabstop>setSpeedDialPageButton</tabstop>
+  <tabstop>loadTabOnActivationCheckBox</tabstop>
+  <tabstop>saveSessionCheckBox</tabstop>
+  <tabstop>sessionTimerSpinBox</tabstop>
+  <tabstop>defaultSchemeCombo</tabstop>
+  <tabstop>protocolHandlerComboBox</tabstop>
+  <tabstop>javaScriptGroup</tabstop>
+  <tabstop>jsOpenWindowsCheckBox</tabstop>
+  <tabstop>jsActivateWindowsCheckBox</tabstop>
+  <tabstop>jsClipboardCheckBox</tabstop>
+  <tabstop>jsPasteCheckBox</tabstop>
+  <tabstop>pluginsGroup</tabstop>
+  <tabstop>pdfViewerCheckBox</tabstop>
+  <tabstop>doNotTrackCheckBox</tabstop>
+  <tabstop>refererSendComboBox</tabstop>
+  <tabstop>refererDefaultPolicyCcomboBox</tabstop>
+  <tabstop>refererTrimmingPolicyComboBox</tabstop>
+  <tabstop>refererWhitelistButton</tabstop>
+  <tabstop>xssAuditingCheckBox</tabstop>
+  <tabstop>insecureContentsCheckBox</tabstop>
+  <tabstop>insecureGeolocationCheckBox</tabstop>
+  <tabstop>expireHistory</tabstop>
+  <tabstop>diskCacheCheckBox</tabstop>
+  <tabstop>cacheSizeSpinBox</tabstop>
+  <tabstop>requestQuotaComboBox</tabstop>
+  <tabstop>languageCombo</tabstop>
+  <tabstop>imageSearchComboBox</tabstop>
+  <tabstop>printBackgroundCheckBox</tabstop>
+  <tabstop>spatialCheckBox</tabstop>
+  <tabstop>linksInFocusChainCheckBox</tabstop>
+  <tabstop>focusOnNavigationCheckBox</tabstop>
+  <tabstop>autoScrollGroupBox</tabstop>
+  <tabstop>autoScrollDividerSpinBox</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html><head>
+<title>eric6.Plugins.CheckerPlugins.CodeStyleChecker.Annotations.AnnotationsChecker</title>
+<meta charset="UTF-8">
+<style>
+body {
+    background: #EDECE6;
+    margin: 0em 1em 10em 1em;
+    color: black;
+}
+
+h1 { color: white; background: #85774A; }
+h2 { color: white; background: #85774A; }
+h3 { color: white; background: #9D936E; }
+h4 { color: white; background: #9D936E; }
+    
+a { color: #BA6D36; }
+
+</style>
+</head>
+<body>
+<a NAME="top" ID="top"></a>
+<h1>eric6.Plugins.CheckerPlugins.CodeStyleChecker.Annotations.AnnotationsChecker</h1>
+
+<p>
+Module implementing a checker for function type annotations.
+</p>
+<h3>Global Attributes</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Classes</h3>
+
+<table>
+
+<tr>
+<td><a href="#AnnotationsChecker">AnnotationsChecker</a></td>
+<td>Class implementing a checker for function type annotations.</td>
+</tr>
+<tr>
+<td><a href="#FunctionVisitor">FunctionVisitor</a></td>
+<td>Class implementing a node visitor to check function annotations.</td>
+</tr>
+</table>
+<h3>Functions</h3>
+
+<table>
+
+<tr>
+<td><a href="#getAnnotationComplexity">getAnnotationComplexity</a></td>
+<td>Function to determine the annotation complexity.</td>
+</tr>
+<tr>
+<td><a href="#hasTypeAnnotations">hasTypeAnnotations</a></td>
+<td>Function to check for type annotations.</td>
+</tr>
+</table>
+<hr />
+<hr />
+<a NAME="AnnotationsChecker" ID="AnnotationsChecker"></a>
+<h2>AnnotationsChecker</h2>
+
+<p>
+    Class implementing a checker for function type annotations.
+</p>
+<h3>Derived from</h3>
+object
+<h3>Class Attributes</h3>
+
+<table>
+<tr><td>Codes</td></tr>
+</table>
+<h3>Class Methods</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+
+<table>
+
+<tr>
+<td><a href="#AnnotationsChecker.__init__">AnnotationsChecker</a></td>
+<td>Constructor</td>
+</tr>
+<tr>
+<td><a href="#AnnotationsChecker.__checkAnnotationComplexity">__checkAnnotationComplexity</a></td>
+<td>Private method to check the type annotation complexity.</td>
+</tr>
+<tr>
+<td><a href="#AnnotationsChecker.__checkAnnotationsCoverage">__checkAnnotationsCoverage</a></td>
+<td>Private method to check for function annotation coverage.</td>
+</tr>
+<tr>
+<td><a href="#AnnotationsChecker.__checkFunctionAnnotations">__checkFunctionAnnotations</a></td>
+<td>Private method to check for function annotation issues.</td>
+</tr>
+<tr>
+<td><a href="#AnnotationsChecker.__error">__error</a></td>
+<td>Private method to record an issue.</td>
+</tr>
+<tr>
+<td><a href="#AnnotationsChecker.__generateTree">__generateTree</a></td>
+<td>Private method to generate an AST for our source.</td>
+</tr>
+<tr>
+<td><a href="#AnnotationsChecker.__ignoreCode">__ignoreCode</a></td>
+<td>Private method to check if the message code should be ignored.</td>
+</tr>
+<tr>
+<td><a href="#AnnotationsChecker.__reportInvalidSyntax">__reportInvalidSyntax</a></td>
+<td>Private method to report a syntax error.</td>
+</tr>
+<tr>
+<td><a href="#AnnotationsChecker.run">run</a></td>
+<td>Public method to check the given source against annotation issues.</td>
+</tr>
+</table>
+<h3>Static Methods</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+
+<a NAME="AnnotationsChecker.__init__" ID="AnnotationsChecker.__init__"></a>
+<h4>AnnotationsChecker (Constructor)</h4>
+<b>AnnotationsChecker</b>(<i>source, filename, select, ignore, expected, repeat, args</i>)
+
+<p>
+        Constructor
+</p>
+<dl>
+
+<dt><i>source</i> (list of str)</dt>
+<dd>
+source code to be checked
+</dd>
+<dt><i>filename</i> (str)</dt>
+<dd>
+name of the source file
+</dd>
+<dt><i>select</i> (list of str)</dt>
+<dd>
+list of selected codes
+</dd>
+<dt><i>ignore</i> (list of str)</dt>
+<dd>
+list of codes to be ignored
+</dd>
+<dt><i>expected</i> (list of str)</dt>
+<dd>
+list of expected codes
+</dd>
+<dt><i>repeat</i> (bool)</dt>
+<dd>
+flag indicating to report each occurrence of a code
+</dd>
+<dt><i>args</i> (dict)</dt>
+<dd>
+dictionary of arguments for the annotation checks
+</dd>
+</dl>
+<a NAME="AnnotationsChecker.__checkAnnotationComplexity" ID="AnnotationsChecker.__checkAnnotationComplexity"></a>
+<h4>AnnotationsChecker.__checkAnnotationComplexity</h4>
+<b>__checkAnnotationComplexity</b>(<i></i>)
+
+<p>
+        Private method to check the type annotation complexity.
+</p>
+<a NAME="AnnotationsChecker.__checkAnnotationsCoverage" ID="AnnotationsChecker.__checkAnnotationsCoverage"></a>
+<h4>AnnotationsChecker.__checkAnnotationsCoverage</h4>
+<b>__checkAnnotationsCoverage</b>(<i></i>)
+
+<p>
+        Private method to check for function annotation coverage.
+</p>
+<a NAME="AnnotationsChecker.__checkFunctionAnnotations" ID="AnnotationsChecker.__checkFunctionAnnotations"></a>
+<h4>AnnotationsChecker.__checkFunctionAnnotations</h4>
+<b>__checkFunctionAnnotations</b>(<i></i>)
+
+<p>
+        Private method to check for function annotation issues.
+</p>
+<a NAME="AnnotationsChecker.__error" ID="AnnotationsChecker.__error"></a>
+<h4>AnnotationsChecker.__error</h4>
+<b>__error</b>(<i>lineNumber, offset, code, *args</i>)
+
+<p>
+        Private method to record an issue.
+</p>
+<dl>
+
+<dt><i>lineNumber</i> (int)</dt>
+<dd>
+line number of the issue
+</dd>
+<dt><i>offset</i> (int)</dt>
+<dd>
+position within line of the issue
+</dd>
+<dt><i>code</i> (str)</dt>
+<dd>
+message code
+</dd>
+<dt><i>args</i> (list)</dt>
+<dd>
+arguments for the message
+</dd>
+</dl>
+<a NAME="AnnotationsChecker.__generateTree" ID="AnnotationsChecker.__generateTree"></a>
+<h4>AnnotationsChecker.__generateTree</h4>
+<b>__generateTree</b>(<i></i>)
+
+<p>
+        Private method to generate an AST for our source.
+</p>
+<dl>
+<dt>Return:</dt>
+<dd>
+generated AST
+</dd>
+</dl>
+<dl>
+<dt>Return Type:</dt>
+<dd>
+ast.Module
+</dd>
+</dl>
+<a NAME="AnnotationsChecker.__ignoreCode" ID="AnnotationsChecker.__ignoreCode"></a>
+<h4>AnnotationsChecker.__ignoreCode</h4>
+<b>__ignoreCode</b>(<i>code</i>)
+
+<p>
+        Private method to check if the message code should be ignored.
+</p>
+<dl>
+
+<dt><i>code</i> (str)</dt>
+<dd>
+message code to check for
+</dd>
+</dl>
+<dl>
+<dt>Return:</dt>
+<dd>
+flag indicating to ignore the given code
+</dd>
+</dl>
+<dl>
+<dt>Return Type:</dt>
+<dd>
+bool
+</dd>
+</dl>
+<a NAME="AnnotationsChecker.__reportInvalidSyntax" ID="AnnotationsChecker.__reportInvalidSyntax"></a>
+<h4>AnnotationsChecker.__reportInvalidSyntax</h4>
+<b>__reportInvalidSyntax</b>(<i></i>)
+
+<p>
+        Private method to report a syntax error.
+</p>
+<a NAME="AnnotationsChecker.run" ID="AnnotationsChecker.run"></a>
+<h4>AnnotationsChecker.run</h4>
+<b>run</b>(<i></i>)
+
+<p>
+        Public method to check the given source against annotation issues.
+</p>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+<hr />
+<a NAME="FunctionVisitor" ID="FunctionVisitor"></a>
+<h2>FunctionVisitor</h2>
+
+<p>
+    Class implementing a node visitor to check function annotations.
+</p>
+<p>
+    Note: this class is modelled after flake8-annotations checker.
+</p>
+<h3>Derived from</h3>
+ast.NodeVisitor
+<h3>Class Attributes</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Class Methods</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+
+<table>
+
+<tr>
+<td><a href="#FunctionVisitor.__init__">FunctionVisitor</a></td>
+<td>Constructor</td>
+</tr>
+<tr>
+<td><a href="#FunctionVisitor.__checkFunctionNode">__checkFunctionNode</a></td>
+<td>Private method to check an individual function definition node.</td>
+</tr>
+<tr>
+<td><a href="#FunctionVisitor.__classifyArgumentError">__classifyArgumentError</a></td>
+<td>Private method to classify and record an argument annotation issue.</td>
+</tr>
+<tr>
+<td><a href="#FunctionVisitor.__classifyReturnError">__classifyReturnError</a></td>
+<td>Private method to classify and record a return annotation issue.</td>
+</tr>
+<tr>
+<td><a href="#FunctionVisitor.visit_AsyncFunctionDef">visit_AsyncFunctionDef</a></td>
+<td>Public method to handle an async function or method definition.</td>
+</tr>
+<tr>
+<td><a href="#FunctionVisitor.visit_ClassDef">visit_ClassDef</a></td>
+<td>Public method to handle class definitions.</td>
+</tr>
+<tr>
+<td><a href="#FunctionVisitor.visit_FunctionDef">visit_FunctionDef</a></td>
+<td>Public method to handle a function or method definition.</td>
+</tr>
+</table>
+<h3>Static Methods</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+
+<a NAME="FunctionVisitor.__init__" ID="FunctionVisitor.__init__"></a>
+<h4>FunctionVisitor (Constructor)</h4>
+<b>FunctionVisitor</b>(<i>sourceLines</i>)
+
+<p>
+        Constructor
+</p>
+<dl>
+
+<dt><i>sourceLines</i> (list of str)</dt>
+<dd>
+lines of source code
+</dd>
+</dl>
+<a NAME="FunctionVisitor.__checkFunctionNode" ID="FunctionVisitor.__checkFunctionNode"></a>
+<h4>FunctionVisitor.__checkFunctionNode</h4>
+<b>__checkFunctionNode</b>(<i>node, classMethod=False</i>)
+
+<p>
+        Private method to check an individual function definition node.
+</p>
+<dl>
+
+<dt><i>node</i> (ast.FunctionDef or ast.AsyncFunctionDef)</dt>
+<dd>
+reference to the node to be processed
+</dd>
+<dt><i>classMethod</i> (bool)</dt>
+<dd>
+flag indicating a class method
+</dd>
+</dl>
+<a NAME="FunctionVisitor.__classifyArgumentError" ID="FunctionVisitor.__classifyArgumentError"></a>
+<h4>FunctionVisitor.__classifyArgumentError</h4>
+<b>__classifyArgumentError</b>(<i>argNode, argType, methodType</i>)
+
+<p>
+        Private method to classify and record an argument annotation issue.
+</p>
+<dl>
+
+<dt><i>argNode</i> (ast.arguments)</dt>
+<dd>
+reference to the argument node
+</dd>
+<dt><i>argType</i> (str)</dt>
+<dd>
+type of the argument node
+</dd>
+<dt><i>methodType</i> (str)</dt>
+<dd>
+type of method/function the argument belongs to
+</dd>
+</dl>
+<a NAME="FunctionVisitor.__classifyReturnError" ID="FunctionVisitor.__classifyReturnError"></a>
+<h4>FunctionVisitor.__classifyReturnError</h4>
+<b>__classifyReturnError</b>(<i>methodType, visibilityType, lineno, colOffset</i>)
+
+<p>
+        Private method to classify and record a return annotation issue.
+</p>
+<dl>
+
+<dt><i>methodType</i> (str)</dt>
+<dd>
+type of method/function the argument belongs to
+</dd>
+<dt><i>visibilityType</i> (str)</dt>
+<dd>
+visibility of the function
+</dd>
+<dt><i>lineno</i> (int)</dt>
+<dd>
+line number
+</dd>
+<dt><i>colOffset</i> (int)</dt>
+<dd>
+column number
+</dd>
+</dl>
+<a NAME="FunctionVisitor.visit_AsyncFunctionDef" ID="FunctionVisitor.visit_AsyncFunctionDef"></a>
+<h4>FunctionVisitor.visit_AsyncFunctionDef</h4>
+<b>visit_AsyncFunctionDef</b>(<i>node</i>)
+
+<p>
+        Public method to handle an async function or method definition.
+</p>
+<dl>
+
+<dt><i>node</i> (ast.AsyncFunctionDef)</dt>
+<dd>
+reference to the node to be processed
+</dd>
+</dl>
+<a NAME="FunctionVisitor.visit_ClassDef" ID="FunctionVisitor.visit_ClassDef"></a>
+<h4>FunctionVisitor.visit_ClassDef</h4>
+<b>visit_ClassDef</b>(<i>node</i>)
+
+<p>
+        Public method to handle class definitions.
+</p>
+<dl>
+
+<dt><i>node</i> (ast.ClassDef)</dt>
+<dd>
+reference to the node to be processed
+</dd>
+</dl>
+<a NAME="FunctionVisitor.visit_FunctionDef" ID="FunctionVisitor.visit_FunctionDef"></a>
+<h4>FunctionVisitor.visit_FunctionDef</h4>
+<b>visit_FunctionDef</b>(<i>node</i>)
+
+<p>
+        Public method to handle a function or method definition.
+</p>
+<dl>
+
+<dt><i>node</i> (ast.FunctionDef)</dt>
+<dd>
+reference to the node to be processed
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+<hr />
+<a NAME="getAnnotationComplexity" ID="getAnnotationComplexity"></a>
+<h2>getAnnotationComplexity</h2>
+<b>getAnnotationComplexity</b>(<i>annotationNode</i>)
+
+<p>
+    Function to determine the annotation complexity.
+</p>
+<dl>
+
+<dt><i>annotationNode</i> (ast.AST)</dt>
+<dd>
+reference to the node to determine the annotation
+        complexity for
+</dd>
+</dl>
+<dl>
+<dt>Return:</dt>
+<dd>
+annotation complexity
+</dd>
+</dl>
+<dl>
+<dt>Return Type:</dt>
+<dd>
+= int
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+<hr />
+<a NAME="hasTypeAnnotations" ID="hasTypeAnnotations"></a>
+<h2>hasTypeAnnotations</h2>
+<b>hasTypeAnnotations</b>(<i>funcNode</i>)
+
+<p>
+    Function to check for type annotations.
+</p>
+<dl>
+
+<dt><i>funcNode</i> (ast.AsyncFunctionDef or ast.FunctionDef)</dt>
+<dd>
+reference to the function definition node to be checked
+</dd>
+</dl>
+<dl>
+<dt>Return:</dt>
+<dd>
+flag indicating the presence of type annotations
+</dd>
+</dl>
+<dl>
+<dt>Return Type:</dt>
+<dd>
+bool
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+</body></html>

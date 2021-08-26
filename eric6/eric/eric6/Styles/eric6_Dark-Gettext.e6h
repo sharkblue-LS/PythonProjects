@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HighlightingStyles SYSTEM "HighlightingStyles-6.0.dtd">
+<!-- Eric6 highlighting styles -->
+<!-- Saved: 2020-04-08, 18:11:52-->
+<!-- Author: Detlev Offenbach <detlev@die-offenbachs.de> -->
+<HighlightingStyles version="6.0">
+  <Lexer name="PO">
+    <Style style="0" substyle="-1" color="#d9cfc4" paper="#2e3436" font="Bitstream Vera Sans Mono,9,-1,5,50,0,0,0,0,0" eolfill="True">
+      <Description>Default</Description>
+    </Style>
+    <Style style="1" substyle="-1" color="#00d900" paper="#2e3436" font="Bitstream Vera Sans Mono,9,-1,5,50,0,0,0,0,0" eolfill="True">
+      <Description>Comment</Description>
+    </Style>
+    <Style style="2" substyle="-1" color="#00ced9" paper="#2e3436" font="Bitstream Vera Sans Mono,9,-1,5,75,0,0,0,0,0" eolfill="True">
+      <Description>Message identifier</Description>
+    </Style>
+    <Style style="3" substyle="-1" color="#d9cfc4" paper="#2e3436" font="Bitstream Vera Sans Mono,9,-1,5,50,0,0,0,0,0" eolfill="True">
+      <Description>Message identifier text</Description>
+    </Style>
+    <Style style="4" substyle="-1" color="#00ced9" paper="#2e3436" font="Bitstream Vera Sans Mono,9,-1,5,75,0,0,0,0,0" eolfill="True">
+      <Description>Message string</Description>
+    </Style>
+    <Style style="5" substyle="-1" color="#d9cfc4" paper="#2e3436" font="Bitstream Vera Sans Mono,9,-1,5,50,0,0,0,0,0" eolfill="True">
+      <Description>Message string text</Description>
+    </Style>
+    <Style style="6" substyle="-1" color="#00ced9" paper="#2e3436" font="Bitstream Vera Sans Mono,9,-1,5,75,0,0,0,0,0" eolfill="True">
+      <Description>Message context</Description>
+    </Style>
+    <Style style="7" substyle="-1" color="#d9cfc4" paper="#2e3436" font="Bitstream Vera Sans Mono,9,-1,5,50,0,0,0,0,0" eolfill="True">
+      <Description>Message context text</Description>
+    </Style>
+    <Style style="8" substyle="-1" color="#d9cfc4" paper="#2e3436" font="Bitstream Vera Sans Mono,9,-1,5,50,0,0,0,0,0" eolfill="True">
+      <Description>Fuzzy flag</Description>
+    </Style>
+    <Style style="9" substyle="-1" color="#00d900" paper="#2e3436" font="Bitstream Vera Sans Mono,9,-1,5,50,0,0,0,0,0" eolfill="True">
+      <Description>Programmer comment</Description>
+    </Style>
+    <Style style="10" substyle="-1" color="#d9cfc4" paper="#2e3436" font="Bitstream Vera Sans Mono,9,-1,5,50,0,0,0,0,0" eolfill="True">
+      <Description>Reference</Description>
+    </Style>
+    <Style style="11" substyle="-1" color="#d9cfc4" paper="#2e3436" font="Bitstream Vera Sans Mono,9,-1,5,50,0,0,0,0,0" eolfill="True">
+      <Description>Flags</Description>
+    </Style>
+    <Style style="12" substyle="-1" color="#ffaa00" paper="#2e3436" font="Bitstream Vera Sans Mono,9,-1,5,50,0,0,0,0,0" eolfill="True">
+      <Description>Message identifier text end-of-line</Description>
+    </Style>
+    <Style style="13" substyle="-1" color="#ffaa00" paper="#2e3436" font="Bitstream Vera Sans Mono,9,-1,5,50,0,0,0,0,0" eolfill="True">
+      <Description>Message string text end-of-line</Description>
+    </Style>
+    <Style style="14" substyle="-1" color="#ffaa00" paper="#2e3436" font="Bitstream Vera Sans Mono,9,-1,5,50,0,0,0,0,0" eolfill="True">
+      <Description>Message context text end-of-line</Description>
+    </Style>
+  </Lexer>
+</HighlightingStyles>

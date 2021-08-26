@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html><head>
+<title>eric6.Utilities.ClassBrowsers.protoclbr</title>
+<meta charset="UTF-8">
+<style>
+body {
+    background: #EDECE6;
+    margin: 0em 1em 10em 1em;
+    color: black;
+}
+
+h1 { color: white; background: #85774A; }
+h2 { color: white; background: #85774A; }
+h3 { color: white; background: #9D936E; }
+h4 { color: white; background: #9D936E; }
+    
+a { color: #BA6D36; }
+
+</style>
+</head>
+<body>
+<a NAME="top" ID="top"></a>
+<h1>eric6.Utilities.ClassBrowsers.protoclbr</h1>
+
+<p>
+Parse a ProtoBuf protocol file and retrieve messages, enums, services and
+rpc methods.
+</p>
+<p>
+It is based on the Python class browser found in this package.
+</p>
+<h3>Global Attributes</h3>
+
+<table>
+<tr><td>SUPPORTED_TYPES</td></tr><tr><td>_commentsub</td></tr><tr><td>_getnext</td></tr><tr><td>_modules</td></tr><tr><td>_normalize</td></tr>
+</table>
+<h3>Classes</h3>
+
+<table>
+
+<tr>
+<td><a href="#Enum">Enum</a></td>
+<td>Class to represent a ProtoBuf Enum.</td>
+</tr>
+<tr>
+<td><a href="#Message">Message</a></td>
+<td>Class to represent a ProtoBuf Message.</td>
+</tr>
+<tr>
+<td><a href="#Service">Service</a></td>
+<td>Class to represent a ProtoBuf Service.</td>
+</tr>
+<tr>
+<td><a href="#ServiceMethod">ServiceMethod</a></td>
+<td>Class to represent a ProtoBuf Service Method.</td>
+</tr>
+<tr>
+<td><a href="#VisibilityMixin">VisibilityMixin</a></td>
+<td>Mixin class implementing the notion of visibility.</td>
+</tr>
+</table>
+<h3>Functions</h3>
+
+<table>
+
+<tr>
+<td><a href="#calculateEndline">calculateEndline</a></td>
+<td>Function to calculate the end line.</td>
+</tr>
+<tr>
+<td><a href="#readmodule_ex">readmodule_ex</a></td>
+<td>Read a ProtoBuf protocol file and return a dictionary of messages, enums, services and rpc methods.</td>
+</tr>
+<tr>
+<td><a href="#scan">scan</a></td>
+<td>Public method to scan the given source text.</td>
+</tr>
+</table>
+<hr />
+<hr />
+<a NAME="Enum" ID="Enum"></a>
+<h2>Enum</h2>
+
+<p>
+    Class to represent a ProtoBuf Enum.
+</p>
+<h3>Derived from</h3>
+ClbrBaseClasses.Enum, VisibilityMixin
+<h3>Class Attributes</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Class Methods</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+
+<table>
+
+<tr>
+<td><a href="#Enum.__init__">Enum</a></td>
+<td>Constructor</td>
+</tr>
+</table>
+<h3>Static Methods</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+
+<a NAME="Enum.__init__" ID="Enum.__init__"></a>
+<h4>Enum (Constructor)</h4>
+<b>Enum</b>(<i>module, name, file, lineno</i>)
+
+<p>
+        Constructor
+</p>
+<dl>
+
+<dt><i>module</i> (str)</dt>
+<dd>
+name of the module containing this enum
+</dd>
+<dt><i>name</i> (str)</dt>
+<dd>
+name of this enum
+</dd>
+<dt><i>file</i> (str)</dt>
+<dd>
+filename containing this enum
+</dd>
+<dt><i>lineno</i> (int)</dt>
+<dd>
+linenumber of the message enum
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+<hr />
+<a NAME="Message" ID="Message"></a>
+<h2>Message</h2>
+
+<p>
+    Class to represent a ProtoBuf Message.
+</p>
+<h3>Derived from</h3>
+ClbrBaseClasses.Module, VisibilityMixin
+<h3>Class Attributes</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Class Methods</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+
+<table>
+
+<tr>
+<td><a href="#Message.__init__">Message</a></td>
+<td>Constructor</td>
+</tr>
+</table>
+<h3>Static Methods</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+
+<a NAME="Message.__init__" ID="Message.__init__"></a>
+<h4>Message (Constructor)</h4>
+<b>Message</b>(<i>module, name, file, lineno</i>)
+
+<p>
+        Constructor
+</p>
+<dl>
+
+<dt><i>module</i> (str)</dt>
+<dd>
+name of the module containing this message
+</dd>
+<dt><i>name</i> (str)</dt>
+<dd>
+name of this message
+</dd>
+<dt><i>file</i> (str)</dt>
+<dd>
+filename containing this message
+</dd>
+<dt><i>lineno</i> (int)</dt>
+<dd>
+linenumber of the message definition
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+<hr />
+<a NAME="Service" ID="Service"></a>
+<h2>Service</h2>
+
+<p>
+    Class to represent a ProtoBuf Service.
+</p>
+<h3>Derived from</h3>
+ClbrBaseClasses.Class, VisibilityMixin
+<h3>Class Attributes</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Class Methods</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+
+<table>
+
+<tr>
+<td><a href="#Service.__init__">Service</a></td>
+<td>Constructor</td>
+</tr>
+</table>
+<h3>Static Methods</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+
+<a NAME="Service.__init__" ID="Service.__init__"></a>
+<h4>Service (Constructor)</h4>
+<b>Service</b>(<i>module, name, file, lineno</i>)
+
+<p>
+        Constructor
+</p>
+<dl>
+
+<dt><i>module</i> (str)</dt>
+<dd>
+name of the module containing this service
+</dd>
+<dt><i>name</i> (str)</dt>
+<dd>
+name of this service
+</dd>
+<dt><i>file</i> (str)</dt>
+<dd>
+filename containing this service
+</dd>
+<dt><i>lineno</i> (int)</dt>
+<dd>
+linenumber of the service definition
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+<hr />
+<a NAME="ServiceMethod" ID="ServiceMethod"></a>
+<h2>ServiceMethod</h2>
+
+<p>
+    Class to represent a ProtoBuf Service Method.
+</p>
+<h3>Derived from</h3>
+ClbrBaseClasses.Function, VisibilityMixin
+<h3>Class Attributes</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Class Methods</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+
+<table>
+
+<tr>
+<td><a href="#ServiceMethod.__init__">ServiceMethod</a></td>
+<td>Constructor</td>
+</tr>
+</table>
+<h3>Static Methods</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+
+<a NAME="ServiceMethod.__init__" ID="ServiceMethod.__init__"></a>
+<h4>ServiceMethod (Constructor)</h4>
+<b>ServiceMethod</b>(<i>name, file, lineno, signature, returns</i>)
+
+<p>
+        Constructor
+</p>
+<dl>
+
+<dt><i>name</i> (str)</dt>
+<dd>
+name of this service method
+</dd>
+<dt><i>file</i> (str)</dt>
+<dd>
+filename containing this service method
+</dd>
+<dt><i>lineno</i> (int)</dt>
+<dd>
+linenumber of the service method definition
+</dd>
+<dt><i>signature</i> (str)</dt>
+<dd>
+parameter list of the service method
+</dd>
+<dt><i>returns</i> (str)</dt>
+<dd>
+return type of the service method
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+<hr />
+<a NAME="VisibilityMixin" ID="VisibilityMixin"></a>
+<h2>VisibilityMixin</h2>
+
+<p>
+    Mixin class implementing the notion of visibility.
+</p>
+<h3>Derived from</h3>
+ClbrBaseClasses.ClbrVisibilityMixinBase
+<h3>Class Attributes</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Class Methods</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+
+<table>
+
+<tr>
+<td><a href="#VisibilityMixin.__init__">VisibilityMixin</a></td>
+<td>Constructor</td>
+</tr>
+</table>
+<h3>Static Methods</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+
+<a NAME="VisibilityMixin.__init__" ID="VisibilityMixin.__init__"></a>
+<h4>VisibilityMixin (Constructor)</h4>
+<b>VisibilityMixin</b>(<i></i>)
+
+<p>
+        Constructor
+</p>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+<hr />
+<a NAME="calculateEndline" ID="calculateEndline"></a>
+<h2>calculateEndline</h2>
+<b>calculateEndline</b>(<i>lineno, lines</i>)
+
+<p>
+        Function to calculate the end line.
+</p>
+<dl>
+
+<dt><i>lineno</i> (int)</dt>
+<dd>
+line number to start at (one based)
+</dd>
+<dt><i>lines</i> (list of str)</dt>
+<dd>
+list of source lines
+</dd>
+</dl>
+<dl>
+<dt>Return:</dt>
+<dd>
+end line (one based)
+</dd>
+</dl>
+<dl>
+<dt>Return Type:</dt>
+<dd>
+int
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+<hr />
+<a NAME="readmodule_ex" ID="readmodule_ex"></a>
+<h2>readmodule_ex</h2>
+<b>readmodule_ex</b>(<i>module, path=None</i>)
+
+<p>
+    Read a ProtoBuf protocol file and return a dictionary of messages, enums,
+    services and rpc methods.
+</p>
+<dl>
+
+<dt><i>module</i> (str)</dt>
+<dd>
+name of the ProtoBuf protocol file
+</dd>
+<dt><i>path</i> (list of str)</dt>
+<dd>
+path the file should be searched in
+</dd>
+</dl>
+<dl>
+<dt>Return:</dt>
+<dd>
+the resulting dictionary
+</dd>
+</dl>
+<dl>
+<dt>Return Type:</dt>
+<dd>
+dict
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+<hr />
+<a NAME="scan" ID="scan"></a>
+<h2>scan</h2>
+<b>scan</b>(<i>src, file, module</i>)
+
+<p>
+    Public method to scan the given source text.
+</p>
+<dl>
+
+<dt><i>src</i> (str)</dt>
+<dd>
+source text to be scanned
+</dd>
+<dt><i>file</i> (str)</dt>
+<dd>
+file name associated with the source text
+</dd>
+<dt><i>module</i> (str)</dt>
+<dd>
+module name associated with the source text
+</dd>
+</dl>
+<dl>
+<dt>Return:</dt>
+<dd>
+dictionary containing the extracted data
+</dd>
+</dl>
+<dl>
+<dt>Return Type:</dt>
+<dd>
+dict
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+</body></html>

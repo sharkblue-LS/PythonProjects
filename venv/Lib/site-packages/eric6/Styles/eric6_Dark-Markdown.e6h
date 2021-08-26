@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HighlightingStyles SYSTEM "HighlightingStyles-6.0.dtd">
+<!-- Eric6 highlighting styles -->
+<!-- Saved: 2020-04-05, 18:46:43-->
+<!-- Author: Detlev Offenbach <detlev@die-offenbachs.de> -->
+<HighlightingStyles version="6.0">
+  <Lexer name="Markdown">
+    <Style style="0" substyle="-1" color="#ffffff" paper="#262626" font="Hack,10,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Default</Description>
+    </Style>
+    <Style style="1" substyle="-1" color="#ea95ff" paper="#262626" font="Hack,10,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Special</Description>
+    </Style>
+    <Style style="2" substyle="-1" color="#4c99e5" paper="#262626" font="Hack,10,-1,5,75,0,0,0,0,0" eolfill="False">
+      <Description>Strong emphasis using double asterisks</Description>
+    </Style>
+    <Style style="3" substyle="-1" color="#4c99e5" paper="#262626" font="Hack,10,-1,5,75,0,0,0,0,0" eolfill="False">
+      <Description>Strong emphasis using double underscores</Description>
+    </Style>
+    <Style style="4" substyle="-1" color="#ed81f0" paper="#262626" font="Hack,10,-1,5,50,1,0,0,0,0" eolfill="False">
+      <Description>Emphasis using single asterisks</Description>
+    </Style>
+    <Style style="5" substyle="-1" color="#ed81f0" paper="#262626" font="Hack,10,-1,5,50,1,0,0,0,0" eolfill="False">
+      <Description>Emphasis using single underscores</Description>
+    </Style>
+    <Style style="6" substyle="-1" color="#ffcc55" paper="#262626" font="Hack,10,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Level 1 header</Description>
+    </Style>
+    <Style style="7" substyle="-1" color="#ddbb55" paper="#262626" font="Hack,10,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Level 2 header</Description>
+    </Style>
+    <Style style="8" substyle="-1" color="#bb9955" paper="#262626" font="Hack,10,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Level 3 header</Description>
+    </Style>
+    <Style style="9" substyle="-1" color="#998855" paper="#262626" font="Hack,10,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Level 4 header</Description>
+    </Style>
+    <Style style="10" substyle="-1" color="#777055" paper="#262626" font="Hack,10,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Level 5 header</Description>
+    </Style>
+    <Style style="11" substyle="-1" color="#666055" paper="#262626" font="Hack,10,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Level 6 header</Description>
+    </Style>
+    <Style style="12" substyle="-1" color="#000000" paper="#eeeeaa" font="Hack,10,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Pre-char</Description>
+    </Style>
+    <Style style="13" substyle="-1" color="#825d00" paper="#ded8c3" font="Hack,10,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Unordered list item</Description>
+    </Style>
+    <Style style="14" substyle="-1" color="#000070" paper="#b8c3e1" font="Hack,10,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Ordered list item</Description>
+    </Style>
+    <Style style="15" substyle="-1" color="#006600" paper="#cbdccb" font="Hack,10,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Block quote</Description>
+    </Style>
+    <Style style="16" substyle="-1" color="#dddd00" paper="#aa0000" font="Hack,10,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Strike out</Description>
+    </Style>
+    <Style style="17" substyle="-1" color="#1f1c1b" paper="#e7d1c9" font="Hack,10,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Horizontal rule</Description>
+    </Style>
+    <Style style="18" substyle="-1" color="#8287eb" paper="#474747" font="Hack,10,-1,5,50,0,1,0,0,0" eolfill="False">
+      <Description>Link</Description>
+    </Style>
+    <Style style="19" substyle="-1" color="#ffd5ff" paper="#707870" font="Hack,10,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Code between backticks</Description>
+    </Style>
+    <Style style="20" substyle="-1" color="#ffd5ff" paper="#707870" font="Hack,10,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Code between double backticks</Description>
+    </Style>
+    <Style style="21" substyle="-1" color="#93cdff" paper="#56626b" font="Hack,10,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Code block</Description>
+    </Style>
+  </Lexer>
+</HighlightingStyles>

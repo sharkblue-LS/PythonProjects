@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HighlightingStyles SYSTEM "HighlightingStyles-6.0.dtd">
+<!-- Eric6 highlighting styles -->
+<!-- Saved: 2020-04-10, 15:13:14-->
+<!-- Author: Detlev Offenbach <detlev@die-offenbachs.de> -->
+<HighlightingStyles version="6.0">
+  <Lexer name="JSON">
+    <Style style="0" substyle="-1" color="#ffffff" paper="#262626" font="Hack,10,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Default</Description>
+    </Style>
+    <Style style="1" substyle="-1" color="#00ffff" paper="#262626" font="Hack,10,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Number</Description>
+    </Style>
+    <Style style="2" substyle="-1" color="#fd6262" paper="#262626" font="Hack,10,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>String</Description>
+    </Style>
+    <Style style="3" substyle="-1" color="#ffffff" paper="#ff0000" font="Hack,10,-1,5,50,0,0,0,0,0" eolfill="True">
+      <Description>Unclosed string</Description>
+    </Style>
+    <Style style="4" substyle="-1" color="#c387ff" paper="#262626" font="Hack,10,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Property</Description>
+    </Style>
+    <Style style="5" substyle="-1" color="#12ff49" paper="#262626" font="Hack,10,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Escape sequence</Description>
+    </Style>
+    <Style style="6" substyle="-1" color="#38fff9" paper="#262626" font="Hack,10,-1,5,50,1,0,0,0,0" eolfill="False">
+      <Description>Line comment</Description>
+    </Style>
+    <Style style="7" substyle="-1" color="#38fff9" paper="#262626" font="Hack,10,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Block comment</Description>
+    </Style>
+    <Style style="8" substyle="-1" color="#3dfebb" paper="#262626" font="Hack,10,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Operator</Description>
+    </Style>
+    <Style style="9" substyle="-1" color="#ffaa7f" paper="#262626" font="Hack,10,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>IRI</Description>
+    </Style>
+    <Style style="10" substyle="-1" color="#ff57f1" paper="#262626" font="Hack,10,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>JSON-LD compact IRI</Description>
+    </Style>
+    <Style style="11" substyle="-1" color="#0dffcf" paper="#262626" font="Hack,10,-1,5,75,0,0,0,0,0" eolfill="False">
+      <Description>JSON keyword</Description>
+    </Style>
+    <Style style="12" substyle="-1" color="#ff7369" paper="#262626" font="Hack,10,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>JSON-LD keyword</Description>
+    </Style>
+    <Style style="13" substyle="-1" color="#ffffff" paper="#ff0000" font="Hack,10,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Parsing error</Description>
+    </Style>
+  </Lexer>
+</HighlightingStyles>

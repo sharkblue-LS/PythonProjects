@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html><head>
+<title>eric6.VirtualEnv.VirtualenvManagerDialog</title>
+<meta charset="UTF-8">
+<style>
+body {
+    background: #EDECE6;
+    margin: 0em 1em 10em 1em;
+    color: black;
+}
+
+h1 { color: white; background: #85774A; }
+h2 { color: white; background: #85774A; }
+h3 { color: white; background: #9D936E; }
+h4 { color: white; background: #9D936E; }
+    
+a { color: #BA6D36; }
+
+</style>
+</head>
+<body>
+<a NAME="top" ID="top"></a>
+<h1>eric6.VirtualEnv.VirtualenvManagerDialog</h1>
+
+<p>
+Module implementing a dialog to manage the list of defined virtual
+environments.
+</p>
+<h3>Global Attributes</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Classes</h3>
+
+<table>
+
+<tr>
+<td><a href="#VirtualenvManagerDialog">VirtualenvManagerDialog</a></td>
+<td>Class implementing a dialog to manage the list of defined virtual environments.</td>
+</tr>
+</table>
+<h3>Functions</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+<hr />
+<hr />
+<a NAME="VirtualenvManagerDialog" ID="VirtualenvManagerDialog"></a>
+<h2>VirtualenvManagerDialog</h2>
+
+<p>
+    Class implementing a dialog to manage the list of defined virtual
+    environments.
+</p>
+<h3>Derived from</h3>
+QDialog, Ui_VirtualenvManagerDialog
+<h3>Class Attributes</h3>
+
+<table>
+<tr><td>ExecPathRole</td></tr><tr><td>IsCondaRole</td></tr><tr><td>IsGlobalRole</td></tr><tr><td>IsRemoteRole</td></tr>
+</table>
+<h3>Class Methods</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+
+<table>
+
+<tr>
+<td><a href="#VirtualenvManagerDialog.__init__">VirtualenvManagerDialog</a></td>
+<td>Constructor</td>
+</tr>
+<tr>
+<td><a href="#VirtualenvManagerDialog.__populateVenvList">__populateVenvList</a></td>
+<td>Private method to populate the list of virtual environments.</td>
+</tr>
+<tr>
+<td><a href="#VirtualenvManagerDialog.__resizeSections">__resizeSections</a></td>
+<td>Private method to resize the sections of the environment list to their contents.</td>
+</tr>
+<tr>
+<td><a href="#VirtualenvManagerDialog.__updateButtons">__updateButtons</a></td>
+<td>Private method to update the enabled state of the various buttons.</td>
+</tr>
+<tr>
+<td><a href="#VirtualenvManagerDialog.closeEvent">closeEvent</a></td>
+<td>Protected method to handle the close event.</td>
+</tr>
+<tr>
+<td><a href="#VirtualenvManagerDialog.on_addButton_clicked">on_addButton_clicked</a></td>
+<td>Private slot to add a new entry.</td>
+</tr>
+<tr>
+<td><a href="#VirtualenvManagerDialog.on_deleteAllButton_clicked">on_deleteAllButton_clicked</a></td>
+<td>Private slot to delete all entries from the list and disk.</td>
+</tr>
+<tr>
+<td><a href="#VirtualenvManagerDialog.on_deleteButton_clicked">on_deleteButton_clicked</a></td>
+<td>Private slot to delete all selected entries from the list and disk.</td>
+</tr>
+<tr>
+<td><a href="#VirtualenvManagerDialog.on_editButton_clicked">on_editButton_clicked</a></td>
+<td>Private slot to edit the selected entry.</td>
+</tr>
+<tr>
+<td><a href="#VirtualenvManagerDialog.on_newButton_clicked">on_newButton_clicked</a></td>
+<td>Private slot to create a new virtual environment.</td>
+</tr>
+<tr>
+<td><a href="#VirtualenvManagerDialog.on_removeAllButton_clicked">on_removeAllButton_clicked</a></td>
+<td>Private slot to remove all entries from the list but keep their directories.</td>
+</tr>
+<tr>
+<td><a href="#VirtualenvManagerDialog.on_removeButton_clicked">on_removeButton_clicked</a></td>
+<td>Private slot to remove all selected entries from the list but keep their directories.</td>
+</tr>
+<tr>
+<td><a href="#VirtualenvManagerDialog.on_venvList_itemSelectionChanged">on_venvList_itemSelectionChanged</a></td>
+<td>Private slot handling a change of the selected items.</td>
+</tr>
+<tr>
+<td><a href="#VirtualenvManagerDialog.refresh">refresh</a></td>
+<td>Public slot to refresh the list of shown items.</td>
+</tr>
+</table>
+<h3>Static Methods</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+
+<a NAME="VirtualenvManagerDialog.__init__" ID="VirtualenvManagerDialog.__init__"></a>
+<h4>VirtualenvManagerDialog (Constructor)</h4>
+<b>VirtualenvManagerDialog</b>(<i>manager, parent=None</i>)
+
+<p>
+        Constructor
+</p>
+<dl>
+
+<dt><i>manager</i> (VirtualenvManager)</dt>
+<dd>
+reference to the virtual environment manager
+</dd>
+<dt><i>parent</i> (QWidget)</dt>
+<dd>
+reference to the parent widget
+</dd>
+</dl>
+<a NAME="VirtualenvManagerDialog.__populateVenvList" ID="VirtualenvManagerDialog.__populateVenvList"></a>
+<h4>VirtualenvManagerDialog.__populateVenvList</h4>
+<b>__populateVenvList</b>(<i></i>)
+
+<p>
+        Private method to populate the list of virtual environments.
+</p>
+<a NAME="VirtualenvManagerDialog.__resizeSections" ID="VirtualenvManagerDialog.__resizeSections"></a>
+<h4>VirtualenvManagerDialog.__resizeSections</h4>
+<b>__resizeSections</b>(<i></i>)
+
+<p>
+        Private method to resize the sections of the environment list to their
+        contents.
+</p>
+<a NAME="VirtualenvManagerDialog.__updateButtons" ID="VirtualenvManagerDialog.__updateButtons"></a>
+<h4>VirtualenvManagerDialog.__updateButtons</h4>
+<b>__updateButtons</b>(<i></i>)
+
+<p>
+        Private method to update the enabled state of the various buttons.
+</p>
+<a NAME="VirtualenvManagerDialog.closeEvent" ID="VirtualenvManagerDialog.closeEvent"></a>
+<h4>VirtualenvManagerDialog.closeEvent</h4>
+<b>closeEvent</b>(<i>evt</i>)
+
+<p>
+        Protected method to handle the close event.
+</p>
+<dl>
+
+<dt><i>evt</i> (QCloseEvent)</dt>
+<dd>
+reference to the close event
+</dd>
+</dl>
+<a NAME="VirtualenvManagerDialog.on_addButton_clicked" ID="VirtualenvManagerDialog.on_addButton_clicked"></a>
+<h4>VirtualenvManagerDialog.on_addButton_clicked</h4>
+<b>on_addButton_clicked</b>(<i></i>)
+
+<p>
+        Private slot to add a new entry.
+</p>
+<a NAME="VirtualenvManagerDialog.on_deleteAllButton_clicked" ID="VirtualenvManagerDialog.on_deleteAllButton_clicked"></a>
+<h4>VirtualenvManagerDialog.on_deleteAllButton_clicked</h4>
+<b>on_deleteAllButton_clicked</b>(<i></i>)
+
+<p>
+        Private slot to delete all entries from the list and disk.
+</p>
+<a NAME="VirtualenvManagerDialog.on_deleteButton_clicked" ID="VirtualenvManagerDialog.on_deleteButton_clicked"></a>
+<h4>VirtualenvManagerDialog.on_deleteButton_clicked</h4>
+<b>on_deleteButton_clicked</b>(<i></i>)
+
+<p>
+        Private slot to delete all selected entries from the list and disk.
+</p>
+<a NAME="VirtualenvManagerDialog.on_editButton_clicked" ID="VirtualenvManagerDialog.on_editButton_clicked"></a>
+<h4>VirtualenvManagerDialog.on_editButton_clicked</h4>
+<b>on_editButton_clicked</b>(<i></i>)
+
+<p>
+        Private slot to edit the selected entry.
+</p>
+<a NAME="VirtualenvManagerDialog.on_newButton_clicked" ID="VirtualenvManagerDialog.on_newButton_clicked"></a>
+<h4>VirtualenvManagerDialog.on_newButton_clicked</h4>
+<b>on_newButton_clicked</b>(<i></i>)
+
+<p>
+        Private slot to create a new virtual environment.
+</p>
+<a NAME="VirtualenvManagerDialog.on_removeAllButton_clicked" ID="VirtualenvManagerDialog.on_removeAllButton_clicked"></a>
+<h4>VirtualenvManagerDialog.on_removeAllButton_clicked</h4>
+<b>on_removeAllButton_clicked</b>(<i></i>)
+
+<p>
+        Private slot to remove all entries from the list but keep their
+        directories.
+</p>
+<a NAME="VirtualenvManagerDialog.on_removeButton_clicked" ID="VirtualenvManagerDialog.on_removeButton_clicked"></a>
+<h4>VirtualenvManagerDialog.on_removeButton_clicked</h4>
+<b>on_removeButton_clicked</b>(<i></i>)
+
+<p>
+        Private slot to remove all selected entries from the list but keep
+        their directories.
+</p>
+<a NAME="VirtualenvManagerDialog.on_venvList_itemSelectionChanged" ID="VirtualenvManagerDialog.on_venvList_itemSelectionChanged"></a>
+<h4>VirtualenvManagerDialog.on_venvList_itemSelectionChanged</h4>
+<b>on_venvList_itemSelectionChanged</b>(<i></i>)
+
+<p>
+        Private slot handling a change of the selected items.
+</p>
+<a NAME="VirtualenvManagerDialog.refresh" ID="VirtualenvManagerDialog.refresh"></a>
+<h4>VirtualenvManagerDialog.refresh</h4>
+<b>refresh</b>(<i></i>)
+
+<p>
+        Public slot to refresh the list of shown items.
+</p>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+</body></html>

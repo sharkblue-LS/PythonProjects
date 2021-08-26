@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HighlightingStyles SYSTEM "HighlightingStyles-6.0.dtd">
+<!-- Eric6 highlighting styles -->
+<!-- Saved: 2020-03-08, 17:10:55-->
+<!-- Author: Detlev Offenbach <detlev@die-offenbachs.de> -->
+<HighlightingStyles version="6.0">
+  <Lexer name="Python3">
+    <Style style="0" substyle="-1" color="#ffffff" paper="#262626" font="Hack,10,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Default</Description>
+    </Style>
+    <Style style="1" substyle="-1" color="#74cc66" paper="#262626" font="Hack,10,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Comment</Description>
+    </Style>
+    <Style style="2" substyle="-1" color="#00c8c8" paper="#262626" font="Hack,10,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Number</Description>
+    </Style>
+    <Style style="3" substyle="-1" color="#c354c3" paper="#262626" font="Hack,10,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Double-quoted string</Description>
+    </Style>
+    <Style style="4" substyle="-1" color="#c354c3" paper="#262626" font="Hack,10,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Single-quoted string</Description>
+    </Style>
+    <Style style="5" substyle="-1" color="#60a5ff" paper="#262626" font="Hack,10,-1,5,75,0,0,0,0,0" eolfill="False">
+      <Description>Keyword</Description>
+    </Style>
+    <Style style="6" substyle="-1" color="#dc5a5a" paper="#262626" font="Hack,10,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Triple single-quoted string</Description>
+    </Style>
+    <Style style="7" substyle="-1" color="#dc5a5a" paper="#262626" font="Hack,10,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Triple double-quoted string</Description>
+    </Style>
+    <Style style="8" substyle="-1" color="#00aaff" paper="#262626" font="Hack,10,-1,5,75,0,0,0,0,0" eolfill="False">
+      <Description>Class name</Description>
+    </Style>
+    <Style style="9" substyle="-1" color="#00d5d5" paper="#262626" font="Hack,10,-1,5,75,0,0,0,0,0" eolfill="False">
+      <Description>Function or method name</Description>
+    </Style>
+    <Style style="10" substyle="-1" color="#bab1a8" paper="#262626" font="Hack,10,-1,5,75,0,0,0,0,0" eolfill="False">
+      <Description>Operator</Description>
+    </Style>
+    <Style style="11" substyle="-1" color="#ffffff" paper="#262626" font="Hack,10,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Identifier</Description>
+    </Style>
+    <Style style="12" substyle="-1" color="#27e534" paper="#262626" font="Hack,10,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Comment block</Description>
+    </Style>
+    <Style style="13" substyle="-1" color="#bdbdbd" paper="#262626" font="Hack,10,-1,5,50,0,0,0,0,0" eolfill="True">
+      <Description>Unclosed string</Description>
+    </Style>
+    <Style style="14" substyle="-1" color="#71c6ff" paper="#262626" font="Hack,10,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Highlighted identifier</Description>
+    </Style>
+    <Style style="15" substyle="-1" color="#e38c00" paper="#262626" font="Hack,10,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Decorator</Description>
+    </Style>
+    <Style style="16" substyle="-1" color="#c354c3" paper="#262626" font="Hack,10,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Double-quoted f-string</Description>
+    </Style>
+    <Style style="17" substyle="-1" color="#c354c3" paper="#262626" font="Hack,10,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Single-quoted f-string</Description>
+    </Style>
+    <Style style="18" substyle="-1" color="#dc5a5a" paper="#262626" font="Hack,10,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Triple single-quoted f-string</Description>
+    </Style>
+    <Style style="19" substyle="-1" color="#dc5a5a" paper="#262626" font="Hack,10,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Triple double-quoted f-string</Description>
+    </Style>
+    <Style style="11" substyle="0" color="#dd9900" paper="#262626" font="Hack,10,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Standard Library Modules</Description>
+      <Words>__main__ _dummy_thread _thread abc aifc argparse array ast asynchat asyncio
+ asyncore atexit audioop base64 bdb binascii binhex bisect builtins bz2
+ calendar cgi cgitb chunk cmath cmd code codecs codeop collections colorsys
+ compileall concurrent configparser contextlib copy copyreg crypt csv ctypes
+ curses datetime dbm decimal difflib dis distutils dummy_threading email
+ ensurepip enum errno faulthandler fcntl filecmp fileinput fnmatch formatter
+ fpectl fractions ftplib functools gc getopt getpass gettext glob grp gzip
+ hashlib heapq hmac html http http imaplib imghdr importlib inspect io
+ ipaddress itertools json keyword linecache locale logging lzma macpath
+ mailbox mailcap marshal math mimetypes mmap modulefinder msilib msvcrt
+ multiprocessing netrc nis nntplib numbers operator os ossaudiodev parser path
+ pathlib pdb pickle pickletools pipes pkgutil platform plistlib poplib posix
+ pprint pty pwd py_compile pyclbr queue quopri random re readline reprlib
+ resource rlcompleter runpy sched select selectors shelve shlex shutil signal
+ site smtpd smtplib sndhdr socket socketserver spwd sqlite3 ssl stat statistics
+ string stringprep struct subprocess sunau symbol symtable sys sysconfig syslog
+ tabnanny tarfile telnetlib tempfile termios textwrap threading time timeit
+ tkinter token tokenize trace traceback tracemalloc tty turtle types
+ unicodedata unittest urllib uu uuid venv warnings wave weakref webbrowser
+ winreg winsound wsgiref xdrlib xml xmlrpc zipfile zipimport zlib</Words>
+    </Style>
+    <Style style="11" substyle="1" color="#ee00aa" paper="#262626" font="Hack,10,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>__future__ Imports</Description>
+      <Words>__future__ with_statement unicode_literals print_function division
+ absolute_import generator_stop annotations</Words>
+    </Style>
+    <Style style="11" substyle="2" color="#41dd97" paper="#262626" font="Hack,10,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>PyQt5 Modules</Description>
+      <Words>PyQt5 Qsci Qt QtCore QtDBus QtDesigner QtGui QtHelp QtLocation QtMacExtras QtMultimedia QtMultimediaWidgets QtNetwork QtNetworkAuth QtNfc QtOpenGL QtPositioning QtPrintSupport QtQml QtQuick QtQuickWidgets QtRemoteObjects QtSensors QtSerialPort QtSql QtSvg QtTest QtWebChannel QtWebEngine QtWebEngineCore QtWebEngineWidgets QtWebSockets QtWidgets QtWinExtras QtX11Extras QtXml QtXmlPatterns sip QtWebKit QtWebKitWidgets</Words>
+    </Style>
+  </Lexer>
+</HighlightingStyles>

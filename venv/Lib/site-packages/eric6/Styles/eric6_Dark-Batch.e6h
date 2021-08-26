@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HighlightingStyles SYSTEM "HighlightingStyles-6.0.dtd">
+<!-- Eric6 highlighting styles -->
+<!-- Saved: 2020-04-04, 19:39:07-->
+<!-- Author: Detlev Offenbach <detlev@die-offenbachs.de> -->
+<HighlightingStyles version="6.0">
+  <Lexer name="Batch">
+    <Style style="0" substyle="-1" color="#ffffff" paper="#262626" font="Bitstream Vera Sans Mono,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Default</Description>
+    </Style>
+    <Style style="1" substyle="-1" color="#74cc66" paper="#262626" font="Bitstream Vera Sans Mono,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Comment</Description>
+    </Style>
+    <Style style="2" substyle="-1" color="#60a5ff" paper="#262626" font="Bitstream Vera Sans Mono,9,-1,5,75,0,0,0,0,0" eolfill="False">
+      <Description>Keyword</Description>
+    </Style>
+    <Style style="3" substyle="-1" color="#ffff7f" paper="#606060" font="Bitstream Vera Sans Mono,9,-1,5,75,0,0,0,0,0" eolfill="True">
+      <Description>Label</Description>
+    </Style>
+    <Style style="4" substyle="-1" color="#d1d100" paper="#262626" font="Bitstream Vera Sans Mono,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Hide command character</Description>
+    </Style>
+    <Style style="5" substyle="-1" color="#2bc2f0" paper="#262626" font="Bitstream Vera Sans Mono,9,-1,5,75,0,0,0,0,0" eolfill="False">
+      <Description>External command</Description>
+    </Style>
+    <Style style="6" substyle="-1" color="#d068d3" paper="#262626" font="Bitstream Vera Sans Mono,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Variable</Description>
+    </Style>
+    <Style style="7" substyle="-1" color="#bab1a8" paper="#262626" font="Bitstream Vera Sans Mono,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Operator</Description>
+    </Style>
+  </Lexer>
+</HighlightingStyles>

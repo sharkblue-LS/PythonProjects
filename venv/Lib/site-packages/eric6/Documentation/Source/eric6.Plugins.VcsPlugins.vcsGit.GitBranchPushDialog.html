@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html><head>
+<title>eric6.Plugins.VcsPlugins.vcsGit.GitBranchPushDialog</title>
+<meta charset="UTF-8">
+<style>
+body {
+    background: #EDECE6;
+    margin: 0em 1em 10em 1em;
+    color: black;
+}
+
+h1 { color: white; background: #85774A; }
+h2 { color: white; background: #85774A; }
+h3 { color: white; background: #9D936E; }
+h4 { color: white; background: #9D936E; }
+    
+a { color: #BA6D36; }
+
+</style>
+</head>
+<body>
+<a NAME="top" ID="top"></a>
+<h1>eric6.Plugins.VcsPlugins.vcsGit.GitBranchPushDialog</h1>
+
+<p>
+Module implementing a dialog to select the data for pushing a branch.
+</p>
+<h3>Global Attributes</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Classes</h3>
+
+<table>
+
+<tr>
+<td><a href="#GitBranchPushDialog">GitBranchPushDialog</a></td>
+<td>Class implementing a dialog to select the data for pushing a branch.</td>
+</tr>
+</table>
+<h3>Functions</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+<hr />
+<hr />
+<a NAME="GitBranchPushDialog" ID="GitBranchPushDialog"></a>
+<h2>GitBranchPushDialog</h2>
+
+<p>
+    Class implementing a dialog to select the data for pushing a branch.
+</p>
+<h3>Derived from</h3>
+QDialog, Ui_GitBranchPushDialog
+<h3>Class Attributes</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Class Methods</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+
+<table>
+
+<tr>
+<td><a href="#GitBranchPushDialog.__init__">GitBranchPushDialog</a></td>
+<td>Constructor</td>
+</tr>
+<tr>
+<td><a href="#GitBranchPushDialog.getData">getData</a></td>
+<td>Public method to get the selected data.</td>
+</tr>
+<tr>
+<td><a href="#GitBranchPushDialog.on_branchComboBox_editTextChanged">on_branchComboBox_editTextChanged</a></td>
+<td>Private slot to handle a change of the branch name.</td>
+</tr>
+</table>
+<h3>Static Methods</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+
+<a NAME="GitBranchPushDialog.__init__" ID="GitBranchPushDialog.__init__"></a>
+<h4>GitBranchPushDialog (Constructor)</h4>
+<b>GitBranchPushDialog</b>(<i>branches, remotes, delete=False, parent=None</i>)
+
+<p>
+        Constructor
+</p>
+<dl>
+
+<dt><i>branches</i></dt>
+<dd>
+list of branch names (list of string)
+</dd>
+<dt><i>remotes</i></dt>
+<dd>
+list of remote names (list of string)
+</dd>
+<dt><i>delete</i></dt>
+<dd>
+flag indicating a delete branch action (boolean)
+</dd>
+<dt><i>parent</i></dt>
+<dd>
+reference to the parent widget (QWidget)
+</dd>
+</dl>
+<a NAME="GitBranchPushDialog.getData" ID="GitBranchPushDialog.getData"></a>
+<h4>GitBranchPushDialog.getData</h4>
+<b>getData</b>(<i></i>)
+
+<p>
+        Public method to get the selected data.
+</p>
+<dl>
+<dt>Return:</dt>
+<dd>
+tuple of selected branch name, remote name and a flag
+            indicating all branches (tuple of two strings and a boolean)
+</dd>
+</dl>
+<a NAME="GitBranchPushDialog.on_branchComboBox_editTextChanged" ID="GitBranchPushDialog.on_branchComboBox_editTextChanged"></a>
+<h4>GitBranchPushDialog.on_branchComboBox_editTextChanged</h4>
+<b>on_branchComboBox_editTextChanged</b>(<i>txt</i>)
+
+<p>
+        Private slot to handle a change of the branch name.
+</p>
+<dl>
+
+<dt><i>txt</i></dt>
+<dd>
+branch name (string)
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+</body></html>

@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html><head>
+<title>eric6.MicroPython.MicroPythonCommandsInterface</title>
+<meta charset="UTF-8">
+<style>
+body {
+    background: #EDECE6;
+    margin: 0em 1em 10em 1em;
+    color: black;
+}
+
+h1 { color: white; background: #85774A; }
+h2 { color: white; background: #85774A; }
+h3 { color: white; background: #9D936E; }
+h4 { color: white; background: #9D936E; }
+    
+a { color: #BA6D36; }
+
+</style>
+</head>
+<body>
+<a NAME="top" ID="top"></a>
+<h1>eric6.MicroPython.MicroPythonCommandsInterface</h1>
+
+<p>
+Module implementing some file system commands for MicroPython.
+</p>
+<h3>Global Attributes</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Classes</h3>
+
+<table>
+
+<tr>
+<td><a href="#MicroPythonCommandsInterface">MicroPythonCommandsInterface</a></td>
+<td>Class implementing some file system commands for MicroPython.</td>
+</tr>
+</table>
+<h3>Functions</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+<hr />
+<hr />
+<a NAME="MicroPythonCommandsInterface" ID="MicroPythonCommandsInterface"></a>
+<h2>MicroPythonCommandsInterface</h2>
+
+<p>
+    Class implementing some file system commands for MicroPython.
+</p>
+<p>
+    Commands are provided to perform operations on the file system of a
+    connected MicroPython device. Supported commands are:
+    <ul>
+    <li>ls: directory listing</li>
+    <li>lls: directory listing with meta data</li>
+    <li>cd: change directory</li>
+    <li>pwd: get the current directory</li>
+    <li>put: copy a file to the connected device</li>
+    <li>get: get a file from the connected device</li>
+    <li>rm: remove a file from the connected device</li>
+    <li>rmrf: remove a file/directory recursively (like 'rm -rf' in bash)
+    <li>mkdir: create a new directory</li>
+    <li>rmdir: remove an empty directory</li>
+    </ul>
+</p>
+<p>
+    There are additional commands related to time and version.
+    <ul>
+    <li>version: get version info about MicroPython</li>
+    <li>getImplementation: get some implementation information</li>
+    <li>syncTime: synchronize the time of the connected device</li>
+    <li>showTime: show the current time of the connected device</li>
+    </ul>
+</p>
+<h3>Signals</h3>
+<dl>
+
+<dt>dataReceived(data)</dt>
+<dd>
+emitted to send data received via the serial
+        connection for further processing
+</dd>
+<dt>executeAsyncFinished()</dt>
+<dd>
+emitted to indicate the end of an
+        asynchronously executed list of commands (e.g. a script)
+</dd>
+</dl>
+<h3>Derived from</h3>
+QObject
+<h3>Class Attributes</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Class Methods</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+
+<table>
+
+<tr>
+<td><a href="#MicroPythonCommandsInterface.__init__">MicroPythonCommandsInterface</a></td>
+<td>Constructor</td>
+</tr>
+<tr>
+<td><a href="#MicroPythonCommandsInterface.__rawOff">__rawOff</a></td>
+<td>Private method to switch 'raw' mode off.</td>
+</tr>
+<tr>
+<td><a href="#MicroPythonCommandsInterface.__rawOn">__rawOn</a></td>
+<td>Private method to switch the connected device to 'raw' mode.</td>
+</tr>
+<tr>
+<td><a href="#MicroPythonCommandsInterface.__readSerial">__readSerial</a></td>
+<td>Private slot to read all available serial data and emit it with the "dataReceived" signal for further processing.</td>
+</tr>
+<tr>
+<td><a href="#MicroPythonCommandsInterface.__shortError">__shortError</a></td>
+<td>Private method to create a shortened error message.</td>
+</tr>
+<tr>
+<td><a href="#MicroPythonCommandsInterface.cd">cd</a></td>
+<td>Public method to change the current directory on the connected device.</td>
+</tr>
+<tr>
+<td><a href="#MicroPythonCommandsInterface.connectToDevice">connectToDevice</a></td>
+<td>Public slot to start the manager.</td>
+</tr>
+<tr>
+<td><a href="#MicroPythonCommandsInterface.disconnectFromDevice">disconnectFromDevice</a></td>
+<td>Public slot to stop the thread.</td>
+</tr>
+<tr>
+<td><a href="#MicroPythonCommandsInterface.execute">execute</a></td>
+<td>Public method to send commands to the connected device and return the result.</td>
+</tr>
+<tr>
+<td><a href="#MicroPythonCommandsInterface.executeAsync">executeAsync</a></td>
+<td>Public method to execute a series of commands over a period of time without returning any result (asynchronous execution).</td>
+</tr>
+<tr>
+<td><a href="#MicroPythonCommandsInterface.fileSystemInfo">fileSystemInfo</a></td>
+<td>Public method to obtain information about the currently mounted file systems.</td>
+</tr>
+<tr>
+<td><a href="#MicroPythonCommandsInterface.get">get</a></td>
+<td>Public method to copy a file from the connected device.</td>
+</tr>
+<tr>
+<td><a href="#MicroPythonCommandsInterface.getImplementation">getImplementation</a></td>
+<td>Public method to get some implementation information of the connected device.</td>
+</tr>
+<tr>
+<td><a href="#MicroPythonCommandsInterface.getTime">getTime</a></td>
+<td>Public method to get the current time of the device.</td>
+</tr>
+<tr>
+<td><a href="#MicroPythonCommandsInterface.handlePreferencesChanged">handlePreferencesChanged</a></td>
+<td>Public slot to handle a change of the preferences.</td>
+</tr>
+<tr>
+<td><a href="#MicroPythonCommandsInterface.isConnected">isConnected</a></td>
+<td>Public method to get the connection status.</td>
+</tr>
+<tr>
+<td><a href="#MicroPythonCommandsInterface.lls">lls</a></td>
+<td>Public method to get a long directory listing of the connected device including meta data.</td>
+</tr>
+<tr>
+<td><a href="#MicroPythonCommandsInterface.ls">ls</a></td>
+<td>Public method to get a directory listing of the connected device.</td>
+</tr>
+<tr>
+<td><a href="#MicroPythonCommandsInterface.mkdir">mkdir</a></td>
+<td>Public method to create a new directory.</td>
+</tr>
+<tr>
+<td><a href="#MicroPythonCommandsInterface.put">put</a></td>
+<td>Public method to copy a local file to the connected device.</td>
+</tr>
+<tr>
+<td><a href="#MicroPythonCommandsInterface.pwd">pwd</a></td>
+<td>Public method to get the current directory of the connected device.</td>
+</tr>
+<tr>
+<td><a href="#MicroPythonCommandsInterface.remainingTask">remainingTask</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#MicroPythonCommandsInterface.rm">rm</a></td>
+<td>Public method to remove a file from the connected device.</td>
+</tr>
+<tr>
+<td><a href="#MicroPythonCommandsInterface.rmdir">rmdir</a></td>
+<td>Public method to remove a directory.</td>
+</tr>
+<tr>
+<td><a href="#MicroPythonCommandsInterface.rmrf">rmrf</a></td>
+<td>Public method to remove a file or directory recursively.</td>
+</tr>
+<tr>
+<td><a href="#MicroPythonCommandsInterface.syncTime">syncTime</a></td>
+<td>Public method to set the time of the connected device to the local computer's time.</td>
+</tr>
+<tr>
+<td><a href="#MicroPythonCommandsInterface.version">version</a></td>
+<td>Public method to get the MicroPython version information of the connected device.</td>
+</tr>
+<tr>
+<td><a href="#MicroPythonCommandsInterface.write">write</a></td>
+<td>Public method to write data to the connected device.</td>
+</tr>
+</table>
+<h3>Static Methods</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+
+<a NAME="MicroPythonCommandsInterface.__init__" ID="MicroPythonCommandsInterface.__init__"></a>
+<h4>MicroPythonCommandsInterface (Constructor)</h4>
+<b>MicroPythonCommandsInterface</b>(<i>parent=None</i>)
+
+<p>
+        Constructor
+</p>
+<dl>
+
+<dt><i>parent</i> (QObject)</dt>
+<dd>
+reference to the parent object
+</dd>
+</dl>
+<a NAME="MicroPythonCommandsInterface.__rawOff" ID="MicroPythonCommandsInterface.__rawOff"></a>
+<h4>MicroPythonCommandsInterface.__rawOff</h4>
+<b>__rawOff</b>(<i></i>)
+
+<p>
+        Private method to switch 'raw' mode off.
+</p>
+<a NAME="MicroPythonCommandsInterface.__rawOn" ID="MicroPythonCommandsInterface.__rawOn"></a>
+<h4>MicroPythonCommandsInterface.__rawOn</h4>
+<b>__rawOn</b>(<i></i>)
+
+<p>
+        Private method to switch the connected device to 'raw' mode.
+</p>
+<p>
+        Note: switching to raw mode is done with synchronous writes.
+</p>
+<dl>
+<dt>Return:</dt>
+<dd>
+flag indicating success
+@rtype bool
+</dd>
+</dl>
+<a NAME="MicroPythonCommandsInterface.__readSerial" ID="MicroPythonCommandsInterface.__readSerial"></a>
+<h4>MicroPythonCommandsInterface.__readSerial</h4>
+<b>__readSerial</b>(<i></i>)
+
+<p>
+        Private slot to read all available serial data and emit it with the
+        "dataReceived" signal for further processing.
+</p>
+<a NAME="MicroPythonCommandsInterface.__shortError" ID="MicroPythonCommandsInterface.__shortError"></a>
+<h4>MicroPythonCommandsInterface.__shortError</h4>
+<b>__shortError</b>(<i>error</i>)
+
+<p>
+        Private method to create a shortened error message.
+</p>
+<dl>
+
+<dt><i>error</i> (bytes)</dt>
+<dd>
+verbose error message
+</dd>
+</dl>
+<dl>
+<dt>Return:</dt>
+<dd>
+shortened error message
+</dd>
+</dl>
+<dl>
+<dt>Return Type:</dt>
+<dd>
+str
+</dd>
+</dl>
+<a NAME="MicroPythonCommandsInterface.cd" ID="MicroPythonCommandsInterface.cd"></a>
+<h4>MicroPythonCommandsInterface.cd</h4>
+<b>cd</b>(<i>dirname</i>)
+
+<p>
+        Public method to change the current directory on the connected device.
+</p>
+<dl>
+
+<dt><i>dirname</i> (str)</dt>
+<dd>
+directory to change to
+</dd>
+</dl>
+<dl>
+
+<dt>Raises <b>OSError</b>:</dt>
+<dd>
+raised to indicate an issue with the device
+</dd>
+</dl>
+<a NAME="MicroPythonCommandsInterface.connectToDevice" ID="MicroPythonCommandsInterface.connectToDevice"></a>
+<h4>MicroPythonCommandsInterface.connectToDevice</h4>
+<b>connectToDevice</b>(<i>port</i>)
+
+<p>
+        Public slot to start the manager.
+</p>
+<dl>
+
+<dt><i>port</i> (str)</dt>
+<dd>
+name of the port to be used
+</dd>
+</dl>
+<dl>
+<dt>Return:</dt>
+<dd>
+flag indicating success
+</dd>
+</dl>
+<dl>
+<dt>Return Type:</dt>
+<dd>
+bool
+</dd>
+</dl>
+<a NAME="MicroPythonCommandsInterface.disconnectFromDevice" ID="MicroPythonCommandsInterface.disconnectFromDevice"></a>
+<h4>MicroPythonCommandsInterface.disconnectFromDevice</h4>
+<b>disconnectFromDevice</b>(<i></i>)
+
+<p>
+        Public slot to stop the thread.
+</p>
+<a NAME="MicroPythonCommandsInterface.execute" ID="MicroPythonCommandsInterface.execute"></a>
+<h4>MicroPythonCommandsInterface.execute</h4>
+<b>execute</b>(<i>commands</i>)
+
+<p>
+        Public method to send commands to the connected device and return the
+        result.
+</p>
+<p>
+        If no serial connection is available, empty results will be returned.
+</p>
+<dl>
+
+<dt><i>commands</i> (str)</dt>
+<dd>
+list of commands to be executed
+</dd>
+</dl>
+<dl>
+<dt>Return:</dt>
+<dd>
+tuple containing stdout and stderr output of the device
+</dd>
+</dl>
+<dl>
+<dt>Return Type:</dt>
+<dd>
+tuple of (bytes, bytes)
+</dd>
+</dl>
+<a NAME="MicroPythonCommandsInterface.executeAsync" ID="MicroPythonCommandsInterface.executeAsync"></a>
+<h4>MicroPythonCommandsInterface.executeAsync</h4>
+<b>executeAsync</b>(<i>commandsList</i>)
+
+<p>
+        Public method to execute a series of commands over a period of time
+        without returning any result (asynchronous execution).
+</p>
+<dl>
+
+<dt><i>commandsList</i> (list of bytes)</dt>
+<dd>
+list of commands to be execute on the device
+</dd>
+</dl>
+<a NAME="MicroPythonCommandsInterface.fileSystemInfo" ID="MicroPythonCommandsInterface.fileSystemInfo"></a>
+<h4>MicroPythonCommandsInterface.fileSystemInfo</h4>
+<b>fileSystemInfo</b>(<i></i>)
+
+<p>
+        Public method to obtain information about the currently mounted file
+        systems.
+</p>
+<dl>
+<dt>Return:</dt>
+<dd>
+tuple of tuples containing the file system name, the total
+            size, the used size and the free size
+</dd>
+</dl>
+<dl>
+<dt>Return Type:</dt>
+<dd>
+tuple of tuples of (str, int, int, int)
+</dd>
+</dl>
+<dl>
+
+<dt>Raises <b>OSError</b>:</dt>
+<dd>
+raised to indicate an issue with the device
+</dd>
+</dl>
+<a NAME="MicroPythonCommandsInterface.get" ID="MicroPythonCommandsInterface.get"></a>
+<h4>MicroPythonCommandsInterface.get</h4>
+<b>get</b>(<i>deviceFileName, hostFileName=None</i>)
+
+<p>
+        Public method to copy a file from the connected device.
+</p>
+<dl>
+
+<dt><i>deviceFileName</i> (str)</dt>
+<dd>
+name of the file to copy
+</dd>
+<dt><i>hostFileName</i> (str)</dt>
+<dd>
+name of the file to copy to
+</dd>
+</dl>
+<dl>
+<dt>Return:</dt>
+<dd>
+flag indicating success
+</dd>
+</dl>
+<dl>
+<dt>Return Type:</dt>
+<dd>
+bool
+</dd>
+</dl>
+<dl>
+
+<dt>Raises <b>OSError</b>:</dt>
+<dd>
+raised to indicate an issue with the device
+</dd>
+</dl>
+<a NAME="MicroPythonCommandsInterface.getImplementation" ID="MicroPythonCommandsInterface.getImplementation"></a>
+<h4>MicroPythonCommandsInterface.getImplementation</h4>
+<b>getImplementation</b>(<i></i>)
+
+<p>
+        Public method to get some implementation information of the connected
+        device.
+</p>
+<dl>
+<dt>Return:</dt>
+<dd>
+dictionary containing the implementation information
+</dd>
+</dl>
+<dl>
+<dt>Return Type:</dt>
+<dd>
+dict
+</dd>
+</dl>
+<dl>
+
+<dt>Raises <b>OSError</b>:</dt>
+<dd>
+raised to indicate an issue with the device
+</dd>
+</dl>
+<a NAME="MicroPythonCommandsInterface.getTime" ID="MicroPythonCommandsInterface.getTime"></a>
+<h4>MicroPythonCommandsInterface.getTime</h4>
+<b>getTime</b>(<i></i>)
+
+<p>
+        Public method to get the current time of the device.
+</p>
+<dl>
+<dt>Return:</dt>
+<dd>
+time of the device
+</dd>
+</dl>
+<dl>
+<dt>Return Type:</dt>
+<dd>
+str
+</dd>
+</dl>
+<dl>
+
+<dt>Raises <b>OSError</b>:</dt>
+<dd>
+raised to indicate an issue with the device
+</dd>
+</dl>
+<a NAME="MicroPythonCommandsInterface.handlePreferencesChanged" ID="MicroPythonCommandsInterface.handlePreferencesChanged"></a>
+<h4>MicroPythonCommandsInterface.handlePreferencesChanged</h4>
+<b>handlePreferencesChanged</b>(<i></i>)
+
+<p>
+        Public slot to handle a change of the preferences.
+</p>
+<a NAME="MicroPythonCommandsInterface.isConnected" ID="MicroPythonCommandsInterface.isConnected"></a>
+<h4>MicroPythonCommandsInterface.isConnected</h4>
+<b>isConnected</b>(<i></i>)
+
+<p>
+        Public method to get the connection status.
+</p>
+<dl>
+<dt>Return:</dt>
+<dd>
+flag indicating the connection status
+</dd>
+</dl>
+<dl>
+<dt>Return Type:</dt>
+<dd>
+bool
+</dd>
+</dl>
+<a NAME="MicroPythonCommandsInterface.lls" ID="MicroPythonCommandsInterface.lls"></a>
+<h4>MicroPythonCommandsInterface.lls</h4>
+<b>lls</b>(<i>dirname="", fullstat=False, showHidden=False</i>)
+
+<p>
+        Public method to get a long directory listing of the connected device
+        including meta data.
+</p>
+<dl>
+
+<dt><i>dirname</i> (str)</dt>
+<dd>
+name of the directory to be listed
+</dd>
+<dt><i>fullstat</i> (bool)</dt>
+<dd>
+flag indicating to return the full stat() tuple
+</dd>
+<dt><i>showHidden</i> (bool)</dt>
+<dd>
+flag indicating to show hidden files as well
+</dd>
+</dl>
+<dl>
+<dt>Return:</dt>
+<dd>
+list containing the directory listing with tuple entries of
+            the name and and a tuple of mode, size and time (if fullstat is
+            false) or the complete stat() tuple. 'None' is returned in case the
+            directory doesn't exist.
+</dd>
+</dl>
+<dl>
+<dt>Return Type:</dt>
+<dd>
+tuple of (str, tuple)
+</dd>
+</dl>
+<dl>
+
+<dt>Raises <b>OSError</b>:</dt>
+<dd>
+raised to indicate an issue with the device
+</dd>
+</dl>
+<a NAME="MicroPythonCommandsInterface.ls" ID="MicroPythonCommandsInterface.ls"></a>
+<h4>MicroPythonCommandsInterface.ls</h4>
+<b>ls</b>(<i>dirname=""</i>)
+
+<p>
+        Public method to get a directory listing of the connected device.
+</p>
+<dl>
+
+<dt><i>dirname</i> (str)</dt>
+<dd>
+name of the directory to be listed
+</dd>
+</dl>
+<dl>
+<dt>Return:</dt>
+<dd>
+tuple containg the directory listing
+</dd>
+</dl>
+<dl>
+<dt>Return Type:</dt>
+<dd>
+tuple of str
+</dd>
+</dl>
+<dl>
+
+<dt>Raises <b>OSError</b>:</dt>
+<dd>
+raised to indicate an issue with the device
+</dd>
+</dl>
+<a NAME="MicroPythonCommandsInterface.mkdir" ID="MicroPythonCommandsInterface.mkdir"></a>
+<h4>MicroPythonCommandsInterface.mkdir</h4>
+<b>mkdir</b>(<i>dirname</i>)
+
+<p>
+        Public method to create a new directory.
+</p>
+<dl>
+
+<dt><i>dirname</i> (str)</dt>
+<dd>
+name of the directory to create
+</dd>
+</dl>
+<dl>
+
+<dt>Raises <b>OSError</b>:</dt>
+<dd>
+raised to indicate an issue with the device
+</dd>
+</dl>
+<a NAME="MicroPythonCommandsInterface.put" ID="MicroPythonCommandsInterface.put"></a>
+<h4>MicroPythonCommandsInterface.put</h4>
+<b>put</b>(<i>hostFileName, deviceFileName=None</i>)
+
+<p>
+        Public method to copy a local file to the connected device.
+</p>
+<dl>
+
+<dt><i>hostFileName</i> (str)</dt>
+<dd>
+name of the file to be copied
+</dd>
+<dt><i>deviceFileName</i> (str)</dt>
+<dd>
+name of the file to copy to
+</dd>
+</dl>
+<dl>
+<dt>Return:</dt>
+<dd>
+flag indicating success
+</dd>
+</dl>
+<dl>
+<dt>Return Type:</dt>
+<dd>
+bool
+</dd>
+</dl>
+<dl>
+
+<dt>Raises <b>OSError</b>:</dt>
+<dd>
+raised to indicate an issue with the device
+</dd>
+</dl>
+<a NAME="MicroPythonCommandsInterface.pwd" ID="MicroPythonCommandsInterface.pwd"></a>
+<h4>MicroPythonCommandsInterface.pwd</h4>
+<b>pwd</b>(<i></i>)
+
+<p>
+        Public method to get the current directory of the connected device.
+</p>
+<dl>
+<dt>Return:</dt>
+<dd>
+current directory
+</dd>
+</dl>
+<dl>
+<dt>Return Type:</dt>
+<dd>
+str
+</dd>
+</dl>
+<dl>
+
+<dt>Raises <b>OSError</b>:</dt>
+<dd>
+raised to indicate an issue with the device
+</dd>
+</dl>
+<a NAME="MicroPythonCommandsInterface.remainingTask" ID="MicroPythonCommandsInterface.remainingTask"></a>
+<h4>MicroPythonCommandsInterface.remainingTask</h4>
+<b>remainingTask</b>(<i></i>)
+
+<a NAME="MicroPythonCommandsInterface.rm" ID="MicroPythonCommandsInterface.rm"></a>
+<h4>MicroPythonCommandsInterface.rm</h4>
+<b>rm</b>(<i>filename</i>)
+
+<p>
+        Public method to remove a file from the connected device.
+</p>
+<dl>
+
+<dt><i>filename</i> (str)</dt>
+<dd>
+name of the file to be removed
+</dd>
+</dl>
+<dl>
+
+<dt>Raises <b>OSError</b>:</dt>
+<dd>
+raised to indicate an issue with the device
+</dd>
+</dl>
+<a NAME="MicroPythonCommandsInterface.rmdir" ID="MicroPythonCommandsInterface.rmdir"></a>
+<h4>MicroPythonCommandsInterface.rmdir</h4>
+<b>rmdir</b>(<i>dirname</i>)
+
+<p>
+        Public method to remove a directory.
+</p>
+<dl>
+
+<dt><i>dirname</i> (str)</dt>
+<dd>
+name of the directory to be removed
+</dd>
+</dl>
+<dl>
+
+<dt>Raises <b>OSError</b>:</dt>
+<dd>
+raised to indicate an issue with the device
+</dd>
+</dl>
+<a NAME="MicroPythonCommandsInterface.rmrf" ID="MicroPythonCommandsInterface.rmrf"></a>
+<h4>MicroPythonCommandsInterface.rmrf</h4>
+<b>rmrf</b>(<i>name, recursive=False, force=False</i>)
+
+<p>
+        Public method to remove a file or directory recursively.
+</p>
+<dl>
+
+<dt><i>name</i> (str)</dt>
+<dd>
+of the file or directory to remove
+</dd>
+<dt><i>recursive</i> (bool)</dt>
+<dd>
+flag indicating a recursive deletion
+</dd>
+<dt><i>force</i> (bool)</dt>
+<dd>
+flag indicating to ignore errors
+</dd>
+</dl>
+<dl>
+<dt>Return:</dt>
+<dd>
+flag indicating success
+</dd>
+</dl>
+<dl>
+<dt>Return Type:</dt>
+<dd>
+bool
+</dd>
+</dl>
+<dl>
+
+<dt>Raises <b>OSError</b>:</dt>
+<dd>
+raised to indicate an issue with the device
+</dd>
+</dl>
+<a NAME="MicroPythonCommandsInterface.syncTime" ID="MicroPythonCommandsInterface.syncTime"></a>
+<h4>MicroPythonCommandsInterface.syncTime</h4>
+<b>syncTime</b>(<i>deviceType</i>)
+
+<p>
+        Public method to set the time of the connected device to the local
+        computer's time.
+</p>
+<dl>
+
+<dt><i>deviceType</i> (str)</dt>
+<dd>
+type of board to sync time to
+</dd>
+</dl>
+<dl>
+
+<dt>Raises <b>OSError</b>:</dt>
+<dd>
+raised to indicate an issue with the device
+</dd>
+</dl>
+<a NAME="MicroPythonCommandsInterface.version" ID="MicroPythonCommandsInterface.version"></a>
+<h4>MicroPythonCommandsInterface.version</h4>
+<b>version</b>(<i></i>)
+
+<p>
+        Public method to get the MicroPython version information of the
+        connected device.
+</p>
+<dl>
+<dt>Return:</dt>
+<dd>
+dictionary containing the version information
+</dd>
+</dl>
+<dl>
+<dt>Return Type:</dt>
+<dd>
+dict
+</dd>
+</dl>
+<dl>
+
+<dt>Raises <b>OSError</b>:</dt>
+<dd>
+raised to indicate an issue with the device
+</dd>
+</dl>
+<a NAME="MicroPythonCommandsInterface.write" ID="MicroPythonCommandsInterface.write"></a>
+<h4>MicroPythonCommandsInterface.write</h4>
+<b>write</b>(<i>data</i>)
+
+<p>
+        Public method to write data to the connected device.
+</p>
+<dl>
+
+<dt><i>data</i> (bytes or bytearray)</dt>
+<dd>
+data to be written
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+</body></html>

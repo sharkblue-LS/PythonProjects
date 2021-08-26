@@ -1,0 +1,56 @@
+# -*- coding: utf-8 -*-
+
+# Copyright (c) 2012 - 2021 Detlev Offenbach <detlev@die-offenbachs.de>
+#
+
+"""
+Module implementing a clickable label.
+"""
+
+from PyQt5.QtCore import pyqtSignal, Qt, QPoint
+from PyQt5.QtWidgets import QLabel
+
+
+class E5ClickableLabel(QLabel):
+    """
+    Class implementing a clickable label.
+    
+    @signal clicked(QPoint) emitted upon a click on the label
+        with the left button
+    @signal middleClicked(QPoint) emitted upon a click on the label
+        with the middle button or CTRL and left button
+    """
+    clicked = pyqtSignal(QPoint)
+    middleClicked = pyqtSignal(QPoint)
+    
+    def __init__(self, parent=None):
+        """
+        Constructor
+        
+        @param parent reference to the parent widget (QWidget)
+        """
+        super(E5ClickableLabel, self).__init__(parent)
+        
+        self.setCursor(Qt.CursorShape.PointingHandCursor)
+    
+    def mouseReleaseEvent(self, evt):
+        """
+        Protected method handling mouse release events.
+        
+        @param evt mouse event (QMouseEvent)
+        """
+        if (
+            evt.button() == Qt.MouseButton.LeftButton and
+            self.rect().contains(evt.pos())
+        ):
+            if evt.modifiers() == Qt.KeyboardModifier.ControlModifier:
+                self.middleClicked.emit(evt.globalPos())
+            else:
+                self.clicked.emit(evt.globalPos())
+        elif (
+            evt.button() == Qt.MouseButton.MidButton and
+            self.rect().contains(evt.pos())
+        ):
+            self.middleClicked.emit(evt.globalPos())
+        else:
+            super(E5ClickableLabel, self).mouseReleaseEvent(evt)

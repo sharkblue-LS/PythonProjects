@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html><head>
+<title>eric6.Plugins.WizardPlugins.DotDesktopWizard.DotDesktopListSelectionDialog</title>
+<meta charset="UTF-8">
+<style>
+body {
+    background: #EDECE6;
+    margin: 0em 1em 10em 1em;
+    color: black;
+}
+
+h1 { color: white; background: #85774A; }
+h2 { color: white; background: #85774A; }
+h3 { color: white; background: #9D936E; }
+h4 { color: white; background: #9D936E; }
+    
+a { color: #BA6D36; }
+
+</style>
+</head>
+<body>
+<a NAME="top" ID="top"></a>
+<h1>eric6.Plugins.WizardPlugins.DotDesktopWizard.DotDesktopListSelectionDialog</h1>
+
+<p>
+Module implementing a dialog to select multiple entries from a list.
+</p>
+<h3>Global Attributes</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Classes</h3>
+
+<table>
+
+<tr>
+<td><a href="#DotDesktopListSelectionDialog">DotDesktopListSelectionDialog</a></td>
+<td>Class implementing a dialog to select multiple entries from a list.</td>
+</tr>
+</table>
+<h3>Functions</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+<hr />
+<hr />
+<a NAME="DotDesktopListSelectionDialog" ID="DotDesktopListSelectionDialog"></a>
+<h2>DotDesktopListSelectionDialog</h2>
+
+<p>
+    Class implementing a dialog to select multiple entries from a list.
+</p>
+<h3>Derived from</h3>
+QDialog, Ui_DotDesktopListSelectionDialog
+<h3>Class Attributes</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Class Methods</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+
+<table>
+
+<tr>
+<td><a href="#DotDesktopListSelectionDialog.__init__">DotDesktopListSelectionDialog</a></td>
+<td>Constructor</td>
+</tr>
+<tr>
+<td><a href="#DotDesktopListSelectionDialog.getData">getData</a></td>
+<td>Public method to extract the selected entries as a list or a string.</td>
+</tr>
+</table>
+<h3>Static Methods</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+
+<a NAME="DotDesktopListSelectionDialog.__init__" ID="DotDesktopListSelectionDialog.__init__"></a>
+<h4>DotDesktopListSelectionDialog (Constructor)</h4>
+<b>DotDesktopListSelectionDialog</b>(<i>entries, selectedEntries, separator, subEntries=None, allowMultiMain=True, allowMultiSub=True, parent=None</i>)
+
+<p>
+        Constructor
+</p>
+<dl>
+
+<dt><i>entries</i></dt>
+<dd>
+list of entries to be shown (list of string)
+</dd>
+<dt><i>selectedEntries</i></dt>
+<dd>
+list of entries to be selected (list of string
+            or string of entries separated by separator)
+</dd>
+<dt><i>separator</i></dt>
+<dd>
+separator string (string)
+</dd>
+<dt><i>subEntries</i></dt>
+<dd>
+secondary list of entries (list of string)
+</dd>
+<dt><i>allowMultiMain</i></dt>
+<dd>
+flag indicating to allow multiple selections for
+            the main entry (bool)
+</dd>
+<dt><i>allowMultiSub</i></dt>
+<dd>
+flag indicating to allow multiple selections for
+            the sub entry (bool)
+</dd>
+<dt><i>parent</i></dt>
+<dd>
+reference to the parent widget (QWidget)
+</dd>
+</dl>
+<a NAME="DotDesktopListSelectionDialog.getData" ID="DotDesktopListSelectionDialog.getData"></a>
+<h4>DotDesktopListSelectionDialog.getData</h4>
+<b>getData</b>(<i>separator=None, separatorAtEnd=False</i>)
+
+<p>
+        Public method to extract the selected entries as a list
+        or a string.
+</p>
+<dl>
+
+<dt><i>separator</i></dt>
+<dd>
+separator string (string)
+</dd>
+<dt><i>separatorAtEnd</i></dt>
+<dd>
+flag indicating to append the separator (boolean)
+</dd>
+</dl>
+<dl>
+<dt>Return:</dt>
+<dd>
+list of selected entries (list of string) if the separator is
+            None or a string with entries delimited by separator (string)
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+</body></html>

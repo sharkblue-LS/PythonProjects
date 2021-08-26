@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html><head>
+<title>eric6.Plugins.VcsPlugins.vcsGit.GitBisectStartDialog</title>
+<meta charset="UTF-8">
+<style>
+body {
+    background: #EDECE6;
+    margin: 0em 1em 10em 1em;
+    color: black;
+}
+
+h1 { color: white; background: #85774A; }
+h2 { color: white; background: #85774A; }
+h3 { color: white; background: #9D936E; }
+h4 { color: white; background: #9D936E; }
+    
+a { color: #BA6D36; }
+
+</style>
+</head>
+<body>
+<a NAME="top" ID="top"></a>
+<h1>eric6.Plugins.VcsPlugins.vcsGit.GitBisectStartDialog</h1>
+
+<p>
+Module implementing a dialog to enter the data for an extended bisect start.
+</p>
+<h3>Global Attributes</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Classes</h3>
+
+<table>
+
+<tr>
+<td><a href="#GitBisectStartDialog">GitBisectStartDialog</a></td>
+<td>Class implementing a dialog to enter the data for an extended bisect start.</td>
+</tr>
+</table>
+<h3>Functions</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+<hr />
+<hr />
+<a NAME="GitBisectStartDialog" ID="GitBisectStartDialog"></a>
+<h2>GitBisectStartDialog</h2>
+
+<p>
+    Class implementing a dialog to enter the data for an extended bisect start.
+</p>
+<h3>Derived from</h3>
+QDialog, Ui_GitBisectStartDialog
+<h3>Class Attributes</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Class Methods</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+
+<table>
+
+<tr>
+<td><a href="#GitBisectStartDialog.__init__">GitBisectStartDialog</a></td>
+<td>Constructor</td>
+</tr>
+<tr>
+<td><a href="#GitBisectStartDialog.__updateOK">__updateOK</a></td>
+<td>Private method used to enable/disable the OK-button.</td>
+</tr>
+<tr>
+<td><a href="#GitBisectStartDialog.getData">getData</a></td>
+<td>Public method to get the entered data.</td>
+</tr>
+<tr>
+<td><a href="#GitBisectStartDialog.on_badEdit_textChanged">on_badEdit_textChanged</a></td>
+<td>Private slot to handle a change of the bad commit.</td>
+</tr>
+</table>
+<h3>Static Methods</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+
+<a NAME="GitBisectStartDialog.__init__" ID="GitBisectStartDialog.__init__"></a>
+<h4>GitBisectStartDialog (Constructor)</h4>
+<b>GitBisectStartDialog</b>(<i>parent=None</i>)
+
+<p>
+        Constructor
+</p>
+<dl>
+
+<dt><i>parent</i></dt>
+<dd>
+reference to the parent widget (QWidget)
+</dd>
+</dl>
+<a NAME="GitBisectStartDialog.__updateOK" ID="GitBisectStartDialog.__updateOK"></a>
+<h4>GitBisectStartDialog.__updateOK</h4>
+<b>__updateOK</b>(<i></i>)
+
+<p>
+        Private method used to enable/disable the OK-button.
+</p>
+<a NAME="GitBisectStartDialog.getData" ID="GitBisectStartDialog.getData"></a>
+<h4>GitBisectStartDialog.getData</h4>
+<b>getData</b>(<i></i>)
+
+<p>
+        Public method to get the entered data.
+</p>
+<dl>
+<dt>Return:</dt>
+<dd>
+tuple containing a bad commit (string), a list of good
+            commits (list of strings) and a flag indicating to not
+            checkout the working tree (boolean)
+</dd>
+</dl>
+<a NAME="GitBisectStartDialog.on_badEdit_textChanged" ID="GitBisectStartDialog.on_badEdit_textChanged"></a>
+<h4>GitBisectStartDialog.on_badEdit_textChanged</h4>
+<b>on_badEdit_textChanged</b>(<i>txt</i>)
+
+<p>
+        Private slot to handle a change of the bad commit.
+</p>
+<dl>
+
+<dt><i>txt</i></dt>
+<dd>
+bad commit entered (string)
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+</body></html>

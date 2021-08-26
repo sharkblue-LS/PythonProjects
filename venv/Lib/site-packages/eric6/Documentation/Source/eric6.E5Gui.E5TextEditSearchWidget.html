@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html><head>
+<title>eric6.E5Gui.E5TextEditSearchWidget</title>
+<meta charset="UTF-8">
+<style>
+body {
+    background: #EDECE6;
+    margin: 0em 1em 10em 1em;
+    color: black;
+}
+
+h1 { color: white; background: #85774A; }
+h2 { color: white; background: #85774A; }
+h3 { color: white; background: #9D936E; }
+h4 { color: white; background: #9D936E; }
+    
+a { color: #BA6D36; }
+
+</style>
+</head>
+<body>
+<a NAME="top" ID="top"></a>
+<h1>eric6.E5Gui.E5TextEditSearchWidget</h1>
+
+<p>
+Module implementing a horizontal search widget for QTextEdit.
+</p>
+<h3>Global Attributes</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Classes</h3>
+
+<table>
+
+<tr>
+<td><a href="#E5TextEditSearchWidget">E5TextEditSearchWidget</a></td>
+<td>Class implementing a horizontal search widget for QTextEdit.</td>
+</tr>
+</table>
+<h3>Functions</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+<hr />
+<hr />
+<a NAME="E5TextEditSearchWidget" ID="E5TextEditSearchWidget"></a>
+<h2>E5TextEditSearchWidget</h2>
+
+<p>
+    Class implementing a horizontal search widget for QTextEdit.
+</p>
+<h3>Derived from</h3>
+QWidget
+<h3>Class Attributes</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Class Methods</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+
+<table>
+
+<tr>
+<td><a href="#E5TextEditSearchWidget.__init__">E5TextEditSearchWidget</a></td>
+<td>Constructor</td>
+</tr>
+<tr>
+<td><a href="#E5TextEditSearchWidget.__addWidthForHeightLayout">__addWidthForHeightLayout</a></td>
+<td>Private method to set the middle part of the layout.</td>
+</tr>
+<tr>
+<td><a href="#E5TextEditSearchWidget.__find">__find</a></td>
+<td>Private method to search the associated text edit.</td>
+</tr>
+<tr>
+<td><a href="#E5TextEditSearchWidget.__findByReturnPressed">__findByReturnPressed</a></td>
+<td>Private slot to handle the returnPressed signal of the findtext combobox.</td>
+</tr>
+<tr>
+<td><a href="#E5TextEditSearchWidget.__findNextPrevCallback">__findNextPrevCallback</a></td>
+<td>Private method to process the result of the last search.</td>
+</tr>
+<tr>
+<td><a href="#E5TextEditSearchWidget.__findPrevNextQTextEdit">__findPrevNextQTextEdit</a></td>
+<td>Private method to to search the associated edit widget of type QTextEdit.</td>
+</tr>
+<tr>
+<td><a href="#E5TextEditSearchWidget.__findPrevNextQWebEngineView">__findPrevNextQWebEngineView</a></td>
+<td>Private method to to search the associated edit widget of type QWebEngineView.</td>
+</tr>
+<tr>
+<td><a href="#E5TextEditSearchWidget.__setFindtextComboBackground">__setFindtextComboBackground</a></td>
+<td>Private slot to change the findtext combo background to indicate errors.</td>
+</tr>
+<tr>
+<td><a href="#E5TextEditSearchWidget.__setSearchButtons">__setSearchButtons</a></td>
+<td>Private slot to set the state of the search buttons.</td>
+</tr>
+<tr>
+<td><a href="#E5TextEditSearchWidget.__setupUi">__setupUi</a></td>
+<td>Private method to generate the UI.</td>
+</tr>
+<tr>
+<td><a href="#E5TextEditSearchWidget.attachTextEdit">attachTextEdit</a></td>
+<td>Public method to attach a QTextEdit widget.</td>
+</tr>
+<tr>
+<td><a href="#E5TextEditSearchWidget.keyPressEvent">keyPressEvent</a></td>
+<td>Protected slot to handle key press events.</td>
+</tr>
+<tr>
+<td><a href="#E5TextEditSearchWidget.on_findNextButton_clicked">on_findNextButton_clicked</a></td>
+<td>Private slot to find the next occurrence.</td>
+</tr>
+<tr>
+<td><a href="#E5TextEditSearchWidget.on_findPrevButton_clicked">on_findPrevButton_clicked</a></td>
+<td>Private slot to find the previous occurrence.</td>
+</tr>
+<tr>
+<td><a href="#E5TextEditSearchWidget.on_findtextCombo_editTextChanged">on_findtextCombo_editTextChanged</a></td>
+<td>Private slot to enable/disable the find buttons.</td>
+</tr>
+<tr>
+<td><a href="#E5TextEditSearchWidget.setWidthForHeight">setWidthForHeight</a></td>
+<td>Public method to set the 'width for height'.</td>
+</tr>
+</table>
+<h3>Static Methods</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+
+<a NAME="E5TextEditSearchWidget.__init__" ID="E5TextEditSearchWidget.__init__"></a>
+<h4>E5TextEditSearchWidget (Constructor)</h4>
+<b>E5TextEditSearchWidget</b>(<i>parent=None, widthForHeight=True</i>)
+
+<p>
+        Constructor
+</p>
+<dl>
+
+<dt><i>parent</i> (QWidget)</dt>
+<dd>
+reference to the parent widget
+</dd>
+<dt><i>widthForHeight</i> (bool)</dt>
+<dd>
+flag indicating to prefer width for height.
+            If this parameter is False, some widgets are shown in a third
+            line.
+</dd>
+</dl>
+<a NAME="E5TextEditSearchWidget.__addWidthForHeightLayout" ID="E5TextEditSearchWidget.__addWidthForHeightLayout"></a>
+<h4>E5TextEditSearchWidget.__addWidthForHeightLayout</h4>
+<b>__addWidthForHeightLayout</b>(<i>widthForHeight</i>)
+
+<p>
+        Private method to set the middle part of the layout.
+</p>
+<dl>
+
+<dt><i>widthForHeight</i> (bool)</dt>
+<dd>
+flag indicating to prefer width
+</dd>
+</dl>
+<a NAME="E5TextEditSearchWidget.__find" ID="E5TextEditSearchWidget.__find"></a>
+<h4>E5TextEditSearchWidget.__find</h4>
+<b>__find</b>(<i>backwards</i>)
+
+<p>
+        Private method to search the associated text edit.
+</p>
+<dl>
+
+<dt><i>backwards</i></dt>
+<dd>
+flag indicating a backwards search (boolean)
+</dd>
+</dl>
+<a NAME="E5TextEditSearchWidget.__findByReturnPressed" ID="E5TextEditSearchWidget.__findByReturnPressed"></a>
+<h4>E5TextEditSearchWidget.__findByReturnPressed</h4>
+<b>__findByReturnPressed</b>(<i></i>)
+
+<p>
+        Private slot to handle the returnPressed signal of the findtext
+        combobox.
+</p>
+<a NAME="E5TextEditSearchWidget.__findNextPrevCallback" ID="E5TextEditSearchWidget.__findNextPrevCallback"></a>
+<h4>E5TextEditSearchWidget.__findNextPrevCallback</h4>
+<b>__findNextPrevCallback</b>(<i>found</i>)
+
+<p>
+        Private method to process the result of the last search.
+</p>
+<dl>
+
+<dt><i>found</i> (bool)</dt>
+<dd>
+flag indicating if the last search succeeded
+</dd>
+</dl>
+<a NAME="E5TextEditSearchWidget.__findPrevNextQTextEdit" ID="E5TextEditSearchWidget.__findPrevNextQTextEdit"></a>
+<h4>E5TextEditSearchWidget.__findPrevNextQTextEdit</h4>
+<b>__findPrevNextQTextEdit</b>(<i>backwards</i>)
+
+<p>
+        Private method to to search the associated edit widget of
+        type QTextEdit.
+</p>
+<dl>
+
+<dt><i>backwards</i> (bool)</dt>
+<dd>
+flag indicating a backwards search
+</dd>
+</dl>
+<dl>
+<dt>Return:</dt>
+<dd>
+flag indicating the search result
+</dd>
+</dl>
+<dl>
+<dt>Return Type:</dt>
+<dd>
+bool
+</dd>
+</dl>
+<a NAME="E5TextEditSearchWidget.__findPrevNextQWebEngineView" ID="E5TextEditSearchWidget.__findPrevNextQWebEngineView"></a>
+<h4>E5TextEditSearchWidget.__findPrevNextQWebEngineView</h4>
+<b>__findPrevNextQWebEngineView</b>(<i>backwards</i>)
+
+<p>
+        Private method to to search the associated edit widget of
+        type QWebEngineView.
+</p>
+<dl>
+
+<dt><i>backwards</i> (bool)</dt>
+<dd>
+flag indicating a backwards search
+</dd>
+</dl>
+<a NAME="E5TextEditSearchWidget.__setFindtextComboBackground" ID="E5TextEditSearchWidget.__setFindtextComboBackground"></a>
+<h4>E5TextEditSearchWidget.__setFindtextComboBackground</h4>
+<b>__setFindtextComboBackground</b>(<i>error</i>)
+
+<p>
+        Private slot to change the findtext combo background to indicate
+        errors.
+</p>
+<dl>
+
+<dt><i>error</i></dt>
+<dd>
+flag indicating an error condition (boolean)
+</dd>
+</dl>
+<a NAME="E5TextEditSearchWidget.__setSearchButtons" ID="E5TextEditSearchWidget.__setSearchButtons"></a>
+<h4>E5TextEditSearchWidget.__setSearchButtons</h4>
+<b>__setSearchButtons</b>(<i>enabled</i>)
+
+<p>
+        Private slot to set the state of the search buttons.
+</p>
+<dl>
+
+<dt><i>enabled</i></dt>
+<dd>
+flag indicating the state (boolean)
+</dd>
+</dl>
+<a NAME="E5TextEditSearchWidget.__setupUi" ID="E5TextEditSearchWidget.__setupUi"></a>
+<h4>E5TextEditSearchWidget.__setupUi</h4>
+<b>__setupUi</b>(<i>widthForHeight</i>)
+
+<p>
+        Private method to generate the UI.
+</p>
+<dl>
+
+<dt><i>widthForHeight</i> (bool)</dt>
+<dd>
+flag indicating to prefer width for height
+</dd>
+</dl>
+<a NAME="E5TextEditSearchWidget.attachTextEdit" ID="E5TextEditSearchWidget.attachTextEdit"></a>
+<h4>E5TextEditSearchWidget.attachTextEdit</h4>
+<b>attachTextEdit</b>(<i>textedit, editType="QTextEdit"</i>)
+
+<p>
+        Public method to attach a QTextEdit widget.
+</p>
+<dl>
+
+<dt><i>textedit</i> (QTextEdit, QWebEngineView or QWebView)</dt>
+<dd>
+reference to the edit widget to be attached
+</dd>
+<dt><i>editType</i> (str (one of "QTextEdit", "QWebEngineView" or "QWebView"))</dt>
+<dd>
+type of the attached edit widget
+</dd>
+</dl>
+<dl>
+
+<dt>Raises <b>ValueError</b>:</dt>
+<dd>
+raised to indicate a bad parameter value
+</dd>
+</dl>
+<a NAME="E5TextEditSearchWidget.keyPressEvent" ID="E5TextEditSearchWidget.keyPressEvent"></a>
+<h4>E5TextEditSearchWidget.keyPressEvent</h4>
+<b>keyPressEvent</b>(<i>event</i>)
+
+<p>
+        Protected slot to handle key press events.
+</p>
+<dl>
+
+<dt><i>event</i></dt>
+<dd>
+reference to the key press event (QKeyEvent)
+</dd>
+</dl>
+<a NAME="E5TextEditSearchWidget.on_findNextButton_clicked" ID="E5TextEditSearchWidget.on_findNextButton_clicked"></a>
+<h4>E5TextEditSearchWidget.on_findNextButton_clicked</h4>
+<b>on_findNextButton_clicked</b>(<i></i>)
+
+<p>
+        Private slot to find the next occurrence.
+</p>
+<a NAME="E5TextEditSearchWidget.on_findPrevButton_clicked" ID="E5TextEditSearchWidget.on_findPrevButton_clicked"></a>
+<h4>E5TextEditSearchWidget.on_findPrevButton_clicked</h4>
+<b>on_findPrevButton_clicked</b>(<i></i>)
+
+<p>
+        Private slot to find the previous occurrence.
+</p>
+<a NAME="E5TextEditSearchWidget.on_findtextCombo_editTextChanged" ID="E5TextEditSearchWidget.on_findtextCombo_editTextChanged"></a>
+<h4>E5TextEditSearchWidget.on_findtextCombo_editTextChanged</h4>
+<b>on_findtextCombo_editTextChanged</b>(<i>txt</i>)
+
+<p>
+        Private slot to enable/disable the find buttons.
+</p>
+<dl>
+
+<dt><i>txt</i></dt>
+<dd>
+text of the combobox (string)
+</dd>
+</dl>
+<a NAME="E5TextEditSearchWidget.setWidthForHeight" ID="E5TextEditSearchWidget.setWidthForHeight"></a>
+<h4>E5TextEditSearchWidget.setWidthForHeight</h4>
+<b>setWidthForHeight</b>(<i>widthForHeight</i>)
+
+<p>
+        Public method to set the 'width for height'.
+</p>
+<dl>
+
+<dt><i>widthForHeight</i> (bool)</dt>
+<dd>
+flag indicating to prefer width
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+</body></html>

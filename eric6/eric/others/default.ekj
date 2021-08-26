@@ -1,0 +1,2789 @@
+{
+  "header": {
+    "comment": "eric keyboard shortcuts file",
+    "saved": "2021-02-01, 14:22:37",
+    "author": "Detlev Offenbach <detlev@die-offenbachs.de>"
+  },
+  "shortcuts": {
+    "Project": {
+      "project_new": [
+        "",
+        ""
+      ],
+      "project_open": [
+        "",
+        ""
+      ],
+      "project_close": [
+        "",
+        ""
+      ],
+      "project_save": [
+        "",
+        ""
+      ],
+      "project_save_as": [
+        "",
+        ""
+      ],
+      "project_add_file": [
+        "",
+        ""
+      ],
+      "project_add_directory": [
+        "",
+        ""
+      ],
+      "project_add_translation": [
+        "",
+        ""
+      ],
+      "project_search_new_files": [
+        "",
+        ""
+      ],
+      "project_search_project_file": [
+        "Ctrl+Alt+P",
+        ""
+      ],
+      "project_properties": [
+        "",
+        ""
+      ],
+      "project_user_properties": [
+        "",
+        ""
+      ],
+      "project_filetype_associations": [
+        "",
+        ""
+      ],
+      "project_lexer_associations": [
+        "",
+        ""
+      ],
+      "project_debugger_properties": [
+        "",
+        ""
+      ],
+      "project_debugger_properties_load": [
+        "",
+        ""
+      ],
+      "project_debugger_properties_save": [
+        "",
+        ""
+      ],
+      "project_debugger_properties_delete": [
+        "",
+        ""
+      ],
+      "project_debugger_properties_resets": [
+        "",
+        ""
+      ],
+      "project_load_session": [
+        "",
+        ""
+      ],
+      "project_save_session": [
+        "",
+        ""
+      ],
+      "project_delete_session": [
+        "",
+        ""
+      ],
+      "project_code_metrics": [
+        "",
+        ""
+      ],
+      "project_code_coverage": [
+        "",
+        ""
+      ],
+      "project_profile_data": [
+        "",
+        ""
+      ],
+      "project_application_diagram": [
+        "",
+        ""
+      ],
+      "project_load_diagram": [
+        "",
+        ""
+      ],
+      "project_plugin_pkglist": [
+        "",
+        ""
+      ],
+      "project_plugin_archive": [
+        "",
+        ""
+      ],
+      "project_plugin_sarchive": [
+        "",
+        ""
+      ],
+      "project_make_execute": [
+        "",
+        ""
+      ],
+      "project_make_test": [
+        "",
+        ""
+      ],
+      "project_check_pep8": [
+        "",
+        ""
+      ],
+      "doc_eric6_api": [
+        "",
+        ""
+      ],
+      "doc_eric6_doc": [
+        "",
+        ""
+      ],
+      "project_show_radon_raw": [
+        "",
+        ""
+      ],
+      "project_show_radon_mi": [
+        "",
+        ""
+      ],
+      "project_show_radon_cc": [
+        "",
+        ""
+      ],
+      "project_check_syntax": [
+        "",
+        ""
+      ],
+      "project_check_vulture": [
+        "",
+        ""
+      ]
+    },
+    "General": {
+      "quit": [
+        "Ctrl+Q",
+        ""
+      ],
+      "restart_eric": [
+        "Ctrl+Shift+Q",
+        ""
+      ],
+      "save_session_to_file": [
+        "",
+        ""
+      ],
+      "load_session_from_file": [
+        "",
+        ""
+      ],
+      "new_window": [
+        "Ctrl+Shift+N",
+        ""
+      ],
+      "edit_profile": [
+        "",
+        ""
+      ],
+      "debug_profile": [
+        "",
+        ""
+      ],
+      "project_viewer_activate": [
+        "Alt+Shift+P",
+        ""
+      ],
+      "multi_project_viewer_activate": [
+        "Alt+Shift+M",
+        ""
+      ],
+      "debug_viewer_activate": [
+        "Alt+Shift+D",
+        ""
+      ],
+      "interpreter_shell_activate": [
+        "Alt+Shift+S",
+        ""
+      ],
+      "file_browser_activate": [
+        "Alt+Shift+F",
+        ""
+      ],
+      "log_viewer_activate": [
+        "Alt+Shift+G",
+        ""
+      ],
+      "task_viewer_activate": [
+        "Alt+Shift+T",
+        ""
+      ],
+      "template_viewer_activate": [
+        "Alt+Shift+A",
+        ""
+      ],
+      "vertical_toolbox": [
+        "",
+        ""
+      ],
+      "horizontal_toolbox": [
+        "",
+        ""
+      ],
+      "left_sidebar": [
+        "",
+        ""
+      ],
+      "right_sidebar": [
+        "",
+        ""
+      ],
+      "bottom_sidebar": [
+        "",
+        ""
+      ],
+      "cooperation_viewer_activate": [
+        "Alt+Shift+O",
+        ""
+      ],
+      "irc_widget_activate": [
+        "Ctrl+Alt+Shift+I",
+        ""
+      ],
+      "symbols_viewer_activate": [
+        "Alt+Shift+Y",
+        ""
+      ],
+      "numbers_viewer_activate": [
+        "Alt+Shift+B",
+        ""
+      ],
+      "code_documentation_viewer_activate": [
+        "Ctrl+Alt+Shift+D",
+        ""
+      ],
+      "pip_widget_activate": [
+        "Ctrl+Alt+Shift+P",
+        ""
+      ],
+      "conda_widget_activate": [
+        "Ctrl+Alt+Shift+C",
+        ""
+      ],
+      "micropython_widget_activate": [
+        "Ctrl+Alt+Shift+M",
+        ""
+      ],
+      "whatsThis": [
+        "Shift+F1",
+        ""
+      ],
+      "helpviewer": [
+        "F1",
+        ""
+      ],
+      "qt5_documentation": [
+        "",
+        ""
+      ],
+      "qt6_documentation": [
+        "",
+        ""
+      ],
+      "pyqt5_documentation": [
+        "",
+        ""
+      ],
+      "pyqt6_documentation": [
+        "",
+        ""
+      ],
+      "python3_documentation": [
+        "",
+        ""
+      ],
+      "eric_documentation": [
+        "",
+        ""
+      ],
+      "pyside2_documentation": [
+        "",
+        ""
+      ],
+      "pyside6_documentation": [
+        "",
+        ""
+      ],
+      "show_versions": [
+        "",
+        ""
+      ],
+      "check_updates": [
+        "",
+        ""
+      ],
+      "show_downloadable_versions": [
+        "",
+        ""
+      ],
+      "show_error_log": [
+        "",
+        ""
+      ],
+      "show_install_info": [
+        "",
+        ""
+      ],
+      "report_bug": [
+        "",
+        ""
+      ],
+      "request_feature": [
+        "",
+        ""
+      ],
+      "unittest": [
+        "",
+        ""
+      ],
+      "unittest_restart": [
+        "",
+        ""
+      ],
+      "unittest_rerun_failed": [
+        "",
+        ""
+      ],
+      "unittest_script": [
+        "",
+        ""
+      ],
+      "unittest_project": [
+        "",
+        ""
+      ],
+      "qt_designer4": [
+        "",
+        ""
+      ],
+      "qt_linguist4": [
+        "",
+        ""
+      ],
+      "ui_previewer": [
+        "",
+        ""
+      ],
+      "tr_previewer": [
+        "",
+        ""
+      ],
+      "diff_files": [
+        "",
+        ""
+      ],
+      "compare_files": [
+        "",
+        ""
+      ],
+      "sql_browser": [
+        "",
+        ""
+      ],
+      "mini_editor": [
+        "",
+        ""
+      ],
+      "hex_editor": [
+        "",
+        ""
+      ],
+      "web_browser": [
+        "",
+        ""
+      ],
+      "icon_editor": [
+        "",
+        ""
+      ],
+      "snapshot": [
+        "",
+        ""
+      ],
+      "preferences": [
+        "",
+        ""
+      ],
+      "export_preferences": [
+        "",
+        ""
+      ],
+      "import_preferences": [
+        "",
+        ""
+      ],
+      "reload_apis": [
+        "",
+        ""
+      ],
+      "show_external_tools": [
+        "",
+        ""
+      ],
+      "view_profiles": [
+        "",
+        ""
+      ],
+      "configure_toolbars": [
+        "",
+        ""
+      ],
+      "keyboard_shortcuts": [
+        "",
+        ""
+      ],
+      "export_keyboard_shortcuts": [
+        "",
+        ""
+      ],
+      "import_keyboard_shortcuts": [
+        "",
+        ""
+      ],
+      "manage_ssl_certificates": [
+        "",
+        ""
+      ],
+      "manage_message_filters": [
+        "",
+        ""
+      ],
+      "clear_private_data": [
+        "",
+        ""
+      ],
+      "viewmanager_activate": [
+        "Alt+Shift+E",
+        ""
+      ],
+      "view_next_tab": [
+        "Ctrl+Alt+Tab",
+        ""
+      ],
+      "view_previous_tab": [
+        "Ctrl+Alt+Shift+Tab",
+        ""
+      ],
+      "switch_tabs": [
+        "Ctrl+1",
+        ""
+      ],
+      "plugin_infos": [
+        "",
+        ""
+      ],
+      "plugin_install": [
+        "",
+        ""
+      ],
+      "plugin_deinstall": [
+        "",
+        ""
+      ],
+      "plugin_repository": [
+        "",
+        ""
+      ],
+      "virtualenv_manager": [
+        "",
+        ""
+      ],
+      "virtualenv_configurator": [
+        "",
+        ""
+      ],
+      "about_eric": [
+        "",
+        ""
+      ],
+      "about_qt": [
+        "",
+        ""
+      ],
+      "time_tracker_activate": [
+        "Alt+Shift+I",
+        ""
+      ],
+      "translator_activate": [
+        "Alt+Shift+R",
+        ""
+      ]
+    },
+    "Wizards": {
+      "wizards_datauriencoder": [
+        "",
+        ""
+      ],
+      "wizards_dotdesktop": [
+        "",
+        ""
+      ],
+      "wizards_e5messagebox": [
+        "",
+        ""
+      ],
+      "wizards_eric_plugin": [
+        "",
+        ""
+      ],
+      "wizards_python_re": [
+        "",
+        ""
+      ],
+      "wizards_qcolordialog": [
+        "",
+        ""
+      ],
+      "wizards_qfiledialog": [
+        "",
+        ""
+      ],
+      "wizards_e5filedialog": [
+        "",
+        ""
+      ],
+      "wizards_qfontdialog": [
+        "",
+        ""
+      ],
+      "wizards_qinputdialog": [
+        "",
+        ""
+      ],
+      "wizards_qmessagebox": [
+        "",
+        ""
+      ],
+      "wizards_qregexp": [
+        "",
+        ""
+      ],
+      "wizards_qregularexpression": [
+        "",
+        ""
+      ],
+      "wizards_setup_py": [
+        "",
+        ""
+      ]
+    },
+    "Debug": {
+      "dbg_run_script": [
+        "F2",
+        ""
+      ],
+      "dbg_run_project": [
+        "Shift+F2",
+        ""
+      ],
+      "dbg_coverage_script": [
+        "",
+        ""
+      ],
+      "dbg_coverage_project": [
+        "",
+        ""
+      ],
+      "dbg_profile_script": [
+        "",
+        ""
+      ],
+      "dbg_profile_project": [
+        "",
+        ""
+      ],
+      "dbg_debug_script": [
+        "F5",
+        ""
+      ],
+      "dbg_debug_project": [
+        "Shift+F5",
+        ""
+      ],
+      "dbg_restart_script": [
+        "F4",
+        ""
+      ],
+      "dbg_stop_script": [
+        "Shift+F10",
+        ""
+      ],
+      "dbg_continue": [
+        "F6",
+        ""
+      ],
+      "dbg_continue_to_cursor": [
+        "Shift+F6",
+        ""
+      ],
+      "dbg_continue_until": [
+        "Ctrl+F6",
+        ""
+      ],
+      "dbg_jump_to_cursor": [
+        "F12",
+        ""
+      ],
+      "dbg_single_step": [
+        "F7",
+        ""
+      ],
+      "dbg_step_over": [
+        "F8",
+        ""
+      ],
+      "dbg_step_out": [
+        "F9",
+        ""
+      ],
+      "dbg_stop": [
+        "F10",
+        ""
+      ],
+      "dbg_variables_filter": [
+        "",
+        ""
+      ],
+      "dbg_exceptions_filter": [
+        "",
+        ""
+      ],
+      "dbg_ignored_exceptions": [
+        "",
+        ""
+      ],
+      "dbg_toggle_breakpoint": [
+        "Shift+F11",
+        ""
+      ],
+      "dbg_edit_breakpoint": [
+        "Shift+F12",
+        ""
+      ],
+      "dbg_next_breakpoint": [
+        "Ctrl+Shift+PgDown",
+        ""
+      ],
+      "dbg_previous_breakpoint": [
+        "Ctrl+Shift+PgUp",
+        ""
+      ],
+      "dbg_clear_breakpoint": [
+        "",
+        ""
+      ]
+    },
+    "Edit": {
+      "vm_edit_undo": [
+        "Ctrl+Z",
+        "Alt+Backspace"
+      ],
+      "vm_edit_redo": [
+        "Ctrl+Shift+Z",
+        ""
+      ],
+      "vm_edit_revert": [
+        "Ctrl+Y",
+        ""
+      ],
+      "vm_edit_cut": [
+        "Ctrl+X",
+        ""
+      ],
+      "vm_edit_copy": [
+        "Ctrl+C",
+        "Ctrl+Ins"
+      ],
+      "vm_edit_paste": [
+        "Ctrl+V",
+        "Shift+Ins"
+      ],
+      "vm_edit_clear": [
+        "Alt+Shift+C",
+        ""
+      ],
+      "vm_edit_join_lines": [
+        "Ctrl+J",
+        ""
+      ],
+      "vm_edit_indent": [
+        "Ctrl+I",
+        ""
+      ],
+      "vm_edit_unindent": [
+        "Ctrl+Shift+I",
+        ""
+      ],
+      "vm_edit_smart_indent": [
+        "",
+        ""
+      ],
+      "vm_edit_comment": [
+        "Ctrl+M",
+        ""
+      ],
+      "vm_edit_uncomment": [
+        "",
+        ""
+      ],
+      "vm_edit_toggle_comment": [
+        "Ctrl+Shift+M",
+        ""
+      ],
+      "vm_edit_stream_comment": [
+        "",
+        ""
+      ],
+      "vm_edit_box_comment": [
+        "",
+        ""
+      ],
+      "vm_edit_select_to_brace": [
+        "Ctrl+E",
+        ""
+      ],
+      "vm_edit_select_all": [
+        "Ctrl+A",
+        ""
+      ],
+      "vm_edit_deselect_all": [
+        "Ctrl+Alt+A",
+        ""
+      ],
+      "vm_edit_convert_eol": [
+        "",
+        ""
+      ],
+      "vm_edit_shorten_empty_lines": [
+        "",
+        ""
+      ],
+      "vm_edit_autocomplete": [
+        "Ctrl+Space",
+        ""
+      ],
+      "vm_edit_autocomplete_from_document": [
+        "Ctrl+Shift+Space",
+        ""
+      ],
+      "vm_edit_autocomplete_from_api": [
+        "Ctrl+Alt+Space",
+        ""
+      ],
+      "vm_edit_autocomplete_from_all": [
+        "Alt+Shift+Space",
+        ""
+      ],
+      "vm_edit_calltip": [
+        "Alt+Space",
+        ""
+      ],
+      "vm_edit_codeinfo": [
+        "Ctrl+Alt+I",
+        ""
+      ],
+      "vm_edit_sort": [
+        "",
+        ""
+      ],
+      "vm_edit_generate_docstring": [
+        "Ctrl+Alt+D",
+        ""
+      ],
+      "vm_edit_move_left_char": [
+        "Left",
+        ""
+      ],
+      "vm_edit_move_right_char": [
+        "Right",
+        ""
+      ],
+      "vm_edit_move_up_line": [
+        "Up",
+        ""
+      ],
+      "vm_edit_move_down_line": [
+        "Down",
+        ""
+      ],
+      "vm_edit_move_left_word_part": [
+        "Alt+Left",
+        ""
+      ],
+      "vm_edit_move_right_word_part": [
+        "Alt+Right",
+        ""
+      ],
+      "vm_edit_move_left_word": [
+        "Ctrl+Left",
+        ""
+      ],
+      "vm_edit_move_right_word": [
+        "Ctrl+Right",
+        ""
+      ],
+      "vm_edit_move_first_visible_char": [
+        "Home",
+        ""
+      ],
+      "vm_edit_move_start_line": [
+        "Alt+Home",
+        ""
+      ],
+      "vm_edit_move_end_line": [
+        "End",
+        ""
+      ],
+      "vm_edit_scroll_down_line": [
+        "Ctrl+Down",
+        ""
+      ],
+      "vm_edit_scroll_up_line": [
+        "Ctrl+Up",
+        ""
+      ],
+      "vm_edit_move_up_para": [
+        "Alt+Up",
+        ""
+      ],
+      "vm_edit_move_down_para": [
+        "Alt+Down",
+        ""
+      ],
+      "vm_edit_move_up_page": [
+        "PgUp",
+        ""
+      ],
+      "vm_edit_move_down_page": [
+        "PgDown",
+        ""
+      ],
+      "vm_edit_move_start_text": [
+        "Ctrl+Home",
+        ""
+      ],
+      "vm_edit_move_end_text": [
+        "Ctrl+End",
+        ""
+      ],
+      "vm_edit_indent_one_level": [
+        "Tab",
+        ""
+      ],
+      "vm_edit_unindent_one_level": [
+        "Shift+Tab",
+        ""
+      ],
+      "vm_edit_extend_selection_left_char": [
+        "Shift+Left",
+        ""
+      ],
+      "vm_edit_extend_selection_right_char": [
+        "Shift+Right",
+        ""
+      ],
+      "vm_edit_extend_selection_up_line": [
+        "Shift+Up",
+        ""
+      ],
+      "vm_edit_extend_selection_down_line": [
+        "Shift+Down",
+        ""
+      ],
+      "vm_edit_extend_selection_left_word_part": [
+        "Alt+Shift+Left",
+        ""
+      ],
+      "vm_edit_extend_selection_right_word_part": [
+        "Alt+Shift+Right",
+        ""
+      ],
+      "vm_edit_extend_selection_left_word": [
+        "Ctrl+Shift+Left",
+        ""
+      ],
+      "vm_edit_extend_selection_right_word": [
+        "Ctrl+Shift+Right",
+        ""
+      ],
+      "vm_edit_extend_selection_first_visible_char": [
+        "Shift+Home",
+        ""
+      ],
+      "vm_edit_extend_selection_end_line": [
+        "Shift+End",
+        ""
+      ],
+      "vm_edit_extend_selection_up_para": [
+        "Alt+Shift+Up",
+        ""
+      ],
+      "vm_edit_extend_selection_down_para": [
+        "Alt+Shift+Down",
+        ""
+      ],
+      "vm_edit_extend_selection_up_page": [
+        "Shift+PgUp",
+        ""
+      ],
+      "vm_edit_extend_selection_down_page": [
+        "Shift+PgDown",
+        ""
+      ],
+      "vm_edit_extend_selection_start_text": [
+        "Ctrl+Shift+Home",
+        ""
+      ],
+      "vm_edit_extend_selection_end_text": [
+        "Ctrl+Shift+End",
+        ""
+      ],
+      "vm_edit_delete_previous_char": [
+        "Backspace",
+        "Shift+Backspace"
+      ],
+      "vm_edit_delet_previous_char_not_line_start": [
+        "",
+        ""
+      ],
+      "vm_edit_delete_current_char": [
+        "Del",
+        ""
+      ],
+      "vm_edit_delete_word_left": [
+        "Ctrl+Backspace",
+        ""
+      ],
+      "vm_edit_delete_word_right": [
+        "Ctrl+Del",
+        ""
+      ],
+      "vm_edit_delete_line_left": [
+        "Ctrl+Shift+Backspace",
+        ""
+      ],
+      "vm_edit_delete_line_right": [
+        "Ctrl+Shift+Del",
+        ""
+      ],
+      "vm_edit_insert_line": [
+        "Return",
+        "Enter"
+      ],
+      "vm_edit_insert_line_below": [
+        "Shift+Return",
+        "Shift+Enter"
+      ],
+      "vm_edit_delete_current_line": [
+        "Ctrl+Shift+L",
+        ""
+      ],
+      "vm_edit_duplicate_current_line": [
+        "Ctrl+D",
+        ""
+      ],
+      "vm_edit_swap_current_previous_line": [
+        "Ctrl+T",
+        ""
+      ],
+      "vm_edit_reverse selected_lines": [
+        "Meta+Alt+R",
+        ""
+      ],
+      "vm_edit_cut_current_line": [
+        "Alt+Shift+L",
+        ""
+      ],
+      "vm_edit_copy_current_line": [
+        "Ctrl+Shift+T",
+        ""
+      ],
+      "vm_edit_toggle_insert_overtype": [
+        "Ins",
+        ""
+      ],
+      "vm_edit_move_end_displayed_line": [
+        "Alt+End",
+        ""
+      ],
+      "vm_edit_extend_selection_end_displayed_line": [
+        "",
+        ""
+      ],
+      "vm_edit_formfeed": [
+        "",
+        ""
+      ],
+      "vm_edit_escape": [
+        "Esc",
+        ""
+      ],
+      "vm_edit_extend_rect_selection_down_line": [
+        "Ctrl+Alt+Down",
+        ""
+      ],
+      "vm_edit_extend_rect_selection_up_line": [
+        "Ctrl+Alt+Up",
+        ""
+      ],
+      "vm_edit_extend_rect_selection_left_char": [
+        "Ctrl+Alt+Left",
+        ""
+      ],
+      "vm_edit_extend_rect_selection_right_char": [
+        "Ctrl+Alt+Right",
+        ""
+      ],
+      "vm_edit_extend_rect_selection_first_visible_char": [
+        "Alt+Shift+Home",
+        ""
+      ],
+      "vm_edit_extend_rect_selection_end_line": [
+        "Alt+Shift+End",
+        ""
+      ],
+      "vm_edit_extend_rect_selection_up_page": [
+        "Alt+Shift+PgUp",
+        ""
+      ],
+      "vm_edit_extend_rect_selection_down_page": [
+        "Alt+Shift+PgDown",
+        ""
+      ],
+      "vm_edit_duplicate_current_selection": [
+        "Ctrl+Shift+D",
+        ""
+      ],
+      "vm_edit_scroll_start_text": [
+        "",
+        ""
+      ],
+      "vm_edit_scroll_end_text": [
+        "",
+        ""
+      ],
+      "vm_edit_scroll_vertically_center": [
+        "",
+        ""
+      ],
+      "vm_edit_move_end_next_word": [
+        "",
+        ""
+      ],
+      "vm_edit_select_end_next_word": [
+        "",
+        ""
+      ],
+      "vm_edit_move_end_previous_word": [
+        "",
+        ""
+      ],
+      "vm_edit_select_end_previous_word": [
+        "",
+        ""
+      ],
+      "vm_edit_move_start_document_line": [
+        "",
+        ""
+      ],
+      "vm_edit_extend_selection_start_document_line": [
+        "",
+        ""
+      ],
+      "vm_edit_select_rect_start_line": [
+        "",
+        ""
+      ],
+      "vm_edit_extend_selection_start_display_line": [
+        "",
+        ""
+      ],
+      "vm_edit_move_start_display_document_line": [
+        "",
+        ""
+      ],
+      "vm_edit_extend_selection_start_display_document_line": [
+        "",
+        ""
+      ],
+      "vm_edit_move_first_visible_char_document_line": [
+        "",
+        ""
+      ],
+      "vm_edit_extend_selection_first_visible_char_document_line": [
+        "",
+        ""
+      ],
+      "vm_edit_end_start_display_document_line": [
+        "",
+        ""
+      ],
+      "vm_edit_extend_selection_end_display_document_line": [
+        "",
+        ""
+      ],
+      "vm_edit_stuttered_move_up_page": [
+        "",
+        ""
+      ],
+      "vm_edit_stuttered_extend_selection_up_page": [
+        "",
+        ""
+      ],
+      "vm_edit_stuttered_move_down_page": [
+        "",
+        ""
+      ],
+      "vm_edit_stuttered_extend_selection_down_page": [
+        "",
+        ""
+      ],
+      "vm_edit_delete_right_end_next_word": [
+        "",
+        ""
+      ],
+      "vm_edit_move_selection_up_one_line": [
+        "",
+        ""
+      ],
+      "vm_edit_move_selection_down_one_line": [
+        "",
+        ""
+      ],
+      "vm_edit_convert_selection_lower": [
+        "Alt+Shift+U",
+        ""
+      ],
+      "vm_edit_convert_selection_upper": [
+        "Ctrl+Shift+U",
+        ""
+      ]
+    },
+    "File": {
+      "vm_file_new": [
+        "Ctrl+N",
+        ""
+      ],
+      "vm_file_open": [
+        "Ctrl+O",
+        ""
+      ],
+      "vm_file_close": [
+        "Ctrl+W",
+        ""
+      ],
+      "vm_file_close_all": [
+        "",
+        ""
+      ],
+      "vm_file_save": [
+        "Ctrl+S",
+        ""
+      ],
+      "vm_file_save_as": [
+        "Ctrl+Shift+S",
+        ""
+      ],
+      "vm_file_save_copy": [
+        "",
+        ""
+      ],
+      "vm_file_save_all": [
+        "",
+        ""
+      ],
+      "vm_file_print": [
+        "Ctrl+P",
+        ""
+      ],
+      "vm_file_print_preview": [
+        "",
+        ""
+      ],
+      "vm_file_search_file": [
+        "Ctrl+Alt+F",
+        ""
+      ]
+    },
+    "Search": {
+      "vm_search": [
+        "Ctrl+F",
+        ""
+      ],
+      "vm_search_next": [
+        "F3",
+        ""
+      ],
+      "vm_search_previous": [
+        "Shift+F3",
+        ""
+      ],
+      "vm_clear_search_markers": [
+        "Ctrl+3",
+        ""
+      ],
+      "vm_search_word_next": [
+        "Ctrl+.",
+        ""
+      ],
+      "vm_search_word_previous": [
+        "Ctrl+,",
+        ""
+      ],
+      "vm_search_replace": [
+        "Ctrl+R",
+        ""
+      ],
+      "vm_replace_search": [
+        "Meta+R",
+        ""
+      ],
+      "vm_replace_occurrence": [
+        "Meta+Ctrl+R",
+        ""
+      ],
+      "vm_replace_all": [
+        "Meta+Shift+R",
+        ""
+      ],
+      "vm_quicksearch": [
+        "Ctrl+Shift+K",
+        ""
+      ],
+      "vm_quicksearch_backwards": [
+        "Ctrl+Shift+J",
+        ""
+      ],
+      "vm_quicksearch_extend": [
+        "Ctrl+Shift+H",
+        ""
+      ],
+      "vm_search_goto_line": [
+        "Ctrl+G",
+        ""
+      ],
+      "vm_search_goto_brace": [
+        "Ctrl+L",
+        ""
+      ],
+      "vm_search_goto_last_edit_location": [
+        "Ctrl+Shift+G",
+        ""
+      ],
+      "vm_search_goto_previous_method_or_class": [
+        "Ctrl+Shift+Up",
+        ""
+      ],
+      "vm_search_goto_next_method_or_class": [
+        "Ctrl+Shift+Down",
+        ""
+      ],
+      "vm_search_in_files": [
+        "Ctrl+Shift+F",
+        ""
+      ],
+      "vm_replace_in_files": [
+        "Ctrl+Shift+R",
+        ""
+      ],
+      "vm_search_in_open_files": [
+        "Ctrl+Alt+Shift+F",
+        ""
+      ],
+      "vm_replace_in_open_files": [
+        "Ctrl+Alt+Shift+R",
+        ""
+      ]
+    },
+    "View": {
+      "vm_view_zoom_in": [
+        "Ctrl++",
+        "Zoom In"
+      ],
+      "vm_view_zoom_out": [
+        "Ctrl+-",
+        "Zoom Out"
+      ],
+      "vm_view_zoom_reset": [
+        "Ctrl+0",
+        ""
+      ],
+      "vm_view_zoom": [
+        "Ctrl+#",
+        ""
+      ],
+      "vm_view_toggle_all_folds": [
+        "",
+        ""
+      ],
+      "vm_view_toggle_all_folds_children": [
+        "",
+        ""
+      ],
+      "vm_view_toggle_current_fold": [
+        "",
+        ""
+      ],
+      "vm_view_clear_all_folds": [
+        "",
+        ""
+      ],
+      "vm_view_unhighlight": [
+        "",
+        ""
+      ],
+      "vm_view_new_document_view": [
+        "",
+        ""
+      ],
+      "vm_view_new_document_split_view": [
+        "",
+        ""
+      ],
+      "vm_view_split_view": [
+        "",
+        ""
+      ],
+      "vm_view_arrange_horizontally": [
+        "",
+        ""
+      ],
+      "vm_view_remove_split": [
+        "",
+        ""
+      ],
+      "vm_next_split": [
+        "Ctrl+Alt+N",
+        ""
+      ],
+      "vm_previous_split": [
+        "",
+        ""
+      ],
+      "vm_preview": [
+        "",
+        ""
+      ],
+      "vm_python_ast_viewer": [
+        "",
+        ""
+      ],
+      "vm_python_dis_viewer": [
+        "",
+        ""
+      ]
+    },
+    "Macro": {
+      "vm_macro_start_recording": [
+        "",
+        ""
+      ],
+      "vm_macro_stop_recording": [
+        "",
+        ""
+      ],
+      "vm_macro_run": [
+        "",
+        ""
+      ],
+      "vm_macro_delete": [
+        "",
+        ""
+      ],
+      "vm_macro_load": [
+        "",
+        ""
+      ],
+      "vm_macro_save": [
+        "",
+        ""
+      ]
+    },
+    "Bookmarks": {
+      "vm_bookmark_toggle": [
+        "Ctrl+Alt+T",
+        ""
+      ],
+      "vm_bookmark_next": [
+        "Ctrl+PgDown",
+        "Ctrl+Shift+,"
+      ],
+      "vm_bookmark_previous": [
+        "Ctrl+PgUp",
+        ""
+      ],
+      "vm_bookmark_clear": [
+        "",
+        ""
+      ],
+      "vm_syntaxerror_goto": [
+        "",
+        ""
+      ],
+      "vm_syntaxerror_clear": [
+        "",
+        ""
+      ],
+      "vm_warning_next": [
+        "",
+        ""
+      ],
+      "vm_warning_previous": [
+        "",
+        ""
+      ],
+      "vm_warnings_clear": [
+        "",
+        ""
+      ],
+      "vm_uncovered_next": [
+        "",
+        ""
+      ],
+      "vm_uncovered_previous": [
+        "",
+        ""
+      ],
+      "vm_task_next": [
+        "",
+        ""
+      ],
+      "vm_task_previous": [
+        "",
+        ""
+      ],
+      "vm_change_next": [
+        "",
+        ""
+      ],
+      "vm_change_previous": [
+        "",
+        ""
+      ]
+    },
+    "Spelling": {
+      "vm_spelling_spellcheck": [
+        "Shift+F7",
+        ""
+      ],
+      "vm_spelling_autospellcheck": [
+        "",
+        ""
+      ]
+    },
+    "RefactoringRope": {
+      "refactoring_rename": [
+        "",
+        ""
+      ],
+      "refactoring_rename_local": [
+        "",
+        ""
+      ],
+      "refactoring_rename_module": [
+        "",
+        ""
+      ],
+      "refactoring_change_occurrences": [
+        "",
+        ""
+      ],
+      "refactoring_extract_method": [
+        "",
+        ""
+      ],
+      "refactoring_extract_variable": [
+        "",
+        ""
+      ],
+      "refactoring_inline": [
+        "",
+        ""
+      ],
+      "refactoring_move_method": [
+        "",
+        ""
+      ],
+      "refactoring_move_module": [
+        "",
+        ""
+      ],
+      "refactoring_use_function": [
+        "",
+        ""
+      ],
+      "refactoring_introduce_factory_method": [
+        "",
+        ""
+      ],
+      "refactoring_introduce_parameter_method": [
+        "",
+        ""
+      ],
+      "refactoring_organize_imports": [
+        "",
+        ""
+      ],
+      "refactoring_expand_star_imports": [
+        "",
+        ""
+      ],
+      "refactoring_relative_to_absolute_imports": [
+        "",
+        ""
+      ],
+      "refactoring_froms_to_imports": [
+        "",
+        ""
+      ],
+      "refactoring_restructure": [
+        "",
+        ""
+      ],
+      "refactoring_change_method_signature": [
+        "",
+        ""
+      ],
+      "refactoring_inline_argument_default": [
+        "",
+        ""
+      ],
+      "refactoring_transform_module_to_package": [
+        "",
+        ""
+      ],
+      "refactoring_encapsulate_attribute": [
+        "",
+        ""
+      ],
+      "refactoring_local_variable_to_attribute": [
+        "",
+        ""
+      ],
+      "refactoring_method_to_methodobject": [
+        "",
+        ""
+      ],
+      "refactoring_show_project_history": [
+        "",
+        ""
+      ],
+      "refactoring_show_file_history": [
+        "",
+        ""
+      ],
+      "refactoring_clear_history": [
+        "",
+        ""
+      ],
+      "refactoring_find_occurrences": [
+        "",
+        ""
+      ],
+      "refactoring_find_definition": [
+        "",
+        ""
+      ],
+      "refactoring_find_implementations": [
+        "",
+        ""
+      ],
+      "refactoring_edit_config": [
+        "",
+        ""
+      ],
+      "refactoring_help": [
+        "",
+        ""
+      ],
+      "refactoring_analyze_all": [
+        "",
+        ""
+      ],
+      "refactoring_update_configuration": [
+        "",
+        ""
+      ]
+    },
+    "Git": {
+      "git_new": [
+        "",
+        ""
+      ],
+      "git_fetch": [
+        "",
+        ""
+      ],
+      "git_pull": [
+        "",
+        ""
+      ],
+      "git_commit": [
+        "",
+        ""
+      ],
+      "git_push": [
+        "",
+        ""
+      ],
+      "git_export_repo": [
+        "",
+        ""
+      ],
+      "git_log_browser": [
+        "",
+        ""
+      ],
+      "git_reflog_browser": [
+        "",
+        ""
+      ],
+      "git_diff": [
+        "",
+        ""
+      ],
+      "git_extendeddiff": [
+        "",
+        ""
+      ],
+      "git_status": [
+        "",
+        ""
+      ],
+      "git_switch": [
+        "",
+        ""
+      ],
+      "git_tag": [
+        "",
+        ""
+      ],
+      "git_list_tags": [
+        "",
+        ""
+      ],
+      "git_describe_tag": [
+        "",
+        ""
+      ],
+      "git_list_branches": [
+        "",
+        ""
+      ],
+      "git_list_merged_branches": [
+        "",
+        ""
+      ],
+      "git_list_non_merged_branches": [
+        "",
+        ""
+      ],
+      "git_branch": [
+        "",
+        ""
+      ],
+      "git_delete_remote_branch": [
+        "",
+        ""
+      ],
+      "git_show_branch": [
+        "",
+        ""
+      ],
+      "git_revert": [
+        "",
+        ""
+      ],
+      "git_merge": [
+        "",
+        ""
+      ],
+      "git_cancel_merge": [
+        "",
+        ""
+      ],
+      "git_commit_merge": [
+        "",
+        ""
+      ],
+      "git_cleanup": [
+        "",
+        ""
+      ],
+      "git_command": [
+        "",
+        ""
+      ],
+      "git_configure": [
+        "",
+        ""
+      ],
+      "git_show_remotes": [
+        "",
+        ""
+      ],
+      "git_show_remote_info": [
+        "",
+        ""
+      ],
+      "git_add_remote": [
+        "",
+        ""
+      ],
+      "git_remove_remote": [
+        "",
+        ""
+      ],
+      "git_prune_remote": [
+        "",
+        ""
+      ],
+      "git_rename_remote": [
+        "",
+        ""
+      ],
+      "git_change_remote_url": [
+        "",
+        ""
+      ],
+      "git_remote_credentials": [
+        "",
+        ""
+      ],
+      "git_cherrypick": [
+        "",
+        ""
+      ],
+      "git_cherrypick_continue": [
+        "",
+        ""
+      ],
+      "git_cherrypick_quit": [
+        "",
+        ""
+      ],
+      "git_cherrypick_abort": [
+        "",
+        ""
+      ],
+      "git_stash": [
+        "",
+        ""
+      ],
+      "git_stash_browser": [
+        "",
+        ""
+      ],
+      "git_stash_show": [
+        "",
+        ""
+      ],
+      "git_stash_apply": [
+        "",
+        ""
+      ],
+      "git_stash_pop": [
+        "",
+        ""
+      ],
+      "git_stash_branch": [
+        "",
+        ""
+      ],
+      "git_stash_delete": [
+        "",
+        ""
+      ],
+      "git_stash_delete_all": [
+        "",
+        ""
+      ],
+      "git_user_configure": [
+        "",
+        ""
+      ],
+      "git_repo_configure": [
+        "",
+        ""
+      ],
+      "git_create_ignore": [
+        "",
+        ""
+      ],
+      "git_show_config": [
+        "",
+        ""
+      ],
+      "git_verify": [
+        "",
+        ""
+      ],
+      "git_housekeeping": [
+        "",
+        ""
+      ],
+      "git_statistics": [
+        "",
+        ""
+      ],
+      "git_create_archive": [
+        "",
+        ""
+      ],
+      "mercurial_bundle_create": [
+        "",
+        ""
+      ],
+      "mercurial_bundle_verify": [
+        "",
+        ""
+      ],
+      "mercurial_bundle_list_heads": [
+        "",
+        ""
+      ],
+      "mercurial_bundle_apply_fetch": [
+        "",
+        ""
+      ],
+      "mercurial_bundle_apply_pull": [
+        "",
+        ""
+      ],
+      "git_bisect_start": [
+        "",
+        ""
+      ],
+      "git_bisect_start_extended": [
+        "",
+        ""
+      ],
+      "git_bisect_good": [
+        "",
+        ""
+      ],
+      "git_bisect_bad": [
+        "",
+        ""
+      ],
+      "git_bisect_skip": [
+        "",
+        ""
+      ],
+      "git_bisect_reset": [
+        "",
+        ""
+      ],
+      "git_bisect_log_browser": [
+        "",
+        ""
+      ],
+      "git_bisect_create_replay": [
+        "",
+        ""
+      ],
+      "git_bisect_edit_replay": [
+        "",
+        ""
+      ],
+      "git_bisect_replay": [
+        "",
+        ""
+      ],
+      "git_check_patches": [
+        "",
+        ""
+      ],
+      "git_apply_patches": [
+        "",
+        ""
+      ],
+      "git_show_patches_statistics": [
+        "",
+        ""
+      ],
+      "git_submodule_add": [
+        "",
+        ""
+      ],
+      "git_submodules_list": [
+        "",
+        ""
+      ],
+      "git_submodules_init": [
+        "",
+        ""
+      ],
+      "git_submodules_deinit": [
+        "",
+        ""
+      ],
+      "git_submodules_update": [
+        "",
+        ""
+      ],
+      "git_submodules_update_init": [
+        "",
+        ""
+      ],
+      "git_submodules_update_remote": [
+        "",
+        ""
+      ],
+      "git_submodules_update_options": [
+        "",
+        ""
+      ],
+      "git_submodules_sync": [
+        "",
+        ""
+      ],
+      "git_submodules_status": [
+        "",
+        ""
+      ],
+      "git_submodules_summary": [
+        "",
+        ""
+      ]
+    },
+    "Mercurial": {
+      "mercurial_new": [
+        "",
+        ""
+      ],
+      "mercurial_incoming": [
+        "Meta+Alt+I",
+        ""
+      ],
+      "mercurial_pull": [
+        "Meta+Alt+P",
+        ""
+      ],
+      "mercurial_update": [
+        "Meta+Alt+U",
+        ""
+      ],
+      "mercurial_commit": [
+        "Meta+Alt+C",
+        ""
+      ],
+      "mercurial_outgoing": [
+        "Meta+Alt+O",
+        ""
+      ],
+      "mercurial_push": [
+        "Meta+Alt+H",
+        ""
+      ],
+      "mercurial_push_forced": [
+        "",
+        ""
+      ],
+      "mercurial_export_repo": [
+        "",
+        ""
+      ],
+      "mercurial_log_browser": [
+        "Meta+Alt+L",
+        ""
+      ],
+      "mercurial_diff": [
+        "Meta+Alt+D",
+        ""
+      ],
+      "mercurial_extendeddiff": [
+        "",
+        ""
+      ],
+      "mercurial_status": [
+        "Meta+Alt+S",
+        ""
+      ],
+      "mercurial_summary": [
+        "",
+        ""
+      ],
+      "mercurial_heads": [
+        "",
+        ""
+      ],
+      "mercurial_parents": [
+        "",
+        ""
+      ],
+      "mercurial_tip": [
+        "",
+        ""
+      ],
+      "mercurial_revert": [
+        "",
+        ""
+      ],
+      "mercurial_merge": [
+        "Meta+Alt+M",
+        ""
+      ],
+      "mercurial_commit_merge": [
+        "",
+        ""
+      ],
+      "mercurial_cancel_merge": [
+        "",
+        ""
+      ],
+      "mercurial_remerge": [
+        "",
+        ""
+      ],
+      "mercurial_show_conflicts": [
+        "",
+        ""
+      ],
+      "mercurial_resolve": [
+        "",
+        ""
+      ],
+      "mercurial_unresolve": [
+        "",
+        ""
+      ],
+      "mercurial_tag": [
+        "Meta+Alt+T",
+        ""
+      ],
+      "mercurial_list_tags": [
+        "",
+        ""
+      ],
+      "mercurial_list_branches": [
+        "",
+        ""
+      ],
+      "mercurial_branch": [
+        "",
+        ""
+      ],
+      "mercurial_push_branch": [
+        "",
+        ""
+      ],
+      "mercurial_close_branch": [
+        "",
+        ""
+      ],
+      "mercurial_show_branch": [
+        "",
+        ""
+      ],
+      "mercurial_switch": [
+        "",
+        ""
+      ],
+      "mercurial_cleanup": [
+        "",
+        ""
+      ],
+      "mercurial_command": [
+        "",
+        ""
+      ],
+      "mercurial_configure": [
+        "",
+        ""
+      ],
+      "mercurial_user_configure": [
+        "",
+        ""
+      ],
+      "mercurial_repo_configure": [
+        "",
+        ""
+      ],
+      "mercurial_show_config": [
+        "",
+        ""
+      ],
+      "mercurial_show_paths": [
+        "",
+        ""
+      ],
+      "mercurial_verify": [
+        "",
+        ""
+      ],
+      "mercurial_recover": [
+        "",
+        ""
+      ],
+      "mercurial_identify": [
+        "",
+        ""
+      ],
+      "mercurial_create ignore": [
+        "",
+        ""
+      ],
+      "mercurial_bundle": [
+        "",
+        ""
+      ],
+      "mercurial_preview_bundle": [
+        "",
+        ""
+      ],
+      "mercurial_unbundle": [
+        "",
+        ""
+      ],
+      "mercurial_bisect_good": [
+        "",
+        ""
+      ],
+      "mercurial_bisect_bad": [
+        "",
+        ""
+      ],
+      "mercurial_bisect_skip": [
+        "",
+        ""
+      ],
+      "mercurial_bisect_reset": [
+        "",
+        ""
+      ],
+      "mercurial_backout": [
+        "",
+        ""
+      ],
+      "mercurial_rollback": [
+        "",
+        ""
+      ],
+      "mercurial_serve": [
+        "",
+        ""
+      ],
+      "mercurial_import": [
+        "",
+        ""
+      ],
+      "mercurial_export": [
+        "",
+        ""
+      ],
+      "mercurial_change_phase": [
+        "",
+        ""
+      ],
+      "mercurial_graft": [
+        "Meta+Alt+G",
+        ""
+      ],
+      "mercurial_graft_continue": [
+        "",
+        ""
+      ],
+      "mercurial_graft_stop": [
+        "",
+        ""
+      ],
+      "mercurial_graft_abort": [
+        "",
+        ""
+      ],
+      "mercurial_add_subrepo": [
+        "",
+        ""
+      ],
+      "mercurial_remove_subrepos": [
+        "",
+        ""
+      ],
+      "mercurial_archive": [
+        "",
+        ""
+      ],
+      "mercurial_list_bookmarks": [
+        "",
+        ""
+      ],
+      "mercurial_define_bookmark": [
+        "",
+        ""
+      ],
+      "mercurial_delete_bookmark": [
+        "",
+        ""
+      ],
+      "mercurial_rename_bookmark": [
+        "",
+        ""
+      ],
+      "mercurial_move_bookmark": [
+        "",
+        ""
+      ],
+      "mercurial_incoming_bookmarks": [
+        "",
+        ""
+      ],
+      "mercurial_pull_bookmark": [
+        "",
+        ""
+      ],
+      "mercurial_outgoing_bookmarks": [
+        "",
+        ""
+      ],
+      "mercurial_push_bookmark": [
+        "",
+        ""
+      ],
+      "mercurial_push_current_bookmark": [
+        "",
+        ""
+      ],
+      "mercurial_delete_all_backups": [
+        "",
+        ""
+      ],
+      "mercurial_pull_current_bookmark": [
+        "",
+        ""
+      ],
+      "mercurial_queues_init": [
+        "",
+        ""
+      ],
+      "mercurial_queues_commit": [
+        "",
+        ""
+      ],
+      "mercurial_queues_new": [
+        "",
+        ""
+      ],
+      "mercurial_queues_refresh": [
+        "",
+        ""
+      ],
+      "mercurial_queues_refresh_message": [
+        "",
+        ""
+      ],
+      "mercurial_queues_show": [
+        "",
+        ""
+      ],
+      "mercurial_queues_show_message": [
+        "",
+        ""
+      ],
+      "mercurial_queues_list": [
+        "",
+        ""
+      ],
+      "mercurial_queues_finish_applied": [
+        "",
+        ""
+      ],
+      "mercurial_queues_rename": [
+        "",
+        ""
+      ],
+      "mercurial_queues_delete": [
+        "",
+        ""
+      ],
+      "mercurial_queues_fold": [
+        "",
+        ""
+      ],
+      "mercurial_queues_status": [
+        "",
+        ""
+      ],
+      "mercurial_queues_summary": [
+        "",
+        ""
+      ],
+      "mercurial_queues_push_next": [
+        "",
+        ""
+      ],
+      "mercurial_queues_push_all": [
+        "",
+        ""
+      ],
+      "mercurial_queues_push_until": [
+        "",
+        ""
+      ],
+      "mercurial_queues_pop_current": [
+        "",
+        ""
+      ],
+      "mercurial_queues_pop_all": [
+        "",
+        ""
+      ],
+      "mercurial_queues_pop_until": [
+        "",
+        ""
+      ],
+      "mercurial_queues_goto": [
+        "",
+        ""
+      ],
+      "mercurial_queues_push_next_force": [
+        "",
+        ""
+      ],
+      "mercurial_queues_push_all_force": [
+        "",
+        ""
+      ],
+      "mercurial_queues_push_until_force": [
+        "",
+        ""
+      ],
+      "mercurial_queues_pop_current_force": [
+        "",
+        ""
+      ],
+      "mercurial_queues_pop_all_force": [
+        "",
+        ""
+      ],
+      "mercurial_queues_pop_until_force": [
+        "",
+        ""
+      ],
+      "mercurial_queues_goto_force": [
+        "",
+        ""
+      ],
+      "mercurial_queues_guards_define": [
+        "",
+        ""
+      ],
+      "mercurial_queues_guards_drop_all": [
+        "",
+        ""
+      ],
+      "mercurial_queues_guards_list": [
+        "",
+        ""
+      ],
+      "mercurial_queues_guards_list_all": [
+        "",
+        ""
+      ],
+      "mercurial_queues_guards_set_active": [
+        "",
+        ""
+      ],
+      "mercurial_queues_guards_deactivate": [
+        "",
+        ""
+      ],
+      "mercurial_queues_guards_identify_active": [
+        "",
+        ""
+      ],
+      "mercurial_queues_create_queue": [
+        "",
+        ""
+      ],
+      "mercurial_queues_rename_queue": [
+        "",
+        ""
+      ],
+      "mercurial_queues_delete_queue": [
+        "",
+        ""
+      ],
+      "mercurial_queues_purge_queue": [
+        "",
+        ""
+      ],
+      "mercurial_queues_activate_queue": [
+        "",
+        ""
+      ],
+      "mercurial_queues_list_queues": [
+        "",
+        ""
+      ],
+      "mercurial_purge": [
+        "",
+        ""
+      ],
+      "mercurial_purge_all": [
+        "",
+        ""
+      ],
+      "mercurial_purge_list": [
+        "",
+        ""
+      ],
+      "mercurial_purge_all_list": [
+        "",
+        ""
+      ],
+      "mercurial_gpg_list": [
+        "",
+        ""
+      ],
+      "mercurial_gpg_verify": [
+        "",
+        ""
+      ],
+      "mercurial_gpg_sign": [
+        "",
+        ""
+      ],
+      "mercurial_rebase": [
+        "",
+        ""
+      ],
+      "mercurial_rebase_continue": [
+        "",
+        ""
+      ],
+      "mercurial_rebase_abort": [
+        "",
+        ""
+      ],
+      "mercurial_shelve": [
+        "",
+        ""
+      ],
+      "mercurial_shelve_browser": [
+        "",
+        ""
+      ],
+      "mercurial_unshelve": [
+        "",
+        ""
+      ],
+      "mercurial_unshelve_abort": [
+        "",
+        ""
+      ],
+      "mercurial_unshelve_continue": [
+        "",
+        ""
+      ],
+      "mercurial_shelve_delete": [
+        "",
+        ""
+      ],
+      "mercurial_shelve_cleanup": [
+        "",
+        ""
+      ],
+      "mercurial_convert_to_largefiles": [
+        "",
+        ""
+      ],
+      "mercurial_convert_to_normal": [
+        "",
+        ""
+      ],
+      "mercurial_pull_largefiles": [
+        "",
+        ""
+      ],
+      "mercurial_summary_largefiles": [
+        "",
+        ""
+      ],
+      "mercurial_verify_large": [
+        "",
+        ""
+      ],
+      "mercurial_verify_lfa": [
+        "",
+        ""
+      ],
+      "mercurial_verify_lfc": [
+        "",
+        ""
+      ],
+      "mercurial_strip": [
+        "",
+        ""
+      ],
+      "mercurial_histedit_start": [
+        "",
+        ""
+      ],
+      "mercurial_histedit_continue": [
+        "",
+        ""
+      ],
+      "mercurial_histedit_abort": [
+        "",
+        ""
+      ],
+      "mercurial_histedit_edit_plan": [
+        "",
+        ""
+      ],
+      "mercurial_closehead": [
+        "",
+        ""
+      ]
+    },
+    "PySvn": {
+      "pysvn_new": [
+        "",
+        ""
+      ],
+      "pysvn_update": [
+        "Meta+Alt+U",
+        ""
+      ],
+      "pysvn_commit": [
+        "Meta+Alt+C",
+        ""
+      ],
+      "pysvn_log_browser": [
+        "Meta+Alt+L",
+        ""
+      ],
+      "pysvn_diff": [
+        "Meta+Alt+D",
+        ""
+      ],
+      "pysvn_extendeddiff": [
+        "",
+        ""
+      ],
+      "pysvn_urldiff": [
+        "",
+        ""
+      ],
+      "pysvn_status": [
+        "Meta+Alt+S",
+        ""
+      ],
+      "pysvn_changelists": [
+        "",
+        ""
+      ],
+      "pysvn_repoinfo": [
+        "",
+        ""
+      ],
+      "pysvn_tag": [
+        "",
+        ""
+      ],
+      "pysvn_export": [
+        "",
+        ""
+      ],
+      "pysvn_options": [
+        "",
+        ""
+      ],
+      "pysvn_revert": [
+        "",
+        ""
+      ],
+      "pysvn_merge": [
+        "Meta+Alt+M",
+        ""
+      ],
+      "pysvn_switch": [
+        "",
+        ""
+      ],
+      "pysvn_resolve": [
+        "",
+        ""
+      ],
+      "pysvn_cleanup": [
+        "",
+        ""
+      ],
+      "pysvn_command": [
+        "",
+        ""
+      ],
+      "pysvn_list_tags": [
+        "",
+        ""
+      ],
+      "pysvn_list_branches": [
+        "",
+        ""
+      ],
+      "pysvn_contents": [
+        "",
+        ""
+      ],
+      "pysvn_property_set": [
+        "",
+        ""
+      ],
+      "pysvn_property_list": [
+        "",
+        ""
+      ],
+      "pysvn_property_delete": [
+        "",
+        ""
+      ],
+      "pysvn_relocate": [
+        "",
+        ""
+      ],
+      "pysvn_repo_browser": [
+        "Meta+Alt+B",
+        ""
+      ],
+      "pysvn_configure": [
+        "",
+        ""
+      ],
+      "pysvn_upgrade": [
+        "",
+        ""
+      ]
+    },
+    "Subversion": {
+      "subversion_new": [
+        "",
+        ""
+      ],
+      "subversion_update": [
+        "Meta+Alt+U",
+        ""
+      ],
+      "subversion_commit": [
+        "Meta+Alt+C",
+        ""
+      ],
+      "subversion_log_browser": [
+        "Meta+Alt+L",
+        ""
+      ],
+      "subversion_diff": [
+        "Meta+Alt+D",
+        ""
+      ],
+      "subversion_extendeddiff": [
+        "",
+        ""
+      ],
+      "subversion_urldiff": [
+        "",
+        ""
+      ],
+      "subversion_status": [
+        "Meta+Alt+S",
+        ""
+      ],
+      "subversion_changelists": [
+        "",
+        ""
+      ],
+      "subversion_tag": [
+        "",
+        ""
+      ],
+      "subversion_export": [
+        "",
+        ""
+      ],
+      "subversion_options": [
+        "",
+        ""
+      ],
+      "subversion_revert": [
+        "",
+        ""
+      ],
+      "subversion_merge": [
+        "Meta+Alt+M",
+        ""
+      ],
+      "subversion_switch": [
+        "",
+        ""
+      ],
+      "subversion_resolve": [
+        "",
+        ""
+      ],
+      "subversion_cleanup": [
+        "",
+        ""
+      ],
+      "subversion_command": [
+        "",
+        ""
+      ],
+      "subversion_list_tags": [
+        "",
+        ""
+      ],
+      "subversion_list_branches": [
+        "",
+        ""
+      ],
+      "subversion_contents": [
+        "",
+        ""
+      ],
+      "subversion_property_set": [
+        "",
+        ""
+      ],
+      "subversion_property_list": [
+        "",
+        ""
+      ],
+      "subversion_property_delete": [
+        "",
+        ""
+      ],
+      "subversion_relocate": [
+        "",
+        ""
+      ],
+      "subversion_repo_browser": [
+        "Meta+Alt+B",
+        ""
+      ],
+      "subversion_configure": [
+        "",
+        ""
+      ],
+      "subversion_upgrade": [
+        "",
+        ""
+      ]
+    }
+  }
+}

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HighlightingStyles SYSTEM "HighlightingStyles-6.0.dtd">
+<!-- Eric6 highlighting styles -->
+<!-- Saved: 2020-04-08, 18:14:45-->
+<!-- Author: Detlev Offenbach <detlev@die-offenbachs.de> -->
+<HighlightingStyles version="6.0">
+  <Lexer name="POV">
+    <Style style="0" substyle="-1" color="#ff0080" paper="#2e3436" font="Bitstream Vera Sans,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Default</Description>
+    </Style>
+    <Style style="1" substyle="-1" color="#91fe8f" paper="#2e3436" font="Bitstream Vera Serif,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Comment</Description>
+    </Style>
+    <Style style="2" substyle="-1" color="#91fe8f" paper="#2e3436" font="Bitstream Vera Serif,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Comment line</Description>
+    </Style>
+    <Style style="3" substyle="-1" color="#6beeee" paper="#2e3436" font="Bitstream Vera Sans,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Number</Description>
+    </Style>
+    <Style style="4" substyle="-1" color="#ffffff" paper="#2e3436" font="Bitstream Vera Sans,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Operator</Description>
+    </Style>
+    <Style style="5" substyle="-1" color="#ffffff" paper="#2e3436" font="Bitstream Vera Sans,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Identifier</Description>
+    </Style>
+    <Style style="6" substyle="-1" color="#e274e5" paper="#2e3436" font="Bitstream Vera Sans,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>String</Description>
+    </Style>
+    <Style style="7" substyle="-1" color="#000000" paper="#e0c0e0" font="Bitstream Vera Sans,9,-1,5,75,0,0,0,0,0" eolfill="True">
+      <Description>Unclosed string</Description>
+    </Style>
+    <Style style="8" substyle="-1" color="#fefe00" paper="#2e3436" font="Bitstream Vera Sans,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Directive</Description>
+    </Style>
+    <Style style="9" substyle="-1" color="#ff8040" paper="#2e3436" font="Bitstream Vera Serif,9,-1,5,50,1,0,0,0,0" eolfill="False">
+      <Description>Bad directive</Description>
+    </Style>
+    <Style style="10" substyle="-1" color="#00007f" paper="#ffd0d0" font="Bitstream Vera Sans,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Objects, CSG and appearance</Description>
+    </Style>
+    <Style style="11" substyle="-1" color="#00007f" paper="#ffffd0" font="Bitstream Vera Sans,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Types, modifiers and items</Description>
+    </Style>
+    <Style style="12" substyle="-1" color="#00007f" paper="#ffffff" font="Bitstream Vera Sans,9,-1,5,75,0,0,0,0,0" eolfill="False">
+      <Description>Predefined identifiers</Description>
+    </Style>
+    <Style style="13" substyle="-1" color="#00007f" paper="#d0d0ff" font="Bitstream Vera Sans,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Predefined functions</Description>
+    </Style>
+    <Style style="14" substyle="-1" color="#00007f" paper="#d0ffd0" font="Bitstream Vera Sans,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>User defined 1</Description>
+    </Style>
+    <Style style="15" substyle="-1" color="#00007f" paper="#d0d0d0" font="Bitstream Vera Sans,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>User defined 2</Description>
+    </Style>
+    <Style style="16" substyle="-1" color="#00007f" paper="#e0e0e0" font="Bitstream Vera Sans,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>User defined 3</Description>
+    </Style>
+  </Lexer>
+</HighlightingStyles>

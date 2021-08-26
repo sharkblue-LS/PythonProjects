@@ -1,0 +1,140 @@
+# -*- coding: utf-8 -*-
+
+# Copyright (c) 2003 - 2021 Detlev Offenbach <detlev@die-offenbachs.de>
+#
+
+"""
+Module implementing a dialog to enter the commit message.
+"""
+
+import pysvn
+
+from PyQt5.QtCore import pyqtSignal, Qt, pyqtSlot
+from PyQt5.QtWidgets import QWidget, QDialogButtonBox
+
+from .Ui_SvnCommitDialog import Ui_SvnCommitDialog
+
+import Preferences
+
+
+class SvnCommitDialog(QWidget, Ui_SvnCommitDialog):
+    """
+    Class implementing a dialog to enter the commit message.
+    
+    @signal accepted() emitted, if the dialog was accepted
+    @signal rejected() emitted, if the dialog was rejected
+    """
+    accepted = pyqtSignal()
+    rejected = pyqtSignal()
+    
+    def __init__(self, changelists, parent=None):
+        """
+        Constructor
+        
+        @param changelists list of available change lists (list of strings)
+        @param parent parent widget (QWidget)
+        """
+        super(SvnCommitDialog, self).__init__(
+            parent, Qt.WindowFlags(Qt.WindowType.Window))
+        self.setupUi(self)
+        
+        if pysvn.svn_version < (1, 5, 0) or pysvn.version < (1, 6, 0):
+            self.changeListsGroup.hide()
+        else:
+            self.changeLists.addItems(sorted(changelists))
+        
+    def showEvent(self, evt):
+        """
+        Protected method called when the dialog is about to be shown.
+        
+        @param evt the event (QShowEvent)
+        """
+        self.recentCommitMessages = Preferences.toList(
+            Preferences.Prefs.settings.value('Subversion/Commits'))
+        self.recentComboBox.clear()
+        self.recentComboBox.addItem("")
+        self.recentComboBox.addItems(self.recentCommitMessages)
+        
+        self.logEdit.setFocus(Qt.FocusReason.OtherFocusReason)
+        
+    def logMessage(self):
+        """
+        Public method to retrieve the log message.
+        
+        This method has the side effect of saving the 20 most recent
+        commit messages for reuse.
+        
+        @return the log message (string)
+        """
+        msg = self.logEdit.toPlainText()
+        if msg:
+            if msg in self.recentCommitMessages:
+                self.recentCommitMessages.remove(msg)
+            self.recentCommitMessages.insert(0, msg)
+            no = int(Preferences.Prefs.settings.value(
+                'Subversion/CommitMessages', 20))
+            del self.recentCommitMessages[no:]
+            Preferences.Prefs.settings.setValue(
+                'Subversion/Commits', self.recentCommitMessages)
+        return msg
+        
+    def hasChangelists(self):
+        """
+        Public method to check, if the user entered some changelists.
+        
+        @return flag indicating availability of changelists (boolean)
+        """
+        return len(self.changeLists.selectedItems()) > 0
+        
+    def changelistsData(self):
+        """
+        Public method to retrieve the changelists data.
+        
+        @return tuple containing the changelists (list of strings) and a flag
+            indicating to keep changelists (boolean)
+        """
+        slists = [line.text().strip()
+                  for line in self.changeLists.selectedItems()
+                  if line.text().strip() != ""]
+        
+        if len(slists) == 0:
+            return [], False
+        
+        return slists, self.keepChangeListsCheckBox.isChecked()
+        
+    def on_buttonBox_clicked(self, button):
+        """
+        Private slot called by a button of the button box clicked.
+        
+        @param button button that was clicked (QAbstractButton)
+        """
+        if button == self.buttonBox.button(
+            QDialogButtonBox.StandardButton.Cancel
+        ):
+            self.logEdit.clear()
+        
+    def on_buttonBox_accepted(self):
+        """
+        Private slot called by the buttonBox accepted signal.
+        """
+        self.close()
+        self.accepted.emit()
+        
+    def on_buttonBox_rejected(self):
+        """
+        Private slot called by the buttonBox rejected signal.
+        """
+        self.close()
+        self.rejected.emit()
+    
+    @pyqtSlot(int)
+    def on_recentComboBox_activated(self, index):
+        """
+        Private slot to select a commit message from recent ones.
+        
+        @param index index of the selected entry
+        @type int
+        """
+        txt = self.recentComboBox.itemText(index)
+        if txt:
+            self.logEdit.setPlainText(txt)

@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html><head>
+<title>eric6.Plugins.VcsPlugins.vcsGit.GitDiffGenerator</title>
+<meta charset="UTF-8">
+<style>
+body {
+    background: #EDECE6;
+    margin: 0em 1em 10em 1em;
+    color: black;
+}
+
+h1 { color: white; background: #85774A; }
+h2 { color: white; background: #85774A; }
+h3 { color: white; background: #9D936E; }
+h4 { color: white; background: #9D936E; }
+    
+a { color: #BA6D36; }
+
+</style>
+</head>
+<body>
+<a NAME="top" ID="top"></a>
+<h1>eric6.Plugins.VcsPlugins.vcsGit.GitDiffGenerator</h1>
+
+<p>
+Module implementing a class to generate the output of the git diff command
+process.
+</p>
+<h3>Global Attributes</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Classes</h3>
+
+<table>
+
+<tr>
+<td><a href="#GitDiffGenerator">GitDiffGenerator</a></td>
+<td>Class implementing the generation of output of the git diff command.</td>
+</tr>
+</table>
+<h3>Functions</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+<hr />
+<hr />
+<a NAME="GitDiffGenerator" ID="GitDiffGenerator"></a>
+<h2>GitDiffGenerator</h2>
+
+<p>
+    Class implementing the generation of output of the git diff command.
+</p>
+<h3>Signals</h3>
+<dl>
+
+<dt>finished()</dt>
+<dd>
+emitted when all processes have finished
+</dd>
+</dl>
+<h3>Derived from</h3>
+QObject
+<h3>Class Attributes</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Class Methods</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+
+<table>
+
+<tr>
+<td><a href="#GitDiffGenerator.__init__">GitDiffGenerator</a></td>
+<td>Constructor</td>
+</tr>
+<tr>
+<td><a href="#GitDiffGenerator.__procFinished">__procFinished</a></td>
+<td>Private slot connected to the finished signal.</td>
+</tr>
+<tr>
+<td><a href="#GitDiffGenerator.__processFileLine">__processFileLine</a></td>
+<td>Private slot to process a line giving the old/new file.</td>
+</tr>
+<tr>
+<td><a href="#GitDiffGenerator.__processLine">__processLine</a></td>
+<td>Private method to process one line of output.</td>
+</tr>
+<tr>
+<td><a href="#GitDiffGenerator.__readStderr">__readStderr</a></td>
+<td>Private slot to handle the readyReadStandardError signal.</td>
+</tr>
+<tr>
+<td><a href="#GitDiffGenerator.__readStdout">__readStdout</a></td>
+<td>Private slot to handle the readyReadStandardOutput signal.</td>
+</tr>
+<tr>
+<td><a href="#GitDiffGenerator.getResult">getResult</a></td>
+<td>Public method to return the result data.</td>
+</tr>
+<tr>
+<td><a href="#GitDiffGenerator.start">start</a></td>
+<td>Public slot to start the git diff command.</td>
+</tr>
+<tr>
+<td><a href="#GitDiffGenerator.stopProcesses">stopProcesses</a></td>
+<td>Public slot to stop the diff processes.</td>
+</tr>
+</table>
+<h3>Static Methods</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+
+<a NAME="GitDiffGenerator.__init__" ID="GitDiffGenerator.__init__"></a>
+<h4>GitDiffGenerator (Constructor)</h4>
+<b>GitDiffGenerator</b>(<i>vcs, parent=None</i>)
+
+<p>
+        Constructor
+</p>
+<dl>
+
+<dt><i>vcs</i></dt>
+<dd>
+reference to the vcs object
+</dd>
+<dt><i>parent</i></dt>
+<dd>
+parent widget (QWidget)
+</dd>
+</dl>
+<a NAME="GitDiffGenerator.__procFinished" ID="GitDiffGenerator.__procFinished"></a>
+<h4>GitDiffGenerator.__procFinished</h4>
+<b>__procFinished</b>(<i>exitCode, exitStatus</i>)
+
+<p>
+        Private slot connected to the finished signal.
+</p>
+<dl>
+
+<dt><i>exitCode</i></dt>
+<dd>
+exit code of the process (integer)
+</dd>
+<dt><i>exitStatus</i></dt>
+<dd>
+exit status of the process (QProcess.ExitStatus)
+</dd>
+</dl>
+<a NAME="GitDiffGenerator.__processFileLine" ID="GitDiffGenerator.__processFileLine"></a>
+<h4>GitDiffGenerator.__processFileLine</h4>
+<b>__processFileLine</b>(<i>line, isTopDiff</i>)
+
+<p>
+        Private slot to process a line giving the old/new file.
+</p>
+<dl>
+
+<dt><i>line</i></dt>
+<dd>
+line to be processed (string)
+</dd>
+<dt><i>isTopDiff</i></dt>
+<dd>
+flag indicating to show the output in the top
+            output widget (boolean)
+</dd>
+</dl>
+<a NAME="GitDiffGenerator.__processLine" ID="GitDiffGenerator.__processLine"></a>
+<h4>GitDiffGenerator.__processLine</h4>
+<b>__processLine</b>(<i>line, isTopDiff</i>)
+
+<p>
+        Private method to process one line of output.
+</p>
+<dl>
+
+<dt><i>line</i></dt>
+<dd>
+output line to process (string)
+</dd>
+<dt><i>isTopDiff</i></dt>
+<dd>
+flag indicating to show the output in the top
+            output widget (boolean)
+</dd>
+</dl>
+<a NAME="GitDiffGenerator.__readStderr" ID="GitDiffGenerator.__readStderr"></a>
+<h4>GitDiffGenerator.__readStderr</h4>
+<b>__readStderr</b>(<i>process</i>)
+
+<p>
+        Private slot to handle the readyReadStandardError signal.
+</p>
+<p>
+        It reads the error output of the process and inserts it into the
+        error pane.
+</p>
+<dl>
+
+<dt><i>process</i> (QProcess)</dt>
+<dd>
+reference to the process providing error output
+</dd>
+</dl>
+<a NAME="GitDiffGenerator.__readStdout" ID="GitDiffGenerator.__readStdout"></a>
+<h4>GitDiffGenerator.__readStdout</h4>
+<b>__readStdout</b>(<i>process</i>)
+
+<p>
+        Private slot to handle the readyReadStandardOutput signal.
+</p>
+<p>
+        It reads the output of the process, formats it and inserts it into
+        the contents pane.
+</p>
+<dl>
+
+<dt><i>process</i> (QProcess)</dt>
+<dd>
+reference to the process providing output
+</dd>
+</dl>
+<a NAME="GitDiffGenerator.getResult" ID="GitDiffGenerator.getResult"></a>
+<h4>GitDiffGenerator.getResult</h4>
+<b>getResult</b>(<i></i>)
+
+<p>
+        Public method to return the result data.
+</p>
+<dl>
+<dt>Return:</dt>
+<dd>
+tuple of lists of string containing lines of the diff, the diff
+            between stage and repo for 'work2stage2repo' mode (empty
+            otherwise), the list of errors and a list of tuples of filenames
+            and the line into the diff output.
+</dd>
+</dl>
+<a NAME="GitDiffGenerator.start" ID="GitDiffGenerator.start"></a>
+<h4>GitDiffGenerator.start</h4>
+<b>start</b>(<i>fn, versions=None, diffMode="work2repo", stashName=""</i>)
+
+<p>
+        Public slot to start the git diff command.
+</p>
+<dl>
+
+<dt><i>fn</i></dt>
+<dd>
+filename to be diffed (string)
+</dd>
+<dt><i>versions</i></dt>
+<dd>
+list of versions to be diffed (list of up to 2 strings
+            or None)
+</dd>
+<dt><i>diffMode</i></dt>
+<dd>
+indication for the type of diff to be performed (
+            'work2repo' compares the working tree with the HEAD commit,
+            'work2stage' compares the working tree with the staging area,
+            'stage2repo' compares the staging area with the HEAD commit,
+            'work2stage2repo' compares the working tree with the staging area
+                and the staging area with the HEAD commit,
+            'stash' shows the diff for a stash)
+</dd>
+<dt><i>stashName</i></dt>
+<dd>
+name of the stash to show a diff for (string)
+</dd>
+</dl>
+<dl>
+<dt>Return:</dt>
+<dd>
+flag indicating the start status (boolean)
+</dd>
+</dl>
+<dl>
+
+<dt>Raises <b>ValueError</b>:</dt>
+<dd>
+raised to indicate a bad value for the 'diffMode'
+            parameter.
+</dd>
+</dl>
+<a NAME="GitDiffGenerator.stopProcesses" ID="GitDiffGenerator.stopProcesses"></a>
+<h4>GitDiffGenerator.stopProcesses</h4>
+<b>stopProcesses</b>(<i></i>)
+
+<p>
+        Public slot to stop the diff processes.
+</p>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+</body></html>

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html><head>
+<title>eric6.VirtualEnv.VirtualenvAddEditDialog</title>
+<meta charset="UTF-8">
+<style>
+body {
+    background: #EDECE6;
+    margin: 0em 1em 10em 1em;
+    color: black;
+}
+
+h1 { color: white; background: #85774A; }
+h2 { color: white; background: #85774A; }
+h3 { color: white; background: #9D936E; }
+h4 { color: white; background: #9D936E; }
+    
+a { color: #BA6D36; }
+
+</style>
+</head>
+<body>
+<a NAME="top" ID="top"></a>
+<h1>eric6.VirtualEnv.VirtualenvAddEditDialog</h1>
+
+<p>
+Module implementing a dialog to enter the data of a virtual environment.
+</p>
+<h3>Global Attributes</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Classes</h3>
+
+<table>
+
+<tr>
+<td><a href="#VirtualenvAddEditDialog">VirtualenvAddEditDialog</a></td>
+<td>Class implementing a dialog to enter the data of a virtual environment.</td>
+</tr>
+</table>
+<h3>Functions</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+<hr />
+<hr />
+<a NAME="VirtualenvAddEditDialog" ID="VirtualenvAddEditDialog"></a>
+<h2>VirtualenvAddEditDialog</h2>
+
+<p>
+    Class implementing a dialog to enter the data of a virtual environment.
+</p>
+<h3>Derived from</h3>
+QDialog, Ui_VirtualenvAddEditDialog
+<h3>Class Attributes</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Class Methods</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+
+<table>
+
+<tr>
+<td><a href="#VirtualenvAddEditDialog.__init__">VirtualenvAddEditDialog</a></td>
+<td>Constructor</td>
+</tr>
+<tr>
+<td><a href="#VirtualenvAddEditDialog.__updateOk">__updateOk</a></td>
+<td>Private slot to update the state of the OK button.</td>
+</tr>
+<tr>
+<td><a href="#VirtualenvAddEditDialog.getData">getData</a></td>
+<td>Public method to retrieve the entered data.</td>
+</tr>
+<tr>
+<td><a href="#VirtualenvAddEditDialog.on_anacondaCheckBox_clicked">on_anacondaCheckBox_clicked</a></td>
+<td>Private slot handling a user click on this check box.</td>
+</tr>
+<tr>
+<td><a href="#VirtualenvAddEditDialog.on_globalCheckBox_toggled">on_globalCheckBox_toggled</a></td>
+<td>Private slot handling a change of the global check box state.</td>
+</tr>
+<tr>
+<td><a href="#VirtualenvAddEditDialog.on_nameEdit_textChanged">on_nameEdit_textChanged</a></td>
+<td>Private slot to handle changes of the logical name.</td>
+</tr>
+<tr>
+<td><a href="#VirtualenvAddEditDialog.on_pythonExecPicker_textChanged">on_pythonExecPicker_textChanged</a></td>
+<td>Private slot to handle changes of the virtual environment interpreter.</td>
+</tr>
+<tr>
+<td><a href="#VirtualenvAddEditDialog.on_remoteCheckBox_toggled">on_remoteCheckBox_toggled</a></td>
+<td>Private slot handling a change of the remote check box state.</td>
+</tr>
+<tr>
+<td><a href="#VirtualenvAddEditDialog.on_targetDirectoryPicker_textChanged">on_targetDirectoryPicker_textChanged</a></td>
+<td>Private slot to handle changes of the virtual environment directory.</td>
+</tr>
+</table>
+<h3>Static Methods</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+
+<a NAME="VirtualenvAddEditDialog.__init__" ID="VirtualenvAddEditDialog.__init__"></a>
+<h4>VirtualenvAddEditDialog (Constructor)</h4>
+<b>VirtualenvAddEditDialog</b>(<i>manager, venvName="", venvDirectory="", venvInterpreter="", isGlobal=False, isConda=False, isRemote=False, execPath="", baseDir="", parent=None</i>)
+
+<p>
+        Constructor
+</p>
+<dl>
+
+<dt><i>manager</i> (VirtualenvManager)</dt>
+<dd>
+reference to the virtual environment manager
+</dd>
+<dt><i>venvName</i> (str)</dt>
+<dd>
+logical name of a virtual environment for editing
+</dd>
+<dt><i>venvDirectory</i> (str)</dt>
+<dd>
+directory of the virtual environment
+</dd>
+<dt><i>venvInterpreter</i> (str)</dt>
+<dd>
+Python interpreter of the virtual environment
+</dd>
+<dt><i>isGlobal</i> (bool)</dt>
+<dd>
+flag indicating a global environment
+</dd>
+<dt><i>isConda</i> (bool)</dt>
+<dd>
+flag indicating an Anaconda virtual environment
+</dd>
+<dt><i>isRemote</i> (bool)</dt>
+<dd>
+flag indicating a remotely accessed environment
+</dd>
+<dt><i>execPath</i> (str)</dt>
+<dd>
+search path string to be prepended to the PATH
+            environment variable
+</dd>
+<dt><i>baseDir</i> (str)</dt>
+<dd>
+base directory for the virtual environments
+</dd>
+<dt><i>parent</i> (QWidget)</dt>
+<dd>
+reference to the parent widget
+</dd>
+</dl>
+<a NAME="VirtualenvAddEditDialog.__updateOk" ID="VirtualenvAddEditDialog.__updateOk"></a>
+<h4>VirtualenvAddEditDialog.__updateOk</h4>
+<b>__updateOk</b>(<i></i>)
+
+<p>
+        Private slot to update the state of the OK button.
+</p>
+<a NAME="VirtualenvAddEditDialog.getData" ID="VirtualenvAddEditDialog.getData"></a>
+<h4>VirtualenvAddEditDialog.getData</h4>
+<b>getData</b>(<i></i>)
+
+<p>
+        Public method to retrieve the entered data.
+</p>
+<dl>
+<dt>Return:</dt>
+<dd>
+tuple containing the logical name, the directory, the
+            interpreter of the virtual environment, a flag indicating a
+            global environment, a flag indicating an Anaconda environment,
+            a flag indicating a remotely accessed environment and a string
+            to be prepended to the PATH environment variable
+</dd>
+</dl>
+<dl>
+<dt>Return Type:</dt>
+<dd>
+tuple of (str, str, str, bool, bool, bool, str)
+</dd>
+</dl>
+<a NAME="VirtualenvAddEditDialog.on_anacondaCheckBox_clicked" ID="VirtualenvAddEditDialog.on_anacondaCheckBox_clicked"></a>
+<h4>VirtualenvAddEditDialog.on_anacondaCheckBox_clicked</h4>
+<b>on_anacondaCheckBox_clicked</b>(<i>checked</i>)
+
+<p>
+        Private slot handling a user click on this check box.
+</p>
+<dl>
+
+<dt><i>checked</i> (bool)</dt>
+<dd>
+state of the check box
+</dd>
+</dl>
+<a NAME="VirtualenvAddEditDialog.on_globalCheckBox_toggled" ID="VirtualenvAddEditDialog.on_globalCheckBox_toggled"></a>
+<h4>VirtualenvAddEditDialog.on_globalCheckBox_toggled</h4>
+<b>on_globalCheckBox_toggled</b>(<i>checked</i>)
+
+<p>
+        Private slot handling a change of the global check box state.
+</p>
+<dl>
+
+<dt><i>checked</i> (bool)</dt>
+<dd>
+state of the check box
+</dd>
+</dl>
+<a NAME="VirtualenvAddEditDialog.on_nameEdit_textChanged" ID="VirtualenvAddEditDialog.on_nameEdit_textChanged"></a>
+<h4>VirtualenvAddEditDialog.on_nameEdit_textChanged</h4>
+<b>on_nameEdit_textChanged</b>(<i>txt</i>)
+
+<p>
+        Private slot to handle changes of the logical name.
+</p>
+<dl>
+
+<dt><i>txt</i> (str)</dt>
+<dd>
+current logical name
+</dd>
+</dl>
+<a NAME="VirtualenvAddEditDialog.on_pythonExecPicker_textChanged" ID="VirtualenvAddEditDialog.on_pythonExecPicker_textChanged"></a>
+<h4>VirtualenvAddEditDialog.on_pythonExecPicker_textChanged</h4>
+<b>on_pythonExecPicker_textChanged</b>(<i>txt</i>)
+
+<p>
+        Private slot to handle changes of the virtual environment interpreter.
+</p>
+<dl>
+
+<dt><i>txt</i> (str)</dt>
+<dd>
+virtual environment interpreter
+</dd>
+</dl>
+<a NAME="VirtualenvAddEditDialog.on_remoteCheckBox_toggled" ID="VirtualenvAddEditDialog.on_remoteCheckBox_toggled"></a>
+<h4>VirtualenvAddEditDialog.on_remoteCheckBox_toggled</h4>
+<b>on_remoteCheckBox_toggled</b>(<i>checked</i>)
+
+<p>
+        Private slot handling a change of the remote check box state.
+</p>
+<dl>
+
+<dt><i>checked</i> (bool)</dt>
+<dd>
+state of the check box
+</dd>
+</dl>
+<a NAME="VirtualenvAddEditDialog.on_targetDirectoryPicker_textChanged" ID="VirtualenvAddEditDialog.on_targetDirectoryPicker_textChanged"></a>
+<h4>VirtualenvAddEditDialog.on_targetDirectoryPicker_textChanged</h4>
+<b>on_targetDirectoryPicker_textChanged</b>(<i>txt</i>)
+
+<p>
+        Private slot to handle changes of the virtual environment directory.
+</p>
+<dl>
+
+<dt><i>txt</i> (str)</dt>
+<dd>
+virtual environment directory
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+</body></html>

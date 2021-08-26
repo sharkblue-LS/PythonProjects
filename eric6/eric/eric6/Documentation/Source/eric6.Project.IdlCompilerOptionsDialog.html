@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html><head>
+<title>eric6.Project.IdlCompilerOptionsDialog</title>
+<meta charset="UTF-8">
+<style>
+body {
+    background: #EDECE6;
+    margin: 0em 1em 10em 1em;
+    color: black;
+}
+
+h1 { color: white; background: #85774A; }
+h2 { color: white; background: #85774A; }
+h3 { color: white; background: #9D936E; }
+h4 { color: white; background: #9D936E; }
+    
+a { color: #BA6D36; }
+
+</style>
+</head>
+<body>
+<a NAME="top" ID="top"></a>
+<h1>eric6.Project.IdlCompilerOptionsDialog</h1>
+
+<p>
+Module implementing a dialog to enter some IDL compiler options.
+</p>
+<h3>Global Attributes</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Classes</h3>
+
+<table>
+
+<tr>
+<td><a href="#IdlCompilerOptionsDialog">IdlCompilerOptionsDialog</a></td>
+<td>Class implementing a dialog to enter some IDL compiler options.</td>
+</tr>
+</table>
+<h3>Functions</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+<hr />
+<hr />
+<a NAME="IdlCompilerOptionsDialog" ID="IdlCompilerOptionsDialog"></a>
+<h2>IdlCompilerOptionsDialog</h2>
+
+<p>
+    Class implementing a dialog to enter some IDL compiler options.
+</p>
+<h3>Derived from</h3>
+QDialog, Ui_IdlCompilerOptionsDialog
+<h3>Class Attributes</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Class Methods</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+
+<table>
+
+<tr>
+<td><a href="#IdlCompilerOptionsDialog.__init__">IdlCompilerOptionsDialog</a></td>
+<td>Constructor</td>
+</tr>
+<tr>
+<td><a href="#IdlCompilerOptionsDialog.__definedNamesContain">__definedNamesContain</a></td>
+<td>Private method to test, if the currently defined 'Defined Names' contain a given one.</td>
+</tr>
+<tr>
+<td><a href="#IdlCompilerOptionsDialog.__generateDefinedNamesList">__generateDefinedNamesList</a></td>
+<td>Private method to prepare the list of 'Defined Names'.</td>
+</tr>
+<tr>
+<td><a href="#IdlCompilerOptionsDialog.__generateIncludeDirectoriesList">__generateIncludeDirectoriesList</a></td>
+<td>Private method to prepare the list of 'Include Directories'.</td>
+</tr>
+<tr>
+<td><a href="#IdlCompilerOptionsDialog.__generateUndefinedNamesList">__generateUndefinedNamesList</a></td>
+<td>Private method to prepare the list of 'Undefined Names'.</td>
+</tr>
+<tr>
+<td><a href="#IdlCompilerOptionsDialog.__includeDirectoriesContain">__includeDirectoriesContain</a></td>
+<td>Private method to test, if the currently defined 'Include Directories' contain a given one.</td>
+</tr>
+<tr>
+<td><a href="#IdlCompilerOptionsDialog.__populateDefineNamesList">__populateDefineNamesList</a></td>
+<td>Private method to populate the list of defined names.</td>
+</tr>
+<tr>
+<td><a href="#IdlCompilerOptionsDialog.__populateIncludeDirectoriesList">__populateIncludeDirectoriesList</a></td>
+<td>Private method to populate the 'Include Directories' list.</td>
+</tr>
+<tr>
+<td><a href="#IdlCompilerOptionsDialog.__undefinedNamesContain">__undefinedNamesContain</a></td>
+<td>Private method to test, if the currently defined 'Undefined Names' contain a given one.</td>
+</tr>
+<tr>
+<td><a href="#IdlCompilerOptionsDialog.__updateDefineNameButtons">__updateDefineNameButtons</a></td>
+<td>Private method to set the state of the 'Define Name' buttons.</td>
+</tr>
+<tr>
+<td><a href="#IdlCompilerOptionsDialog.__updateIncludeDirectoryButtons">__updateIncludeDirectoryButtons</a></td>
+<td>Private method to set the state of the 'Include Directory' buttons.</td>
+</tr>
+<tr>
+<td><a href="#IdlCompilerOptionsDialog.__updateUndefineNameButtons">__updateUndefineNameButtons</a></td>
+<td>Private method to set the state of the 'Undefine Name' buttons.</td>
+</tr>
+<tr>
+<td><a href="#IdlCompilerOptionsDialog.getData">getData</a></td>
+<td>Public method to return the data entered by the user.</td>
+</tr>
+<tr>
+<td><a href="#IdlCompilerOptionsDialog.on_dnAddButton_clicked">on_dnAddButton_clicked</a></td>
+<td>Private slot to add a 'Define Name' entry.</td>
+</tr>
+<tr>
+<td><a href="#IdlCompilerOptionsDialog.on_dnDeleteButton_clicked">on_dnDeleteButton_clicked</a></td>
+<td>Private slot to delete the selected 'Define Name' entry.</td>
+</tr>
+<tr>
+<td><a href="#IdlCompilerOptionsDialog.on_dnEditButton_clicked">on_dnEditButton_clicked</a></td>
+<td>Private slot to edit the selected 'Define Name' entry.</td>
+</tr>
+<tr>
+<td><a href="#IdlCompilerOptionsDialog.on_dnList_itemSelectionChanged">on_dnList_itemSelectionChanged</a></td>
+<td>Private slot handling the selection of a 'Define Name' entry.</td>
+</tr>
+<tr>
+<td><a href="#IdlCompilerOptionsDialog.on_idAddButton_clicked">on_idAddButton_clicked</a></td>
+<td>Private slot to add an 'Include Directory'.</td>
+</tr>
+<tr>
+<td><a href="#IdlCompilerOptionsDialog.on_idDeleteButton_clicked">on_idDeleteButton_clicked</a></td>
+<td>Private slot to delete the selected 'Include Directory' entry.</td>
+</tr>
+<tr>
+<td><a href="#IdlCompilerOptionsDialog.on_idEditButton_clicked">on_idEditButton_clicked</a></td>
+<td>Private slot to edit the selected 'Include Directory' entry.</td>
+</tr>
+<tr>
+<td><a href="#IdlCompilerOptionsDialog.on_idList_itemSelectionChanged">on_idList_itemSelectionChanged</a></td>
+<td>Private slot handling the selection of an 'Include Directory' entry.</td>
+</tr>
+<tr>
+<td><a href="#IdlCompilerOptionsDialog.on_unAddButton_clicked">on_unAddButton_clicked</a></td>
+<td>Private slot to add a 'Undefine Name' entry.</td>
+</tr>
+<tr>
+<td><a href="#IdlCompilerOptionsDialog.on_unDeleteButton_clicked">on_unDeleteButton_clicked</a></td>
+<td>Private slot to delete the selected 'Undefine Name' entry.</td>
+</tr>
+<tr>
+<td><a href="#IdlCompilerOptionsDialog.on_unEditButton_clicked">on_unEditButton_clicked</a></td>
+<td>Private slot to edit the selected 'Undefine Name' entry.</td>
+</tr>
+<tr>
+<td><a href="#IdlCompilerOptionsDialog.on_unList_itemSelectionChanged">on_unList_itemSelectionChanged</a></td>
+<td>Private slot handling the selection of a 'Undefine Name' entry.</td>
+</tr>
+</table>
+<h3>Static Methods</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+
+<a NAME="IdlCompilerOptionsDialog.__init__" ID="IdlCompilerOptionsDialog.__init__"></a>
+<h4>IdlCompilerOptionsDialog (Constructor)</h4>
+<b>IdlCompilerOptionsDialog</b>(<i>includeDirectories, definedNames, undefinedNames, project=None, parent=None</i>)
+
+<p>
+        Constructor
+</p>
+<dl>
+
+<dt><i>includeDirectories</i> (list of str)</dt>
+<dd>
+list of include directories
+</dd>
+<dt><i>definedNames</i> (list of str)</dt>
+<dd>
+list of defined variables with name and value
+            separated by '='
+</dd>
+<dt><i>undefinedNames</i> (list of str)</dt>
+<dd>
+list of undefined names
+</dd>
+<dt><i>project</i> (Project)</dt>
+<dd>
+reference to the project object
+</dd>
+<dt><i>parent</i> (QWidget)</dt>
+<dd>
+reference to the parent widget
+</dd>
+</dl>
+<a NAME="IdlCompilerOptionsDialog.__definedNamesContain" ID="IdlCompilerOptionsDialog.__definedNamesContain"></a>
+<h4>IdlCompilerOptionsDialog.__definedNamesContain</h4>
+<b>__definedNamesContain</b>(<i>name</i>)
+
+<p>
+        Private method to test, if the currently defined 'Defined Names'
+        contain a given one.
+</p>
+<dl>
+
+<dt><i>name</i> (str)</dt>
+<dd>
+variable name to be tested
+</dd>
+</dl>
+<dl>
+<dt>Return:</dt>
+<dd>
+flag indicating that the given name is already included
+</dd>
+</dl>
+<dl>
+<dt>Return Type:</dt>
+<dd>
+bool
+</dd>
+</dl>
+<a NAME="IdlCompilerOptionsDialog.__generateDefinedNamesList" ID="IdlCompilerOptionsDialog.__generateDefinedNamesList"></a>
+<h4>IdlCompilerOptionsDialog.__generateDefinedNamesList</h4>
+<b>__generateDefinedNamesList</b>(<i></i>)
+
+<p>
+        Private method to prepare the list of 'Defined Names'.
+</p>
+<dl>
+<dt>Return:</dt>
+<dd>
+list of 'Defined Names'
+</dd>
+</dl>
+<dl>
+<dt>Return Type:</dt>
+<dd>
+list of str
+</dd>
+</dl>
+<a NAME="IdlCompilerOptionsDialog.__generateIncludeDirectoriesList" ID="IdlCompilerOptionsDialog.__generateIncludeDirectoriesList"></a>
+<h4>IdlCompilerOptionsDialog.__generateIncludeDirectoriesList</h4>
+<b>__generateIncludeDirectoriesList</b>(<i></i>)
+
+<p>
+        Private method to prepare the list of 'Include Directories'.
+</p>
+<dl>
+<dt>Return:</dt>
+<dd>
+list of 'Include Directories'
+</dd>
+</dl>
+<dl>
+<dt>Return Type:</dt>
+<dd>
+list of str
+</dd>
+</dl>
+<a NAME="IdlCompilerOptionsDialog.__generateUndefinedNamesList" ID="IdlCompilerOptionsDialog.__generateUndefinedNamesList"></a>
+<h4>IdlCompilerOptionsDialog.__generateUndefinedNamesList</h4>
+<b>__generateUndefinedNamesList</b>(<i></i>)
+
+<p>
+        Private method to prepare the list of 'Undefined Names'.
+</p>
+<dl>
+<dt>Return:</dt>
+<dd>
+list of 'Undefined Names'
+</dd>
+</dl>
+<dl>
+<dt>Return Type:</dt>
+<dd>
+list of str
+</dd>
+</dl>
+<a NAME="IdlCompilerOptionsDialog.__includeDirectoriesContain" ID="IdlCompilerOptionsDialog.__includeDirectoriesContain"></a>
+<h4>IdlCompilerOptionsDialog.__includeDirectoriesContain</h4>
+<b>__includeDirectoriesContain</b>(<i>directory</i>)
+
+<p>
+        Private method to test, if the currently defined 'Include Directories'
+        contain a given one.
+</p>
+<dl>
+
+<dt><i>directory</i> (str)</dt>
+<dd>
+directory name to be tested
+</dd>
+</dl>
+<dl>
+<dt>Return:</dt>
+<dd>
+flag indicating that the given directory is already included
+</dd>
+</dl>
+<dl>
+<dt>Return Type:</dt>
+<dd>
+bool
+</dd>
+</dl>
+<a NAME="IdlCompilerOptionsDialog.__populateDefineNamesList" ID="IdlCompilerOptionsDialog.__populateDefineNamesList"></a>
+<h4>IdlCompilerOptionsDialog.__populateDefineNamesList</h4>
+<b>__populateDefineNamesList</b>(<i>definedNames</i>)
+
+<p>
+        Private method to populate the list of defined names.
+</p>
+<dl>
+
+<dt><i>definedNames</i> (list of str)</dt>
+<dd>
+list of defined variables with name and value
+            separated by '='
+</dd>
+</dl>
+<a NAME="IdlCompilerOptionsDialog.__populateIncludeDirectoriesList" ID="IdlCompilerOptionsDialog.__populateIncludeDirectoriesList"></a>
+<h4>IdlCompilerOptionsDialog.__populateIncludeDirectoriesList</h4>
+<b>__populateIncludeDirectoriesList</b>(<i>includeDirectories</i>)
+
+<p>
+        Private method to populate the 'Include Directories' list.
+</p>
+<dl>
+
+<dt><i>includeDirectories</i> (list of str)</dt>
+<dd>
+list of include directories
+</dd>
+</dl>
+<a NAME="IdlCompilerOptionsDialog.__undefinedNamesContain" ID="IdlCompilerOptionsDialog.__undefinedNamesContain"></a>
+<h4>IdlCompilerOptionsDialog.__undefinedNamesContain</h4>
+<b>__undefinedNamesContain</b>(<i>name</i>)
+
+<p>
+        Private method to test, if the currently defined 'Undefined Names'
+        contain a given one.
+</p>
+<dl>
+
+<dt><i>name</i> (str)</dt>
+<dd>
+variable name to be tested
+</dd>
+</dl>
+<dl>
+<dt>Return:</dt>
+<dd>
+flag indicating that the given name is already included
+</dd>
+</dl>
+<dl>
+<dt>Return Type:</dt>
+<dd>
+bool
+</dd>
+</dl>
+<a NAME="IdlCompilerOptionsDialog.__updateDefineNameButtons" ID="IdlCompilerOptionsDialog.__updateDefineNameButtons"></a>
+<h4>IdlCompilerOptionsDialog.__updateDefineNameButtons</h4>
+<b>__updateDefineNameButtons</b>(<i></i>)
+
+<p>
+        Private method to set the state of the 'Define Name' buttons.
+</p>
+<a NAME="IdlCompilerOptionsDialog.__updateIncludeDirectoryButtons" ID="IdlCompilerOptionsDialog.__updateIncludeDirectoryButtons"></a>
+<h4>IdlCompilerOptionsDialog.__updateIncludeDirectoryButtons</h4>
+<b>__updateIncludeDirectoryButtons</b>(<i></i>)
+
+<p>
+        Private method to set the state of the 'Include Directory' buttons.
+</p>
+<a NAME="IdlCompilerOptionsDialog.__updateUndefineNameButtons" ID="IdlCompilerOptionsDialog.__updateUndefineNameButtons"></a>
+<h4>IdlCompilerOptionsDialog.__updateUndefineNameButtons</h4>
+<b>__updateUndefineNameButtons</b>(<i></i>)
+
+<p>
+        Private method to set the state of the 'Undefine Name' buttons.
+</p>
+<a NAME="IdlCompilerOptionsDialog.getData" ID="IdlCompilerOptionsDialog.getData"></a>
+<h4>IdlCompilerOptionsDialog.getData</h4>
+<b>getData</b>(<i></i>)
+
+<p>
+        Public method to return the data entered by the user.
+</p>
+<dl>
+<dt>Return:</dt>
+<dd>
+tuple containing the list of include directories, list of
+            defined names and list of undefined names
+</dd>
+</dl>
+<dl>
+<dt>Return Type:</dt>
+<dd>
+tuple of (list of str, list of str, list of str)
+</dd>
+</dl>
+<a NAME="IdlCompilerOptionsDialog.on_dnAddButton_clicked" ID="IdlCompilerOptionsDialog.on_dnAddButton_clicked"></a>
+<h4>IdlCompilerOptionsDialog.on_dnAddButton_clicked</h4>
+<b>on_dnAddButton_clicked</b>(<i></i>)
+
+<p>
+        Private slot to add a 'Define Name' entry.
+</p>
+<a NAME="IdlCompilerOptionsDialog.on_dnDeleteButton_clicked" ID="IdlCompilerOptionsDialog.on_dnDeleteButton_clicked"></a>
+<h4>IdlCompilerOptionsDialog.on_dnDeleteButton_clicked</h4>
+<b>on_dnDeleteButton_clicked</b>(<i></i>)
+
+<p>
+        Private slot to delete the selected 'Define Name' entry.
+</p>
+<a NAME="IdlCompilerOptionsDialog.on_dnEditButton_clicked" ID="IdlCompilerOptionsDialog.on_dnEditButton_clicked"></a>
+<h4>IdlCompilerOptionsDialog.on_dnEditButton_clicked</h4>
+<b>on_dnEditButton_clicked</b>(<i></i>)
+
+<p>
+        Private slot to edit the selected 'Define Name' entry.
+</p>
+<a NAME="IdlCompilerOptionsDialog.on_dnList_itemSelectionChanged" ID="IdlCompilerOptionsDialog.on_dnList_itemSelectionChanged"></a>
+<h4>IdlCompilerOptionsDialog.on_dnList_itemSelectionChanged</h4>
+<b>on_dnList_itemSelectionChanged</b>(<i></i>)
+
+<p>
+        Private slot handling the selection of a 'Define Name' entry.
+</p>
+<a NAME="IdlCompilerOptionsDialog.on_idAddButton_clicked" ID="IdlCompilerOptionsDialog.on_idAddButton_clicked"></a>
+<h4>IdlCompilerOptionsDialog.on_idAddButton_clicked</h4>
+<b>on_idAddButton_clicked</b>(<i></i>)
+
+<p>
+        Private slot to add an 'Include Directory'.
+</p>
+<a NAME="IdlCompilerOptionsDialog.on_idDeleteButton_clicked" ID="IdlCompilerOptionsDialog.on_idDeleteButton_clicked"></a>
+<h4>IdlCompilerOptionsDialog.on_idDeleteButton_clicked</h4>
+<b>on_idDeleteButton_clicked</b>(<i></i>)
+
+<p>
+        Private slot to delete the selected 'Include Directory' entry.
+</p>
+<a NAME="IdlCompilerOptionsDialog.on_idEditButton_clicked" ID="IdlCompilerOptionsDialog.on_idEditButton_clicked"></a>
+<h4>IdlCompilerOptionsDialog.on_idEditButton_clicked</h4>
+<b>on_idEditButton_clicked</b>(<i></i>)
+
+<p>
+        Private slot to edit the selected 'Include Directory' entry.
+</p>
+<a NAME="IdlCompilerOptionsDialog.on_idList_itemSelectionChanged" ID="IdlCompilerOptionsDialog.on_idList_itemSelectionChanged"></a>
+<h4>IdlCompilerOptionsDialog.on_idList_itemSelectionChanged</h4>
+<b>on_idList_itemSelectionChanged</b>(<i></i>)
+
+<p>
+        Private slot handling the selection of an 'Include Directory' entry.
+</p>
+<a NAME="IdlCompilerOptionsDialog.on_unAddButton_clicked" ID="IdlCompilerOptionsDialog.on_unAddButton_clicked"></a>
+<h4>IdlCompilerOptionsDialog.on_unAddButton_clicked</h4>
+<b>on_unAddButton_clicked</b>(<i></i>)
+
+<p>
+        Private slot to add a 'Undefine Name' entry.
+</p>
+<a NAME="IdlCompilerOptionsDialog.on_unDeleteButton_clicked" ID="IdlCompilerOptionsDialog.on_unDeleteButton_clicked"></a>
+<h4>IdlCompilerOptionsDialog.on_unDeleteButton_clicked</h4>
+<b>on_unDeleteButton_clicked</b>(<i></i>)
+
+<p>
+        Private slot to delete the selected 'Undefine Name' entry.
+</p>
+<a NAME="IdlCompilerOptionsDialog.on_unEditButton_clicked" ID="IdlCompilerOptionsDialog.on_unEditButton_clicked"></a>
+<h4>IdlCompilerOptionsDialog.on_unEditButton_clicked</h4>
+<b>on_unEditButton_clicked</b>(<i></i>)
+
+<p>
+        Private slot to edit the selected 'Undefine Name' entry.
+</p>
+<a NAME="IdlCompilerOptionsDialog.on_unList_itemSelectionChanged" ID="IdlCompilerOptionsDialog.on_unList_itemSelectionChanged"></a>
+<h4>IdlCompilerOptionsDialog.on_unList_itemSelectionChanged</h4>
+<b>on_unList_itemSelectionChanged</b>(<i></i>)
+
+<p>
+        Private slot handling the selection of a 'Undefine Name' entry.
+</p>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+</body></html>

@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html><head>
+<title>eric6.E5Gui.E5PathPickerDialog</title>
+<meta charset="UTF-8">
+<style>
+body {
+    background: #EDECE6;
+    margin: 0em 1em 10em 1em;
+    color: black;
+}
+
+h1 { color: white; background: #85774A; }
+h2 { color: white; background: #85774A; }
+h3 { color: white; background: #9D936E; }
+h4 { color: white; background: #9D936E; }
+    
+a { color: #BA6D36; }
+
+</style>
+</head>
+<body>
+<a NAME="top" ID="top"></a>
+<h1>eric6.E5Gui.E5PathPickerDialog</h1>
+
+<p>
+Module implementing a dialog to enter a file system path using a file picker.
+</p>
+<h3>Global Attributes</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Classes</h3>
+
+<table>
+
+<tr>
+<td><a href="#E5PathPickerDialog">E5PathPickerDialog</a></td>
+<td>Class implementing a dialog to enter a file system path using a file picker.</td>
+</tr>
+</table>
+<h3>Functions</h3>
+
+<table>
+
+<tr>
+<td><a href="#getPath">getPath</a></td>
+<td>Function to get a file or directory path from the user.</td>
+</tr>
+</table>
+<hr />
+<hr />
+<a NAME="E5PathPickerDialog" ID="E5PathPickerDialog"></a>
+<h2>E5PathPickerDialog</h2>
+
+<p>
+    Class implementing a dialog to enter a file system path using a file
+    picker.
+</p>
+<h3>Derived from</h3>
+QDialog
+<h3>Class Attributes</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Class Methods</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+
+<table>
+
+<tr>
+<td><a href="#E5PathPickerDialog.__init__">E5PathPickerDialog</a></td>
+<td>Constructor</td>
+</tr>
+<tr>
+<td><a href="#E5PathPickerDialog.getPath">getPath</a></td>
+<td>Public method to get the current path.</td>
+</tr>
+<tr>
+<td><a href="#E5PathPickerDialog.setDefaultDirectory">setDefaultDirectory</a></td>
+<td>Public method to set the default directory of the path picker.</td>
+</tr>
+<tr>
+<td><a href="#E5PathPickerDialog.setLabelText">setLabelText</a></td>
+<td>Public method to set the label text.</td>
+</tr>
+<tr>
+<td><a href="#E5PathPickerDialog.setPickerFilters">setPickerFilters</a></td>
+<td>Public method to set the filters of the path picker.</td>
+</tr>
+<tr>
+<td><a href="#E5PathPickerDialog.setPickerMode">setPickerMode</a></td>
+<td>Public method to set the mode of the path picker.</td>
+</tr>
+<tr>
+<td><a href="#E5PathPickerDialog.setPickerPath">setPickerPath</a></td>
+<td>Public method to set the path of the path picker.</td>
+</tr>
+<tr>
+<td><a href="#E5PathPickerDialog.setTitle">setTitle</a></td>
+<td>Public method to set the window title.</td>
+</tr>
+</table>
+<h3>Static Methods</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+
+<a NAME="E5PathPickerDialog.__init__" ID="E5PathPickerDialog.__init__"></a>
+<h4>E5PathPickerDialog (Constructor)</h4>
+<b>E5PathPickerDialog</b>(<i>parent=None</i>)
+
+<p>
+        Constructor
+</p>
+<dl>
+
+<dt><i>parent</i> (QWidget)</dt>
+<dd>
+reference to the parent widget
+</dd>
+</dl>
+<a NAME="E5PathPickerDialog.getPath" ID="E5PathPickerDialog.getPath"></a>
+<h4>E5PathPickerDialog.getPath</h4>
+<b>getPath</b>(<i></i>)
+
+<p>
+        Public method to get the current path.
+</p>
+<dl>
+<dt>Return:</dt>
+<dd>
+current path
+</dd>
+</dl>
+<dl>
+<dt>Return Type:</dt>
+<dd>
+str
+</dd>
+</dl>
+<a NAME="E5PathPickerDialog.setDefaultDirectory" ID="E5PathPickerDialog.setDefaultDirectory"></a>
+<h4>E5PathPickerDialog.setDefaultDirectory</h4>
+<b>setDefaultDirectory</b>(<i>directory</i>)
+
+<p>
+        Public method to set the default directory of the path picker.
+</p>
+<dl>
+
+<dt><i>directory</i> (str)</dt>
+<dd>
+default directory
+</dd>
+</dl>
+<a NAME="E5PathPickerDialog.setLabelText" ID="E5PathPickerDialog.setLabelText"></a>
+<h4>E5PathPickerDialog.setLabelText</h4>
+<b>setLabelText</b>(<i>text</i>)
+
+<p>
+        Public method to set the label text.
+</p>
+<dl>
+
+<dt><i>text</i> (str)</dt>
+<dd>
+label text
+</dd>
+</dl>
+<a NAME="E5PathPickerDialog.setPickerFilters" ID="E5PathPickerDialog.setPickerFilters"></a>
+<h4>E5PathPickerDialog.setPickerFilters</h4>
+<b>setPickerFilters</b>(<i>filters</i>)
+
+<p>
+        Public method to set the filters of the path picker.
+</p>
+<p>
+        Note: Multiple filters must be separated by ';;'.
+</p>
+<dl>
+
+<dt><i>filters</i> (str)</dt>
+<dd>
+string containing the file filters
+</dd>
+</dl>
+<a NAME="E5PathPickerDialog.setPickerMode" ID="E5PathPickerDialog.setPickerMode"></a>
+<h4>E5PathPickerDialog.setPickerMode</h4>
+<b>setPickerMode</b>(<i>mode</i>)
+
+<p>
+        Public method to set the mode of the path picker.
+</p>
+<dl>
+
+<dt><i>mode</i> (E5PathPickerModes)</dt>
+<dd>
+picker mode
+</dd>
+</dl>
+<a NAME="E5PathPickerDialog.setPickerPath" ID="E5PathPickerDialog.setPickerPath"></a>
+<h4>E5PathPickerDialog.setPickerPath</h4>
+<b>setPickerPath</b>(<i>path</i>)
+
+<p>
+        Public method to set the path of the path picker.
+</p>
+<dl>
+
+<dt><i>path</i> (str)</dt>
+<dd>
+path to be set
+</dd>
+</dl>
+<a NAME="E5PathPickerDialog.setTitle" ID="E5PathPickerDialog.setTitle"></a>
+<h4>E5PathPickerDialog.setTitle</h4>
+<b>setTitle</b>(<i>title</i>)
+
+<p>
+        Public method to set the window title.
+</p>
+<dl>
+
+<dt><i>title</i> (str)</dt>
+<dd>
+window title
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+<hr />
+<a NAME="getPath" ID="getPath"></a>
+<h2>getPath</h2>
+<b>getPath</b>(<i>parent, title, label, mode=E5PathPickerModes.OpenFileMode, path="", defaultDirectory="", filters=None</i>)
+
+<p>
+    Function to get a file or directory path from the user.
+</p>
+<dl>
+
+<dt><i>parent</i> (QWidget)</dt>
+<dd>
+reference to the parent widget
+</dd>
+<dt><i>title</i> (str)</dt>
+<dd>
+title of the dialog
+</dd>
+<dt><i>label</i> (str)</dt>
+<dd>
+text to be shown above the path picker
+</dd>
+<dt><i>mode</i> (E5PathPickerModes)</dt>
+<dd>
+mode of the path picker
+</dd>
+<dt><i>path</i> (str)</dt>
+<dd>
+initial path to be shown
+</dd>
+<dt><i>defaultDirectory</i> (str)</dt>
+<dd>
+default directory of the path picker selection
+        dialog
+</dd>
+<dt><i>filters</i> (list of str)</dt>
+<dd>
+list of file filters
+</dd>
+</dl>
+<dl>
+<dt>Return:</dt>
+<dd>
+tuple containing the entered path and a flag indicating that the
+        user pressed the OK button
+</dd>
+</dl>
+<dl>
+<dt>Return Type:</dt>
+<dd>
+tuple of (str, bool)
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+</body></html>

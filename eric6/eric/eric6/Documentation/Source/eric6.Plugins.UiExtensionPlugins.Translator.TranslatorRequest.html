@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html><head>
+<title>eric6.Plugins.UiExtensionPlugins.Translator.TranslatorRequest</title>
+<meta charset="UTF-8">
+<style>
+body {
+    background: #EDECE6;
+    margin: 0em 1em 10em 1em;
+    color: black;
+}
+
+h1 { color: white; background: #85774A; }
+h2 { color: white; background: #85774A; }
+h3 { color: white; background: #9D936E; }
+h4 { color: white; background: #9D936E; }
+    
+a { color: #BA6D36; }
+
+</style>
+</head>
+<body>
+<a NAME="top" ID="top"></a>
+<h1>eric6.Plugins.UiExtensionPlugins.Translator.TranslatorRequest</h1>
+
+<p>
+Module implementing a synchronous network request handler for translation
+requests.
+</p>
+<h3>Global Attributes</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Classes</h3>
+
+<table>
+
+<tr>
+<td><a href="#TranslatorRequest">TranslatorRequest</a></td>
+<td>Class implementing a synchronous network request handler for translation requests.</td>
+</tr>
+</table>
+<h3>Functions</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+<hr />
+<hr />
+<a NAME="TranslatorRequest" ID="TranslatorRequest"></a>
+<h2>TranslatorRequest</h2>
+
+<p>
+    Class implementing a synchronous network request handler for translation
+    requests.
+</p>
+<h3>Derived from</h3>
+QObject
+<h3>Class Attributes</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Class Methods</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+
+<table>
+
+<tr>
+<td><a href="#TranslatorRequest.__init__">TranslatorRequest</a></td>
+<td>Constructor</td>
+</tr>
+<tr>
+<td><a href="#TranslatorRequest.get">get</a></td>
+<td>Public method to issue a GET request.</td>
+</tr>
+<tr>
+<td><a href="#TranslatorRequest.post">post</a></td>
+<td>Public method to issue a POST request.</td>
+</tr>
+</table>
+<h3>Static Methods</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+
+<a NAME="TranslatorRequest.__init__" ID="TranslatorRequest.__init__"></a>
+<h4>TranslatorRequest (Constructor)</h4>
+<b>TranslatorRequest</b>(<i>parent=None</i>)
+
+<p>
+        Constructor
+</p>
+<dl>
+
+<dt><i>parent</i></dt>
+<dd>
+reference to the parent object (QObject)
+</dd>
+</dl>
+<a NAME="TranslatorRequest.get" ID="TranslatorRequest.get"></a>
+<h4>TranslatorRequest.get</h4>
+<b>get</b>(<i>requestUrl, extraHeaders=None</i>)
+
+<p>
+        Public method to issue a GET request.
+</p>
+<dl>
+
+<dt><i>requestUrl</i></dt>
+<dd>
+URL of the request (QUrl)
+</dd>
+<dt><i>extraHeaders</i></dt>
+<dd>
+list of tuples of additional headers giving
+            header name (string) and header value (string)
+</dd>
+</dl>
+<dl>
+<dt>Return:</dt>
+<dd>
+server response (QByteArray) or error message (string)
+</dd>
+</dl>
+<a NAME="TranslatorRequest.post" ID="TranslatorRequest.post"></a>
+<h4>TranslatorRequest.post</h4>
+<b>post</b>(<i>requestUrl, requestData, dataType="form", extraHeaders=None</i>)
+
+<p>
+        Public method to issue a POST request.
+</p>
+<dl>
+
+<dt><i>requestUrl</i></dt>
+<dd>
+URL of the request (QUrl)
+</dd>
+<dt><i>requestData</i></dt>
+<dd>
+data of the request (QByteArray)
+</dd>
+<dt><i>dataType</i></dt>
+<dd>
+type of the request data (string)
+</dd>
+<dt><i>extraHeaders</i></dt>
+<dd>
+list of tuples of additional headers giving
+            header name (string) and header value (string)
+</dd>
+</dl>
+<dl>
+<dt>Return:</dt>
+<dd>
+tuple of server response (string) and flag indicating
+            success (boolean)
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+</body></html>

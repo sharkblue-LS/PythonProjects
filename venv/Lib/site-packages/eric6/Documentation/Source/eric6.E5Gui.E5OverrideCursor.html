@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html><head>
+<title>eric6.E5Gui.E5OverrideCursor</title>
+<meta charset="UTF-8">
+<style>
+body {
+    background: #EDECE6;
+    margin: 0em 1em 10em 1em;
+    color: black;
+}
+
+h1 { color: white; background: #85774A; }
+h2 { color: white; background: #85774A; }
+h3 { color: white; background: #9D936E; }
+h4 { color: white; background: #9D936E; }
+    
+a { color: #BA6D36; }
+
+</style>
+</head>
+<body>
+<a NAME="top" ID="top"></a>
+<h1>eric6.E5Gui.E5OverrideCursor</h1>
+
+<p>
+Module implementing a context manager class for an override cursor and a
+QProcess class controlling an override cursor.
+</p>
+<h3>Global Attributes</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Classes</h3>
+
+<table>
+
+<tr>
+<td><a href="#E5OverrideCursor">E5OverrideCursor</a></td>
+<td>Class implementing a context manager class for an override cursor.</td>
+</tr>
+<tr>
+<td><a href="#E5OverrideCursorProcess">E5OverrideCursorProcess</a></td>
+<td>Class implementing a QProcess subclass controlling an override cursor.</td>
+</tr>
+<tr>
+<td><a href="#E5OverridenCursor">E5OverridenCursor</a></td>
+<td>Class implementing a context manager class for an overriden cursor.</td>
+</tr>
+</table>
+<h3>Functions</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+<hr />
+<hr />
+<a NAME="E5OverrideCursor" ID="E5OverrideCursor"></a>
+<h2>E5OverrideCursor</h2>
+
+<p>
+    Class implementing a context manager class for an override cursor.
+</p>
+<h3>Derived from</h3>
+contextlib.AbstractContextManager
+<h3>Class Attributes</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Class Methods</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+
+<table>
+
+<tr>
+<td><a href="#E5OverrideCursor.__init__">E5OverrideCursor</a></td>
+<td>Constructor</td>
+</tr>
+<tr>
+<td><a href="#E5OverrideCursor.__enter__">__enter__</a></td>
+<td>Special method called when entering the runtime ccontext.</td>
+</tr>
+<tr>
+<td><a href="#E5OverrideCursor.__exit__">__exit__</a></td>
+<td>Special method called when exiting the runtime ccontext.</td>
+</tr>
+</table>
+<h3>Static Methods</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+
+<a NAME="E5OverrideCursor.__init__" ID="E5OverrideCursor.__init__"></a>
+<h4>E5OverrideCursor (Constructor)</h4>
+<b>E5OverrideCursor</b>(<i>cursorShape=Qt.CursorShape.WaitCursor</i>)
+
+<p>
+        Constructor
+</p>
+<dl>
+
+<dt><i>cursorShape</i> (Qt.CursorShape)</dt>
+<dd>
+shape of the override cursor
+</dd>
+</dl>
+<a NAME="E5OverrideCursor.__enter__" ID="E5OverrideCursor.__enter__"></a>
+<h4>E5OverrideCursor.__enter__</h4>
+<b>__enter__</b>(<i></i>)
+
+<p>
+        Special method called when entering the runtime ccontext.
+</p>
+<dl>
+<dt>Return:</dt>
+<dd>
+reference to the context manager object
+</dd>
+</dl>
+<dl>
+<dt>Return Type:</dt>
+<dd>
+E5OverrideCursor
+</dd>
+</dl>
+<a NAME="E5OverrideCursor.__exit__" ID="E5OverrideCursor.__exit__"></a>
+<h4>E5OverrideCursor.__exit__</h4>
+<b>__exit__</b>(<i>exc_type, exc_value, traceback</i>)
+
+<p>
+        Special method called when exiting the runtime ccontext.
+</p>
+<dl>
+
+<dt><i>exc_type</i></dt>
+<dd>
+type of an exception raised in the runtime context
+</dd>
+<dt><i>exc_value</i></dt>
+<dd>
+value of an exception raised in the runtime context
+</dd>
+<dt><i>traceback</i></dt>
+<dd>
+traceback of an exception raised in the runtime
+            context
+</dd>
+</dl>
+<dl>
+<dt>Return:</dt>
+<dd>
+always returns None to not suppress any exception
+</dd>
+</dl>
+<dl>
+<dt>Return Type:</dt>
+<dd>
+None
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+<hr />
+<a NAME="E5OverrideCursorProcess" ID="E5OverrideCursorProcess"></a>
+<h2>E5OverrideCursorProcess</h2>
+
+<p>
+    Class implementing a QProcess subclass controlling an override cursor.
+</p>
+<h3>Derived from</h3>
+QProcess
+<h3>Class Attributes</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Class Methods</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+
+<table>
+
+<tr>
+<td><a href="#E5OverrideCursorProcess.__init__">E5OverrideCursorProcess</a></td>
+<td>Constructor</td>
+</tr>
+<tr>
+<td><a href="#E5OverrideCursorProcess.__processFinished">__processFinished</a></td>
+<td>Private slot resetting the cursor when the process finished.</td>
+</tr>
+<tr>
+<td><a href="#E5OverrideCursorProcess.__processStarted">__processStarted</a></td>
+<td>Private slot setting the cursor after the process has started.</td>
+</tr>
+</table>
+<h3>Static Methods</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+
+<a NAME="E5OverrideCursorProcess.__init__" ID="E5OverrideCursorProcess.__init__"></a>
+<h4>E5OverrideCursorProcess (Constructor)</h4>
+<b>E5OverrideCursorProcess</b>(<i>parent=None, cursorShape=Qt.CursorShape.WaitCursor</i>)
+
+<p>
+        Constructor
+</p>
+<dl>
+
+<dt><i>parent</i> (QObject)</dt>
+<dd>
+reference to the parent object
+</dd>
+<dt><i>cursorShape</i> (Qt.CursorShape)</dt>
+<dd>
+shape of the override cursor
+</dd>
+</dl>
+<a NAME="E5OverrideCursorProcess.__processFinished" ID="E5OverrideCursorProcess.__processFinished"></a>
+<h4>E5OverrideCursorProcess.__processFinished</h4>
+<b>__processFinished</b>(<i></i>)
+
+<p>
+        Private slot resetting the cursor when the process finished.
+</p>
+<a NAME="E5OverrideCursorProcess.__processStarted" ID="E5OverrideCursorProcess.__processStarted"></a>
+<h4>E5OverrideCursorProcess.__processStarted</h4>
+<b>__processStarted</b>(<i></i>)
+
+<p>
+        Private slot setting the cursor after the process has started.
+</p>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+<hr />
+<a NAME="E5OverridenCursor" ID="E5OverridenCursor"></a>
+<h2>E5OverridenCursor</h2>
+
+<p>
+    Class implementing a context manager class for an overriden cursor.
+</p>
+<p>
+    The cursor is reset upon entering the runtime context and restored
+    upon exiting it.
+</p>
+<h3>Derived from</h3>
+contextlib.AbstractContextManager
+<h3>Class Attributes</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Class Methods</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+
+<table>
+
+<tr>
+<td><a href="#E5OverridenCursor.__init__">E5OverridenCursor</a></td>
+<td>Constructor</td>
+</tr>
+<tr>
+<td><a href="#E5OverridenCursor.__enter__">__enter__</a></td>
+<td>Special method called when entering the runtime ccontext.</td>
+</tr>
+<tr>
+<td><a href="#E5OverridenCursor.__exit__">__exit__</a></td>
+<td>Special method called when exiting the runtime ccontext.</td>
+</tr>
+</table>
+<h3>Static Methods</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+
+<a NAME="E5OverridenCursor.__init__" ID="E5OverridenCursor.__init__"></a>
+<h4>E5OverridenCursor (Constructor)</h4>
+<b>E5OverridenCursor</b>(<i></i>)
+
+<p>
+        Constructor
+</p>
+<a NAME="E5OverridenCursor.__enter__" ID="E5OverridenCursor.__enter__"></a>
+<h4>E5OverridenCursor.__enter__</h4>
+<b>__enter__</b>(<i></i>)
+
+<p>
+        Special method called when entering the runtime ccontext.
+</p>
+<dl>
+<dt>Return:</dt>
+<dd>
+reference to the context manager object
+</dd>
+</dl>
+<dl>
+<dt>Return Type:</dt>
+<dd>
+E5OverrideCursor
+</dd>
+</dl>
+<a NAME="E5OverridenCursor.__exit__" ID="E5OverridenCursor.__exit__"></a>
+<h4>E5OverridenCursor.__exit__</h4>
+<b>__exit__</b>(<i>exc_type, exc_value, traceback</i>)
+
+<p>
+        Special method called when exiting the runtime ccontext.
+</p>
+<dl>
+
+<dt><i>exc_type</i></dt>
+<dd>
+type of an exception raised in the runtime context
+</dd>
+<dt><i>exc_value</i></dt>
+<dd>
+value of an exception raised in the runtime context
+</dd>
+<dt><i>traceback</i></dt>
+<dd>
+traceback of an exception raised in the runtime
+            context
+</dd>
+</dl>
+<dl>
+<dt>Return:</dt>
+<dd>
+always returns None to not suppress any exception
+</dd>
+</dl>
+<dl>
+<dt>Return Type:</dt>
+<dd>
+None
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+</body></html>

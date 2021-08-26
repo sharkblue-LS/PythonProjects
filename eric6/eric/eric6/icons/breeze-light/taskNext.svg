@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg version="1.1" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg"><defs><style type="text/css">.ColorScheme-Text {
+        color:#232629;
+      }</style></defs><path class="ColorScheme-Text" d="m1 4v14h14v-14h-1.75v2.625h-1.75v-2.625h-7v2.625h-1.75v-2.625h-1.75m0.875 3.5h12.25v9.625h-12.25v-9.625m9.0063 1.75-4.0178 4.0178-1.0032-1.0032-0.61865 0.61865 1.615 1.6167 0.0051267-0.006836 0.0068354 0.006836 4.6313-4.6313-0.61865-0.61865" color="#232629" fill="currentColor"/><path class="ColorScheme-Text" d="m16.406 3-0.40601 0.70703 4.188 7.293-4.188 7.293 0.40601 0.70703 4.594-8-4.594-8" color="#eff0f1" fill="#232629"/></svg>

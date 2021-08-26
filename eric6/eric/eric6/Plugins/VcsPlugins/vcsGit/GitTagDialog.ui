@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>GitTagDialog</class>
+ <widget class="QDialog" name="GitTagDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>391</width>
+    <height>344</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Git Tag</string>
+  </property>
+  <property name="sizeGripEnabled">
+   <bool>true</bool>
+  </property>
+  <layout class="QGridLayout" name="gridLayout_3">
+   <item row="0" column="0">
+    <widget class="QLabel" name="TextLabel1">
+     <property name="text">
+      <string>Name:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="1">
+    <widget class="QComboBox" name="tagCombo">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="toolTip">
+      <string>Enter the name of the tag</string>
+     </property>
+     <property name="whatsThis">
+      <string>&lt;b&gt;Tag Name&lt;/b&gt;
+&lt;p&gt;Enter the name of the tag to be created, deleted or verified.&lt;/p&gt;</string>
+     </property>
+     <property name="editable">
+      <bool>true</bool>
+     </property>
+     <property name="duplicatesEnabled">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QLabel" name="label">
+     <property name="text">
+      <string>Revision:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="1">
+    <widget class="QLineEdit" name="revisionEdit">
+     <property name="toolTip">
+      <string>Enter a revision to set a tag for</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="0" colspan="2">
+    <widget class="QGroupBox" name="tagActionGroup">
+     <property name="title">
+      <string>Tag Action</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_2">
+      <item row="0" column="0">
+       <widget class="QRadioButton" name="createTagButton">
+        <property name="toolTip">
+         <string>Select to create a tag</string>
+        </property>
+        <property name="whatsThis">
+         <string>&lt;b&gt;Create Tag&lt;/b&gt;
+&lt;p&gt;Select this entry in order to create a tag.&lt;/p&gt;</string>
+        </property>
+        <property name="text">
+         <string>Create Tag</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QRadioButton" name="deleteTagButton">
+        <property name="toolTip">
+         <string>Select to delete a tag</string>
+        </property>
+        <property name="whatsThis">
+         <string>&lt;b&gt;Delete Tag&lt;/b&gt;
+&lt;p&gt;Select this entry in order to delete the selected tag.&lt;/p&gt;</string>
+        </property>
+        <property name="text">
+         <string>Delete Tag</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QRadioButton" name="verifyTagButton">
+        <property name="toolTip">
+         <string>Select to verify a tag</string>
+        </property>
+        <property name="whatsThis">
+         <string>&lt;b&gt;Verify Tag&lt;/b&gt;
+&lt;p&gt;Select this entry in order to verify the selected tag.&lt;/p&gt;</string>
+        </property>
+        <property name="text">
+         <string>Verify Tag</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="3" column="0" colspan="2">
+    <widget class="QGroupBox" name="tagTypeGroup">
+     <property name="title">
+      <string>Tag Type</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="0" column="0">
+       <widget class="QRadioButton" name="globalTagButton">
+        <property name="toolTip">
+         <string>Select to create/delete/verify a global tag</string>
+        </property>
+        <property name="text">
+         <string>Global Tag</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QRadioButton" name="signedTagButton">
+        <property name="toolTip">
+         <string>Select to create/delete/verify a signed tag</string>
+        </property>
+        <property name="text">
+         <string>Signed Tag</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QRadioButton" name="localTagButton">
+        <property name="toolTip">
+         <string>Select to create/delete/verify a local tag</string>
+        </property>
+        <property name="text">
+         <string>Local Tag</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="4" column="0" colspan="2">
+    <widget class="QCheckBox" name="forceCheckBox">
+     <property name="toolTip">
+      <string>Select to enforce the create operation</string>
+     </property>
+     <property name="text">
+      <string>Enforce Operation</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="0" colspan="2">
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <pixmapfunction>qPixmapFromMimeSource</pixmapfunction>
+ <tabstops>
+  <tabstop>tagCombo</tabstop>
+  <tabstop>revisionEdit</tabstop>
+  <tabstop>createTagButton</tabstop>
+  <tabstop>deleteTagButton</tabstop>
+  <tabstop>verifyTagButton</tabstop>
+  <tabstop>globalTagButton</tabstop>
+  <tabstop>signedTagButton</tabstop>
+  <tabstop>localTagButton</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>GitTagDialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>104</x>
+     <y>333</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>25</x>
+     <y>214</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>GitTagDialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>141</x>
+     <y>333</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>128</x>
+     <y>210</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>deleteTagButton</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>revisionEdit</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>344</x>
+     <y>127</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>137</x>
+     <y>49</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>verifyTagButton</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>revisionEdit</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>80</x>
+     <y>149</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>101</x>
+     <y>57</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>createTagButton</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>tagTypeGroup</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>62</x>
+     <y>119</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>59</x>
+     <y>182</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>createTagButton</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>forceCheckBox</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>43</x>
+     <y>120</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>35</x>
+     <y>288</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg version="1.1" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg"><defs><style type="text/css">.ColorScheme-Text {
+        color:#eff0f1;
+      }</style></defs><path d="m1 1v20h8.75v-20h-8.75zm10 0v10h1.25v-5h7.5v5h1.25v-10h-10zm-8.75 5h6.25v13.75h-6.25v-13.75z" color="#eff0f1" fill="currentColor"/><path class="ColorScheme-NegativeText" d="M 13.2726,12 12,13.2726 15.2274,16.500002 12,19.7274 13.2726,21 16.500002,17.7726 19.7274,21 21,19.7274 17.7726,16.500002 21,13.2726 19.7274,12 16.500002,15.2274 Z" fill="#da4453"/></svg>

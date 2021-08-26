@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>GitPushDialog</class>
+ <widget class="QDialog" name="GitPushDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>600</width>
+    <height>400</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Git Push</string>
+  </property>
+  <property name="sizeGripEnabled">
+   <bool>true</bool>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_2">
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>Remote Repository:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="remotesComboBox">
+       <property name="toolTip">
+        <string>Select the remote repository to push to</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="remoteEdit">
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="groupBox">
+     <property name="title">
+      <string>Branches to be pushed</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QTreeWidget" name="branchesTree">
+        <property name="alternatingRowColors">
+         <bool>true</bool>
+        </property>
+        <property name="rootIsDecorated">
+         <bool>false</bool>
+        </property>
+        <property name="itemsExpandable">
+         <bool>false</bool>
+        </property>
+        <property name="sortingEnabled">
+         <bool>true</bool>
+        </property>
+        <property name="expandsOnDoubleClick">
+         <bool>false</bool>
+        </property>
+        <column>
+         <property name="text">
+          <string>Push?</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Local</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Remote</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Force?</string>
+         </property>
+        </column>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="selectAllCheckBox">
+        <property name="toolTip">
+         <string>Press to select all branches</string>
+        </property>
+        <property name="text">
+         <string>Select All</string>
+        </property>
+        <property name="tristate">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="forceWarningLabel">
+        <property name="text">
+         <string>&lt;b&gt;WARNING: The &quot;Force&quot; option can result in dangling branches in the remote repository.&lt;/b&gt;</string>
+        </property>
+        <property name="wordWrap">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QCheckBox" name="tagsCheckBox">
+     <property name="toolTip">
+      <string>Select to push tags as well</string>
+     </property>
+     <property name="text">
+      <string>Include tags</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QCheckBox" name="trackingCheckBox">
+     <property name="toolTip">
+      <string>Select this to associate a remote tracking branch</string>
+     </property>
+     <property name="text">
+      <string>Set tracking information</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="groupBox_2">
+     <property name="title">
+      <string>Push Submodules</string>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <widget class="QRadioButton" name="submodulesOnDemandButton">
+        <property name="toolTip">
+         <string>Select to push submodules automatically</string>
+        </property>
+        <property name="text">
+         <string>on-demand</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QRadioButton" name="submodulesCheckButton">
+        <property name="toolTip">
+         <string>Select to check, if submodules were pushed already</string>
+        </property>
+        <property name="text">
+         <string>check</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QRadioButton" name="submodulesOnlyButton">
+        <property name="toolTip">
+         <string>Select to push submodules only</string>
+        </property>
+        <property name="text">
+         <string>only</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QRadioButton" name="submodulesNoButton">
+        <property name="toolTip">
+         <string>Select to not push any submodule</string>
+        </property>
+        <property name="text">
+         <string>no</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <tabstops>
+  <tabstop>remotesComboBox</tabstop>
+  <tabstop>remoteEdit</tabstop>
+  <tabstop>branchesTree</tabstop>
+  <tabstop>selectAllCheckBox</tabstop>
+  <tabstop>tagsCheckBox</tabstop>
+  <tabstop>trackingCheckBox</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>GitPushDialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>248</x>
+     <y>254</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>157</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>GitPushDialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>316</x>
+     <y>260</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>286</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

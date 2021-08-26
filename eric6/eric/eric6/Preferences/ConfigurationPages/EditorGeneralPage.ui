@@ -1,0 +1,528 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>EditorGeneralPage</class>
+ <widget class="QWidget" name="EditorGeneralPage">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>550</width>
+    <height>863</height>
+   </rect>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_3">
+   <item>
+    <widget class="QLabel" name="headerLabel">
+     <property name="text">
+      <string>&lt;b&gt;Configure general editor settings&lt;/b&gt;</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="Line" name="line2">
+     <property name="frameShape">
+      <enum>QFrame::HLine</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Sunken</enum>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="groupBox_5">
+     <property name="title">
+      <string>Tabs &amp;&amp; Indentation</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_5">
+      <item row="0" column="0" colspan="2">
+       <layout class="QGridLayout" name="gridLayout_2">
+        <item row="0" column="0">
+         <widget class="QCheckBox" name="autoindentCheckBox">
+          <property name="toolTip">
+           <string>Select whether autoindentation shall be enabled</string>
+          </property>
+          <property name="text">
+           <string>Auto indentation</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QCheckBox" name="tabforindentationCheckBox">
+          <property name="toolTip">
+           <string>Select whether tab characters are used for indentations.</string>
+          </property>
+          <property name="text">
+           <string>Use tabs for indentations</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QCheckBox" name="tabindentsCheckBox">
+          <property name="toolTip">
+           <string>Select whether pressing the tab key indents.</string>
+          </property>
+          <property name="text">
+           <string>Tab key indents</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QCheckBox" name="converttabsCheckBox">
+          <property name="toolTip">
+           <string>Select whether tabs shall be converted upon opening the file</string>
+          </property>
+          <property name="text">
+           <string>Convert tabs upon open</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item row="1" column="0" colspan="2">
+       <layout class="QGridLayout" name="gridLayout_4">
+        <item row="0" column="0">
+         <widget class="QLabel" name="TextLabel13_3">
+          <property name="text">
+           <string>Tab width:</string>
+          </property>
+          <property name="buddy">
+           <cstring>tabwidthSlider</cstring>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QSlider" name="tabwidthSlider">
+          <property name="toolTip">
+           <string>Move to set the tab width.</string>
+          </property>
+          <property name="minimum">
+           <number>1</number>
+          </property>
+          <property name="maximum">
+           <number>20</number>
+          </property>
+          <property name="value">
+           <number>4</number>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="tickInterval">
+           <number>1</number>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="2">
+         <widget class="QLCDNumber" name="tabwidthLCD">
+          <property name="toolTip">
+           <string>Displays the selected tab width.</string>
+          </property>
+          <property name="digitCount">
+           <number>2</number>
+          </property>
+          <property name="segmentStyle">
+           <enum>QLCDNumber::Flat</enum>
+          </property>
+          <property name="value" stdset="0">
+           <double>4.000000000000000</double>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="TextLabel13_2_3">
+          <property name="text">
+           <string>Indentation width:</string>
+          </property>
+          <property name="buddy">
+           <cstring>indentwidthSlider</cstring>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QSlider" name="indentwidthSlider">
+          <property name="toolTip">
+           <string>Move to set the indentation width.</string>
+          </property>
+          <property name="minimum">
+           <number>1</number>
+          </property>
+          <property name="maximum">
+           <number>20</number>
+          </property>
+          <property name="value">
+           <number>4</number>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="tickInterval">
+           <number>1</number>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="2">
+         <widget class="QLCDNumber" name="indentwidthLCD">
+          <property name="toolTip">
+           <string>Displays the selected indentation width.</string>
+          </property>
+          <property name="digitCount">
+           <number>2</number>
+          </property>
+          <property name="segmentStyle">
+           <enum>QLCDNumber::Flat</enum>
+          </property>
+          <property name="value" stdset="0">
+           <double>4.000000000000000</double>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item row="2" column="0">
+       <widget class="QTreeWidget" name="languageOverrideWidget">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>150</height>
+         </size>
+        </property>
+        <property name="alternatingRowColors">
+         <bool>true</bool>
+        </property>
+        <property name="selectionMode">
+         <enum>QAbstractItemView::ExtendedSelection</enum>
+        </property>
+        <property name="rootIsDecorated">
+         <bool>false</bool>
+        </property>
+        <property name="itemsExpandable">
+         <bool>false</bool>
+        </property>
+        <column>
+         <property name="text">
+          <string>Language</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Tab Width</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Indent Width</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string notr="true"/>
+         </property>
+        </column>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <spacer name="verticalSpacer">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QToolButton" name="addButton">
+          <property name="toolTip">
+           <string>Press to add a language specific override</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QToolButton" name="deleteButton">
+          <property name="toolTip">
+           <string>Press to delete the selected language specific override</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QToolButton" name="editButton">
+          <property name="toolTip">
+           <string>Press to edit the selected language specific override</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="verticalSpacer_2">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="sourceOutlineGroupBox">
+     <property name="toolTip">
+      <string>Select to enable the source code outline view</string>
+     </property>
+     <property name="title">
+      <string>Source Code Outline</string>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_3">
+      <item row="0" column="0">
+       <widget class="QLabel" name="label_2">
+        <property name="text">
+         <string>Default Width:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QSpinBox" name="sourceOutlineWidthSpinBox">
+        <property name="toolTip">
+         <string>Enter the default width of the source code outline view</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        </property>
+        <property name="minimum">
+         <number>50</number>
+        </property>
+        <property name="maximum">
+         <number>498</number>
+        </property>
+        <property name="singleStep">
+         <number>50</number>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="2">
+       <widget class="QLabel" name="label_3">
+        <property name="text">
+         <string>Width Step Size:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="3">
+       <widget class="QSpinBox" name="sourceOutlineWidthStepSpinBox">
+        <property name="toolTip">
+         <string>Enter the amount of pixels the width of the outline should be increased or decreased</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        </property>
+        <property name="minimum">
+         <number>10</number>
+        </property>
+        <property name="maximum">
+         <number>100</number>
+        </property>
+        <property name="singleStep">
+         <number>10</number>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="4">
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>345</width>
+          <height>17</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item row="1" column="0" colspan="5">
+       <widget class="QCheckBox" name="sourceOutlineShowCodingCheckBox">
+        <property name="toolTip">
+         <string>Select to show the source code encoding</string>
+        </property>
+        <property name="text">
+         <string>Show source file encoding</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="groupBox">
+     <property name="title">
+      <string>Comments</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="0" column="0">
+       <widget class="QCheckBox" name="comment0CheckBox">
+        <property name="toolTip">
+         <string>Select to insert the comment sign at column 0</string>
+        </property>
+        <property name="whatsThis">
+         <string>&lt;b&gt;Insert comment at column 0&lt;/b&gt;&lt;p&gt;Select to insert the comment sign at column 0. Otherwise, the comment sign is inserted at the first non-whitespace position.&lt;/p&gt;</string>
+        </property>
+        <property name="text">
+         <string>Insert comment at column 0</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="groupBox_3">
+     <property name="title">
+      <string>Docstring</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_6">
+      <item row="0" column="0">
+       <widget class="QLabel" name="label_4">
+        <property name="text">
+         <string>Docstring Style:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QComboBox" name="docstringStyleComboBox">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="toolTip">
+         <string>Select the docstring style to be used</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0" colspan="2">
+       <widget class="QCheckBox" name="docstringCompletionCheckBox">
+        <property name="toolTip">
+         <string>Select this to generate a docstring when the docstring start sequence was entered (e.g. &quot;&quot;&quot; for Python).</string>
+        </property>
+        <property name="text">
+         <string>Generate Docstring when Docstring start is entered</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="groupBox_2">
+     <property name="title">
+      <string>Virtual Space</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string>Virtual space is the space after the last character of a line. It is not allocated unless some text is entered or copied into it. Usage of virtual space can be configured with these selections.</string>
+        </property>
+        <property name="wordWrap">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="vsSelectionCheckBox">
+        <property name="toolTip">
+         <string>Select to enable a rectangular selection to extend into virtual space</string>
+        </property>
+        <property name="text">
+         <string>Selection may access virtual space</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="vsUserCheckBox">
+        <property name="toolTip">
+         <string>Select to allow the cursor to be moved into virtual space</string>
+        </property>
+        <property name="text">
+         <string>Cursor can move into virtual space</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <tabstops>
+  <tabstop>autoindentCheckBox</tabstop>
+  <tabstop>tabforindentationCheckBox</tabstop>
+  <tabstop>tabindentsCheckBox</tabstop>
+  <tabstop>converttabsCheckBox</tabstop>
+  <tabstop>tabwidthSlider</tabstop>
+  <tabstop>indentwidthSlider</tabstop>
+  <tabstop>languageOverrideWidget</tabstop>
+  <tabstop>addButton</tabstop>
+  <tabstop>deleteButton</tabstop>
+  <tabstop>editButton</tabstop>
+  <tabstop>sourceOutlineGroupBox</tabstop>
+  <tabstop>sourceOutlineWidthSpinBox</tabstop>
+  <tabstop>sourceOutlineWidthStepSpinBox</tabstop>
+  <tabstop>sourceOutlineShowCodingCheckBox</tabstop>
+  <tabstop>comment0CheckBox</tabstop>
+  <tabstop>docstringStyleComboBox</tabstop>
+  <tabstop>docstringCompletionCheckBox</tabstop>
+  <tabstop>vsSelectionCheckBox</tabstop>
+  <tabstop>vsUserCheckBox</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>tabwidthSlider</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>tabwidthLCD</receiver>
+   <slot>display(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>384</x>
+     <y>81</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>415</x>
+     <y>82</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>indentwidthSlider</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>indentwidthLCD</receiver>
+   <slot>display(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>384</x>
+     <y>110</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>410</x>
+     <y>110</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

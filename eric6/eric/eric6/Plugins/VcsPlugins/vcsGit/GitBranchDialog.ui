@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>GitBranchDialog</class>
+ <widget class="QDialog" name="GitBranchDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>391</width>
+    <height>499</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Git Branch</string>
+  </property>
+  <property name="sizeGripEnabled">
+   <bool>true</bool>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QGroupBox" name="tagActionGroup">
+     <property name="title">
+      <string>Branch Action</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="0" column="0">
+       <widget class="QRadioButton" name="createBranchButton">
+        <property name="toolTip">
+         <string>Select to create a branch</string>
+        </property>
+        <property name="whatsThis">
+         <string>&lt;b&gt;Create Branch&lt;/b&gt;
+&lt;p&gt;Select this entry in order to create a branch.&lt;/p&gt;</string>
+        </property>
+        <property name="text">
+         <string>Create</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QRadioButton" name="moveBranchButton">
+        <property name="toolTip">
+         <string>Select to rename a branch</string>
+        </property>
+        <property name="whatsThis">
+         <string>&lt;b&gt;Rename&lt;/b&gt;
+&lt;p&gt;Select this entry in order to rename the selected branch.&lt;/p&gt;</string>
+        </property>
+        <property name="text">
+         <string>Rename</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="2">
+       <widget class="QRadioButton" name="deleteBranchButton">
+        <property name="toolTip">
+         <string>Select to delete a branch</string>
+        </property>
+        <property name="whatsThis">
+         <string>&lt;b&gt;Delete Branch&lt;/b&gt;
+&lt;p&gt;Select this entry in order to delete the selected branch.&lt;/p&gt;</string>
+        </property>
+        <property name="text">
+         <string>Delete</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0" colspan="3">
+       <widget class="QRadioButton" name="createSwitchButton">
+        <property name="toolTip">
+         <string>Select to create a new branch and switch to it</string>
+        </property>
+        <property name="whatsThis">
+         <string>&lt;b&gt;Create &amp;amp; Switch&lt;/b&gt;\n&lt;p&gt;Select this entry in order to create a new branch and switch the working tree to it.&lt;/p&gt;</string>
+        </property>
+        <property name="text">
+         <string>Create &amp;&amp; Switch</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0" colspan="3">
+       <widget class="QRadioButton" name="createTrackingButton">
+        <property name="toolTip">
+         <string>Select to create a tracking branch and switch to it</string>
+        </property>
+        <property name="whatsThis">
+         <string>&lt;b&gt;Create Tracking Branch &amp;amp; Switch&lt;/b&gt;\n&lt;p&gt;Select this entry in order to create a new branch tracking a remote repository branch. The working tree is switched to it.&lt;/p&gt;</string>
+        </property>
+        <property name="text">
+         <string>Create Tracking Branch &amp;&amp; Switch</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0" colspan="3">
+       <widget class="QRadioButton" name="setTrackingButton">
+        <property name="toolTip">
+         <string>Select to associate a remote branch</string>
+        </property>
+        <property name="text">
+         <string>Set Tracking Branch</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="0" colspan="3">
+       <widget class="QRadioButton" name="unsetTrackingButton">
+        <property name="toolTip">
+         <string>Select to de-associate a remote branch</string>
+        </property>
+        <property name="text">
+         <string>Unset Tracking Branch Information</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_3">
+     <item>
+      <widget class="QLabel" name="TextLabel1">
+       <property name="text">
+        <string>Name:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="branchCombo">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="toolTip">
+        <string>Enter the name of the branch</string>
+       </property>
+       <property name="whatsThis">
+        <string>&lt;b&gt;Branch Name&lt;/b&gt;
+&lt;p&gt;Enter the name of the branch to be created, deleted or moved.&lt;/p&gt;</string>
+       </property>
+       <property name="editable">
+        <bool>true</bool>
+       </property>
+       <property name="duplicatesEnabled">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="createBranchGroup">
+     <property name="title">
+      <string>Create Branch</string>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string>Revision:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="revisionEdit">
+        <property name="toolTip">
+         <string>Enter a revision at which to start the branch</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="moveBranchGroup">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="title">
+      <string>Rename Branch</string>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QLabel" name="label_2">
+        <property name="text">
+         <string>New Name:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="newBranchNameEdit">
+        <property name="statusTip">
+         <string>Enter a new name for the selected branch</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="trackingBranchGroup">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="title">
+      <string>Set Tracking Branch</string>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_4">
+      <item>
+       <widget class="QLabel" name="label_3">
+        <property name="text">
+         <string>Remote Branch:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QComboBox" name="remoteBranchCombo">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="toolTip">
+         <string>Select the remote branch to associate</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QCheckBox" name="forceCheckBox">
+     <property name="toolTip">
+      <string>Select to enforce the create operation</string>
+     </property>
+     <property name="text">
+      <string>Enforce Operation</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <pixmapfunction>qPixmapFromMimeSource</pixmapfunction>
+ <tabstops>
+  <tabstop>createBranchButton</tabstop>
+  <tabstop>moveBranchButton</tabstop>
+  <tabstop>deleteBranchButton</tabstop>
+  <tabstop>createSwitchButton</tabstop>
+  <tabstop>createTrackingButton</tabstop>
+  <tabstop>setTrackingButton</tabstop>
+  <tabstop>unsetTrackingButton</tabstop>
+  <tabstop>branchCombo</tabstop>
+  <tabstop>revisionEdit</tabstop>
+  <tabstop>newBranchNameEdit</tabstop>
+  <tabstop>remoteBranchCombo</tabstop>
+  <tabstop>forceCheckBox</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>GitBranchDialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>134</x>
+     <y>461</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>25</x>
+     <y>214</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>GitBranchDialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>171</x>
+     <y>461</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>128</x>
+     <y>210</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>createBranchButton</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>createBranchGroup</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>63</x>
+     <y>57</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>66</x>
+     <y>246</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>moveBranchButton</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>moveBranchGroup</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>243</x>
+     <y>61</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>51</x>
+     <y>323</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>createSwitchButton</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>createBranchGroup</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>107</x>
+     <y>86</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>196</x>
+     <y>259</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>createTrackingButton</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>forceCheckBox</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>122</x>
+     <y>115</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>147</x>
+     <y>432</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>setTrackingButton</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>trackingBranchGroup</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>108</x>
+     <y>132</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>93</x>
+     <y>360</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

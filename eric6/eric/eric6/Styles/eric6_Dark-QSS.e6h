@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HighlightingStyles SYSTEM "HighlightingStyles-6.0.dtd">
+<!-- Eric6 highlighting styles -->
+<!-- Saved: 2020-04-11, 12:29:21-->
+<!-- Author: Detlev Offenbach <detlev@die-offenbachs.de> -->
+<HighlightingStyles version="6.0">
+  <Lexer name="QSS">
+    <Style style="0" substyle="-1" color="#ff7bc2" paper="#262626" font="Hack,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Default</Description>
+    </Style>
+    <Style style="1" substyle="-1" color="#75ff98" paper="#262626" font="Hack,9,-1,5,75,0,0,0,0,0,Bold" eolfill="False">
+      <Description>Tag</Description>
+    </Style>
+    <Style style="2" substyle="-1" color="#ffffff" paper="#262626" font="Hack,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Class selector</Description>
+    </Style>
+    <Style style="3" substyle="-1" color="#cc6363" paper="#262626" font="Hack,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Pseudo-class</Description>
+    </Style>
+    <Style style="4" substyle="-1" color="#ffb45d" paper="#262626" font="Hack,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Unknown pseudo-class</Description>
+    </Style>
+    <Style style="5" substyle="-1" color="#ffffff" paper="#262626" font="Hack,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Operator</Description>
+    </Style>
+    <Style style="6" substyle="-1" color="#81a9ff" paper="#262626" font="Hack,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>CSS1 property</Description>
+    </Style>
+    <Style style="7" substyle="-1" color="#ff0000" paper="#262626" font="Hack,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Unknown property</Description>
+    </Style>
+    <Style style="8" substyle="-1" color="#ff92bc" paper="#262626" font="Hack,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Value</Description>
+    </Style>
+    <Style style="9" substyle="-1" color="#00b400" paper="#262626" font="Hack,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Comment</Description>
+    </Style>
+    <Style style="10" substyle="-1" color="#00dada" paper="#262626" font="Hack,9,-1,5,50,1,0,0,0,0" eolfill="False">
+      <Description>ID selector</Description>
+    </Style>
+    <Style style="11" substyle="-1" color="#ff8000" paper="#262626" font="Hack,9,-1,5,75,0,0,0,0,0" eolfill="False">
+      <Description>Important</Description>
+    </Style>
+    <Style style="12" substyle="-1" color="#aaaa00" paper="#262626" font="Hack,9,-1,5,75,0,0,0,0,0" eolfill="False">
+      <Description>@-rule</Description>
+    </Style>
+    <Style style="13" substyle="-1" color="#ff00ff" paper="#262626" font="Hack,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Double-quoted string</Description>
+    </Style>
+    <Style style="14" substyle="-1" color="#ff00ff" paper="#262626" font="Hack,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Single-quoted string</Description>
+    </Style>
+    <Style style="15" substyle="-1" color="#00b7ff" paper="#262626" font="Hack,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>CSS2 property</Description>
+    </Style>
+    <Style style="16" substyle="-1" color="#ff7575" paper="#262626" font="Hack,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Attribute</Description>
+    </Style>
+    <Style style="17" substyle="-1" color="#c8ffb3" paper="#262626" font="Hack,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>CSS3 property</Description>
+    </Style>
+    <Style style="18" substyle="-1" color="#ddd2c8" paper="#262626" font="Hack,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Pseudo-element</Description>
+    </Style>
+    <Style style="19" substyle="-1" color="#ddd2c8" paper="#262626" font="Hack,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Extended CSS property</Description>
+    </Style>
+    <Style style="20" substyle="-1" color="#ddd2c8" paper="#262626" font="Hack,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Extended pseudo-class</Description>
+    </Style>
+    <Style style="21" substyle="-1" color="#ddd2c8" paper="#262626" font="Hack,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Extended pseudo-element</Description>
+    </Style>
+    <Style style="22" substyle="-1" color="#c7c700" paper="#262626" font="Hack,9,-1,5,75,0,0,0,0,0" eolfill="False">
+      <Description>Media rule</Description>
+    </Style>
+    <Style style="23" substyle="-1" color="#ddd2c8" paper="#262626" font="Hack,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Variable</Description>
+    </Style>
+  </Lexer>
+</HighlightingStyles>

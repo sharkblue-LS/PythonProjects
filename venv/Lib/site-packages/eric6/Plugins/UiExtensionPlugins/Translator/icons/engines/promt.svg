@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48" height="48" version="1.1" viewBox="0 0 12.7 12.7" xmlns="http://www.w3.org/2000/svg">
+ <g transform="translate(0 -284.3)">
+  <g transform="matrix(-.19072 -.33461 -.33375 .19519 93.139 237.87)" stroke-width="0">
+   <rect transform="matrix(1 0 -.5 .86603 0 0)" x="144.46" y="305.93" width="21.801" height="11.238" fill="#3d82f7"/>
+   <rect transform="matrix(-.5 -.86603 1 0 0 0)" x="-305.93" y="-150.9" width="21.801" height="11.238" fill="#fcd04b"/>
+   <rect transform="matrix(-.5 .86603 -.5 -.86603 0 0)" x="150.9" y="-144.46" width="21.801" height="11.238" fill="#0fa961"/>
+  </g>
+ </g>
+</svg>

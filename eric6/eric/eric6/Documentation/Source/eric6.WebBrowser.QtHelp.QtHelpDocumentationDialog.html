@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html><head>
+<title>eric6.WebBrowser.QtHelp.QtHelpDocumentationDialog</title>
+<meta charset="UTF-8">
+<style>
+body {
+    background: #EDECE6;
+    margin: 0em 1em 10em 1em;
+    color: black;
+}
+
+h1 { color: white; background: #85774A; }
+h2 { color: white; background: #85774A; }
+h3 { color: white; background: #9D936E; }
+h4 { color: white; background: #9D936E; }
+    
+a { color: #BA6D36; }
+
+</style>
+</head>
+<body>
+<a NAME="top" ID="top"></a>
+<h1>eric6.WebBrowser.QtHelp.QtHelpDocumentationDialog</h1>
+
+<p>
+Module implementing a dialog to manage the QtHelp documentation database.
+</p>
+<h3>Global Attributes</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Classes</h3>
+
+<table>
+
+<tr>
+<td><a href="#QtHelpDocumentationDialog">QtHelpDocumentationDialog</a></td>
+<td>Class implementing a dialog to manage the QtHelp documentation database.</td>
+</tr>
+</table>
+<h3>Functions</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+<hr />
+<hr />
+<a NAME="QtHelpDocumentationDialog" ID="QtHelpDocumentationDialog"></a>
+<h2>QtHelpDocumentationDialog</h2>
+
+<p>
+    Class implementing a dialog to manage the QtHelp documentation database.
+</p>
+<h3>Derived from</h3>
+QDialog, Ui_QtHelpDocumentationDialog
+<h3>Class Attributes</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Class Methods</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+
+<table>
+
+<tr>
+<td><a href="#QtHelpDocumentationDialog.__init__">QtHelpDocumentationDialog</a></td>
+<td>Constructor</td>
+</tr>
+<tr>
+<td><a href="#QtHelpDocumentationDialog.__hasChangedFilters">__hasChangedFilters</a></td>
+<td>Private method to determine, if there are filter changes.</td>
+</tr>
+<tr>
+<td><a href="#QtHelpDocumentationDialog.__initDocumentsTab">__initDocumentsTab</a></td>
+<td>Private method to initialize the documents tab.</td>
+</tr>
+<tr>
+<td><a href="#QtHelpDocumentationDialog.__initFiltersTab">__initFiltersTab</a></td>
+<td>Private method to initialize the filters tab.</td>
+</tr>
+<tr>
+<td><a href="#QtHelpDocumentationDialog.__registerDocumentations">__registerDocumentations</a></td>
+<td>Private method to register a given list of documentations.</td>
+</tr>
+<tr>
+<td><a href="#QtHelpDocumentationDialog.__removeAttributes">__removeAttributes</a></td>
+<td>Private method to remove attributes from the Qt Help database.</td>
+</tr>
+<tr>
+<td><a href="#QtHelpDocumentationDialog.getTabsToClose">getTabsToClose</a></td>
+<td>Public method to get the list of tabs to close.</td>
+</tr>
+<tr>
+<td><a href="#QtHelpDocumentationDialog.hasDocumentationChanges">hasDocumentationChanges</a></td>
+<td>Public slot to test the dialog for changes of configured QtHelp documents.</td>
+</tr>
+<tr>
+<td><a href="#QtHelpDocumentationDialog.on_addDocumentsButton_clicked">on_addDocumentsButton_clicked</a></td>
+<td>Private slot to add QtHelp documents to the help database.</td>
+</tr>
+<tr>
+<td><a href="#QtHelpDocumentationDialog.on_addFilterButton_clicked">on_addFilterButton_clicked</a></td>
+<td>Private slot to add a new filter.</td>
+</tr>
+<tr>
+<td><a href="#QtHelpDocumentationDialog.on_addPluginButton_clicked">on_addPluginButton_clicked</a></td>
+<td>Private slot to add QtHelp documents provided by plug-ins to the help database.</td>
+</tr>
+<tr>
+<td><a href="#QtHelpDocumentationDialog.on_applyFilterChangesButton_clicked">on_applyFilterChangesButton_clicked</a></td>
+<td>Private slot to apply the filter changes.</td>
+</tr>
+<tr>
+<td><a href="#QtHelpDocumentationDialog.on_attributesList_itemChanged">on_attributesList_itemChanged</a></td>
+<td>Private slot to handle a change of an attribute.</td>
+</tr>
+<tr>
+<td><a href="#QtHelpDocumentationDialog.on_attributesList_itemSelectionChanged">on_attributesList_itemSelectionChanged</a></td>
+<td>Private slot handling the selection of attributes.</td>
+</tr>
+<tr>
+<td><a href="#QtHelpDocumentationDialog.on_documentsList_itemSelectionChanged">on_documentsList_itemSelectionChanged</a></td>
+<td>Private slot handling a change of the documents selection.</td>
+</tr>
+<tr>
+<td><a href="#QtHelpDocumentationDialog.on_filtersList_currentItemChanged">on_filtersList_currentItemChanged</a></td>
+<td>Private slot to update the attributes depending on the current filter.</td>
+</tr>
+<tr>
+<td><a href="#QtHelpDocumentationDialog.on_filtersList_itemSelectionChanged">on_filtersList_itemSelectionChanged</a></td>
+<td>Private slot handling a change of selected filters.</td>
+</tr>
+<tr>
+<td><a href="#QtHelpDocumentationDialog.on_managePluginButton_clicked">on_managePluginButton_clicked</a></td>
+<td>Private slot to manage the QtHelp documents provided by plug-ins.</td>
+</tr>
+<tr>
+<td><a href="#QtHelpDocumentationDialog.on_removeAttributesButton_clicked">on_removeAttributesButton_clicked</a></td>
+<td>Private slot to remove the selected filter attributes.</td>
+</tr>
+<tr>
+<td><a href="#QtHelpDocumentationDialog.on_removeDocumentsButton_clicked">on_removeDocumentsButton_clicked</a></td>
+<td>Private slot to remove a document from the help database.</td>
+</tr>
+<tr>
+<td><a href="#QtHelpDocumentationDialog.on_removeFiltersButton_clicked">on_removeFiltersButton_clicked</a></td>
+<td>Private slot to remove the selected filters.</td>
+</tr>
+<tr>
+<td><a href="#QtHelpDocumentationDialog.on_resetFilterChangesButton_clicked">on_resetFilterChangesButton_clicked</a></td>
+<td>Private slot to forget the filter changes and reset the tab.</td>
+</tr>
+<tr>
+<td><a href="#QtHelpDocumentationDialog.on_tabWidget_currentChanged">on_tabWidget_currentChanged</a></td>
+<td>Private slot handling a change of the current tab.</td>
+</tr>
+<tr>
+<td><a href="#QtHelpDocumentationDialog.on_unusedAttributesButton_clicked">on_unusedAttributesButton_clicked</a></td>
+<td>Private slot to select all unused attributes.</td>
+</tr>
+</table>
+<h3>Static Methods</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+
+<a NAME="QtHelpDocumentationDialog.__init__" ID="QtHelpDocumentationDialog.__init__"></a>
+<h4>QtHelpDocumentationDialog (Constructor)</h4>
+<b>QtHelpDocumentationDialog</b>(<i>engine, parent</i>)
+
+<p>
+        Constructor
+</p>
+<dl>
+
+<dt><i>engine</i></dt>
+<dd>
+reference to the help engine (QHelpEngine)
+</dd>
+<dt><i>parent</i></dt>
+<dd>
+reference to the parent widget (QWidget)
+</dd>
+</dl>
+<a NAME="QtHelpDocumentationDialog.__hasChangedFilters" ID="QtHelpDocumentationDialog.__hasChangedFilters"></a>
+<h4>QtHelpDocumentationDialog.__hasChangedFilters</h4>
+<b>__hasChangedFilters</b>(<i></i>)
+
+<p>
+        Private method to determine, if there are filter changes.
+</p>
+<dl>
+<dt>Return:</dt>
+<dd>
+flag indicating the presence of filter changes
+</dd>
+</dl>
+<dl>
+<dt>Return Type:</dt>
+<dd>
+bool
+</dd>
+</dl>
+<a NAME="QtHelpDocumentationDialog.__initDocumentsTab" ID="QtHelpDocumentationDialog.__initDocumentsTab"></a>
+<h4>QtHelpDocumentationDialog.__initDocumentsTab</h4>
+<b>__initDocumentsTab</b>(<i></i>)
+
+<p>
+        Private method to initialize the documents tab.
+</p>
+<a NAME="QtHelpDocumentationDialog.__initFiltersTab" ID="QtHelpDocumentationDialog.__initFiltersTab"></a>
+<h4>QtHelpDocumentationDialog.__initFiltersTab</h4>
+<b>__initFiltersTab</b>(<i></i>)
+
+<p>
+        Private method to initialize the filters tab.
+</p>
+<a NAME="QtHelpDocumentationDialog.__registerDocumentations" ID="QtHelpDocumentationDialog.__registerDocumentations"></a>
+<h4>QtHelpDocumentationDialog.__registerDocumentations</h4>
+<b>__registerDocumentations</b>(<i>fileNames</i>)
+
+<p>
+        Private method to register a given list of documentations.
+</p>
+<dl>
+
+<dt><i>fileNames</i> (list of str)</dt>
+<dd>
+list of documentation files to be registered
+</dd>
+</dl>
+<a NAME="QtHelpDocumentationDialog.__removeAttributes" ID="QtHelpDocumentationDialog.__removeAttributes"></a>
+<h4>QtHelpDocumentationDialog.__removeAttributes</h4>
+<b>__removeAttributes</b>(<i></i>)
+
+<p>
+        Private method to remove attributes from the Qt Help database.
+</p>
+<a NAME="QtHelpDocumentationDialog.getTabsToClose" ID="QtHelpDocumentationDialog.getTabsToClose"></a>
+<h4>QtHelpDocumentationDialog.getTabsToClose</h4>
+<b>getTabsToClose</b>(<i></i>)
+
+<p>
+        Public method to get the list of tabs to close.
+</p>
+<dl>
+<dt>Return:</dt>
+<dd>
+list of tab ids to be closed
+</dd>
+</dl>
+<dl>
+<dt>Return Type:</dt>
+<dd>
+list of int
+</dd>
+</dl>
+<a NAME="QtHelpDocumentationDialog.hasDocumentationChanges" ID="QtHelpDocumentationDialog.hasDocumentationChanges"></a>
+<h4>QtHelpDocumentationDialog.hasDocumentationChanges</h4>
+<b>hasDocumentationChanges</b>(<i></i>)
+
+<p>
+        Public slot to test the dialog for changes of configured QtHelp
+        documents.
+</p>
+<dl>
+<dt>Return:</dt>
+<dd>
+flag indicating presence of changes
+</dd>
+</dl>
+<dl>
+<dt>Return Type:</dt>
+<dd>
+bool
+</dd>
+</dl>
+<a NAME="QtHelpDocumentationDialog.on_addDocumentsButton_clicked" ID="QtHelpDocumentationDialog.on_addDocumentsButton_clicked"></a>
+<h4>QtHelpDocumentationDialog.on_addDocumentsButton_clicked</h4>
+<b>on_addDocumentsButton_clicked</b>(<i></i>)
+
+<p>
+        Private slot to add QtHelp documents to the help database.
+</p>
+<a NAME="QtHelpDocumentationDialog.on_addFilterButton_clicked" ID="QtHelpDocumentationDialog.on_addFilterButton_clicked"></a>
+<h4>QtHelpDocumentationDialog.on_addFilterButton_clicked</h4>
+<b>on_addFilterButton_clicked</b>(<i></i>)
+
+<p>
+        Private slot to add a new filter.
+</p>
+<a NAME="QtHelpDocumentationDialog.on_addPluginButton_clicked" ID="QtHelpDocumentationDialog.on_addPluginButton_clicked"></a>
+<h4>QtHelpDocumentationDialog.on_addPluginButton_clicked</h4>
+<b>on_addPluginButton_clicked</b>(<i></i>)
+
+<p>
+        Private slot to add QtHelp documents provided by plug-ins to
+        the help database.
+</p>
+<a NAME="QtHelpDocumentationDialog.on_applyFilterChangesButton_clicked" ID="QtHelpDocumentationDialog.on_applyFilterChangesButton_clicked"></a>
+<h4>QtHelpDocumentationDialog.on_applyFilterChangesButton_clicked</h4>
+<b>on_applyFilterChangesButton_clicked</b>(<i></i>)
+
+<p>
+        Private slot to apply the filter changes.
+</p>
+<a NAME="QtHelpDocumentationDialog.on_attributesList_itemChanged" ID="QtHelpDocumentationDialog.on_attributesList_itemChanged"></a>
+<h4>QtHelpDocumentationDialog.on_attributesList_itemChanged</h4>
+<b>on_attributesList_itemChanged</b>(<i>item, column</i>)
+
+<p>
+        Private slot to handle a change of an attribute.
+</p>
+<dl>
+
+<dt><i>item</i></dt>
+<dd>
+reference to the changed item (QTreeWidgetItem)
+</dd>
+<dt><i>column</i></dt>
+<dd>
+column containing the change (integer)
+</dd>
+</dl>
+<a NAME="QtHelpDocumentationDialog.on_attributesList_itemSelectionChanged" ID="QtHelpDocumentationDialog.on_attributesList_itemSelectionChanged"></a>
+<h4>QtHelpDocumentationDialog.on_attributesList_itemSelectionChanged</h4>
+<b>on_attributesList_itemSelectionChanged</b>(<i></i>)
+
+<p>
+        Private slot handling the selection of attributes.
+</p>
+<a NAME="QtHelpDocumentationDialog.on_documentsList_itemSelectionChanged" ID="QtHelpDocumentationDialog.on_documentsList_itemSelectionChanged"></a>
+<h4>QtHelpDocumentationDialog.on_documentsList_itemSelectionChanged</h4>
+<b>on_documentsList_itemSelectionChanged</b>(<i></i>)
+
+<p>
+        Private slot handling a change of the documents selection.
+</p>
+<a NAME="QtHelpDocumentationDialog.on_filtersList_currentItemChanged" ID="QtHelpDocumentationDialog.on_filtersList_currentItemChanged"></a>
+<h4>QtHelpDocumentationDialog.on_filtersList_currentItemChanged</h4>
+<b>on_filtersList_currentItemChanged</b>(<i>current, previous</i>)
+
+<p>
+        Private slot to update the attributes depending on the current filter.
+</p>
+<dl>
+
+<dt><i>current</i></dt>
+<dd>
+reference to the current item (QListWidgetitem)
+</dd>
+<dt><i>previous</i></dt>
+<dd>
+reference to the previous current item
+            (QListWidgetItem)
+</dd>
+</dl>
+<a NAME="QtHelpDocumentationDialog.on_filtersList_itemSelectionChanged" ID="QtHelpDocumentationDialog.on_filtersList_itemSelectionChanged"></a>
+<h4>QtHelpDocumentationDialog.on_filtersList_itemSelectionChanged</h4>
+<b>on_filtersList_itemSelectionChanged</b>(<i></i>)
+
+<p>
+        Private slot handling a change of selected filters.
+</p>
+<a NAME="QtHelpDocumentationDialog.on_managePluginButton_clicked" ID="QtHelpDocumentationDialog.on_managePluginButton_clicked"></a>
+<h4>QtHelpDocumentationDialog.on_managePluginButton_clicked</h4>
+<b>on_managePluginButton_clicked</b>(<i></i>)
+
+<p>
+        Private slot to manage the QtHelp documents provided by plug-ins.
+</p>
+<a NAME="QtHelpDocumentationDialog.on_removeAttributesButton_clicked" ID="QtHelpDocumentationDialog.on_removeAttributesButton_clicked"></a>
+<h4>QtHelpDocumentationDialog.on_removeAttributesButton_clicked</h4>
+<b>on_removeAttributesButton_clicked</b>(<i></i>)
+
+<p>
+        Private slot to remove the selected filter attributes.
+</p>
+<a NAME="QtHelpDocumentationDialog.on_removeDocumentsButton_clicked" ID="QtHelpDocumentationDialog.on_removeDocumentsButton_clicked"></a>
+<h4>QtHelpDocumentationDialog.on_removeDocumentsButton_clicked</h4>
+<b>on_removeDocumentsButton_clicked</b>(<i></i>)
+
+<p>
+        Private slot to remove a document from the help database.
+</p>
+<a NAME="QtHelpDocumentationDialog.on_removeFiltersButton_clicked" ID="QtHelpDocumentationDialog.on_removeFiltersButton_clicked"></a>
+<h4>QtHelpDocumentationDialog.on_removeFiltersButton_clicked</h4>
+<b>on_removeFiltersButton_clicked</b>(<i></i>)
+
+<p>
+        Private slot to remove the selected filters.
+</p>
+<a NAME="QtHelpDocumentationDialog.on_resetFilterChangesButton_clicked" ID="QtHelpDocumentationDialog.on_resetFilterChangesButton_clicked"></a>
+<h4>QtHelpDocumentationDialog.on_resetFilterChangesButton_clicked</h4>
+<b>on_resetFilterChangesButton_clicked</b>(<i></i>)
+
+<p>
+        Private slot to forget the filter changes and reset the tab.
+</p>
+<a NAME="QtHelpDocumentationDialog.on_tabWidget_currentChanged" ID="QtHelpDocumentationDialog.on_tabWidget_currentChanged"></a>
+<h4>QtHelpDocumentationDialog.on_tabWidget_currentChanged</h4>
+<b>on_tabWidget_currentChanged</b>(<i>index</i>)
+
+<p>
+        Private slot handling a change of the current tab.
+</p>
+<dl>
+
+<dt><i>index</i> (int)</dt>
+<dd>
+index of the current tab
+</dd>
+</dl>
+<a NAME="QtHelpDocumentationDialog.on_unusedAttributesButton_clicked" ID="QtHelpDocumentationDialog.on_unusedAttributesButton_clicked"></a>
+<h4>QtHelpDocumentationDialog.on_unusedAttributesButton_clicked</h4>
+<b>on_unusedAttributesButton_clicked</b>(<i></i>)
+
+<p>
+        Private slot to select all unused attributes.
+</p>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+</body></html>

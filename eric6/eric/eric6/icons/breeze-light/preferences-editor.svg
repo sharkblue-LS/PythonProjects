@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg version="1.1" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg"><defs><style type="text/css">.ColorScheme-Text {
+        color:#eff0f1;
+      }
+      .ColorScheme-Highlight {
+        color:#3daee9;
+      }</style></defs><path class="ColorScheme-Text" d="m1 1v20h7.5v-1.25h-6.25v-15h15v5h1.25v-8.75h-2.5v1.25h-1.25v-1.25h-10v1.25h-1.25v-1.25zm2.5 5v1.25h12.5v-1.25zm0 3.75v1.25h12.5v-1.25zm15 1.25-1.2451 1.2427-0.0049-0.0049-6.25 6.2476 0.0098 0.0098-0.0049 1.2549h-0.004882v1.25h2.5l0.0123-0.0123c5e-3 -2.5e-5 0.0073 0.0025 0.01225 0.0025l-0.0074-0.0074 1.2328-1.2328 5-4.9951-0.88135-0.88623-6.2378 6.2329-0.74219-0.73975 6.2402-6.2354 0.73975 0.74219 0.88135 0.87891 1.25-1.25zm-15 2.5v1.25h8.75v-1.25z" color="#eff0f1" fill="#232629"/></svg>

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html><head>
+<title>eric6.E5Gui.E5TextInputDialog</title>
+<meta charset="UTF-8">
+<style>
+body {
+    background: #EDECE6;
+    margin: 0em 1em 10em 1em;
+    color: black;
+}
+
+h1 { color: white; background: #85774A; }
+h2 { color: white; background: #85774A; }
+h3 { color: white; background: #9D936E; }
+h4 { color: white; background: #9D936E; }
+    
+a { color: #BA6D36; }
+
+</style>
+</head>
+<body>
+<a NAME="top" ID="top"></a>
+<h1>eric6.E5Gui.E5TextInputDialog</h1>
+
+<p>
+Module implementing a dialog to enter some text.
+</p>
+<h3>Global Attributes</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Classes</h3>
+
+<table>
+
+<tr>
+<td><a href="#E5TextInputDialog">E5TextInputDialog</a></td>
+<td>Class implementing a dialog to enter some text.</td>
+</tr>
+</table>
+<h3>Functions</h3>
+
+<table>
+
+<tr>
+<td><a href="#getText">getText</a></td>
+<td>Function to get create a dialog to enter some text and return it.</td>
+</tr>
+</table>
+<hr />
+<hr />
+<a NAME="E5TextInputDialog" ID="E5TextInputDialog"></a>
+<h2>E5TextInputDialog</h2>
+
+<p>
+    Class implementing a dialog to enter some text.
+</p>
+<h3>Derived from</h3>
+QDialog
+<h3>Class Attributes</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Class Methods</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+
+<table>
+
+<tr>
+<td><a href="#E5TextInputDialog.__init__">E5TextInputDialog</a></td>
+<td>Constructor</td>
+</tr>
+<tr>
+<td><a href="#E5TextInputDialog.labelText">labelText</a></td>
+<td>Public method to get the current label text.</td>
+</tr>
+<tr>
+<td><a href="#E5TextInputDialog.setLabelText">setLabelText</a></td>
+<td>Public method to set the label text.</td>
+</tr>
+<tr>
+<td><a href="#E5TextInputDialog.setTextEchoMode">setTextEchoMode</a></td>
+<td>Public method to set the echo mode of the line edit.</td>
+</tr>
+<tr>
+<td><a href="#E5TextInputDialog.setTextValue">setTextValue</a></td>
+<td>Public method to set the text of the line edit.</td>
+</tr>
+<tr>
+<td><a href="#E5TextInputDialog.textEchoMode">textEchoMode</a></td>
+<td>Public method to get the current echo mode of the line edit.</td>
+</tr>
+<tr>
+<td><a href="#E5TextInputDialog.textValue">textValue</a></td>
+<td>Public method to get the text of the line edit.</td>
+</tr>
+</table>
+<h3>Static Methods</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+
+<a NAME="E5TextInputDialog.__init__" ID="E5TextInputDialog.__init__"></a>
+<h4>E5TextInputDialog (Constructor)</h4>
+<b>E5TextInputDialog</b>(<i>parent=None</i>)
+
+<p>
+        Constructor
+</p>
+<dl>
+
+<dt><i>parent</i> (QWidget)</dt>
+<dd>
+reference to the parent widget
+</dd>
+</dl>
+<a NAME="E5TextInputDialog.labelText" ID="E5TextInputDialog.labelText"></a>
+<h4>E5TextInputDialog.labelText</h4>
+<b>labelText</b>(<i></i>)
+
+<p>
+        Public method to get the current label text.
+</p>
+<dl>
+<dt>Return:</dt>
+<dd>
+current label text
+</dd>
+</dl>
+<dl>
+<dt>Return Type:</dt>
+<dd>
+str
+</dd>
+</dl>
+<a NAME="E5TextInputDialog.setLabelText" ID="E5TextInputDialog.setLabelText"></a>
+<h4>E5TextInputDialog.setLabelText</h4>
+<b>setLabelText</b>(<i>text</i>)
+
+<p>
+        Public method to set the label text.
+</p>
+<dl>
+
+<dt><i>text</i> (str)</dt>
+<dd>
+label text
+</dd>
+</dl>
+<a NAME="E5TextInputDialog.setTextEchoMode" ID="E5TextInputDialog.setTextEchoMode"></a>
+<h4>E5TextInputDialog.setTextEchoMode</h4>
+<b>setTextEchoMode</b>(<i>echoMode</i>)
+
+<p>
+        Public method to set the echo mode of the line edit.
+</p>
+<dl>
+
+<dt><i>echoMode</i> (QLineEdit.EchoMode)</dt>
+<dd>
+echo mode of the line edit
+</dd>
+</dl>
+<a NAME="E5TextInputDialog.setTextValue" ID="E5TextInputDialog.setTextValue"></a>
+<h4>E5TextInputDialog.setTextValue</h4>
+<b>setTextValue</b>(<i>text</i>)
+
+<p>
+        Public method to set the text of the line edit.
+</p>
+<dl>
+
+<dt><i>text</i> (str)</dt>
+<dd>
+text for the line edit
+</dd>
+</dl>
+<a NAME="E5TextInputDialog.textEchoMode" ID="E5TextInputDialog.textEchoMode"></a>
+<h4>E5TextInputDialog.textEchoMode</h4>
+<b>textEchoMode</b>(<i></i>)
+
+<p>
+        Public method to get the current echo mode of the line edit.
+</p>
+<dl>
+<dt>Return:</dt>
+<dd>
+echo mode of the line edit
+</dd>
+</dl>
+<dl>
+<dt>Return Type:</dt>
+<dd>
+QLineEdit.EchoMode
+</dd>
+</dl>
+<a NAME="E5TextInputDialog.textValue" ID="E5TextInputDialog.textValue"></a>
+<h4>E5TextInputDialog.textValue</h4>
+<b>textValue</b>(<i></i>)
+
+<p>
+        Public method to get the text of the line edit.
+</p>
+<dl>
+<dt>Return:</dt>
+<dd>
+text of the line edit
+</dd>
+</dl>
+<dl>
+<dt>Return Type:</dt>
+<dd>
+str
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+<hr />
+<a NAME="getText" ID="getText"></a>
+<h2>getText</h2>
+<b>getText</b>(<i>parent, title, label, mode=QLineEdit.EchoMode.Normal, text="", minimumWidth=300</i>)
+
+<p>
+    Function to get create a dialog to enter some text and return it.
+</p>
+<dl>
+
+<dt><i>parent</i> (QWidget)</dt>
+<dd>
+reference to the parent widget
+</dd>
+<dt><i>title</i> (str)</dt>
+<dd>
+title of the dialog
+</dd>
+<dt><i>label</i> (str)</dt>
+<dd>
+label of the dialog
+</dd>
+<dt><i>mode</i> (QLineEdit.EchoMode)</dt>
+<dd>
+echo mode of the line edit
+</dd>
+<dt><i>text</i> (str)</dt>
+<dd>
+initial text of the line edit
+</dd>
+<dt><i>minimumWidth</i> (int)</dt>
+<dd>
+minimum width of the dialog
+</dd>
+</dl>
+<dl>
+<dt>Return:</dt>
+<dd>
+tuple containing a flag indicating the dialog was accepted and the
+        entered text
+</dd>
+</dl>
+<dl>
+<dt>Return Type:</dt>
+<dd>
+tuple of (bool, str)
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+</body></html>

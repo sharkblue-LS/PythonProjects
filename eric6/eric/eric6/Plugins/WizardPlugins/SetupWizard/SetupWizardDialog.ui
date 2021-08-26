@@ -1,0 +1,1007 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SetupWizardDialog</class>
+ <widget class="QDialog" name="SetupWizardDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>700</width>
+    <height>550</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>setup.py Wizard</string>
+  </property>
+  <property name="sizeGripEnabled">
+   <bool>true</bool>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_9">
+     <item>
+      <widget class="QCheckBox" name="introCheckBox">
+       <property name="toolTip">
+        <string>Select to include the introductory part of the setup.py code</string>
+       </property>
+       <property name="text">
+        <string>Include Introductory Code</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QCheckBox" name="importCheckBox">
+       <property name="toolTip">
+        <string>Select to include the import statement</string>
+       </property>
+       <property name="text">
+        <string>Include Import Statement</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QCheckBox" name="metaDataCheckBox">
+       <property name="toolTip">
+        <string>Select to include code for the meta data section</string>
+       </property>
+       <property name="text">
+        <string>Include Meta Data</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_6">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <item>
+      <widget class="QLabel" name="label_13">
+       <property name="text">
+        <string>Setup Variant:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="variantComboBox">
+       <property name="toolTip">
+        <string>Select the setup variant</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_2">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_5">
+     <item>
+      <widget class="QLabel" name="label_15">
+       <property name="text">
+        <string>Root Directory:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="packageRootEdit">
+       <property name="toolTip">
+        <string>Enter the root directory</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QToolButton" name="packageRootDirButton">
+       <property name="toolTip">
+        <string>Select the root directory via a directory selection dialog</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QTabWidget" name="dataTabWidget">
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="basicTab">
+      <attribute name="title">
+       <string>Basic</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout">
+       <item row="0" column="0">
+        <widget class="QLabel" name="label">
+         <property name="text">
+          <string>Name:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLineEdit" name="nameEdit">
+         <property name="toolTip">
+          <string>Enter the package name</string>
+         </property>
+         <property name="maxLength">
+          <number>200</number>
+         </property>
+         <property name="placeholderText">
+          <string>Mandatory</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="label_2">
+         <property name="text">
+          <string>Version:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QLineEdit" name="versionEdit">
+         <property name="toolTip">
+          <string>Enter the version number in the form 'major.minor[.patch[.sub]]'</string>
+         </property>
+         <property name="maxLength">
+          <number>200</number>
+         </property>
+         <property name="placeholderText">
+          <string>Mandatory</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="label_3">
+         <property name="text">
+          <string>Author:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QLineEdit" name="authorEdit">
+         <property name="toolTip">
+          <string>Enter the author's name</string>
+         </property>
+         <property name="maxLength">
+          <number>200</number>
+         </property>
+         <property name="placeholderText">
+          <string>Mandatory (or Maintainer)</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLabel" name="label_4">
+         <property name="text">
+          <string>Author Email:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QLineEdit" name="authorEmailEdit">
+         <property name="toolTip">
+          <string>Enter the author's email address</string>
+         </property>
+         <property name="inputMask">
+          <string notr="true"/>
+         </property>
+         <property name="maxLength">
+          <number>200</number>
+         </property>
+         <property name="placeholderText">
+          <string>Mandatory (or Maintainer Email)</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="0">
+        <widget class="QLabel" name="label_5">
+         <property name="text">
+          <string>Maintainer:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="1">
+        <widget class="QLineEdit" name="maintainerEdit">
+         <property name="toolTip">
+          <string>Enter the maintainer's name</string>
+         </property>
+         <property name="maxLength">
+          <number>200</number>
+         </property>
+         <property name="placeholderText">
+          <string>Mandatory (or Author)</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="0">
+        <widget class="QLabel" name="label_6">
+         <property name="text">
+          <string>Maintainer Email:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="1">
+        <widget class="QLineEdit" name="maintainerEmailEdit">
+         <property name="toolTip">
+          <string>Enter the maintainer's email address</string>
+         </property>
+         <property name="maxLength">
+          <number>200</number>
+         </property>
+         <property name="placeholderText">
+          <string>Mandatory (or Author Email)</string>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="1">
+        <spacer name="verticalSpacer">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>223</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="descriptionTab">
+      <attribute name="title">
+       <string>Description</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_2">
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_7">
+         <property name="text">
+          <string>Summary:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLineEdit" name="summaryEdit">
+         <property name="toolTip">
+          <string>Enter the summary description of the package</string>
+         </property>
+         <property name="maxLength">
+          <number>200</number>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="label_8">
+         <property name="text">
+          <string>Description:</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QPlainTextEdit" name="descriptionEdit">
+         <property name="toolTip">
+          <string>Enter the description of the package or files (one per line) to get it from.</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QCheckBox" name="descriptionFromFilesCheckBox">
+         <property name="toolTip">
+          <string>Select to get the description from files</string>
+         </property>
+         <property name="text">
+          <string>Get description from files</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLabel" name="label_16">
+         <property name="text">
+          <string>Keywords:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QLineEdit" name="keywordsEdit">
+         <property name="toolTip">
+          <string>Enter the keywords separated by comma</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="urlTab">
+      <attribute name="title">
+       <string>URLs</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_3">
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_9">
+         <property name="text">
+          <string>Home Page URL:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLineEdit" name="homePageUrlEdit">
+         <property name="toolTip">
+          <string>Enter the URL of the home page</string>
+         </property>
+         <property name="placeholderText">
+          <string>Mandatory</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="label_10">
+         <property name="text">
+          <string>Download URL:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QLineEdit" name="downloadUrlEdit">
+         <property name="toolTip">
+          <string>Enter the download URL</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <spacer name="verticalSpacer_2">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>339</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="licenseTab">
+      <attribute name="title">
+       <string>License</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <widget class="QCheckBox" name="licenseClassifierCheckBox">
+         <property name="text">
+          <string>Select From Trove License Classifiers</string>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="licenseClassifierComboBox">
+         <property name="toolTip">
+          <string>Select the license from the list of Trove Classifiers</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="licenseEdit">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="toolTip">
+          <string>Enter a license if none of the above are suitable</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="verticalSpacer_3">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>311</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="platformsTab">
+      <attribute name="title">
+       <string>Platforms</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <item>
+        <widget class="QLabel" name="label_11">
+         <property name="text">
+          <string>Enter supported platforms (one per line):</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPlainTextEdit" name="platformsEdit"/>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="classifiersTab">
+      <attribute name="title">
+       <string>Classifiers</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_4">
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_3">
+         <item>
+          <widget class="QLabel" name="label_14">
+           <property name="text">
+            <string>Development Status:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QComboBox" name="developmentStatusComboBox">
+           <property name="toolTip">
+            <string>Select the development status</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer_3">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QPushButton" name="localClassifiersButton">
+           <property name="toolTip">
+            <string>Press to populate the classifiers with data retrieved from a local file.</string>
+           </property>
+           <property name="text">
+            <string>Populate from local file</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_12">
+         <property name="text">
+          <string>Select the applicable classifiers:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QTreeWidget" name="classifiersList">
+         <property name="alternatingRowColors">
+          <bool>true</bool>
+         </property>
+         <attribute name="headerVisible">
+          <bool>false</bool>
+         </attribute>
+         <column>
+          <property name="text">
+           <string notr="true">1</string>
+          </property>
+         </column>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="packagesTab">
+      <attribute name="title">
+       <string>Packages</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_8">
+       <item>
+        <widget class="QStackedWidget" name="packagesStackedWidget">
+         <property name="currentIndex">
+          <number>1</number>
+         </property>
+         <widget class="QWidget" name="distutilsPage">
+          <layout class="QVBoxLayout" name="verticalLayout_5">
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <item>
+            <widget class="QListWidget" name="packagesList">
+             <property name="alternatingRowColors">
+              <bool>true</bool>
+             </property>
+             <property name="selectionMode">
+              <enum>QAbstractItemView::ExtendedSelection</enum>
+             </property>
+             <property name="sortingEnabled">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_4">
+             <item>
+              <widget class="QPushButton" name="deletePackageButton">
+               <property name="enabled">
+                <bool>false</bool>
+               </property>
+               <property name="toolTip">
+                <string>Press to delete the selected entries</string>
+               </property>
+               <property name="text">
+                <string>Delete</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="addPackageButton">
+               <property name="enabled">
+                <bool>false</bool>
+               </property>
+               <property name="toolTip">
+                <string>Add the package</string>
+               </property>
+               <property name="text">
+                <string>Add</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="packageEdit">
+               <property name="toolTip">
+                <string>Enter a package name to be added</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QToolButton" name="packageDirButton">
+               <property name="toolTip">
+                <string>Press to select a package directory via a directory selection dialog</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <widget class="QPushButton" name="autodiscoverPackagesButton">
+             <property name="toolTip">
+              <string>Press to discover packages of a project automatically</string>
+             </property>
+             <property name="text">
+              <string>Autodiscover Packages</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="setuptoolsPage">
+          <layout class="QGridLayout" name="gridLayout_5">
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_17">
+             <property name="text">
+              <string>Source Directory:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QLineEdit" name="sourceDirectoryEdit">
+             <property name="toolTip">
+              <string>Enter the source directory for the 'find_packages()' call</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="2">
+            <widget class="QToolButton" name="sourceDirectoryButton">
+             <property name="toolTip">
+              <string>Select the source directory for the 'find_packages()' call via a directory selection dialog</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0" alignment="Qt::AlignTop">
+            <widget class="QLabel" name="label_18">
+             <property name="text">
+              <string>Exclude Patterns:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1" colspan="2">
+            <widget class="QListWidget" name="excludePatternList">
+             <property name="alternatingRowColors">
+              <bool>true</bool>
+             </property>
+             <property name="selectionMode">
+              <enum>QAbstractItemView::ExtendedSelection</enum>
+             </property>
+             <property name="sortingEnabled">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1" colspan="2">
+            <layout class="QHBoxLayout" name="horizontalLayout_8">
+             <item>
+              <widget class="QPushButton" name="deleteExcludePatternButton">
+               <property name="enabled">
+                <bool>false</bool>
+               </property>
+               <property name="toolTip">
+                <string>Press to delete the selected entries</string>
+               </property>
+               <property name="text">
+                <string>Delete</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="addExludePatternButton">
+               <property name="enabled">
+                <bool>false</bool>
+               </property>
+               <property name="toolTip">
+                <string>Press to add the pattern</string>
+               </property>
+               <property name="text">
+                <string>Add</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="excludePatternEdit">
+               <property name="toolTip">
+                <string>Enter an exclude pattern for the 'find_packages()' call</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item row="3" column="0" colspan="3">
+            <widget class="QCheckBox" name="includePackageDataCheckBox">
+             <property name="toolTip">
+              <string>Select to add the 'include_package_data' statement</string>
+             </property>
+             <property name="text">
+              <string>Add 'include_package_data' Statement</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tab">
+      <attribute name="title">
+       <string>Modules</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_7">
+       <item>
+        <widget class="QListWidget" name="modulesList">
+         <property name="alternatingRowColors">
+          <bool>true</bool>
+         </property>
+         <property name="selectionMode">
+          <enum>QAbstractItemView::ExtendedSelection</enum>
+         </property>
+         <property name="sortingEnabled">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_7">
+         <item>
+          <widget class="QPushButton" name="deleteModuleButton">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="toolTip">
+            <string>Press to delete the selected entries</string>
+           </property>
+           <property name="text">
+            <string>Delete</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="addModuleButton">
+           <property name="toolTip">
+            <string>Add modules via a files selection dialog</string>
+           </property>
+           <property name="text">
+            <string>Add...</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer_5">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="scriptsTab">
+      <attribute name="title">
+       <string>Scripts</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_6">
+       <item>
+        <widget class="QListWidget" name="scriptsList">
+         <property name="alternatingRowColors">
+          <bool>true</bool>
+         </property>
+         <property name="selectionMode">
+          <enum>QAbstractItemView::ExtendedSelection</enum>
+         </property>
+         <property name="sortingEnabled">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_6">
+         <item>
+          <widget class="QPushButton" name="deleteScriptButton">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="toolTip">
+            <string>Press to delete the selected entries</string>
+           </property>
+           <property name="text">
+            <string>Delete</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="addScriptButton">
+           <property name="toolTip">
+            <string>Add script files via a files selection dialog</string>
+           </property>
+           <property name="text">
+            <string>Add...</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer_4">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QPushButton" name="projectButton">
+       <property name="toolTip">
+        <string>Press to populate entry fields from project data</string>
+       </property>
+       <property name="text">
+        <string>Populate from Project</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QDialogButtonBox" name="buttonBox">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="standardButtons">
+        <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <tabstops>
+  <tabstop>introCheckBox</tabstop>
+  <tabstop>importCheckBox</tabstop>
+  <tabstop>metaDataCheckBox</tabstop>
+  <tabstop>variantComboBox</tabstop>
+  <tabstop>packageRootEdit</tabstop>
+  <tabstop>packageRootDirButton</tabstop>
+  <tabstop>dataTabWidget</tabstop>
+  <tabstop>nameEdit</tabstop>
+  <tabstop>versionEdit</tabstop>
+  <tabstop>authorEdit</tabstop>
+  <tabstop>authorEmailEdit</tabstop>
+  <tabstop>maintainerEdit</tabstop>
+  <tabstop>maintainerEmailEdit</tabstop>
+  <tabstop>summaryEdit</tabstop>
+  <tabstop>descriptionEdit</tabstop>
+  <tabstop>descriptionFromFilesCheckBox</tabstop>
+  <tabstop>keywordsEdit</tabstop>
+  <tabstop>homePageUrlEdit</tabstop>
+  <tabstop>downloadUrlEdit</tabstop>
+  <tabstop>licenseClassifierCheckBox</tabstop>
+  <tabstop>licenseClassifierComboBox</tabstop>
+  <tabstop>licenseEdit</tabstop>
+  <tabstop>platformsEdit</tabstop>
+  <tabstop>developmentStatusComboBox</tabstop>
+  <tabstop>localClassifiersButton</tabstop>
+  <tabstop>classifiersList</tabstop>
+  <tabstop>sourceDirectoryEdit</tabstop>
+  <tabstop>sourceDirectoryButton</tabstop>
+  <tabstop>excludePatternList</tabstop>
+  <tabstop>deleteExcludePatternButton</tabstop>
+  <tabstop>addExludePatternButton</tabstop>
+  <tabstop>excludePatternEdit</tabstop>
+  <tabstop>includePackageDataCheckBox</tabstop>
+  <tabstop>modulesList</tabstop>
+  <tabstop>deleteModuleButton</tabstop>
+  <tabstop>addModuleButton</tabstop>
+  <tabstop>scriptsList</tabstop>
+  <tabstop>deleteScriptButton</tabstop>
+  <tabstop>addScriptButton</tabstop>
+  <tabstop>projectButton</tabstop>
+  <tabstop>autodiscoverPackagesButton</tabstop>
+  <tabstop>deletePackageButton</tabstop>
+  <tabstop>addPackageButton</tabstop>
+  <tabstop>packageEdit</tabstop>
+  <tabstop>packageDirButton</tabstop>
+  <tabstop>packagesList</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>SetupWizardDialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>236</x>
+     <y>540</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>157</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>SetupWizardDialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>304</x>
+     <y>540</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>286</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>licenseClassifierCheckBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>licenseClassifierComboBox</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>99</x>
+     <y>91</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>110</x>
+     <y>133</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>licenseClassifierCheckBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>licenseEdit</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>207</x>
+     <y>107</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>192</x>
+     <y>141</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

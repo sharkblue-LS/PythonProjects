@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HighlightingStyles SYSTEM "HighlightingStyles-6.0.dtd">
+<!-- Eric6 highlighting styles -->
+<!-- Saved: 2020-04-04, 19:35:01-->
+<!-- Author: Detlev Offenbach <detlev@die-offenbachs.de> -->
+<HighlightingStyles version="6.0">
+  <Lexer name="Bash">
+    <Style style="0" substyle="-1" color="#ffffff" paper="#262626" font="DejaVu Sans Mono,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Default</Description>
+    </Style>
+    <Style style="1" substyle="-1" color="#ffff00" paper="#ff0000" font="DejaVu Sans Mono,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Error</Description>
+    </Style>
+    <Style style="2" substyle="-1" color="#74cc66" paper="#262626" font="DejaVu Sans Mono,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Comment</Description>
+    </Style>
+    <Style style="3" substyle="-1" color="#00c8c8" paper="#262626" font="DejaVu Sans Mono,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Number</Description>
+    </Style>
+    <Style style="4" substyle="-1" color="#60a5ff" paper="#262626" font="DejaVu Sans Mono,9,-1,5,75,0,0,0,0,0" eolfill="False">
+      <Description>Keyword</Description>
+    </Style>
+    <Style style="5" substyle="-1" color="#c354c3" paper="#262626" font="DejaVu Sans Mono,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Double-quoted string</Description>
+    </Style>
+    <Style style="6" substyle="-1" color="#c354c3" paper="#262626" font="DejaVu Sans Mono,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Single-quoted string</Description>
+    </Style>
+    <Style style="7" substyle="-1" color="#bab1a8" paper="#262626" font="DejaVu Sans Mono,9,-1,5,75,0,0,0,0,0" eolfill="False">
+      <Description>Operator</Description>
+    </Style>
+    <Style style="8" substyle="-1" color="#ffffff" paper="#262626" font="DejaVu Sans Mono,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Identifier</Description>
+    </Style>
+    <Style style="9" substyle="-1" color="#ffffff" paper="#645858" font="DejaVu Sans Mono,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Scalar</Description>
+    </Style>
+    <Style style="10" substyle="-1" color="#ffffff" paper="#99995f" font="DejaVu Sans Mono,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Parameter expansion</Description>
+    </Style>
+    <Style style="11" substyle="-1" color="#ffff00" paper="#645858" font="DejaVu Sans Mono,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Backticks</Description>
+    </Style>
+    <Style style="12" substyle="-1" color="#ffffff" paper="#aa81a9" font="DejaVu Sans Mono,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Here document delimiter</Description>
+    </Style>
+    <Style style="13" substyle="-1" color="#ffd8fe" paper="#aa81a9" font="DejaVu Sans Mono,9,-1,5,50,0,0,0,0,0" eolfill="True">
+      <Description>Single-quoted here document</Description>
+    </Style>
+  </Lexer>
+</HighlightingStyles>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HighlightingStyles SYSTEM "HighlightingStyles-6.0.dtd">
+<!-- Eric6 highlighting styles -->
+<!-- Saved: 2020-04-05, 18:47:06-->
+<!-- Author: Detlev Offenbach <detlev@die-offenbachs.de> -->
+<HighlightingStyles version="6.0">
+  <Lexer name="Properties">
+    <Style style="0" substyle="-1" color="#ffffff" paper="#262626" font="Droid Sans Mono,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Default</Description>
+    </Style>
+    <Style style="1" substyle="-1" color="#74cc66" paper="#262626" font="Droid Sans Mono,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Comment</Description>
+    </Style>
+    <Style style="2" substyle="-1" color="#ec8aef" paper="#393d3d" font="Droid Sans Mono,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Section</Description>
+    </Style>
+    <Style style="3" substyle="-1" color="#e38c00" paper="#262626" font="Droid Sans Mono,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Assignment</Description>
+    </Style>
+    <Style style="4" substyle="-1" color="#d5d66c" paper="#262626" font="Droid Sans Mono,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Default value</Description>
+    </Style>
+    <Style style="5" substyle="-1" color="#141312" paper="#262626" font="Droid Sans Mono,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Key</Description>
+    </Style>
+  </Lexer>
+</HighlightingStyles>

@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html><head>
+<title>eric6.MicroPython.MicrobitDevices</title>
+<meta charset="UTF-8">
+<style>
+body {
+    background: #EDECE6;
+    margin: 0em 1em 10em 1em;
+    color: black;
+}
+
+h1 { color: white; background: #85774A; }
+h2 { color: white; background: #85774A; }
+h3 { color: white; background: #9D936E; }
+h4 { color: white; background: #9D936E; }
+    
+a { color: #BA6D36; }
+
+</style>
+</head>
+<body>
+<a NAME="top" ID="top"></a>
+<h1>eric6.MicroPython.MicrobitDevices</h1>
+
+<p>
+Module implementing the device interface class for BBC micro:bit and
+Calliope mini boards.
+</p>
+<h3>Global Attributes</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Classes</h3>
+
+<table>
+
+<tr>
+<td><a href="#MicrobitDevice">MicrobitDevice</a></td>
+<td>Class implementing the device for BBC micro:bit and Calliope mini boards.</td>
+</tr>
+</table>
+<h3>Functions</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+<hr />
+<hr />
+<a NAME="MicrobitDevice" ID="MicrobitDevice"></a>
+<h2>MicrobitDevice</h2>
+
+<p>
+    Class implementing the device for BBC micro:bit and Calliope mini boards.
+</p>
+<h3>Derived from</h3>
+MicroPythonDevice
+<h3>Class Attributes</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Class Methods</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+
+<table>
+
+<tr>
+<td><a href="#MicrobitDevice.__init__">MicrobitDevice</a></td>
+<td>Constructor</td>
+</tr>
+<tr>
+<td><a href="#MicrobitDevice.__flashMicroPython">__flashMicroPython</a></td>
+<td>Private slot to flash MicroPython or the DAPLink firmware to the device.</td>
+</tr>
+<tr>
+<td><a href="#MicrobitDevice.__resetDevice">__resetDevice</a></td>
+<td>Private slot to reset the connected device.</td>
+</tr>
+<tr>
+<td><a href="#MicrobitDevice.__saveMain">__saveMain</a></td>
+<td>Private slot to copy the current script as 'main.py' onto the connected device.</td>
+</tr>
+<tr>
+<td><a href="#MicrobitDevice.__saveScriptToDevice">__saveScriptToDevice</a></td>
+<td>Private method to save the current script onto the connected device.</td>
+</tr>
+<tr>
+<td><a href="#MicrobitDevice.addDeviceMenuEntries">addDeviceMenuEntries</a></td>
+<td>Public method to add device specific entries to the given menu.</td>
+</tr>
+<tr>
+<td><a href="#MicrobitDevice.canRunScript">canRunScript</a></td>
+<td>Public method to determine, if a script can be executed.</td>
+</tr>
+<tr>
+<td><a href="#MicrobitDevice.canStartFileManager">canStartFileManager</a></td>
+<td>Public method to determine, if a File Manager can be started.</td>
+</tr>
+<tr>
+<td><a href="#MicrobitDevice.canStartPlotter">canStartPlotter</a></td>
+<td>Public method to determine, if a Plotter can be started.</td>
+</tr>
+<tr>
+<td><a href="#MicrobitDevice.canStartRepl">canStartRepl</a></td>
+<td>Public method to determine, if a REPL can be started.</td>
+</tr>
+<tr>
+<td><a href="#MicrobitDevice.deviceName">deviceName</a></td>
+<td>Public method to get the name of the device.</td>
+</tr>
+<tr>
+<td><a href="#MicrobitDevice.forceInterrupt">forceInterrupt</a></td>
+<td>Public method to determine the need for an interrupt when opening the serial connection.</td>
+</tr>
+<tr>
+<td><a href="#MicrobitDevice.getDocumentationUrl">getDocumentationUrl</a></td>
+<td>Public method to get the device documentation URL.</td>
+</tr>
+<tr>
+<td><a href="#MicrobitDevice.getDownloadMenuEntries">getDownloadMenuEntries</a></td>
+<td>Public method to retrieve the entries for the downloads menu.</td>
+</tr>
+<tr>
+<td><a href="#MicrobitDevice.hasFlashMenuEntry">hasFlashMenuEntry</a></td>
+<td>Public method to check, if the device has its own flash menu entry.</td>
+</tr>
+<tr>
+<td><a href="#MicrobitDevice.hasTimeCommands">hasTimeCommands</a></td>
+<td>Public method to check, if the device supports time commands.</td>
+</tr>
+<tr>
+<td><a href="#MicrobitDevice.runScript">runScript</a></td>
+<td>Public method to run the given Python script.</td>
+</tr>
+<tr>
+<td><a href="#MicrobitDevice.setButtons">setButtons</a></td>
+<td>Public method to enable the supported action buttons.</td>
+</tr>
+</table>
+<h3>Static Methods</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+
+<a NAME="MicrobitDevice.__init__" ID="MicrobitDevice.__init__"></a>
+<h4>MicrobitDevice (Constructor)</h4>
+<b>MicrobitDevice</b>(<i>microPythonWidget, deviceType, parent=None</i>)
+
+<p>
+        Constructor
+</p>
+<dl>
+
+<dt><i>microPythonWidget</i> (MicroPythonWidget)</dt>
+<dd>
+reference to the main MicroPython widget
+</dd>
+<dt><i>deviceType</i> (str)</dt>
+<dd>
+type of the device
+</dd>
+<dt><i>parent</i> (QObject)</dt>
+<dd>
+reference to the parent object
+</dd>
+</dl>
+<a NAME="MicrobitDevice.__flashMicroPython" ID="MicrobitDevice.__flashMicroPython"></a>
+<h4>MicrobitDevice.__flashMicroPython</h4>
+<b>__flashMicroPython</b>(<i>firmware=False</i>)
+
+<p>
+        Private slot to flash MicroPython or the DAPLink firmware to the
+        device.
+</p>
+<dl>
+
+<dt><i>firmware</i> (bool)</dt>
+<dd>
+flag indicating to flash the DAPLink firmware
+</dd>
+</dl>
+<a NAME="MicrobitDevice.__resetDevice" ID="MicrobitDevice.__resetDevice"></a>
+<h4>MicrobitDevice.__resetDevice</h4>
+<b>__resetDevice</b>(<i></i>)
+
+<p>
+        Private slot to reset the connected device.
+</p>
+<a NAME="MicrobitDevice.__saveMain" ID="MicrobitDevice.__saveMain"></a>
+<h4>MicrobitDevice.__saveMain</h4>
+<b>__saveMain</b>(<i></i>)
+
+<p>
+        Private slot to copy the current script as 'main.py' onto the
+        connected device.
+</p>
+<a NAME="MicrobitDevice.__saveScriptToDevice" ID="MicrobitDevice.__saveScriptToDevice"></a>
+<h4>MicrobitDevice.__saveScriptToDevice</h4>
+<b>__saveScriptToDevice</b>(<i>scriptName=""</i>)
+
+<p>
+        Private method to save the current script onto the connected
+        device.
+</p>
+<dl>
+
+<dt><i>scriptName</i> (str)</dt>
+<dd>
+name of the file on the device
+</dd>
+</dl>
+<a NAME="MicrobitDevice.addDeviceMenuEntries" ID="MicrobitDevice.addDeviceMenuEntries"></a>
+<h4>MicrobitDevice.addDeviceMenuEntries</h4>
+<b>addDeviceMenuEntries</b>(<i>menu</i>)
+
+<p>
+        Public method to add device specific entries to the given menu.
+</p>
+<dl>
+
+<dt><i>menu</i> (QMenu)</dt>
+<dd>
+reference to the context menu
+</dd>
+</dl>
+<a NAME="MicrobitDevice.canRunScript" ID="MicrobitDevice.canRunScript"></a>
+<h4>MicrobitDevice.canRunScript</h4>
+<b>canRunScript</b>(<i></i>)
+
+<p>
+        Public method to determine, if a script can be executed.
+</p>
+<dl>
+<dt>Return:</dt>
+<dd>
+tuple containing a flag indicating it is safe to start a
+            Plotter and a reason why it cannot.
+</dd>
+</dl>
+<dl>
+<dt>Return Type:</dt>
+<dd>
+tuple of (bool, str)
+</dd>
+</dl>
+<a NAME="MicrobitDevice.canStartFileManager" ID="MicrobitDevice.canStartFileManager"></a>
+<h4>MicrobitDevice.canStartFileManager</h4>
+<b>canStartFileManager</b>(<i></i>)
+
+<p>
+        Public method to determine, if a File Manager can be started.
+</p>
+<dl>
+<dt>Return:</dt>
+<dd>
+tuple containing a flag indicating it is safe to start a
+            File Manager and a reason why it cannot.
+</dd>
+</dl>
+<dl>
+<dt>Return Type:</dt>
+<dd>
+tuple of (bool, str)
+</dd>
+</dl>
+<a NAME="MicrobitDevice.canStartPlotter" ID="MicrobitDevice.canStartPlotter"></a>
+<h4>MicrobitDevice.canStartPlotter</h4>
+<b>canStartPlotter</b>(<i></i>)
+
+<p>
+        Public method to determine, if a Plotter can be started.
+</p>
+<dl>
+<dt>Return:</dt>
+<dd>
+tuple containing a flag indicating it is safe to start a
+            Plotter and a reason why it cannot.
+</dd>
+</dl>
+<dl>
+<dt>Return Type:</dt>
+<dd>
+tuple of (bool, str)
+</dd>
+</dl>
+<a NAME="MicrobitDevice.canStartRepl" ID="MicrobitDevice.canStartRepl"></a>
+<h4>MicrobitDevice.canStartRepl</h4>
+<b>canStartRepl</b>(<i></i>)
+
+<p>
+        Public method to determine, if a REPL can be started.
+</p>
+<dl>
+<dt>Return:</dt>
+<dd>
+tuple containing a flag indicating it is safe to start a REPL
+            and a reason why it cannot.
+</dd>
+</dl>
+<dl>
+<dt>Return Type:</dt>
+<dd>
+tuple of (bool, str)
+</dd>
+</dl>
+<a NAME="MicrobitDevice.deviceName" ID="MicrobitDevice.deviceName"></a>
+<h4>MicrobitDevice.deviceName</h4>
+<b>deviceName</b>(<i></i>)
+
+<p>
+        Public method to get the name of the device.
+</p>
+<dl>
+<dt>Return:</dt>
+<dd>
+name of the device
+</dd>
+</dl>
+<dl>
+<dt>Return Type:</dt>
+<dd>
+str
+</dd>
+</dl>
+<a NAME="MicrobitDevice.forceInterrupt" ID="MicrobitDevice.forceInterrupt"></a>
+<h4>MicrobitDevice.forceInterrupt</h4>
+<b>forceInterrupt</b>(<i></i>)
+
+<p>
+        Public method to determine the need for an interrupt when opening the
+        serial connection.
+</p>
+<dl>
+<dt>Return:</dt>
+<dd>
+flag indicating an interrupt is needed
+</dd>
+</dl>
+<dl>
+<dt>Return Type:</dt>
+<dd>
+bool
+</dd>
+</dl>
+<a NAME="MicrobitDevice.getDocumentationUrl" ID="MicrobitDevice.getDocumentationUrl"></a>
+<h4>MicrobitDevice.getDocumentationUrl</h4>
+<b>getDocumentationUrl</b>(<i></i>)
+
+<p>
+        Public method to get the device documentation URL.
+</p>
+<dl>
+<dt>Return:</dt>
+<dd>
+documentation URL of the device
+</dd>
+</dl>
+<dl>
+<dt>Return Type:</dt>
+<dd>
+str
+</dd>
+</dl>
+<a NAME="MicrobitDevice.getDownloadMenuEntries" ID="MicrobitDevice.getDownloadMenuEntries"></a>
+<h4>MicrobitDevice.getDownloadMenuEntries</h4>
+<b>getDownloadMenuEntries</b>(<i></i>)
+
+<p>
+        Public method to retrieve the entries for the downloads menu.
+</p>
+<dl>
+<dt>Return:</dt>
+<dd>
+list of tuples with menu text and URL to be opened for each
+            entry
+</dd>
+</dl>
+<dl>
+<dt>Return Type:</dt>
+<dd>
+list of tuple of (str, str)
+</dd>
+</dl>
+<a NAME="MicrobitDevice.hasFlashMenuEntry" ID="MicrobitDevice.hasFlashMenuEntry"></a>
+<h4>MicrobitDevice.hasFlashMenuEntry</h4>
+<b>hasFlashMenuEntry</b>(<i></i>)
+
+<p>
+        Public method to check, if the device has its own flash menu entry.
+</p>
+<dl>
+<dt>Return:</dt>
+<dd>
+flag indicating a specific flash menu entry
+</dd>
+</dl>
+<dl>
+<dt>Return Type:</dt>
+<dd>
+bool
+</dd>
+</dl>
+<a NAME="MicrobitDevice.hasTimeCommands" ID="MicrobitDevice.hasTimeCommands"></a>
+<h4>MicrobitDevice.hasTimeCommands</h4>
+<b>hasTimeCommands</b>(<i></i>)
+
+<p>
+        Public method to check, if the device supports time commands.
+</p>
+<p>
+        The default returns True.
+</p>
+<dl>
+<dt>Return:</dt>
+<dd>
+flag indicating support for time commands
+</dd>
+</dl>
+<dl>
+<dt>Return Type:</dt>
+<dd>
+bool
+</dd>
+</dl>
+<a NAME="MicrobitDevice.runScript" ID="MicrobitDevice.runScript"></a>
+<h4>MicrobitDevice.runScript</h4>
+<b>runScript</b>(<i>script</i>)
+
+<p>
+        Public method to run the given Python script.
+</p>
+<dl>
+
+<dt><i>script</i> (str)</dt>
+<dd>
+script to be executed
+</dd>
+</dl>
+<a NAME="MicrobitDevice.setButtons" ID="MicrobitDevice.setButtons"></a>
+<h4>MicrobitDevice.setButtons</h4>
+<b>setButtons</b>(<i></i>)
+
+<p>
+        Public method to enable the supported action buttons.
+</p>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+</body></html>

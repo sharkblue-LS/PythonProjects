@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html><head>
+<title>eric6.Globals.__init__</title>
+<meta charset="UTF-8">
+<style>
+body {
+    background: #EDECE6;
+    margin: 0em 1em 10em 1em;
+    color: black;
+}
+
+h1 { color: white; background: #85774A; }
+h2 { color: white; background: #85774A; }
+h3 { color: white; background: #9D936E; }
+h4 { color: white; background: #9D936E; }
+    
+a { color: #BA6D36; }
+
+</style>
+</head>
+<body>
+<a NAME="top" ID="top"></a>
+<h1>eric6.Globals.__init__</h1>
+
+<p>
+Module defining common data to be used by all modules.
+</p>
+<h3>Global Attributes</h3>
+
+<table>
+<tr><td>configDir</td></tr><tr><td>recentNameBreakpointConditions</td></tr><tr><td>recentNameBreakpointFiles</td></tr><tr><td>recentNameFiles</td></tr><tr><td>recentNameHexFiles</td></tr><tr><td>recentNameHosts</td></tr><tr><td>recentNameMultiProject</td></tr><tr><td>recentNameProject</td></tr><tr><td>settingsNameGlobal</td></tr><tr><td>settingsNameOrganization</td></tr><tr><td>settingsNameRecent</td></tr>
+</table>
+<h3>Classes</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Functions</h3>
+
+<table>
+
+<tr>
+<td><a href="#dataString">dataString</a></td>
+<td>Module function to generate a formatted size string.</td>
+</tr>
+<tr>
+<td><a href="#desktopName">desktopName</a></td>
+<td>Function to determine the name of the desktop environment used (Linux only).</td>
+</tr>
+<tr>
+<td><a href="#getConfigDir">getConfigDir</a></td>
+<td>Module function to get the name of the directory storing the config data.</td>
+</tr>
+<tr>
+<td><a href="#getInstallInfoFilePath">getInstallInfoFilePath</a></td>
+<td>Public method to get the path name of the install info file.</td>
+</tr>
+<tr>
+<td><a href="#getPyQt5ModulesDirectory">getPyQt5ModulesDirectory</a></td>
+<td>Function to determine the path to PyQt5 modules directory.</td>
+</tr>
+<tr>
+<td><a href="#getPyQtToolsPath">getPyQtToolsPath</a></td>
+<td>Module function to get the path of the PyQt tools.</td>
+</tr>
+<tr>
+<td><a href="#getPythonModulesDirectory">getPythonModulesDirectory</a></td>
+<td>Function to determine the path to Python's modules directory.</td>
+</tr>
+<tr>
+<td><a href="#getQtBinariesPath">getQtBinariesPath</a></td>
+<td>Module function to get the path of the Qt binaries.</td>
+</tr>
+<tr>
+<td><a href="#getWebBrowserSupport">getWebBrowserSupport</a></td>
+<td>Module function to determine the supported web browser variant.</td>
+</tr>
+<tr>
+<td><a href="#isGnomeDesktop">isGnomeDesktop</a></td>
+<td>Function to check, if the current session is a Gnome desktop (Linux only).</td>
+</tr>
+<tr>
+<td><a href="#isKdeDesktop">isKdeDesktop</a></td>
+<td>Function to check, if the current session is a KDE desktop (Linux only).</td>
+</tr>
+<tr>
+<td><a href="#isLinuxPlatform">isLinuxPlatform</a></td>
+<td>Function to check, if this is a Linux platform.</td>
+</tr>
+<tr>
+<td><a href="#isMacPlatform">isMacPlatform</a></td>
+<td>Function to check, if this is a Mac platform.</td>
+</tr>
+<tr>
+<td><a href="#isWaylandSession">isWaylandSession</a></td>
+<td>Function to check, if the current session is a wayland session.</td>
+</tr>
+<tr>
+<td><a href="#isWindowsPlatform">isWindowsPlatform</a></td>
+<td>Function to check, if this is a Windows platform.</td>
+</tr>
+<tr>
+<td><a href="#qVersionTuple">qVersionTuple</a></td>
+<td>Module function to get the Qt version as a tuple.</td>
+</tr>
+<tr>
+<td><a href="#sessionType">sessionType</a></td>
+<td>Function to determine the name of the running session (Linux only).</td>
+</tr>
+<tr>
+<td><a href="#setConfigDir">setConfigDir</a></td>
+<td>Module function to set the name of the directory storing the config data.</td>
+</tr>
+<tr>
+<td><a href="#strGroup">strGroup</a></td>
+<td>Module function to group a string into sub-strings separated by a separator.</td>
+</tr>
+<tr>
+<td><a href="#strToQByteArray">strToQByteArray</a></td>
+<td>Module function to convert a Python string into a QByteArray.</td>
+</tr>
+<tr>
+<td><a href="#toBool">toBool</a></td>
+<td>Module function to convert a value to bool.</td>
+</tr>
+<tr>
+<td><a href="#toByteArray">toByteArray</a></td>
+<td>Module function to convert a value to a byte array.</td>
+</tr>
+<tr>
+<td><a href="#toDict">toDict</a></td>
+<td>Module function to convert a value to a dictionary.</td>
+</tr>
+<tr>
+<td><a href="#toList">toList</a></td>
+<td>Module function to convert a value to a list.</td>
+</tr>
+<tr>
+<td><a href="#versionToTuple">versionToTuple</a></td>
+<td>Module function to convert a version string into a tuple.</td>
+</tr>
+</table>
+<hr />
+<hr />
+<a NAME="dataString" ID="dataString"></a>
+<h2>dataString</h2>
+<b>dataString</b>(<i>size</i>)
+
+<p>
+    Module function to generate a formatted size string.
+</p>
+<dl>
+
+<dt><i>size</i> (int)</dt>
+<dd>
+size to be formatted
+</dd>
+</dl>
+<dl>
+<dt>Return:</dt>
+<dd>
+formatted data string
+</dd>
+</dl>
+<dl>
+<dt>Return Type:</dt>
+<dd>
+str
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+<hr />
+<a NAME="desktopName" ID="desktopName"></a>
+<h2>desktopName</h2>
+<b>desktopName</b>(<i></i>)
+
+<p>
+    Function to determine the name of the desktop environment used
+    (Linux only).
+</p>
+<dl>
+<dt>Return:</dt>
+<dd>
+name of the desktop environment
+</dd>
+</dl>
+<dl>
+<dt>Return Type:</dt>
+<dd>
+str
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+<hr />
+<a NAME="getConfigDir" ID="getConfigDir"></a>
+<h2>getConfigDir</h2>
+<b>getConfigDir</b>(<i></i>)
+
+<p>
+    Module function to get the name of the directory storing the config data.
+</p>
+<dl>
+<dt>Return:</dt>
+<dd>
+directory name of the config dir (string)
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+<hr />
+<a NAME="getInstallInfoFilePath" ID="getInstallInfoFilePath"></a>
+<h2>getInstallInfoFilePath</h2>
+<b>getInstallInfoFilePath</b>(<i></i>)
+
+<p>
+    Public method to get the path name of the install info file.
+</p>
+<dl>
+<dt>Return:</dt>
+<dd>
+file path of the install info file
+</dd>
+</dl>
+<dl>
+<dt>Return Type:</dt>
+<dd>
+str
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+<hr />
+<a NAME="getPyQt5ModulesDirectory" ID="getPyQt5ModulesDirectory"></a>
+<h2>getPyQt5ModulesDirectory</h2>
+<b>getPyQt5ModulesDirectory</b>(<i></i>)
+
+<p>
+    Function to determine the path to PyQt5 modules directory.
+</p>
+<dl>
+<dt>Return:</dt>
+<dd>
+path to the PyQt5 modules directory (string)
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+<hr />
+<a NAME="getPyQtToolsPath" ID="getPyQtToolsPath"></a>
+<h2>getPyQtToolsPath</h2>
+<b>getPyQtToolsPath</b>(<i>version=5</i>)
+
+<p>
+    Module function to get the path of the PyQt tools.
+</p>
+<dl>
+
+<dt><i>version</i> (int)</dt>
+<dd>
+PyQt major version
+</dd>
+</dl>
+<dl>
+<dt>Return:</dt>
+<dd>
+path to the PyQt tools
+</dd>
+</dl>
+<dl>
+<dt>Return Type:</dt>
+<dd>
+str
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+<hr />
+<a NAME="getPythonModulesDirectory" ID="getPythonModulesDirectory"></a>
+<h2>getPythonModulesDirectory</h2>
+<b>getPythonModulesDirectory</b>(<i></i>)
+
+<p>
+    Function to determine the path to Python's modules directory.
+</p>
+<dl>
+<dt>Return:</dt>
+<dd>
+path to the Python modules directory (string)
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+<hr />
+<a NAME="getQtBinariesPath" ID="getQtBinariesPath"></a>
+<h2>getQtBinariesPath</h2>
+<b>getQtBinariesPath</b>(<i></i>)
+
+<p>
+    Module function to get the path of the Qt binaries.
+</p>
+<dl>
+<dt>Return:</dt>
+<dd>
+path of the Qt binaries
+</dd>
+</dl>
+<dl>
+<dt>Return Type:</dt>
+<dd>
+str
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+<hr />
+<a NAME="getWebBrowserSupport" ID="getWebBrowserSupport"></a>
+<h2>getWebBrowserSupport</h2>
+<b>getWebBrowserSupport</b>(<i></i>)
+
+<p>
+    Module function to determine the supported web browser variant.
+</p>
+<dl>
+<dt>Return:</dt>
+<dd>
+string indicating the supported web browser variant ("QtWebEngine",
+        or "None")
+</dd>
+</dl>
+<dl>
+<dt>Return Type:</dt>
+<dd>
+str
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+<hr />
+<a NAME="isGnomeDesktop" ID="isGnomeDesktop"></a>
+<h2>isGnomeDesktop</h2>
+<b>isGnomeDesktop</b>(<i></i>)
+
+<p>
+    Function to check, if the current session is a Gnome desktop (Linux only).
+</p>
+<dl>
+<dt>Return:</dt>
+<dd>
+flag indicating a Gnome desktop
+</dd>
+</dl>
+<dl>
+<dt>Return Type:</dt>
+<dd>
+bool
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+<hr />
+<a NAME="isKdeDesktop" ID="isKdeDesktop"></a>
+<h2>isKdeDesktop</h2>
+<b>isKdeDesktop</b>(<i></i>)
+
+<p>
+    Function to check, if the current session is a KDE desktop (Linux only).
+</p>
+<dl>
+<dt>Return:</dt>
+<dd>
+flag indicating a KDE desktop
+</dd>
+</dl>
+<dl>
+<dt>Return Type:</dt>
+<dd>
+bool
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+<hr />
+<a NAME="isLinuxPlatform" ID="isLinuxPlatform"></a>
+<h2>isLinuxPlatform</h2>
+<b>isLinuxPlatform</b>(<i></i>)
+
+<p>
+    Function to check, if this is a Linux platform.
+</p>
+<dl>
+<dt>Return:</dt>
+<dd>
+flag indicating Linux platform (boolean)
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+<hr />
+<a NAME="isMacPlatform" ID="isMacPlatform"></a>
+<h2>isMacPlatform</h2>
+<b>isMacPlatform</b>(<i></i>)
+
+<p>
+    Function to check, if this is a Mac platform.
+</p>
+<dl>
+<dt>Return:</dt>
+<dd>
+flag indicating Mac platform (boolean)
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+<hr />
+<a NAME="isWaylandSession" ID="isWaylandSession"></a>
+<h2>isWaylandSession</h2>
+<b>isWaylandSession</b>(<i></i>)
+
+<p>
+    Function to check, if the current session is a wayland session.
+</p>
+<dl>
+<dt>Return:</dt>
+<dd>
+flag indicating a wayland session
+</dd>
+</dl>
+<dl>
+<dt>Return Type:</dt>
+<dd>
+bool
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+<hr />
+<a NAME="isWindowsPlatform" ID="isWindowsPlatform"></a>
+<h2>isWindowsPlatform</h2>
+<b>isWindowsPlatform</b>(<i></i>)
+
+<p>
+    Function to check, if this is a Windows platform.
+</p>
+<dl>
+<dt>Return:</dt>
+<dd>
+flag indicating Windows platform (boolean)
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+<hr />
+<a NAME="qVersionTuple" ID="qVersionTuple"></a>
+<h2>qVersionTuple</h2>
+<b>qVersionTuple</b>(<i></i>)
+
+<p>
+    Module function to get the Qt version as a tuple.
+</p>
+<dl>
+<dt>Return:</dt>
+<dd>
+Qt version as a tuple
+</dd>
+</dl>
+<dl>
+<dt>Return Type:</dt>
+<dd>
+tuple of int
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+<hr />
+<a NAME="sessionType" ID="sessionType"></a>
+<h2>sessionType</h2>
+<b>sessionType</b>(<i></i>)
+
+<p>
+    Function to determine the name of the running session (Linux only).
+</p>
+<dl>
+<dt>Return:</dt>
+<dd>
+name of the desktop environment
+</dd>
+</dl>
+<dl>
+<dt>Return Type:</dt>
+<dd>
+str
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+<hr />
+<a NAME="setConfigDir" ID="setConfigDir"></a>
+<h2>setConfigDir</h2>
+<b>setConfigDir</b>(<i>d</i>)
+
+<p>
+    Module function to set the name of the directory storing the config data.
+</p>
+<dl>
+
+<dt><i>d</i></dt>
+<dd>
+name of an existing directory (string)
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+<hr />
+<a NAME="strGroup" ID="strGroup"></a>
+<h2>strGroup</h2>
+<b>strGroup</b>(<i>txt, sep, groupLen=4</i>)
+
+<p>
+    Module function to group a string into sub-strings separated by a
+    separator.
+</p>
+<dl>
+
+<dt><i>txt</i> (str)</dt>
+<dd>
+text to be grouped
+</dd>
+<dt><i>sep</i> (str)</dt>
+<dd>
+separator string
+</dd>
+<dt><i>groupLen</i> (int)</dt>
+<dd>
+length of each group
+</dd>
+</dl>
+<dl>
+<dt>Return:</dt>
+<dd>
+result string
+</dd>
+</dl>
+<dl>
+<dt>Return Type:</dt>
+<dd>
+str
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+<hr />
+<a NAME="strToQByteArray" ID="strToQByteArray"></a>
+<h2>strToQByteArray</h2>
+<b>strToQByteArray</b>(<i>txt</i>)
+
+<p>
+    Module function to convert a Python string into a QByteArray.
+</p>
+<dl>
+
+<dt><i>txt</i> (str, bytes, bytearray)</dt>
+<dd>
+Python string to be converted
+</dd>
+</dl>
+<dl>
+<dt>Return:</dt>
+<dd>
+converted QByteArray
+</dd>
+</dl>
+<dl>
+<dt>Return Type:</dt>
+<dd>
+QByteArray
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+<hr />
+<a NAME="toBool" ID="toBool"></a>
+<h2>toBool</h2>
+<b>toBool</b>(<i>value</i>)
+
+<p>
+    Module function to convert a value to bool.
+</p>
+<dl>
+
+<dt><i>value</i></dt>
+<dd>
+value to be converted
+</dd>
+</dl>
+<dl>
+<dt>Return:</dt>
+<dd>
+converted data
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+<hr />
+<a NAME="toByteArray" ID="toByteArray"></a>
+<h2>toByteArray</h2>
+<b>toByteArray</b>(<i>value</i>)
+
+<p>
+    Module function to convert a value to a byte array.
+</p>
+<dl>
+
+<dt><i>value</i></dt>
+<dd>
+value to be converted
+</dd>
+</dl>
+<dl>
+<dt>Return:</dt>
+<dd>
+converted data
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+<hr />
+<a NAME="toDict" ID="toDict"></a>
+<h2>toDict</h2>
+<b>toDict</b>(<i>value</i>)
+
+<p>
+    Module function to convert a value to a dictionary.
+</p>
+<dl>
+
+<dt><i>value</i></dt>
+<dd>
+value to be converted
+</dd>
+</dl>
+<dl>
+<dt>Return:</dt>
+<dd>
+converted data
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+<hr />
+<a NAME="toList" ID="toList"></a>
+<h2>toList</h2>
+<b>toList</b>(<i>value</i>)
+
+<p>
+    Module function to convert a value to a list.
+</p>
+<dl>
+
+<dt><i>value</i></dt>
+<dd>
+value to be converted
+</dd>
+</dl>
+<dl>
+<dt>Return:</dt>
+<dd>
+converted data
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+<hr />
+<a NAME="versionToTuple" ID="versionToTuple"></a>
+<h2>versionToTuple</h2>
+<b>versionToTuple</b>(<i>version, length=3</i>)
+
+<p>
+    Module function to convert a version string into a tuple.
+</p>
+<p>
+    Note: A version string consists of non-negative decimals separated by "."
+    optionally followed by a suffix. Suffix is everything after the last
+    decimal.
+</p>
+<dl>
+
+<dt><i>version</i> (str)</dt>
+<dd>
+version string
+</dd>
+<dt><i>length</i> (int)</dt>
+<dd>
+desired length of the version tuple
+</dd>
+</dl>
+<dl>
+<dt>Return:</dt>
+<dd>
+version tuple without the suffix
+</dd>
+</dl>
+<dl>
+<dt>Return Type:</dt>
+<dd>
+tuple of int
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+</body></html>

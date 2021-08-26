@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html><head>
+<title>eric6.E5Gui.E5ProcessDialog</title>
+<meta charset="UTF-8">
+<style>
+body {
+    background: #EDECE6;
+    margin: 0em 1em 10em 1em;
+    color: black;
+}
+
+h1 { color: white; background: #85774A; }
+h2 { color: white; background: #85774A; }
+h3 { color: white; background: #9D936E; }
+h4 { color: white; background: #9D936E; }
+    
+a { color: #BA6D36; }
+
+</style>
+</head>
+<body>
+<a NAME="top" ID="top"></a>
+<h1>eric6.E5Gui.E5ProcessDialog</h1>
+
+<p>
+Module implementing a dialog starting a process and showing its output.
+</p>
+<h3>Global Attributes</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Classes</h3>
+
+<table>
+
+<tr>
+<td><a href="#E5ProcessDialog">E5ProcessDialog</a></td>
+<td>Class implementing a dialog starting a process and showing its output.</td>
+</tr>
+</table>
+<h3>Functions</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+<hr />
+<hr />
+<a NAME="E5ProcessDialog" ID="E5ProcessDialog"></a>
+<h2>E5ProcessDialog</h2>
+
+<p>
+    Class implementing a dialog starting a process and showing its output.
+</p>
+<p>
+    It starts a QProcess and displays a dialog that
+    shows the output of the process. The dialog is modal,
+    which causes a synchronized execution of the process.
+</p>
+<h3>Derived from</h3>
+QDialog, Ui_E5ProcessDialog
+<h3>Class Attributes</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Class Methods</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+
+<table>
+
+<tr>
+<td><a href="#E5ProcessDialog.__init__">E5ProcessDialog</a></td>
+<td>Constructor</td>
+</tr>
+<tr>
+<td><a href="#E5ProcessDialog.__finish">__finish</a></td>
+<td>Private slot called when the process finished or the user pressed the button.</td>
+</tr>
+<tr>
+<td><a href="#E5ProcessDialog.__procFinished">__procFinished</a></td>
+<td>Private slot connected to the finished signal.</td>
+</tr>
+<tr>
+<td><a href="#E5ProcessDialog.__readStderr">__readStderr</a></td>
+<td>Private slot to handle the readyReadStandardError signal.</td>
+</tr>
+<tr>
+<td><a href="#E5ProcessDialog.__readStdout">__readStdout</a></td>
+<td>Private slot to handle the readyReadStandardOutput signal.</td>
+</tr>
+<tr>
+<td><a href="#E5ProcessDialog.keyPressEvent">keyPressEvent</a></td>
+<td>Protected slot to handle a key press event.</td>
+</tr>
+<tr>
+<td><a href="#E5ProcessDialog.normalExit">normalExit</a></td>
+<td>Public method to check for a normal process termination.</td>
+</tr>
+<tr>
+<td><a href="#E5ProcessDialog.normalExitWithoutErrors">normalExitWithoutErrors</a></td>
+<td>Public method to check for a normal process termination without error messages.</td>
+</tr>
+<tr>
+<td><a href="#E5ProcessDialog.on_buttonBox_clicked">on_buttonBox_clicked</a></td>
+<td>Private slot called by a button of the button box clicked.</td>
+</tr>
+<tr>
+<td><a href="#E5ProcessDialog.on_input_returnPressed">on_input_returnPressed</a></td>
+<td>Private slot to handle the press of the return key in the input field.</td>
+</tr>
+<tr>
+<td><a href="#E5ProcessDialog.on_passwordCheckBox_toggled">on_passwordCheckBox_toggled</a></td>
+<td>Private slot to handle the password checkbox toggled.</td>
+</tr>
+<tr>
+<td><a href="#E5ProcessDialog.on_sendButton_clicked">on_sendButton_clicked</a></td>
+<td>Private slot to send the input to the git process.</td>
+</tr>
+<tr>
+<td><a href="#E5ProcessDialog.startProcess">startProcess</a></td>
+<td>Public slot used to start the process.</td>
+</tr>
+</table>
+<h3>Static Methods</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+
+<a NAME="E5ProcessDialog.__init__" ID="E5ProcessDialog.__init__"></a>
+<h4>E5ProcessDialog (Constructor)</h4>
+<b>E5ProcessDialog</b>(<i>outputTitle="", windowTitle="", showProgress=False, parent=None</i>)
+
+<p>
+        Constructor
+</p>
+<dl>
+
+<dt><i>outputTitle</i> (str)</dt>
+<dd>
+title for the output group
+</dd>
+<dt><i>windowTitle</i> (str)</dt>
+<dd>
+title of the dialog
+</dd>
+<dt><i>showProgress</i> (bool)</dt>
+<dd>
+flag indicating to show a progress bar
+</dd>
+<dt><i>parent</i> (QWidget)</dt>
+<dd>
+reference to the parent widget
+</dd>
+</dl>
+<a NAME="E5ProcessDialog.__finish" ID="E5ProcessDialog.__finish"></a>
+<h4>E5ProcessDialog.__finish</h4>
+<b>__finish</b>(<i></i>)
+
+<p>
+        Private slot called when the process finished or the user pressed
+        the button.
+</p>
+<a NAME="E5ProcessDialog.__procFinished" ID="E5ProcessDialog.__procFinished"></a>
+<h4>E5ProcessDialog.__procFinished</h4>
+<b>__procFinished</b>(<i>exitCode, exitStatus</i>)
+
+<p>
+        Private slot connected to the finished signal.
+</p>
+<dl>
+
+<dt><i>exitCode</i> (int)</dt>
+<dd>
+exit code of the process
+</dd>
+<dt><i>exitStatus</i> (QProcess.ExitStatus)</dt>
+<dd>
+exit status of the process
+</dd>
+</dl>
+<a NAME="E5ProcessDialog.__readStderr" ID="E5ProcessDialog.__readStderr"></a>
+<h4>E5ProcessDialog.__readStderr</h4>
+<b>__readStderr</b>(<i></i>)
+
+<p>
+        Private slot to handle the readyReadStandardError signal.
+</p>
+<p>
+        It reads the error output of the process and inserts it into the
+        error pane.
+</p>
+<a NAME="E5ProcessDialog.__readStdout" ID="E5ProcessDialog.__readStdout"></a>
+<h4>E5ProcessDialog.__readStdout</h4>
+<b>__readStdout</b>(<i></i>)
+
+<p>
+        Private slot to handle the readyReadStandardOutput signal.
+</p>
+<p>
+        It reads the output of the process and inserts it into the
+        output pane.
+</p>
+<a NAME="E5ProcessDialog.keyPressEvent" ID="E5ProcessDialog.keyPressEvent"></a>
+<h4>E5ProcessDialog.keyPressEvent</h4>
+<b>keyPressEvent</b>(<i>evt</i>)
+
+<p>
+        Protected slot to handle a key press event.
+</p>
+<dl>
+
+<dt><i>evt</i></dt>
+<dd>
+the key press event (QKeyEvent)
+</dd>
+</dl>
+<a NAME="E5ProcessDialog.normalExit" ID="E5ProcessDialog.normalExit"></a>
+<h4>E5ProcessDialog.normalExit</h4>
+<b>normalExit</b>(<i></i>)
+
+<p>
+        Public method to check for a normal process termination.
+</p>
+<dl>
+<dt>Return:</dt>
+<dd>
+flag indicating normal process termination
+</dd>
+</dl>
+<dl>
+<dt>Return Type:</dt>
+<dd>
+bool
+</dd>
+</dl>
+<a NAME="E5ProcessDialog.normalExitWithoutErrors" ID="E5ProcessDialog.normalExitWithoutErrors"></a>
+<h4>E5ProcessDialog.normalExitWithoutErrors</h4>
+<b>normalExitWithoutErrors</b>(<i></i>)
+
+<p>
+        Public method to check for a normal process termination without
+        error messages.
+</p>
+<dl>
+<dt>Return:</dt>
+<dd>
+flag indicating normal process termination
+</dd>
+</dl>
+<dl>
+<dt>Return Type:</dt>
+<dd>
+bool
+</dd>
+</dl>
+<a NAME="E5ProcessDialog.on_buttonBox_clicked" ID="E5ProcessDialog.on_buttonBox_clicked"></a>
+<h4>E5ProcessDialog.on_buttonBox_clicked</h4>
+<b>on_buttonBox_clicked</b>(<i>button</i>)
+
+<p>
+        Private slot called by a button of the button box clicked.
+</p>
+<dl>
+
+<dt><i>button</i> (QAbstractButton)</dt>
+<dd>
+button that was clicked
+</dd>
+</dl>
+<a NAME="E5ProcessDialog.on_input_returnPressed" ID="E5ProcessDialog.on_input_returnPressed"></a>
+<h4>E5ProcessDialog.on_input_returnPressed</h4>
+<b>on_input_returnPressed</b>(<i></i>)
+
+<p>
+        Private slot to handle the press of the return key in the input field.
+</p>
+<a NAME="E5ProcessDialog.on_passwordCheckBox_toggled" ID="E5ProcessDialog.on_passwordCheckBox_toggled"></a>
+<h4>E5ProcessDialog.on_passwordCheckBox_toggled</h4>
+<b>on_passwordCheckBox_toggled</b>(<i>isOn</i>)
+
+<p>
+        Private slot to handle the password checkbox toggled.
+</p>
+<dl>
+
+<dt><i>isOn</i> (bool)</dt>
+<dd>
+flag indicating the status of the check box
+</dd>
+</dl>
+<a NAME="E5ProcessDialog.on_sendButton_clicked" ID="E5ProcessDialog.on_sendButton_clicked"></a>
+<h4>E5ProcessDialog.on_sendButton_clicked</h4>
+<b>on_sendButton_clicked</b>(<i></i>)
+
+<p>
+        Private slot to send the input to the git process.
+</p>
+<a NAME="E5ProcessDialog.startProcess" ID="E5ProcessDialog.startProcess"></a>
+<h4>E5ProcessDialog.startProcess</h4>
+<b>startProcess</b>(<i>program, args, workingDir=None, showArgs=True, environment=None</i>)
+
+<p>
+        Public slot used to start the process.
+</p>
+<dl>
+
+<dt><i>program</i> (str)</dt>
+<dd>
+path of the program to be executed
+</dd>
+<dt><i>args</i> (list of str)</dt>
+<dd>
+list of arguments for the process
+</dd>
+<dt><i>workingDir</i> (str)</dt>
+<dd>
+working directory for the process
+</dd>
+<dt><i>showArgs</i> (bool)</dt>
+<dd>
+flag indicating to show the arguments
+</dd>
+<dt><i>environment</i> (dict)</dt>
+<dd>
+dictionary of environment settings to add
+            or change for the process
+</dd>
+</dl>
+<dl>
+<dt>Return:</dt>
+<dd>
+flag indicating a successful start of the process
+</dd>
+</dl>
+<dl>
+<dt>Return Type:</dt>
+<dd>
+bool
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+</body></html>

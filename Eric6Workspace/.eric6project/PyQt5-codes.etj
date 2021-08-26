@@ -1,0 +1,23 @@
+{
+  "header": {
+    "comment": "eric tasks file for project PyQt5-codes",
+    "warning": "This file was generated automatically, do not edit.",
+    "saved": "2021-04-23, 11:14:23"
+  },
+  "ProjectScanFilter": "",
+  "Tasks": [
+    {
+      "summary": "WARNING: Any manual changes made to this file will be lost when pyuic5 is",
+      "description": "",
+      "priority": 1,
+      "lineno": 7,
+      "completed": false,
+      "created": 1619147567.9828167,
+      "type": 2,
+      "uid": "{80f5cd98-2216-4a96-8a6e-48aa9a44b9ca}",
+      "parent_uid": "",
+      "expanded": false,
+      "filename": "E:\\PythonProjects\\Eric6Workspace\\WinUI\\Ui_firstMainWin.py"
+    }
+  ]
+}

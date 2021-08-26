@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html><head>
+<title>eric6.Plugins.VcsPlugins.vcsGit.GitDiffDialog</title>
+<meta charset="UTF-8">
+<style>
+body {
+    background: #EDECE6;
+    margin: 0em 1em 10em 1em;
+    color: black;
+}
+
+h1 { color: white; background: #85774A; }
+h2 { color: white; background: #85774A; }
+h3 { color: white; background: #9D936E; }
+h4 { color: white; background: #9D936E; }
+    
+a { color: #BA6D36; }
+
+</style>
+</head>
+<body>
+<a NAME="top" ID="top"></a>
+<h1>eric6.Plugins.VcsPlugins.vcsGit.GitDiffDialog</h1>
+
+<p>
+Module implementing a dialog to show the output of the git diff command
+process.
+</p>
+<h3>Global Attributes</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Classes</h3>
+
+<table>
+
+<tr>
+<td><a href="#GitDiffDialog">GitDiffDialog</a></td>
+<td>Class implementing a dialog to show the output of the git diff command process.</td>
+</tr>
+</table>
+<h3>Functions</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+<hr />
+<hr />
+<a NAME="GitDiffDialog" ID="GitDiffDialog"></a>
+<h2>GitDiffDialog</h2>
+
+<p>
+    Class implementing a dialog to show the output of the git diff command
+    process.
+</p>
+<h3>Derived from</h3>
+QWidget, Ui_GitDiffDialog
+<h3>Class Attributes</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Class Methods</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+
+<table>
+
+<tr>
+<td><a href="#GitDiffDialog.__init__">GitDiffDialog</a></td>
+<td>Constructor</td>
+</tr>
+<tr>
+<td><a href="#GitDiffDialog.__generatorFinished">__generatorFinished</a></td>
+<td>Private slot connected to the finished signal.</td>
+</tr>
+<tr>
+<td><a href="#GitDiffDialog.__mergeFileSeparators">__mergeFileSeparators</a></td>
+<td>Private method to merge the file separator entries.</td>
+</tr>
+<tr>
+<td><a href="#GitDiffDialog.closeEvent">closeEvent</a></td>
+<td>Protected slot implementing a close event handler.</td>
+</tr>
+<tr>
+<td><a href="#GitDiffDialog.on_buttonBox_clicked">on_buttonBox_clicked</a></td>
+<td>Private slot called by a button of the button box clicked.</td>
+</tr>
+<tr>
+<td><a href="#GitDiffDialog.on_filesCombo_activated">on_filesCombo_activated</a></td>
+<td>Private slot to handle the selection of a file.</td>
+</tr>
+<tr>
+<td><a href="#GitDiffDialog.on_refreshButton_clicked">on_refreshButton_clicked</a></td>
+<td>Private slot to refresh the display.</td>
+</tr>
+<tr>
+<td><a href="#GitDiffDialog.on_saveButton_clicked">on_saveButton_clicked</a></td>
+<td>Private slot to handle the Save button press.</td>
+</tr>
+<tr>
+<td><a href="#GitDiffDialog.start">start</a></td>
+<td>Public slot to start the git diff command.</td>
+</tr>
+</table>
+<h3>Static Methods</h3>
+
+<table>
+<tr><td>None</td></tr>
+</table>
+
+<a NAME="GitDiffDialog.__init__" ID="GitDiffDialog.__init__"></a>
+<h4>GitDiffDialog (Constructor)</h4>
+<b>GitDiffDialog</b>(<i>vcs, parent=None</i>)
+
+<p>
+        Constructor
+</p>
+<dl>
+
+<dt><i>vcs</i></dt>
+<dd>
+reference to the vcs object
+</dd>
+<dt><i>parent</i></dt>
+<dd>
+parent widget (QWidget)
+</dd>
+</dl>
+<a NAME="GitDiffDialog.__generatorFinished" ID="GitDiffDialog.__generatorFinished"></a>
+<h4>GitDiffDialog.__generatorFinished</h4>
+<b>__generatorFinished</b>(<i></i>)
+
+<p>
+        Private slot connected to the finished signal.
+</p>
+<a NAME="GitDiffDialog.__mergeFileSeparators" ID="GitDiffDialog.__mergeFileSeparators"></a>
+<h4>GitDiffDialog.__mergeFileSeparators</h4>
+<b>__mergeFileSeparators</b>(<i>fileSeparators</i>)
+
+<p>
+        Private method to merge the file separator entries.
+</p>
+<dl>
+
+<dt><i>fileSeparators</i></dt>
+<dd>
+list of file separator entries to be merged
+</dd>
+</dl>
+<dl>
+<dt>Return:</dt>
+<dd>
+merged list of file separator entries
+</dd>
+</dl>
+<a NAME="GitDiffDialog.closeEvent" ID="GitDiffDialog.closeEvent"></a>
+<h4>GitDiffDialog.closeEvent</h4>
+<b>closeEvent</b>(<i>e</i>)
+
+<p>
+        Protected slot implementing a close event handler.
+</p>
+<dl>
+
+<dt><i>e</i></dt>
+<dd>
+close event (QCloseEvent)
+</dd>
+</dl>
+<a NAME="GitDiffDialog.on_buttonBox_clicked" ID="GitDiffDialog.on_buttonBox_clicked"></a>
+<h4>GitDiffDialog.on_buttonBox_clicked</h4>
+<b>on_buttonBox_clicked</b>(<i>button</i>)
+
+<p>
+        Private slot called by a button of the button box clicked.
+</p>
+<dl>
+
+<dt><i>button</i></dt>
+<dd>
+button that was clicked (QAbstractButton)
+</dd>
+</dl>
+<a NAME="GitDiffDialog.on_filesCombo_activated" ID="GitDiffDialog.on_filesCombo_activated"></a>
+<h4>GitDiffDialog.on_filesCombo_activated</h4>
+<b>on_filesCombo_activated</b>(<i>index</i>)
+
+<p>
+        Private slot to handle the selection of a file.
+</p>
+<dl>
+
+<dt><i>index</i></dt>
+<dd>
+activated row (integer)
+</dd>
+</dl>
+<a NAME="GitDiffDialog.on_refreshButton_clicked" ID="GitDiffDialog.on_refreshButton_clicked"></a>
+<h4>GitDiffDialog.on_refreshButton_clicked</h4>
+<b>on_refreshButton_clicked</b>(<i></i>)
+
+<p>
+        Private slot to refresh the display.
+</p>
+<a NAME="GitDiffDialog.on_saveButton_clicked" ID="GitDiffDialog.on_saveButton_clicked"></a>
+<h4>GitDiffDialog.on_saveButton_clicked</h4>
+<b>on_saveButton_clicked</b>(<i></i>)
+
+<p>
+        Private slot to handle the Save button press.
+</p>
+<p>
+        It saves the diff shown in the dialog to a file in the local
+        filesystem.
+</p>
+<a NAME="GitDiffDialog.start" ID="GitDiffDialog.start"></a>
+<h4>GitDiffDialog.start</h4>
+<b>start</b>(<i>fn, versions=None, diffMode="work2repo", stashName="", refreshable=False</i>)
+
+<p>
+        Public slot to start the git diff command.
+</p>
+<dl>
+
+<dt><i>fn</i></dt>
+<dd>
+filename to be diffed (string)
+</dd>
+<dt><i>versions</i></dt>
+<dd>
+list of versions to be diffed (list of up to 2 strings
+            or None)
+</dd>
+<dt><i>diffMode</i></dt>
+<dd>
+indication for the type of diff to be performed (
+            'work2repo' compares the working tree with the HEAD commit,
+            'work2stage' compares the working tree with the staging area,
+            'stage2repo' compares the staging area with the HEAD commit,
+            'work2stage2repo' compares the working tree with the staging area
+                and the staging area with the HEAD commit,
+            'stash' shows the diff for a stash)
+</dd>
+<dt><i>stashName</i></dt>
+<dd>
+name of the stash to show a diff for (string)
+</dd>
+<dt><i>refreshable</i></dt>
+<dd>
+flag indicating a refreshable diff (boolean)
+</dd>
+</dl>
+<dl>
+
+<dt>Raises <b>ValueError</b>:</dt>
+<dd>
+raised to indicate a bad value for the 'diffMode'
+            parameter.
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+</body></html>

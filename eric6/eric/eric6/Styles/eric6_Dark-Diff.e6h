@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HighlightingStyles SYSTEM "HighlightingStyles-6.0.dtd">
+<!-- Eric6 highlighting styles -->
+<!-- Saved: 2020-04-10, 15:17:13-->
+<!-- Author: Detlev Offenbach <detlev@die-offenbachs.de> -->
+<HighlightingStyles version="6.0">
+  <Lexer name="Diff">
+    <Style style="0" substyle="-1" color="#ffffff" paper="#262626" font="Bitstream Vera Sans Mono,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Default</Description>
+    </Style>
+    <Style style="1" substyle="-1" color="#74cc66" paper="#262626" font="Bitstream Vera Sans Mono,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Comment</Description>
+    </Style>
+    <Style style="2" substyle="-1" color="#ffff00" paper="#262626" font="Bitstream Vera Sans Mono,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Command</Description>
+    </Style>
+    <Style style="3" substyle="-1" color="#78fdff" paper="#262626" font="Bitstream Vera Sans Mono,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Header</Description>
+    </Style>
+    <Style style="4" substyle="-1" color="#ff3cfc" paper="#262626" font="Bitstream Vera Sans Mono,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Position</Description>
+    </Style>
+    <Style style="5" substyle="-1" color="#ffb574" paper="#262626" font="Bitstream Vera Sans Mono,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Removed line</Description>
+    </Style>
+    <Style style="6" substyle="-1" color="#89ff9b" paper="#262626" font="Bitstream Vera Sans Mono,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Added line</Description>
+    </Style>
+    <Style style="7" substyle="-1" color="#e2e2e2" paper="#262626" font="Bitstream Vera Sans Mono,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Changed line</Description>
+    </Style>
+    <Style style="8" substyle="-1" color="#89ff9b" paper="#262626" font="Bitstream Vera Sans,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Added adding patch</Description>
+    </Style>
+    <Style style="9" substyle="-1" color="#89ff9b" paper="#262626" font="Bitstream Vera Sans,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Removed adding patch</Description>
+    </Style>
+    <Style style="10" substyle="-1" color="#ffb574" paper="#262626" font="Bitstream Vera Sans,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Added removing patch</Description>
+    </Style>
+    <Style style="11" substyle="-1" color="#ffb574" paper="#262626" font="Bitstream Vera Sans,9,-1,5,50,0,0,0,0,0" eolfill="False">
+      <Description>Removed removing patch</Description>
+    </Style>
+  </Lexer>
+</HighlightingStyles>

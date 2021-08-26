@@ -1,0 +1,676 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>UnittestDialog</class>
+ <widget class="QWidget" name="UnittestDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>650</width>
+    <height>700</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Unittest</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_5">
+   <item>
+    <widget class="QTabWidget" name="tabWidget">
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="parametersTab">
+      <attribute name="title">
+       <string>Parameters</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_6">
+       <item>
+        <widget class="QGroupBox" name="groupBox">
+         <property name="title">
+          <string>Test Parameters</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout">
+          <item row="0" column="0" colspan="2">
+           <widget class="QCheckBox" name="discoverCheckBox">
+            <property name="toolTip">
+             <string>Select to discover tests automatically</string>
+            </property>
+            <property name="text">
+             <string>&amp;Discover tests (test modules must be importable)</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="label_3">
+            <property name="text">
+             <string>Discovery &amp;Start:</string>
+            </property>
+            <property name="buddy">
+             <cstring>discoveryPicker</cstring>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="E5ComboPathPicker" name="discoveryPicker" native="true">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="focusPolicy">
+             <enum>Qt::WheelFocus</enum>
+            </property>
+            <property name="toolTip">
+             <string>Enter name of the directory at which to start the test file discovery</string>
+            </property>
+            <property name="whatsThis">
+             <string>&lt;b&gt;Discovery Start&lt;/b&gt;
+&lt;p&gt;Enter name of the directory at which to start the test file discovery.
+Note that all test modules must be importable from this directory.&lt;/p&gt;</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="testsuiteLabel">
+            <property name="text">
+             <string>Test &amp;Filename:</string>
+            </property>
+            <property name="buddy">
+             <cstring>testsuitePicker</cstring>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="E5ComboPathPicker" name="testsuitePicker" native="true">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="focusPolicy">
+             <enum>Qt::WheelFocus</enum>
+            </property>
+            <property name="toolTip">
+             <string>Enter name of file defining the testsuite</string>
+            </property>
+            <property name="whatsThis">
+             <string>&lt;b&gt;Testsuite&lt;/b&gt;
+&lt;p&gt;Enter the name of the file defining the testsuite.
+It should have a method with a name given below. If no name is given, the suite() method will be tried. If no such method can be
+found, the module will be inspected for proper test
+cases.&lt;/p&gt;</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="QLabel" name="label">
+            <property name="text">
+             <string>&amp;Test Name:</string>
+            </property>
+            <property name="buddy">
+             <cstring>testComboBox</cstring>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="1">
+           <widget class="QComboBox" name="testComboBox">
+            <property name="toolTip">
+             <string>Enter the test name. Leave empty to use the default name &quot;suite&quot;.</string>
+            </property>
+            <property name="whatsThis">
+             <string>&lt;b&gt;Testname&lt;/b&gt;&lt;p&gt;Enter the name of the test to be performed. This name must follow the rules given by Python's unittest module. If this field is empty, the default name of &quot;suite&quot; will be used.&lt;/p&gt;</string>
+            </property>
+            <property name="editable">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="optionsGroup">
+         <property name="title">
+          <string>Run Parameters</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_2">
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_3">
+            <item>
+             <widget class="QLabel" name="venvLabel">
+              <property name="text">
+               <string>&amp;Virtual Environment:</string>
+              </property>
+              <property name="buddy">
+               <cstring>venvComboBox</cstring>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QComboBox" name="venvComboBox">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="toolTip">
+               <string>Select the virtual environment to be used</string>
+              </property>
+              <property name="whatsThis">
+               <string>&lt;b&gt;Virtual Environment&lt;/b&gt;\n&lt;p&gt;Enter the virtual environment to be used. Leave it empty to use the default environment, i.e. the one configured globally or per project.&lt;/p&gt;</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QGridLayout" name="gridLayout_2">
+            <item row="0" column="0">
+             <widget class="QCheckBox" name="coverageCheckBox">
+              <property name="toolTip">
+               <string>Select whether coverage data should be collected</string>
+              </property>
+              <property name="text">
+               <string>C&amp;ollect coverage data</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QCheckBox" name="coverageEraseCheckBox">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="toolTip">
+               <string>Select whether old coverage data should be erased</string>
+              </property>
+              <property name="text">
+               <string>&amp;Erase coverage data</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="0">
+             <widget class="QCheckBox" name="failfastCheckBox">
+              <property name="toolTip">
+               <string>Select to stop the test run on the first error or failure</string>
+              </property>
+              <property name="text">
+               <string>Stop on First Error or Failure</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="1">
+             <widget class="QCheckBox" name="debuggerCheckBox">
+              <property name="toolTip">
+               <string>Select to run the unittest with debugger support enabled</string>
+              </property>
+              <property name="text">
+               <string>Run with Debugger</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="discoveryGroup">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="title">
+          <string>Discovery Results</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_3">
+          <item>
+           <widget class="QTreeWidget" name="discoveryList">
+            <property name="alternatingRowColors">
+             <bool>true</bool>
+            </property>
+            <property name="sortingEnabled">
+             <bool>true</bool>
+            </property>
+            <property name="headerHidden">
+             <bool>true</bool>
+            </property>
+            <property name="expandsOnDoubleClick">
+             <bool>false</bool>
+            </property>
+            <column>
+             <property name="text">
+              <string notr="true">1</string>
+             </property>
+            </column>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="resultsTab">
+      <attribute name="title">
+       <string>Results</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_4">
+       <item>
+        <widget class="QGroupBox" name="progressGroupBox">
+         <property name="title">
+          <string>Progress</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout">
+          <item>
+           <layout class="QHBoxLayout" name="_8">
+            <item>
+             <widget class="QLabel" name="progressTextLabel">
+              <property name="text">
+               <string>Progress:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer>
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>371</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="E5Led" name="progressLed"/>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="QProgressBar" name="progressProgressBar">
+            <property name="value">
+             <number>0</number>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="format">
+             <string>%v/%m Tests</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_2">
+            <item>
+             <widget class="QLabel" name="progressCounterRunLabel">
+              <property name="text">
+               <string>Run:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="progressCounterRunCount">
+              <property name="toolTip">
+               <string>Number of tests run</string>
+              </property>
+              <property name="text">
+               <string notr="true">0</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="progressCounterRemLabel">
+              <property name="text">
+               <string>Remaining:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="progressCounterRemCount">
+              <property name="toolTip">
+               <string>Number of tests to be run</string>
+              </property>
+              <property name="text">
+               <string notr="true">0</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout">
+            <item>
+             <widget class="QLabel" name="progressCounterFailureLabel">
+              <property name="text">
+               <string>Failures:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="progressCounterFailureCount">
+              <property name="toolTip">
+               <string>Number of test failures</string>
+              </property>
+              <property name="text">
+               <string notr="true">0</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="progressCounterErrorLabel">
+              <property name="text">
+               <string>Errors:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="progressCounterErrorCount">
+              <property name="toolTip">
+               <string>Number of test errors</string>
+              </property>
+              <property name="text">
+               <string notr="true">0</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="progressCounterSkippedLabel">
+              <property name="text">
+               <string>Skipped:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="progressCounterSkippedCount">
+              <property name="toolTip">
+               <string>Number of tests skipped</string>
+              </property>
+              <property name="text">
+               <string notr="true">0</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="progressCounterExpectedFailureLabel">
+              <property name="text">
+               <string>Expected Failures:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="progressCounterExpectedFailureCount">
+              <property name="toolTip">
+               <string>Number of tests with expected failure</string>
+              </property>
+              <property name="text">
+               <string notr="true">0</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="progressCounterUnexpectedSuccessLabel">
+              <property name="text">
+               <string>Unexpected Successes:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="progressCounterUnexpectedSuccessCount">
+              <property name="toolTip">
+               <string>Number of tests with unexpected success</string>
+              </property>
+              <property name="text">
+               <string notr="true">0</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer>
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeType">
+               <enum>QSizePolicy::Expanding</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="textLabel1">
+         <property name="text">
+          <string>Tests performed:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QListWidget" name="testsListWidget"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="listboxLabel">
+         <property name="text">
+          <string>Failures and errors:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QListWidget" name="errorsListWidget">
+         <property name="toolTip">
+          <string>Failures and Errors list</string>
+         </property>
+         <property name="whatsThis">
+          <string>&lt;b&gt;Failures and Errors list&lt;/b&gt;
+&lt;p&gt;This list shows all failed and errored tests.
+Double clicking on an entry will show the respective traceback.&lt;/p&gt;</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+   <item>
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Close</set>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="_3">
+     <item>
+      <widget class="QLabel" name="sbLabel">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="text">
+        <string>Idle</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeType">
+        <enum>QSizePolicy::Expanding</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>E5ComboPathPicker</class>
+   <extends>QWidget</extends>
+   <header>E5Gui/E5PathPicker.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>E5Led</class>
+   <extends>QFrame</extends>
+   <header>E5Gui/E5Led.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>tabWidget</tabstop>
+  <tabstop>discoverCheckBox</tabstop>
+  <tabstop>testsuitePicker</tabstop>
+  <tabstop>discoveryPicker</tabstop>
+  <tabstop>testComboBox</tabstop>
+  <tabstop>venvComboBox</tabstop>
+  <tabstop>coverageCheckBox</tabstop>
+  <tabstop>coverageEraseCheckBox</tabstop>
+  <tabstop>failfastCheckBox</tabstop>
+  <tabstop>debuggerCheckBox</tabstop>
+  <tabstop>discoveryList</tabstop>
+  <tabstop>testsListWidget</tabstop>
+  <tabstop>errorsListWidget</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>coverageCheckBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>coverageEraseCheckBox</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>321</x>
+     <y>294</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>616</x>
+     <y>294</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>UnittestDialog</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>67</x>
+     <y>662</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>72</x>
+     <y>667</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>UnittestDialog</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>157</x>
+     <y>662</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>148</x>
+     <y>668</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>discoverCheckBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>discoveryPicker</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>209</x>
+     <y>93</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>209</x>
+     <y>120</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>discoverCheckBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>testsuitePicker</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>96</x>
+     <y>93</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>150</x>
+     <y>143</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>discoverCheckBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>testComboBox</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>321</x>
+     <y>97</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>327</x>
+     <y>166</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
