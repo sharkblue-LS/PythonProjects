@@ -11,60 +11,38 @@ timelen = len(experimenttime)
 
 num = datalen // 50 + 1
 
-url = 'http://jspro-gateway-test.gcnao.cn/experiment-service/experiment-result/syncResult'
+url = 'http://jspro-gateway-test.gcnao.cn/jspro-laboratory-service/laboratoryTestMachine/syncResult'
 
-Authorization = "eyJhbGciOiJIUzI1NiJ9.eyJhY2NvdW50SWQiOiI3NDk3MzVmMWVlNTk0ODYyYmI2YjI4YzIwZDljZmY4OSIsIm5hbWUiOiLlhazot6_mtYvor5XkuJrkuLsiLCJ1c2VybmFtZSI6IjEzNzUxNDMwMDAxYSIsInBob25lTnVtYmVyIjoiMTM3NTE0MzAwMDEiLCJhY2NvdW50VHlwZSI6IlBFUlNPTkFMIiwidXNlcklkIjoiZTk1Y2Y2N2Q1ZDNjNGMyMGFkODFkNzBjMDlmNTRhZTAiLCJjb21wYW55SWQiOiIzOWNhNjFkZmNmYWM0M2RjYThkNWNkYjBmMWNmZGRmMSIsImNvbXBhbnlOYW1lIjoiSVTkuInpg6jkuJrkuLvljZXkvY0iLCJqdGktdXVpZCI6Imp0aS1lNjM1Y2E2NC04MGUyLTQ1ZjUtOWQ1Yy01ZmFjZGNlNTI4NzUiLCJleHAiOjE2NjUyMzIzMTF9.2CdB5tYqWbT9gFBSD8rt3vFyPlR3f6Uh_2ud_IB9S6E"
+Authorization = "eyJhbGciOiJIUzI1NiJ9.eyJhY2NvdW50SWQiOiI3NGNlOTJkZWVhNWY0M2QxYWUyNWM5YmRlOGEyOGIxYiIsIm5hbWUiOiLkuYvpgaUiLCJ1c2VybmFtZSI6InpoaXlhbyIsInBob25lTnVtYmVyIjoiMTQyMDAwMDAwMDIiLCJhY2NvdW50VHlwZSI6IlBFUlNPTkFMIiwidXNlcklkIjoiZDgyZTlkNDIwNWE4NGJhY2IyYjhkOTgzOWE3NzEyNzEiLCJjb21wYW55SWQiOiI2ZTE2MmJjMDA2ZjI0NDk1YTQ0NTkzOTFiNjE5MmVmYSIsImNvbXBhbnlOYW1lIjoid2h56K-V6aqM5qOA5rWL5Lit5b-D5pS56YCgNTE4IiwianRpLXV1aWQiOiJqdGktZjU0ZDA2MzItZTgxYy00NDVjLTlkOWItNTAwZTJmN2I0MzJiIiwiZXhwIjoxNjY2MTg4ODI1fQ.IBAbMSWnlM89PGq8vyc25P5l-Zw5Y7LGxXzWQQ98FJ4"
 
 headers = {"Authorization": Authorization, "Content-Type": "application/json;charset=UTF-8"}
 
-# data = {"startTime": "2021-03-11 11:14:13", "LabNo": "", "experimentNo": "202103110001",
-#         "sampleNo": "YP-SJ-LSJSCLMC01-2021-03-10-0050", "sampleId": "69c01f94912b494ca52a34eb723e675e",
-#         "experimentTypeNo": "JS01", "experimentTypeName": "金属材料室温拉伸试验", "diameter": "17.88258",
-#         "lowerYieldForce": "96.75863", "lowerYieldStrength": "86.30000", "maxForce": "86.42588",
-#         "tensileStrength": "483.90000", "status": "0", "standard": "HRBF335", "data": experimentdata,
-#         "time": experimenttime}
-#
-# response = requests.post(url, data=demjson.encode(data), headers=headers)
-#
-# print(response.text)
-
-startTime = "2022-10-08 10:10:13"
-LabNo = ''
-experimentNo = '202103110001'
-sampleNo = 'YP-CL-33-22-0226'
-sampleId = '5e181c3c6b71452ab0345af174ea9c44'
-experimentTypeNo = 'JS01'
-experimentTypeName = '金属材料室温拉伸试验'
-diameter = '17.88258'
-lowerYieldForce = '96.75863'
-lowerYieldStrength = '86.30000'
-maxForce = '86.42588'
-tensileStrength = '483.90000'
-standard = 'HRBF335'
+startTime = int(round(time.time()*1000))
+machineId = '7947cfb3f0fe4121982402d1b8ded569'
+experimentNo = 'YP-试件类-2022-10-13-0273-01'
+experimentTypeNo = 'SK01'
+maxForce = '93.6843'
+tensileStrength = '394.632'
 
 for i in range(num):
     tempexperimentdata = experimentdata[0:(i+1)*50]
     tempexperimenttime = experimenttime[0:(i+1)*50]
 
-    data = {"startTime":startTime,"LabNo":LabNo,"experimentNo":experimentNo,"sampleNo":sampleNo,"sampleId":sampleId,"experimentTypeNo":experimentTypeNo,"experimentTypeName":experimentTypeName,"diameter":diameter,"lowerYieldForce":lowerYieldForce,"lowerYieldStrength":lowerYieldStrength,"maxForce":maxForce,"tensileStrength":tensileStrength,"status":"0","standard":standard,"data":tempexperimentdata,"time":tempexperimenttime}
+    data = {"startTime": startTime, "machineId": machineId, "experimentNo": experimentNo, "experimentTypeNo": experimentTypeNo, "maxForce": maxForce, "tensileStrength": tensileStrength, "status": "0", "forceList": tempexperimentdata, "timeList": tempexperimenttime}
 
-    response = requests.post(url,data=json.dumps(data),headers=headers)
-    print(response.text)
+    response = requests.post(url, data=json.dumps(data), headers=headers)
+    print(time.strftime('%Y-%m-%d %H:%M:%S'), response.text)
     time.sleep(1)
     if i == num-1:
         tempexperimentdata = experimentdata[0:datalen]
         tempexperimenttime = experimenttime[0:timelen]
-        data = {"startTime":startTime, "LabNo": LabNo, "experimentNo": experimentNo,
-               "sampleNo": sampleNo, "sampleId": sampleId,
-               "experimentTypeNo": experimentTypeNo, "experimentTypeName": experimentTypeName, "diameter": diameter,
-               "lowerYieldForce": lowerYieldForce, "lowerYieldStrength": lowerYieldStrength, "maxForce": maxForce,
-               "tensileStrength": tensileStrength, "status": "1", "standard": standard, "data": tempexperimentdata,
-               "time": tempexperimenttime}
+        data = {"startTime": startTime, "machineId": machineId, "experimentNo": experimentNo, "experimentTypeNo": experimentTypeNo, "maxForce": maxForce, "tensileStrength": tensileStrength, "status": "1", "forceList": tempexperimentdata, "timeList": tempexperimenttime}
 
         response = requests.post(url, data=json.dumps(data), headers=headers)
-        print(response.text)
+        print(time.strftime('%Y-%m-%d %H:%M:%S'), response.text)
         print('数据传输完成！')
         break
+
 
 
 
