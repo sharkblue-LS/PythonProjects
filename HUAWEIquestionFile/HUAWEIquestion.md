@@ -374,4 +374,18 @@
 ![img_218.png](img_218.png)
 ![img_219.png](img_219.png)
 
+# 81
+![img_220.png](img_220.png)
+![img_221.png](img_221.png)
+![img_222.png](img_222.png)
+
+# 82
+![img_223.png](img_223.png)
+![img_224.png](img_224.png)
+
+# 83
+![img_225.png](img_225.png)
+![img_226.png](img_226.png)
+
+
 

@@ -1,4 +1,4 @@
-### 1
+# 1
 # while True:
 #     try:
 #         S = input()
@@ -23,8 +23,10 @@
 # import string
 # import time
 # import time
+# from itertools import permutations
+# import time
 
-### 2
+# 2
 # while True:
 #     try:
 #         s = list(map(int, input().split(',')))
@@ -43,7 +45,7 @@
 #         break
 
 
-### 4
+# 4
 # s = int(input())
 #
 # count = 1
@@ -68,7 +70,7 @@
 # print('result:'+ str(len(sum_list)))
 
 
-### 5
+# 5
 # a:3,b:5,c:2@a:1,b:2
 # a:2,b:3,c:2
 
@@ -107,7 +109,7 @@
 #     print(','.join(ss))
 
 
-### 6
+# 6
 # Aa1#<Bb2$<Cc3%<
 # ABC<c89%000<
 
@@ -142,7 +144,7 @@
 #     print(res + ',false')
 
 
-### 8
+# 8
 # 输入
 # 0
 # asdbuiodevauufgh
@@ -184,7 +186,7 @@
 #     print(max(ll))
 
 
-### 9
+# 9
 # 输入
 # 3 1 1 2
 # 3 1 2 3
@@ -221,7 +223,7 @@
 # print(sum(s[:n]))
 
 
-### 10
+# 10
 # 输入
 # 5
 # 1 90
@@ -273,7 +275,7 @@
 #     print(*p)
 
 
-### 11
+# 11
 
 # 输入
 # looxdolx
@@ -300,7 +302,7 @@
 #     print(length - 1)
 
 
-### 12
+# 12
 # 输入
 # 10001
 # 输出
@@ -332,7 +334,7 @@
 #
 # print(num)
 
-### 13
+# 13
 
 # 输入
 # 3 15 6 14
@@ -352,7 +354,7 @@
 # print(*s2)
 
 
-### 14
+# 14
 
 # 输入
 # 2
@@ -383,7 +385,7 @@
 # print(*ss)
 
 
-### 15
+# 15
 
 # 输入
 # 2 3 4 5
@@ -456,7 +458,7 @@
 #     print(0)
 
 
-### 16
+# 16
 
 # 输入
 # 1 2 3 4 5 6 7 8 9 10
@@ -489,7 +491,7 @@
 # print(res)
 
 
-### 17
+# 17
 
 # 输入
 # abC124Acb
@@ -534,7 +536,7 @@
 #     print(-1)
 
 
-### 18
+# 18
 
 # 输入
 # XXYYXY
@@ -554,7 +556,7 @@
 # print(ans)
 
 
-### 19
+# 19
 
 # 输入
 # 30 12 25 8 19
@@ -592,7 +594,7 @@
 # print(min_energy(nums, 8))
 
 
-### 20
+# 20
 
 # 输入
 # 5
@@ -620,7 +622,7 @@
 # print(c)
 
 
-### 21
+# 21
 
 # 输入
 # 4
@@ -646,7 +648,7 @@
 # print(maxw)
 
 
-### 22
+# 22
 
 # 输入
 # 5
@@ -684,7 +686,7 @@
 #     print(j[0])
 
 
-### 23
+# 23
 # 输入
 # 2
 # present
@@ -729,7 +731,7 @@
 #     print('false')
 
 
-### 24
+# 24
 
 # 输入
 # 100 10
@@ -759,7 +761,7 @@
 # print(*s)
 
 
-### 25
+# 25
 
 # 输入
 # 3 3
@@ -799,7 +801,7 @@
 # print(maxarea)
 
 
-### 26
+# 26
 
 # 输入
 # 3
@@ -853,7 +855,7 @@
 #     print(0)
 
 
-### 26
+# 26
 
 # 输入
 # 10
@@ -895,7 +897,7 @@
 #     print(0)
 
 
-### 27
+# 27
 
 # 输入
 # bAaAcBb
@@ -928,7 +930,7 @@
 # print(''.join(ds))
 
 
-### 29
+# 29
 
 # 输入
 # 1,2,5,-21,22,11,55,-101,42,8,7,32
@@ -946,7 +948,7 @@
 # print(','.join(s))
 
 
-### 30
+# 30
 
 # 输入
 # 1,3,3,3,2,4,4,4,5
@@ -964,7 +966,7 @@
 # print(','.join(ds.keys()))
 
 
-### 31
+# 31
 
 # 输入
 # 3 2
@@ -1007,7 +1009,7 @@
 # s = [j[0] for j in score]
 # print(*s)
 
-### 32
+# 32
 
 # 输入
 # 4
@@ -1030,7 +1032,7 @@
 # print(*s)
 
 
-### 33
+# 33
 
 # 输入
 # abcdef
@@ -1043,7 +1045,7 @@
 # acdefb
 
 
-### 34
+# 34
 
 # 输入
 # 3
@@ -1079,7 +1081,7 @@
 # print(time)
 
 
-### 35
+# 35
 
 # 输入
 # 5
@@ -1104,7 +1106,7 @@
 # else:
 #     print(sum(s[:n]) + sum(s[-n:]))
 
-### 36
+# 36
 
 # 输入
 # 93,95,97,100,102,123,155
@@ -1127,7 +1129,7 @@
 # print(left+1)
 
 
-### 37
+# 37
 
 # 输入
 # 4
@@ -1184,7 +1186,7 @@
 # print(sum(q))
 
 
-### 38
+# 38
 
 # 输入
 # 9
@@ -1223,7 +1225,7 @@
 # print(ms)
 
 
-### 39
+# 39
 
 # 输入
 # 15
@@ -1259,7 +1261,7 @@
 #     print('-1 -1')
 
 
-### 40
+# 40
 
 # 输入
 # 4
@@ -1289,7 +1291,7 @@
 # 输出
 # 2
 
-n = int('4')
+# n = int('4')
 
 # s = []
 # for i in range(n):
@@ -1326,7 +1328,7 @@ n = int('4')
 # print(count)
 
 
-### 41
+# 41
 
 # 输入
 # 2 2
@@ -1376,7 +1378,7 @@ n = int('4')
 #         break
 
 
-### 42
+# 42
 
 # 输入
 # 5
@@ -1403,7 +1405,7 @@ n = int('4')
 # print(max(ss))
 
 
-### 43
+# 43
 
 # 输入
 # 10 2 4
@@ -1430,7 +1432,7 @@ n = int('4')
 # print(conversion(k, m).count(str(n)))
 
 
-### 44
+# 44
 
 # 输入
 # 3 3
@@ -1476,7 +1478,7 @@ n = int('4')
 # print(len(getroad(s, n, m)))
 
 
-### 45
+# 45
 
 # 输入
 # I love you
@@ -1485,13 +1487,15 @@ n = int('4')
 # He
 
 # 输入
-# The Furthest distance in the world,Is not between life and death,But when I stand in front of you,Yet you don't know that I love you.
+# The Furthest distance in the world,Is not between life and death,
+# But when I stand in front of you,Yet you don't know that I love you.
 # f
 # 输出
 # fron furthest
 
 
-# sentence = 'The furthest distance in the world,Is not between life and death,But when I stand in front of you,Yet you don\'t know that I love you.'
+# sentence = 'The furthest distance in the world,Is not between life and death,
+# But when I stand in front of you,Yet you don\'t know that I love you.'
 #
 # prefix = 'f'
 #
@@ -1513,7 +1517,7 @@ n = int('4')
 #     print(prefix)
 
 
-### 46
+# 46
 
 # 输入
 # AbCdeFG
@@ -1534,7 +1538,7 @@ n = int('4')
 #     print(s.index(ss[k-1]))
 
 
-### 47
+# 47
 
 # 输入
 # /abc/,/bcd
@@ -1549,7 +1553,7 @@ n = int('4')
 # print('/'.join(s))
 
 
-### 48
+# 48
 
 # 输入
 # 1,1,0,0,1,1,1,0,1
@@ -1581,7 +1585,7 @@ n = int('4')
 # print(mincars)
 
 
-### 49
+# 49
 
 # 输入
 # 5
@@ -1641,7 +1645,7 @@ n = int('4')
 # print(count)
 
 
-### 50
+# 50
 
 # 输入
 # 5
@@ -1697,7 +1701,7 @@ n = int('4')
 # print(res)
 
 
-### 51
+# 51
 
 # 输入
 # 3 7
@@ -1705,7 +1709,7 @@ n = int('4')
 # 输出
 # 4
 
-### 51
+# 51
 
 # 输入
 # 10 10000
@@ -1732,7 +1736,7 @@ n = int('4')
 # print(count)
 
 
-### 52
+# 52
 
 # 输入
 # 3
@@ -1782,7 +1786,7 @@ n = int('4')
 # print('-'.join(res))
 
 
-### 53
+# 53
 
 # 输入
 # AAAAHHHBBCDHHHH
@@ -1816,7 +1820,7 @@ n = int('4')
 # print(res[k - 1])
 
 
-### 54
+# 54
 
 # x#y = 2*x+3*y+4
 # x$y = 3*x+y+2
@@ -1876,7 +1880,7 @@ n = int('4')
 #     print(s)
 
 
-### 55
+# 55
 
 # 输入
 # 5 100 10
@@ -1923,7 +1927,7 @@ n = int('4')
 # print(' '.join(map(str, best_investments)))
 
 
-### 56
+# 56
 
 # 输入
 # 4 10
@@ -1963,7 +1967,7 @@ n = int('4')
 # print(ans)
 
 
-### 57
+# 57
 
 # 输入
 # CA3385,CZ6678,SC6508,DU7523,HK4456,MK0987
@@ -1980,7 +1984,7 @@ n = int('4')
 # print(','.join(s))
 
 
-### 58
+# 58
 
 # 输入
 # 0 5 8 9 9 10
@@ -2029,7 +2033,7 @@ n = int('4')
 # print(cq(bl,q),cq(wl,q))
 
 
-### 59
+# 59
 
 # 输入
 # 40 40 18
@@ -2089,7 +2093,7 @@ n = int('4')
 # # print(end-start)
 
 
-### 60
+# 60
 
 # 输入
 # 5
@@ -2149,7 +2153,7 @@ n = int('4')
 # print(height)
 
 
-### 61
+# 61
 
 # 输入
 # abc1 A
@@ -2211,7 +2215,7 @@ n = int('4')
 # # print(res)
 
 
-### 62
+# 62
 
 # 输入
 # 2 8 3 7 3 6 3 5 4 4 5 3 6 2 7 3 8 4 7 5
@@ -2254,7 +2258,7 @@ n = int('4')
 # print(' '.join(f'{x} {y}' for x, y in simplified_points))
 
 
-### 63
+# 63
 
 # 输入
 # bb1234aa
@@ -2294,7 +2298,7 @@ n = int('4')
 # print(sum)
 
 
-### 64
+# 64
 
 # 输入
 # 1,2,3,4,5,6,7,8,9
@@ -2323,7 +2327,7 @@ n = int('4')
 # print(sum(nums))
 
 
-### 65
+# 65
 
 # 输入
 # 0 9 20 -1 -1 15 7 -1 -1 -1 -1 3 2
@@ -2358,7 +2362,7 @@ n = int('4')
 # print(max_time)
 
 
-### 66
+# 66
 
 # 输入
 # 20*19*20
@@ -2377,7 +2381,7 @@ n = int('4')
 # print(''.join(res))
 
 
-### 67
+# 67
 
 # 输入
 # 5
@@ -2405,7 +2409,7 @@ n = int('4')
 # print(' '.join(f'{x} {y}' for x, y in res[:-1]), *res[-1])
 
 
-### 68
+# 68
 
 # 输入
 # 5
@@ -2437,7 +2441,7 @@ n = int('4')
 # print(count)
 
 
-### 69
+# 69
 
 # 输入
 # 7
@@ -2477,7 +2481,7 @@ n = int('4')
 #     print(total - min_total)
 
 
-### 70
+# 70
 
 # 输入
 # 10 10 255 34 0 1 255 8 0 3 255 6 0 5 255 4 0 7 255 2 0 9 255 21
@@ -2511,7 +2515,7 @@ n = int('4')
 #         break
 
 
-### 71
+# 71
 
 # 输入
 # 1
@@ -2569,7 +2573,7 @@ n = int('4')
 #     print('NA')
 
 
-### 72
+# 72
 
 # 输入
 # 2 2 3
@@ -2609,7 +2613,7 @@ n = int('4')
 # print(res)
 
 
-### 73
+# 73
 
 # 输入
 # 5 4
@@ -2663,7 +2667,7 @@ n = int('4')
 #     print(key[0])
 
 
-### 74
+# 74
 
 # 输入
 # 9 4
@@ -2718,7 +2722,7 @@ n = int('4')
 #     print(*j)
 
 
-### 75
+# 75
 
 # 输入
 # 1
@@ -2761,7 +2765,7 @@ n = int('4')
 #     print(0)
 
 
-### 76
+# 76
 
 # 输入
 # 2 11
@@ -2784,7 +2788,7 @@ n = int('4')
 # print(arrivalTimes[M - 1] - M + 1)
 
 
-### 77
+# 77
 
 # 输入
 # 4 4
@@ -2851,7 +2855,7 @@ n = int('4')
 # print(res)
 
 
-### 78
+# 78
 
 # 输入
 # 2 2
@@ -2909,7 +2913,7 @@ n = int('4')
 # print(ans)
 
 
-### 79
+# 79
 
 # 输入
 # 1,2<A>00
@@ -2956,7 +2960,7 @@ n = int('4')
 #     print(','.join(res))
 
 
-### 80
+# 80
 
 # 输入
 # 3
@@ -3026,8 +3030,8 @@ n = int('4')
 描述
 输入int型数组，询问该数组能否分成两组，使得两组中各元素加起来的和相等，并且，所有5的倍数必须在其中一个组中，所有3的倍数在另一个组中（不包括5的倍数），
 不是5的倍数也不是3的倍数能放在任意一组，可以将数组分为空数组，能满足以上条件，输出true；不满足时输出false。
-数据范围：每个数组大小满足 
-1≤n≤50  ，输入的数据大小满足 
+数据范围：每个数组大小满足
+1≤n≤50  ，输入的数据大小满足
 输入描述：
 第一行是数据个数，第二行是输入的数据
 输出描述：
@@ -3039,15 +3043,15 @@ n = int('4')
 true
 说明：
 第一组：5 -5 1
-第二组：1 
-  
+第二组：1
+
 输入：
 3
 3 5 8
 输出：
 false
 说明：
-由于3和5不能放在同一组，所以不存在一种分法。 
+由于3和5不能放在同一组，所以不存在一种分法。
 
 输入：
 5
@@ -3107,7 +3111,7 @@ A是一个50×10的矩阵，B是10×20的矩阵，C是20×5的矩阵
 保证给出的字符串表示的计算顺序唯一。
 进阶：时间复杂度：
 O(n) ，空间复杂度：
-O(n) 
+O(n)
 输入描述：
 输入多行，先输入要计算乘法的矩阵个数n，每个矩阵的行数，列数，总共2n的数，最后输入要计算的法则
 计算的法则为一个字符串，仅由左右括号和大写字母（'A'~'Z'）组成，保证括号是匹配的且输入合法！
@@ -3177,8 +3181,8 @@ NONE
 输出：
 K-A*4/2
 说明：
-A+K*2-4也是一种答案，输出任意一种即可 
- 
+A+K*2-4也是一种答案，输出任意一种即可
+
 输入：
 B 5 joker 4
 输出：
@@ -3275,4 +3279,224 @@ NONE
 #         print(res)
 
 
+# 81
+# 输入
+# 4
+# 1 1 2 2
+# 输出
+# 2
 
+# 输入
+# 10
+# 1 1 1 1 1 9 8 3 7 10
+# 输出
+# 3
+
+
+# def dfs(stones, targetWeight, i=0, res=None, count=None):
+#     global m
+#     m += 1
+#     if res is None:
+#         res = []
+#     if count is None:
+#         count = []
+#     if sum(count) == targetWeight:
+#         if count not in res:
+#             res.append(count)
+#         count = []
+#         return
+#     if i == len(stones) or sum(count) > targetWeight:
+#         return
+#
+#     dfs(stones, targetWeight, i + 1, res, count + [stones[i]])
+#     dfs(stones, targetWeight, i + 1, res, count)
+#     return res
+#
+#
+# n = int('10')
+#
+# stones = list(map(int, '1 1 1 1 1 9 8 3 7 10'.split()))
+#
+# totalWeight = sum(stones)
+# targetWeight = totalWeight // 2
+#
+# m = 0
+# start_time = time.time()
+# print(start_time)
+# if totalWeight % 2 == 0:
+#     res = dfs(stones, targetWeight)
+#     print(res)
+#     print(min([len(i) for i in res]))
+#     print(m)
+# else:
+#     print(-1)
+#
+# end_time = time.time()
+# print(f'{(end_time-start_time)*1000:.4f}')
+
+
+# 82
+# 输入
+# 5 14 30 100
+# 1 3 5 20 21 200 202 230
+# 输出
+# 2
+
+# price = list(map(int, '10 14 30 100'.split()))
+# date = list(map(int, '1 3 5 20 21 200 202 230'.split()))
+#
+# res = []
+#
+# for i in range(len(price)):
+#     totalPrice = 0
+#     if i == 0:
+#         totalPrice = price[i] * len(date)
+#     elif i == 1:
+#         start = 0
+#         count = 0
+#         for j in range(1, len(date)):
+#             if date[j] - date[start] + 1 > 3:
+#                 count += 1
+#                 start = j
+#         totalPrice = price[i] * (count + 1)
+#     elif i == 2:
+#         start = 0
+#         count = 0
+#         for j in range(1, len(date)):
+#             if date[j] - date[start] + 1 > 7:
+#                 count += 1
+#                 start = j
+#         totalPrice = price[i] * (count + 1)
+#     elif i == 3:
+#         start = 0
+#         count = 0
+#         for j in range(1, len(date)):
+#             if date[j] - date[start] + 1 > 30:
+#                 count += 1
+#                 start = j
+#         totalPrice = price[i] * (count + 1)
+#
+#     res.append(totalPrice)
+# print(res)
+# print(min(res))
+
+
+#
+#
+# a = ['1', '2', '3']
+# b = 'abc'
+# for i in permutations(a):
+#     print(i)
+# for i in permutations(b,2):
+#     print(i)
+
+
+'''
+给定一个只包括 '('，')'，'{'，'}'，'['，']' 的字符串 s ，判断字符串是否有效。
+有效字符串需满足：
+左括号必须用相同类型的右括号闭合。
+左括号必须以正确的顺序闭合。
+每个右括号都有一个对应的相同类型的左括号。
+输入：s = "()[]{}" 或者 "{[]}"
+输出：true
+'''
+
+# def test(s):
+#     if len(s) % 2 != 0:
+#         return False
+#
+#     stack = []
+#     pairs = {
+#         ')': '(',
+#         '}': '{',
+#         ']': '['
+#     }
+#     for i in s:
+#         if i in pairs:
+#             if not stack or stack[-1] != pairs[i]:
+#                 return False
+#             stack.pop()
+#         else:
+#             stack.append(i)
+#     return not stack
+#
+#
+# s = "]()["
+# print(test(s))
+
+
+'''
+给定一个循环数组 nums （ nums[nums.length - 1] 的下一个元素是 nums[0] ），返回 nums 中每个元素的 下一个更大元素 。
+数字 x 的 下一个更大的元素 是按数组遍历顺序，这个数字之后的第一个比它更大的数，这意味着你应该循环地搜索它的下一个更大的数。如果不存在，则输出 -1 。
+输入: nums = [1,2,3,4,3]
+输出: [2,3,4,-1,4]
+'''
+
+# nums = [1, 2, 3, 4, 3]
+#
+# n = len(nums)
+# res = []
+#
+# for i in range(n):
+#     tag = True
+#     for j in range(i + 1, 2 * n):
+#         if nums[j % n] > nums[i]:
+#             res.append(nums[j % n])
+#             tag = False
+#             break
+#     if tag:
+#         res.append(-1)
+#
+# print(res)
+
+'''
+给定一个整数数组 temperatures ，表示每天的温度，返回一个数组 answer ，其中 answer[i] 是指对于第 i 天，下一个更高温度出现在几天后。如果气温在这之后都不会升高，请在该位置用 0 来代替。
+输入: temperatures = [73,74,75,71,69,72,76,73]
+输出: [1,1,4,2,1,1,0,0]
+'''
+
+# def test(temperatures):
+#     stack = []
+#     answer = [0] * len(temperatures)
+#     for i in range(len(temperatures)):
+#         tem = temperatures[i]
+#         while stack and tem > temperatures[stack[-1]]:
+#             index = stack.pop()
+#             answer[index] = i - index
+#         stack.append(i)
+#     return answer
+#
+#
+# temperatures = [73, 74, 75, 71, 69, 72, 76, 73]
+# print(test(temperatures))
+#
+# print(temperatures.pop())
+
+
+#  创建类
+# class Person():
+#     """ 实例方法 """
+#
+#     def __init__(self, name='xiaosan', age='18', sex='female'):
+#         self.name = name
+#         self.age = age
+#         self.sex = sex
+#         print("构造方法。")
+#
+#     # 实例方法
+#     def say(self):
+#         print("实例方法。")
+#
+#     # 类方法
+#     @classmethod
+#     def info(cls):
+#         print("正在调用类方法。")
+#
+#     def __repr__(self):
+#         return 'Person=' + self.name
+#
+#
+# pp = Person()
+# # print(dir(pp))
+# print(pp.__dict__)
+# print(getattr(pp, 'name'))
